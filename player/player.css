@@ -1,0 +1,10 @@
+#player {
+  position: fixed;
+  bottom: 0;
+  height: 120px;
+}
+
+#left-element,
+#right-element {
+  color: #1db954;
+}

@@ -40,6 +40,6 @@ form input{
     background-color: #2A2A2A;
     padding: 0.5em 2.5em;
 }
-.ahover:hover{
-    fill: black;
-}
+.custom-tooltip {
+    --bs-tooltip-bg: var(--bs-dark);
+  }

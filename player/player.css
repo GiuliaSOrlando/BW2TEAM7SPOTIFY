@@ -1,3 +1,7 @@
+:root {
+  --spotifycolor: #1db954;
+}
+
 #player {
   position: fixed;
   bottom: 0;
@@ -6,5 +10,12 @@
 
 #left-element,
 #right-element {
-  color: #1db954;
+}
+
+#album-cover {
+  width: 80px;
+}
+
+#connect-icon {
+  fill: #1db954;
 }

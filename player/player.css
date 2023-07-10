@@ -16,6 +16,20 @@
   width: 80px;
 }
 
-#connect-icon {
-  fill: #1db954;
+#volume-range-div {
+  width: 80px;
+}
+
+#volume-range {
+  height: 3px;
+}
+
+#song-range {
+  width: 500px;
+  height: 4px;
+}
+
+#shuffle-active,
+#repeat-active {
+  margin: 1px;
 }

@@ -14,7 +14,7 @@ nav{
 }
 .dropdown-menu[data-bs-popper] {
     top: 113%;
-    left: -185px;
+    left: -215px;
     margin-top: var(--bs-dropdown-spacer);
 }
 .dropdown-item:focus, .dropdown-item:hover{
@@ -38,6 +38,6 @@ form{
 form input{
     background-color: #2A2A2A;
 }
-form input::after{
-    background-color: #2A2A2A;
+form input:focus-visible{
+    border: none;
 }

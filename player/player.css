@@ -17,7 +17,7 @@
 }
 
 #volume-range-div {
-  width: 80px;
+  width: 40px;
 }
 
 #volume-range {
@@ -32,4 +32,66 @@
 #shuffle-active,
 #repeat-active {
   margin: 1px;
+}
+
+.controller-icon,
+.player-extra-icons {
+  opacity: 0.8;
+  cursor: default;
+}
+
+.controller-icon:hover,
+.player-extra-icons:hover {
+  opacity: 1;
+}
+
+#play-button:hover {
+  transform: scale(1.05);
+}
+
+button {
+  background-color: transparent;
+  border: none;
+}
+
+/* Il click va poi aggiustato su JS, con classList.toggle sui bottoni */
+
+#shuffle-active,
+#repeat-active {
+  display: none;
+}
+
+button:focus {
+  #shuffle-active,
+  #repeat-active {
+    display: block;
+    color: #1db954;
+  }
+  #shuffle,
+  #repeat,
+  #about,
+  #queue,
+  #connect,
+  #volume {
+    fill: #1db954;
+  }
+}
+
+#artist {
+  font-weight: 300;
+  opacity: 0.6;
+  font-size: 0.9em;
+}
+
+#artist:hover {
+  text-decoration: underline;
+}
+
+#title {
+  font-size: 1.1em;
+  font-weight: 400;
+}
+
+#title:hover {
+  text-decoration: underline;
 }

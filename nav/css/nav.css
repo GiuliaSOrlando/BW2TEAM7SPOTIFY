@@ -1,0 +1,43 @@
+nav{
+    background-color: #212121;
+    font-size: 0.8em;
+}
+
+.drop{
+    background-color:#282828;
+    color: white;
+    
+}
+
+.drop a{
+    color: white;
+}
+.dropdown-menu[data-bs-popper] {
+    top: 113%;
+    left: -215px;
+    margin-top: var(--bs-dropdown-spacer);
+}
+.dropdown-item:focus, .dropdown-item:hover{
+    color: white;
+    background-color: #3E3E3E;
+    
+}
+
+.dropdown-toggle::after {
+    display: none;
+}
+
+.ulhov li:hover{
+    transform: scale(1.1);
+}
+form{
+    /* border: 1px solid red; */
+    border-radius: 5em;
+    background-color: #2A2A2A;
+}
+form input{
+    background-color: #2A2A2A;
+}
+form input:focus-visible{
+    border: none;
+}

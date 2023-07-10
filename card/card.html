@@ -29,65 +29,161 @@
       }
       .card:hover {
         background-color: #282828;
+        cursor: pointer;
+      }
+
+      #c-img {
+        position: relative;
+      }
+      #c-img svg {
+        position: absolute;
+        z-index: 1;
+        top: 66%;
+        left: 66%;
+        visibility: hidden;
+      }
+      .card:hover #c-img svg {
+        visibility: visible;
+      }
+
+      .play-card:hover {
+        transform: scale(1.1);
       }
     </style>
     <title>Contenitore con 4 Card</title>
   </head>
   <body>
     <div class="container container-album text-white">
-      <h3>Album</h3>
-      <div class="row container-card">
-        <div class="col-md-3">
-          <div class="card text-white">
-            <img
-              src="/assets/imgs/main/image-1.jpg"
-              class="card-img-top img-album"
-              alt="Immagine 1"
-            />
-            <i class="icon fa-sharp fa-solid fa-circle-play"></i>
+      <div id="Sezione 1">
+        <h3>Album</h3>
+        <div class="row container-card">
+          <div class="col-md-3">
+            <div class="card text-white">
+              <div id="c-img">
+                <img
+                  src="https://images-ext-1.discordapp.net/external/myF39AA16MfYWxOfDG0C8cpgPqTISABqABi-8HYyUcA/https/distortedsoundmag.com/wp-content/uploads/2020/09/Necrodaemon-Terrorsathan-re-release-Belphegor.jpg?width=473&height=473"
+                  class="card-img-top img-album"
+                  alt="Immagine 1"
+                />
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="48"
+                  height="48"
+                  viewBox="0 0 24 24"
+                  fill="#1db954"
+                  stroke-width="1"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="feather feather-play-circle play-card"
+                >
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <polygon
+                    points="10 8 16 12 10 16 10 8"
+                    fill="black"
+                  ></polygon>
+                </svg>
+              </div>
+              <div class="card-body text-white">
+                <h5 class="card-title">Titolo 1</h5>
+                <h6 class="card-subtitle mb-2">Sottotitolo 1</h6>
+              </div>
+            </div>
+          </div>
 
-            <div class="card-body text-white">
-              <h5 class="card-title">Titolo 1</h5>
-              <h6 class="card-subtitle mb-2">Sottotitolo 1</h6>
+          <div class="col-md-3">
+            <div class="card text-white">
+              <div id="c-img">
+                <img
+                  src="https://i.scdn.co/image/ab67616d0000b273db2b55e779dc09a7c0d8dafe"
+                  class="card-img-top img-album rounded-circle"
+                  alt="Immagine 1"
+                />
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="48"
+                  height="48"
+                  viewBox="0 0 24 24"
+                  fill="#1db954"
+                  stroke-width="1"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="feather feather-play-circle play-card"
+                >
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <polygon
+                    points="10 8 16 12 10 16 10 8"
+                    fill="black"
+                  ></polygon>
+                </svg>
+              </div>
+              <div class="card-body text-white">
+                <h5 class="card-title">Titolo 1</h5>
+                <h6 class="card-subtitle mb-2">Sottotitolo 1</h6>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="col-md-3">
-          <div class="card">
-            <img
-              src="/assets/imgs/main/image-2.jpg"
-              class="card-img-top img-album"
-              alt="Immagine 2"
-            />
-            <div class="card-body text-white">
-              <h5 class="card-title">Titolo 1</h5>
-              <h6 class="card-subtitle mb-2">Sottotitolo 1</h6>
+          <div class="col-md-3">
+            <div class="card text-white">
+              <div id="c-img">
+                <img
+                  src="https://cdns-images.dzcdn.net/images/cover/523063d92a11bc49e8c24547b252d804/264x264.jpg"
+                  class="card-img-top img-album"
+                  alt="Immagine 1"
+                />
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="48"
+                  height="48"
+                  viewBox="0 0 24 24"
+                  fill="#1db954"
+                  stroke-width="1"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="feather feather-play-circle play-card"
+                >
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <polygon
+                    points="10 8 16 12 10 16 10 8"
+                    fill="black"
+                  ></polygon>
+                </svg>
+              </div>
+              <div class="card-body text-white">
+                <h5 class="card-title">Titolo 1</h5>
+                <h6 class="card-subtitle mb-2">Sottotitolo 1</h6>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="col-md-3">
-          <div class="card">
-            <img
-              src="assets-card/image-3.jpg"
-              class="card-img-top img-album"
-              alt="Immagine 3"
-            />
-            <div class="card-body text-white">
-              <h5 class="card-title">Titolo 1</h5>
-              <h6 class="card-subtitle mb-2">Sottotitolo 1</h6>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="card">
-            <img
-              src="assets-card/image-4.jpg"
-              class="card-img-top img-album"
-              alt="Immagine 4"
-            />
-            <div class="card-body text-white">
-              <h5 class="card-title">Titolo 1</h5>
-              <h6 class="card-subtitle mb-2">Sottotitolo 1</h6>
+          <div class="col-md-3">
+            <div class="card text-white">
+              <div id="c-img">
+                <img
+                  src="https://images-ext-2.discordapp.net/external/GnhEnD2XB189F8l4J9t5-JSXUncfc2bxkbkWoHIARRw/https/m.media-amazon.com/images/I/81szhxu%2BadL._AC_SX679_.jpg?width=473&height=473"
+                  class="card-img-top img-album"
+                  alt="Immagine 1"
+                />
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="48"
+                  height="48"
+                  viewBox="0 0 24 24"
+                  fill="#1db954"
+                  stroke-width="1"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="feather feather-play-circle play-card"
+                >
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <polygon
+                    points="10 8 16 12 10 16 10 8"
+                    fill="black"
+                  ></polygon>
+                </svg>
+              </div>
+              <div class="card-body text-white">
+                <h5 class="card-title">Titolo 1</h5>
+                <h6 class="card-subtitle mb-2">Sottotitolo 1</h6>
+              </div>
             </div>
           </div>
         </div>

@@ -27,7 +27,7 @@ nav{
     display: none;
 }
 
-.ulhov li:hover{
+.ulhov:hover{
     transform: scale(1.1);
 }
 form{
@@ -39,4 +39,7 @@ form{
 form input{
     background-color: #2A2A2A;
     padding: 0.5em 2.5em;
+}
+.ahover:hover{
+    fill: black;
 }

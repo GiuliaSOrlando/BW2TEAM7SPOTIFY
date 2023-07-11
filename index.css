@@ -1,101 +1,154 @@
-*{
-    /* outline: 1px solid grey; */
-    box-sizing: border-box;
-    
-    
+* {
+  /* outline: 1px solid grey; */
+  box-sizing: border-box;
 }
-html{
-    
-    margin: 0;
-    padding: 0;
+html {
+  margin: 0;
+  padding: 0;
 }
-body{
-    margin: 0;
-    padding: 0;
-    background-color: #000;
-    
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #000;
 }
-.margin-div{
-    height: 100vh;
-    padding-top: .5rem;
-    padding-bottom: .5rem;
-    padding-right: .5rem;
-} 
-.home-container{
-    height: 100%;
-    /* margin-top: .5rem; */
-    display:flex;
-
-    
+.margin-div {
+  height: 100vh;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-right: 0.5rem;
+}
+.home-container {
+  height: 100%;
+  /* margin-top: .5rem; */
+  display: flex;
 }
 
 /* SCROLLBAR------------------------------------- */
 /* Firefox */
-#section-hidden{
-    overflow:hidden;
-    background-color: #000000;
-    width: 60%;
-    border-radius: 10px;
+#section-hidden {
+  overflow: hidden;
+  background-color: #000000;
+  width: 60%;
+  border-radius: 10px;
 }
 .main-content {
-    scrollbar-width: thin;
-    scrollbar-color: #B2B2B2 #000000;
-    
-  }
-  
-  /* Chrome, Edge and Safari */
-  .main-content::-webkit-scrollbar {
-    width: 10px;
-    width: 10px;
-  }
-  .main-content::-webkit-scrollbar-track {
-    border-radius: 5px;
-    background-color: #000000;
-  }
-  
-  .main-content::-webkit-scrollbar-track:hover {
-    background-color: #000000;
-  }
-  
-  .main-content::-webkit-scrollbar-track:active {
-    background-color: #000000;
-  }
-  
-  .main-content::-webkit-scrollbar-thumb {
-    border-radius: none;
-    background-color: #B2B2B2;
-  }
-  
-  .main-content::-webkit-scrollbar-thumb:hover {
-    background-color: #929292;
-  }
-  
-  .main-content::-webkit-scrollbar-thumb:active {
-    background-color: #828282;
-  }
+  scrollbar-width: thin;
+  scrollbar-color: #b2b2b2 #000000;
+}
 
-.home-aside{
-    flex-shrink: 0;
-    border-radius: 10px !important;
-    overflow: hidden;
-    width: 400px;
-    
+/* Chrome, Edge and Safari */
+.main-content::-webkit-scrollbar {
+  width: 10px;
+  width: 10px;
+}
+.main-content::-webkit-scrollbar-track {
+  border-radius: 5px;
+  background-color: #000000;
+}
+
+.main-content::-webkit-scrollbar-track:hover {
+  background-color: #000000;
+}
+
+.main-content::-webkit-scrollbar-track:active {
+  background-color: #000000;
+}
+
+.main-content::-webkit-scrollbar-thumb {
+  border-radius: none;
+  background-color: #b2b2b2;
+}
+
+.main-content::-webkit-scrollbar-thumb:hover {
+  background-color: #929292;
+}
+
+.main-content::-webkit-scrollbar-thumb:active {
+  background-color: #828282;
+}
+
+.home-aside {
+  flex-shrink: 0;
+  border-radius: 10px !important;
+  overflow: hidden;
+  width: 400px;
 }
 /* .main-content-wrap{
     overflow: hidden;
     border-radius: 10px;
 } */
-.main-content{
-    border-radius: 10px;
-    overflow-x: hidden;
-    
-    background-color: yellow;
-    flex-grow: 1;
-   
+.main-content {
+  border-radius: 10px;
+  overflow-x: hidden;
+  flex-grow: 1;
 }
-.main-content-body{
-    
+.main-content-body {
 }
-.prova-img{
-    width: 100%;
+.prova-img {
+  width: 100%;
+}
+
+.bg-img {
+  background-image: url("../assets/imgs/main/image-12.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.bg-lin {
+  background-image: linear-gradient(
+    360deg,
+    black 3%,
+    transparent 50%,
+    transparent
+  );
+}
+.tw {
+  width: 30%;
+}
+.he {
+  height: 50vh;
+}
+.abs {
+  left: 20px;
+  bottom: 15px;
+}
+.colo {
+  background-color: #181818c0;
+}
+
+.img-album {
+  padding: 15px;
+}
+body {
+  background-color: #000000;
+}
+.container-album {
+  background-color: #121212;
+}
+.container-card {
+  padding: 20px;
+}
+.card {
+  background-color: #181818;
+}
+.card:hover {
+  background-color: #282828;
+  cursor: pointer;
+}
+
+#c-img {
+  position: relative;
+}
+#c-img svg {
+  position: absolute;
+  z-index: 1;
+  top: 66%;
+  left: 66%;
+  visibility: hidden;
+}
+.card:hover #c-img svg {
+  visibility: visible;
+}
+
+.play-card:hover {
+  transform: scale(1.1);
 }

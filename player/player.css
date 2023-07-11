@@ -87,6 +87,7 @@ button {
   font-weight: 300;
   opacity: 0.6;
   font-size: 0.9em;
+  cursor: pointer;
 }
 
 #artist:hover {
@@ -96,6 +97,7 @@ button {
 #title {
   font-size: 1.1em;
   font-weight: 400;
+  cursor: pointer;
 }
 
 #title:hover {

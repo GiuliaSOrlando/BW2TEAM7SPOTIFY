@@ -27,17 +27,19 @@ nav{
     display: none;
 }
 
-.ulhov li:hover{
+.ulhov:hover{
     transform: scale(1.1);
 }
 form{
     /* border: 1px solid red; */
     border-radius: 5em;
     background-color: #2A2A2A;
+    
 }
 form input{
     background-color: #2A2A2A;
+    padding: 0.5em 2.5em;
 }
-form input:focus-visible{
-    border: none;
-}
+.custom-tooltip {
+    --bs-tooltip-bg: var(--bs-dark);
+  }

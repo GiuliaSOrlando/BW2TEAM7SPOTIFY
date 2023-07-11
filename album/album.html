@@ -1,48 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>album</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
     />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
-    <link rel="stylesheet" href="./album.css">
-    <link rel="stylesheet" href="../nav/css/nav.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-</head>
-<body>
-  <div id="section-hidden">
-    <section id="album-section">
-      <nav id="navbar" class="navbar bg-transparent navbar-expand" >
-        <div class="container-fluid">
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul
-              class="navbar-nav me-auto mb-2 mb-lg-0 w-100 justify-content-between"
-            >
-              <div id="buttons-container" class="d-flex">
-                <li class="nav-item">
-                  <a
-                    class="nav-link active text-white"
-                    aria-current="page"
-                    href="#"
-                    ><i
-                      class="bi bi-chevron-left bg-black opacity-50 rounded-circle fs-5 p-1 px-2"
-                    ></i
-                  ></a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link text-white" href="#"
-                    ><i
-                      class="bi bi-chevron-right bg-black rounded-circle fs-5 p-1 px-2"
-                    ></i
-                  ></a>
-                </li>
-                <div id="reproduce" class="d-none"><button id="play-button-nav" ><i class="fas fa-play"></i></button><span id="testo-canzone-nav">Canzone</span></div>
-                <!-- <form class="d-flex" role="search">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"
+    />
+    <link rel="stylesheet" href="./album.css" />
+    <link rel="stylesheet" href="../nav/css/nav.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div id="section-hidden">
+      <section id="album-section">
+        <nav id="navbar" class="navbar bg-transparent navbar-expand">
+          <div class="container-fluid">
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul
+                class="navbar-nav me-auto mb-2 mb-lg-0 w-100 justify-content-between"
+              >
+                <div id="buttons-container" class="d-flex">
+                  <li class="nav-item">
+                    <a
+                      class="nav-link active text-white"
+                      aria-current="page"
+                      href="#"
+                      ><i
+                        class="bi bi-chevron-left bg-black opacity-50 rounded-circle fs-5 p-1 px-2"
+                      ></i
+                    ></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-white" href="#"
+                      ><i
+                        class="bi bi-chevron-right bg-black rounded-circle fs-5 p-1 px-2"
+                      ></i
+                    ></a>
+                  </li>
+                  <div id="reproduce" class="d-none">
+                    <button id="play-button-nav">
+                      <i class="fas fa-play"></i></button
+                    ><span id="testo-canzone-nav">Canzone</span>
+                  </div>
+                  <!-- <form class="d-flex" role="search">
                   <div class="d-flex align-items-center">
                     <i
                       class="bi bi-search text-white fs-6 mx-2 position-absolute"
@@ -56,311 +71,285 @@
                     />
                   </div>
                 </form> -->
-              </div>
-              <div class="d-flex align-items-center">
-                <ul class="d-flex navbar-nav align-items-center">
-                  <li class="nav-item">
-                    <a
-                      class="nav-link text-black rounded-5 bg-white py-1 fw-bold me-2 px-3 ulhov"
-                      href="#"
-                    >
-                      Esplora Premium</a
-                    >
-                  </li>
-                  <li class="nav-item">
-                    <a
-                      class="nav-link text-white rounded-5 bg-black bg-opacity-25 py-1 fw-bold px-3 d-flex align-items-center ulhov"
-                      href="#"
-                    >
-                      <i class="bi bi-arrow-down-circle fs-6 me-1"></i>Installa
-                      app</a
-                    >
-                  </li>
-                </ul>
-  
-                <li class="nav-item dropdown">
-                  <a
-                    class="nav-link dropdown-toggle ulhov"
-                    href="#"
-                    role="button"
-                    data-bs-toggle="dropdown"
-                    aria-expanded="false"
-                  >
-                    <i
-                      class="bi bi-person rounded-circle fs-5 p-1 px-2 bg-black bg-opacity-25 text-white ahover"
-                      data-bs-toggle="tooltip"
-                      data-bs-title="user"
-                      data-bs-placement="bottom"
-                      data-bs-custom-class="custom-tooltip"
-                    ></i>
-                  </a>
-                  <ul class="dropdown-menu drop">
-                    <li>
+                </div>
+                <div class="d-flex align-items-center">
+                  <ul class="d-flex navbar-nav align-items-center">
+                    <li class="nav-item">
                       <a
-                        class="dropdown-item d-flex justify-content-between"
+                        class="nav-link text-black rounded-5 bg-white py-1 fw-bold me-2 px-3 ulhov"
                         href="#"
-                        >Account <i class="bi bi-box-arrow-up-right ms-1"></i
-                      ></a>
+                      >
+                        Esplora Premium</a
+                      >
                     </li>
-                    <li><a class="dropdown-item" href="#">Profilo</a></li>
-                    <li>
+                    <li class="nav-item">
                       <a
-                        class="dropdown-item d-flex justify-content-between fs-6"
+                        class="nav-link text-white rounded-5 bg-black bg-opacity-25 py-1 fw-bold px-3 d-flex align-items-center ulhov"
                         href="#"
-                        >Effettua l' upgrade a Premium
-                        <i class="bi bi-box-arrow-up-right ms-1"></i
-                      ></a>
+                      >
+                        <i class="bi bi-arrow-down-circle fs-6 me-1"></i
+                        >Installa app</a
+                      >
                     </li>
-                    <li><a class="dropdown-item" href="#">Impostazioni</a></li>
-                    <li><hr class="dropdown-divider bg-secondary" /></li>
-                    <li><a class="dropdown-item" href="#">Esci</a></li>
                   </ul>
-                </li>
-              </div>
-            </ul>
+
+                  <li class="nav-item dropdown">
+                    <a
+                      class="nav-link dropdown-toggle ulhov"
+                      href="#"
+                      role="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      <i
+                        class="bi bi-person rounded-circle fs-5 p-1 px-2 bg-black bg-opacity-25 text-white ahover"
+                        data-bs-toggle="tooltip"
+                        data-bs-title="user"
+                        data-bs-placement="bottom"
+                        data-bs-custom-class="custom-tooltip"
+                      ></i>
+                    </a>
+                    <ul class="dropdown-menu drop">
+                      <li>
+                        <a
+                          class="dropdown-item d-flex justify-content-between"
+                          href="#"
+                          >Account <i class="bi bi-box-arrow-up-right ms-1"></i
+                        ></a>
+                      </li>
+                      <li><a class="dropdown-item" href="#">Profilo</a></li>
+                      <li>
+                        <a
+                          class="dropdown-item d-flex justify-content-between fs-6"
+                          href="#"
+                          >Effettua l' upgrade a Premium
+                          <i class="bi bi-box-arrow-up-right ms-1"></i
+                        ></a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#">Impostazioni</a>
+                      </li>
+                      <li><hr class="dropdown-divider bg-secondary" /></li>
+                      <li><a class="dropdown-item" href="#">Esci</a></li>
+                    </ul>
+                  </li>
+                </div>
+              </ul>
+            </div>
           </div>
-        </div>
-      </nav> 
+        </nav>
         <div class="album-heading-wrapper">
-            <div class="scritte-immagini">
+          <div class="scritte-immagini">
             <div id="album-img" class="album-img">
-                <img src="https://images.genius.com/026447f265b15f5807c4ef22fac092f3.1000x1000x1.jpg" alt="">
+              <img
+                src="https://images.genius.com/026447f265b15f5807c4ef22fac092f3.1000x1000x1.jpg"
+                alt=""
+              />
             </div>
             <div class="album-title">
-                <p>Album</p>
-                <h1>Infernum</h1>
-                <p>Claver Gold Murubutu 2020 14 brani, 46 min 31sec.</p>
-
+              <p>Album</p>
+              <h1>Infernum</h1>
+              <p>Claver Gold Murubutu 2020 14 brani, 46 min 31sec.</p>
             </div>
-            </div>
-            <div class="bottoni">
-                <button id="play-button"><i class="fas fa-play"></i></button>
-                <button id="fav-button"><i class="fas fa-heart"></i></button>
-                <button id="ellipsis-button"><i class="fas fa-ellipsis-h"></i></button>
-            </div>
-
+          </div>
+          <div class="bottoni">
+            <button id="play-button"><i class="fas fa-play"></i></button>
+            <button id="fav-button"><i class="fas fa-heart"></i></button>
+            <button id="ellipsis-button">
+              <i class="fas fa-ellipsis-h"></i>
+            </button>
+          </div>
         </div>
         <div id="tracks-container">
-            
-            <div class="track tracks-header">
-                <div class="track-num">#</div>
-                <div class="song">
-                    <h3 class="song-title">title</h3>
-                    
-                </div>
-                <div class="song-length">
-                    <i class="far fa-clock"></i>
-                    </div>
+          <div class="track tracks-header">
+            <div class="track-num">#</div>
+            <div class="song">
+              <h3 class="song-title">title</h3>
             </div>
-
-            <div class="track">
-                <div class="track-num"> 1</div>
-                <div class="song">
-                    <h3 class="song-title">Song Title</h3>
-                    <p>authors</p>
-                </div>
-                <div class="song-length">
-                    <span></span>2:06 <span></span>
-                </div>
+            <div class="song-length">
+              <i class="far fa-clock"></i>
             </div>
+          </div>
 
-            <div class="track">
-                <div class="track-num"> 1</div>
-                <div class="song">
-                    <h3 class="song-title">Song Title</h3>
-                    <p>authors</p>
-                </div>
-                <div class="song-length">
-                    <span></span>2:06 <span></span>
-                </div>
+          <div class="track">
+            <div class="track-num">1</div>
+            <div class="song">
+              <h3 class="song-title">Song Title</h3>
+              <p>authors</p>
             </div>
+            <div class="song-length"><span></span>2:06 <span></span></div>
+          </div>
 
-            <div class="track">
-                <div class="track-num"> 1</div>
-                <div class="song">
-                    <h3 class="song-title">Song Title</h3>
-                    <p>authors</p>
-                </div>
-                <div class="song-length">
-                    <span></span>2:06 <span></span>
-                </div>
+          <div class="track">
+            <div class="track-num">1</div>
+            <div class="song">
+              <h3 class="song-title">Song Title</h3>
+              <p>authors</p>
             </div>
+            <div class="song-length"><span></span>2:06 <span></span></div>
+          </div>
 
-            <div class="track">
-                <div class="track-num"> 1</div>
-                <div class="song">
-                    <h3 class="song-title">Song Title</h3>
-                    <p>authors</p>
-                </div>
-                <div class="song-length">
-                    <span></span>2:06 <span></span>
-                </div>
+          <div class="track">
+            <div class="track-num">1</div>
+            <div class="song">
+              <h3 class="song-title">Song Title</h3>
+              <p>authors</p>
             </div>
+            <div class="song-length"><span></span>2:06 <span></span></div>
+          </div>
 
-            <div class="track">
-                <div class="track-num"> 1</div>
-                <div class="song">
-                    <h3 class="song-title">Song Title</h3>
-                    <p>authors</p>
-                </div>
-                <div class="song-length">
-                    <span></span>2:06 <span></span>
-                </div>
+          <div class="track">
+            <div class="track-num">1</div>
+            <div class="song">
+              <h3 class="song-title">Song Title</h3>
+              <p>authors</p>
             </div>
+            <div class="song-length"><span></span>2:06 <span></span></div>
+          </div>
 
-            <div class="track">
-                <div class="track-num"> 1</div>
-                <div class="song">
-                    <h3 class="song-title">Song Title</h3>
-                    <p>authors</p>
-                </div>
-                <div class="song-length">
-                    <span></span>2:06 <span></span>
-                </div>
+          <div class="track">
+            <div class="track-num">1</div>
+            <div class="song">
+              <h3 class="song-title">Song Title</h3>
+              <p>authors</p>
             </div>
+            <div class="song-length"><span></span>2:06 <span></span></div>
+          </div>
 
-            <div class="track">
-                <div class="track-num"> 1</div>
-                <div class="song">
-                    <h3 class="song-title">Song Title</h3>
-                    <p>authors</p>
-                </div>
-                <div class="song-length">
-                    <span></span>2:06 <span></span>
-                </div>
+          <div class="track">
+            <div class="track-num">1</div>
+            <div class="song">
+              <h3 class="song-title">Song Title</h3>
+              <p>authors</p>
             </div>
+            <div class="song-length"><span></span>2:06 <span></span></div>
+          </div>
 
-            <div class="track">
-                <div class="track-num"> 1</div>
-                <div class="song">
-                    <h3 class="song-title">Song Title</h3>
-                    <p>authors</p>
-                </div>
-                <div class="song-length">
-                    <span></span>2:06 <span></span>
-                </div>
+          <div class="track">
+            <div class="track-num">1</div>
+            <div class="song">
+              <h3 class="song-title">Song Title</h3>
+              <p>authors</p>
             </div>
+            <div class="song-length"><span></span>2:06 <span></span></div>
+          </div>
 
-            <div class="track">
-                <div class="track-num"> 1</div>
-                <div class="song">
-                    <h3 class="song-title">Song Title</h3>
-                    <p>authors</p>
-                </div>
-                <div class="song-length">
-                    <span></span>2:06 <span></span>
-                </div>
+          <div class="track">
+            <div class="track-num">1</div>
+            <div class="song">
+              <h3 class="song-title">Song Title</h3>
+              <p>authors</p>
             </div>
+            <div class="song-length"><span></span>2:06 <span></span></div>
+          </div>
 
-            <div class="track">
-                <div class="track-num"> 1</div>
-                <div class="song">
-                    <h3 class="song-title">Song Title</h3>
-                    <p>authors</p>
-                </div>
-                <div class="song-length">
-                    <span></span>2:06 <span></span>
-                </div>
+          <div class="track">
+            <div class="track-num">1</div>
+            <div class="song">
+              <h3 class="song-title">Song Title</h3>
+              <p>authors</p>
             </div>
+            <div class="song-length"><span></span>2:06 <span></span></div>
+          </div>
 
-            <div class="track">
-                <div class="track-num"> 1</div>
-                <div class="song">
-                    <h3 class="song-title">Song Title</h3>
-                    <p>authors</p>
-                </div>
-                <div class="song-length">
-                    <span></span>2:06 <span></span>
-                </div>
+          <div class="track">
+            <div class="track-num">1</div>
+            <div class="song">
+              <h3 class="song-title">Song Title</h3>
+              <p>authors</p>
             </div>
+            <div class="song-length"><span></span>2:06 <span></span></div>
+          </div>
 
-            <div class="track">
-                <div class="track-num"> 1</div>
-                <div class="song">
-                    <h3 class="song-title">Song Title</h3>
-                    <p>authors</p>
-                </div>
-                <div class="song-length">
-                    <span></span>2:06 <span></span>
-                </div>
+          <div class="track">
+            <div class="track-num">1</div>
+            <div class="song">
+              <h3 class="song-title">Song Title</h3>
+              <p>authors</p>
             </div>
+            <div class="song-length"><span></span>2:06 <span></span></div>
+          </div>
 
-            <div class="track">
-                <div class="track-num"> 1</div>
-                <div class="song">
-                    <h3 class="song-title">Song Title</h3>
-                    <p>authors</p>
-                </div>
-                <div class="song-length">
-                    <span></span>2:06 <span></span>
-                </div>
+          <div class="track">
+            <div class="track-num">1</div>
+            <div class="song">
+              <h3 class="song-title">Song Title</h3>
+              <p>authors</p>
             </div>
+            <div class="song-length"><span></span>2:06 <span></span></div>
+          </div>
 
-            <div class="track">
-                <div class="track-num"> 1</div>
-                <div class="song">
-                    <h3 class="song-title">Song Title</h3>
-                    <p>authors</p>
-                </div>
-                <div class="song-length">
-                    <span></span>2:06 <span></span>
-                </div>
+          <div class="track">
+            <div class="track-num">1</div>
+            <div class="song">
+              <h3 class="song-title">Song Title</h3>
+              <p>authors</p>
             </div>
+            <div class="song-length"><span></span>2:06 <span></span></div>
+          </div>
 
-            
-
-
+          <div class="track">
+            <div class="track-num">1</div>
+            <div class="song">
+              <h3 class="song-title">Song Title</h3>
+              <p>authors</p>
+            </div>
+            <div class="song-length"><span></span>2:06 <span></span></div>
+          </div>
         </div>
-    </section>
-  </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+      </section>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+      crossorigin="anonymous"
+    ></script>
     <script src="avrg_color.js"></script>
     <script>
       // let avgColor = start()
 
-      let albumSection = document.getElementById('album-section')
-      
-      albumSection.addEventListener('scroll', function(){
-        
-        let y = albumSection.scrollTop;
-        let tracksHeader = document.querySelector('.tracks-header')
+      let albumSection = document.getElementById("album-section")
+
+      albumSection.addEventListener("scroll", function () {
+        let y = albumSection.scrollTop
+        let tracksHeader = document.querySelector(".tracks-header")
         console.log(y)
-        let nav = document.getElementById('navbar')
-        let navButtonsContainer = document.getElementById('buttons-container')
-        let playButtonNav = document.getElementById('reproduce')
-        if(y > 25){
-          
-          nav.classList.remove('bg-transparent')
-            if( y > 264){
-              playButtonNav.classList.remove('d-none');
-              playButtonNav.classList.add('d-flex', 'justify-content-center','align-items-center')
-              
-            } else{
-              playButtonNav.classList.add('d-none');
-            }
-            if(y > 368){
-              tracksHeader.style.backgroundColor = "#272727;"
-              tracksHeader.style.margin = "none"
-            }
-        } else{
-          nav.classList.add('bg-transparent')
+        let nav = document.getElementById("navbar")
+        let navButtonsContainer = document.getElementById("buttons-container")
+        let playButtonNav = document.getElementById("reproduce")
+        if (y > 25) {
+          nav.classList.remove("bg-transparent")
+          if (y > 264) {
+            playButtonNav.classList.remove("d-none")
+            playButtonNav.classList.add(
+              "d-flex",
+              "justify-content-center",
+              "align-items-center"
+            )
+          } else {
+            playButtonNav.classList.add("d-none")
+          }
+          if (y > 368) {
+            tracksHeader.style.backgroundColor = "#272727;"
+            tracksHeader.style.margin = "none"
+          }
+        } else {
+          nav.classList.add("bg-transparent")
         }
-      
       })
-      let tracks = document.querySelectorAll('.track')
-      tracks.forEach(track => {
-        let trackNum = track.querySelector('.track-num')
-        let songNum = trackNum.innerText;
-        track.addEventListener('mouseover', ()=>{
-          
+      let tracks = document.querySelectorAll(".track")
+      tracks.forEach((track) => {
+        let trackNum = track.querySelector(".track-num")
+        let songNum = trackNum.innerText
+        track.addEventListener("mouseover", () => {
           trackNum.innerHTML = `<i class="fas fa-play"></i>`
         })
-      track.addEventListener('mouseout', ()=>{
-          let trackNum = track.querySelector('.track-num')
+        track.addEventListener("mouseout", () => {
+          let trackNum = track.querySelector(".track-num")
           trackNum.innerHTML = `${songNum}`
         })
       })
     </script>
-    
-</body>
+    <script src="avrg_color.js"></script>
+  </body>
 </html>

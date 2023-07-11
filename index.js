@@ -61,7 +61,8 @@ const populateAlbums = function (elements) {
     const newCol = document.createElement("div")
     newCol.classList.add("col-md-3")
     newCol.innerHTML = `
-                            <div class="card text-white">
+                            <a href="./album-page.html?id=${elements.data[i].id}">
+                              <div class="card text-white">
                         <div id="c-img">
                           <img
                             src="${elements.data[i].album.cover_medium}"
@@ -91,6 +92,7 @@ const populateAlbums = function (elements) {
                           <h6 class="card-subtitle mb-2">${elements.data[i].artist}</h6>
                         </div>
                       </div>
+                            </a>
       `
 
     albumRow.appendChild(newCol)
@@ -125,7 +127,7 @@ const populateLibrary = function (elements) {
   }
 }
 
-// Funzoine generica per la fetch
+// Funzione generica per la fetch
 const getData = function (url, foo) {
   fetch(url)
     .then((res) => {

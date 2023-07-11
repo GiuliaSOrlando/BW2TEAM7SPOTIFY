@@ -17,103 +17,109 @@
 <body>
   <div id="section-hidden">
     <section id="album-section">
-        <nav id="navbar" class="navbar bg-transparent navbar-expand" style="transition: 0.5s">
-            <div class="container-fluid">
-              <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul
-                  class="navbar-nav me-auto mb-2 mb-lg-0 w-100 justify-content-between"
-                >
-                  <div class="d-flex">
-                    <li class="nav-item">
-                      <a
-                        class="nav-link active text-white"
-                        aria-current="page"
-                        href="#"
-                        ><i
-                          class="bi bi-chevron-left bg-black opacity-50 rounded-circle fs-5 p-1 px-2"
-                        ></i
-                      ></a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link text-white" href="#"
-                        ><i
-                          class="bi bi-chevron-right bg-black rounded-circle fs-5 p-1 px-2"
-                        ></i
-                      ></a>
-                    </li>
-                    <form class="d-flex" role="search">
-                      <div class="d-flex align-items-center">
-                        <i class="bi bi-search text-white fs-6 mx-2"></i>
-                        <input
-                          class="border-0 rounded-5 pe-5 fs-6 text-white p-2"
-                          type="search"
-                          placeholder="Cosa vuoi ascoltare?"
-                          aria-label="Search"
-                          autofocus
-                        />
-                      </div>
-                    </form>
-                  </div>
+      <nav id="navbar" class="navbar bg-transparent navbar-expand" >
+        <div class="container-fluid">
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul
+              class="navbar-nav me-auto mb-2 mb-lg-0 w-100 justify-content-between"
+            >
+              <div id="buttons-container" class="d-flex">
+                <li class="nav-item">
+                  <a
+                    class="nav-link active text-white"
+                    aria-current="page"
+                    href="#"
+                    ><i
+                      class="bi bi-chevron-left bg-black opacity-50 rounded-circle fs-5 p-1 px-2"
+                    ></i
+                  ></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-white" href="#"
+                    ><i
+                      class="bi bi-chevron-right bg-black rounded-circle fs-5 p-1 px-2"
+                    ></i
+                  ></a>
+                </li>
+                <!-- <form class="d-flex" role="search">
                   <div class="d-flex align-items-center">
-                    <ul class="d-flex navbar-nav align-items-center ulhov">
-                      <li class="nav-item">
-                        <a
-                          class="nav-link text-black rounded-5 bg-white py-1 fw-bold me-2 px-3"
-                          href="#"
-                        >
-                          Esplora Premium</a
-                        >
-                      </li>
-                      <li class="nav-item">
-                        <a
-                          class="nav-link text-white rounded-5 bg-black py-1 fw-bold px-3 d-flex align-items-center"
-                          href="#"
-                        >
-                          <i class="bi bi-arrow-down-circle fs-6 me-1"></i>Installa
-                          app</a
-                        >
-                      </li>
-                    </ul>
-      
-                    <li class="nav-item dropdown">
-                      <a
-                        class="nav-link dropdown-toggle"
-                        href="#"
-                        role="button"
-                        data-bs-toggle="dropdown"
-                        aria-expanded="false"
-                      >
-                        <i
-                          class="bi bi-person rounded-circle fs-5 p-1 px-2 bg-black text-white"
-                        ></i>
-                      </a>
-                      <ul class="dropdown-menu drop">
-                        <li>
-                          <a
-                            class="dropdown-item d-flex justify-content-between"
-                            href="#"
-                            >Account <i class="bi bi-box-arrow-up-right ms-1"></i
-                          ></a>
-                        </li>
-                        <li><a class="dropdown-item" href="#">Profilo</a></li>
-                        <li>
-                          <a
-                            class="dropdown-item d-flex justify-content-between fs-6"
-                            href="#"
-                            >Effettua l' upgrade a Premium
-                            <i class="bi bi-box-arrow-up-right ms-1"></i
-                          ></a>
-                        </li>
-                        <li><a class="dropdown-item" href="#">Impostazioni</a></li>
-                        <li><hr class="dropdown-divider" /></li>
-                        <li><a class="dropdown-item" href="#">Esci</a></li>
-                      </ul>
-                    </li>
+                    <i
+                      class="bi bi-search text-white fs-6 mx-2 position-absolute"
+                    ></i>
+                    <input
+                      class="border-0 rounded-5 pe-5 fs-6 text-white"
+                      type="search"
+                      placeholder="Cosa vuoi ascoltare?"
+                      aria-label="Search"
+                      autofocus
+                    />
                   </div>
-                </ul>
+                </form> -->
               </div>
-            </div>
-          </nav>  
+              <div class="d-flex align-items-center">
+                <ul class="d-flex navbar-nav align-items-center">
+                  <li class="nav-item">
+                    <a
+                      class="nav-link text-black rounded-5 bg-white py-1 fw-bold me-2 px-3 ulhov"
+                      href="#"
+                    >
+                      Esplora Premium</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a
+                      class="nav-link text-white rounded-5 bg-black bg-opacity-25 py-1 fw-bold px-3 d-flex align-items-center ulhov"
+                      href="#"
+                    >
+                      <i class="bi bi-arrow-down-circle fs-6 me-1"></i>Installa
+                      app</a
+                    >
+                  </li>
+                </ul>
+  
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle ulhov"
+                    href="#"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    <i
+                      class="bi bi-person rounded-circle fs-5 p-1 px-2 bg-black bg-opacity-25 text-white ahover"
+                      data-bs-toggle="tooltip"
+                      data-bs-title="user"
+                      data-bs-placement="bottom"
+                      data-bs-custom-class="custom-tooltip"
+                    ></i>
+                  </a>
+                  <ul class="dropdown-menu drop">
+                    <li>
+                      <a
+                        class="dropdown-item d-flex justify-content-between"
+                        href="#"
+                        >Account <i class="bi bi-box-arrow-up-right ms-1"></i
+                      ></a>
+                    </li>
+                    <li><a class="dropdown-item" href="#">Profilo</a></li>
+                    <li>
+                      <a
+                        class="dropdown-item d-flex justify-content-between fs-6"
+                        href="#"
+                        >Effettua l' upgrade a Premium
+                        <i class="bi bi-box-arrow-up-right ms-1"></i
+                      ></a>
+                    </li>
+                    <li><a class="dropdown-item" href="#">Impostazioni</a></li>
+                    <li><hr class="dropdown-divider bg-secondary" /></li>
+                    <li><a class="dropdown-item" href="#">Esci</a></li>
+                  </ul>
+                </li>
+              </div>
+            </ul>
+          </div>
+        </div>
+      </nav> 
         <div class="album-heading-wrapper">
             <div class="scritte-immagini">
             <div class="album-img">
@@ -315,9 +321,17 @@
         let tracksHeader = document.querySelector('.tracks-header')
         console.log(y)
         let nav = document.getElementById('navbar')
+        let navButtonsContainer = document.getElementById('buttons-container')
         if(y > 25){
           
           nav.classList.remove('bg-transparent')
+            if( y > 264 ){
+              let playButton = document.createElement('div');
+              playButton.innerHTML = `
+              <button id="play-button-nav"><i class="fas fa-play"></i></button>
+              `
+              navButtonsContainer.appendChild(playButton)
+            }
             if(y > 368){
               tracksHeader.style.backgroundColor = "#272727;"
               tracksHeader.style.margin = "none"

@@ -17,7 +17,7 @@
 }
 
 #volume-range-div {
-  width: 80px;
+  width: 1vh;
 }
 
 #volume-range {
@@ -25,11 +25,78 @@
 }
 
 #song-range {
-  width: 500px;
+  width: 100%;
   height: 4px;
 }
 
 #shuffle-active,
 #repeat-active {
-  margin: 1px;
+  margin-bottom: -10px;
+}
+
+.controller-icon,
+.player-extra-icons {
+  opacity: 0.8;
+  cursor: default;
+}
+
+.controller-icon:hover,
+.player-extra-icons:hover {
+  opacity: 1;
+}
+
+#play-button:hover {
+  transform: scale(1.05);
+}
+
+button {
+  background-color: transparent;
+  border: none;
+}
+
+#shuffle-active,
+#repeat-active {
+  display: none;
+}
+
+.active-btn {
+  #shuffle-active,
+  #repeat-active {
+    display: block;
+    color: #1db954;
+  }
+  #shuffle,
+  #repeat,
+  #about,
+  #queue,
+  #connect,
+  #volume {
+    fill: #1db954;
+  }
+
+  #about,
+  #queue,
+  #connect,
+  #volume {
+    transform: scale(1.05);
+  }
+}
+
+#artist {
+  font-weight: 300;
+  opacity: 0.6;
+  font-size: 0.9em;
+}
+
+#artist:hover {
+  text-decoration: underline;
+}
+
+#title {
+  font-size: 1.1em;
+  font-weight: 400;
+}
+
+#title:hover {
+  text-decoration: underline;
 }

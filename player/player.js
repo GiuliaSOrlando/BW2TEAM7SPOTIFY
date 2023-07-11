@@ -1,3 +1,5 @@
+// Toggle class al click dei bottoni
+
 const shuffleBtn = document.getElementById("shuffle-button")
 shuffleBtn.addEventListener("click", function () {
   shuffleBtn.classList.toggle("active-btn")

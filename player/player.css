@@ -17,7 +17,7 @@
 }
 
 #volume-range-div {
-  width: 40px;
+  width: 1vh;
 }
 
 #volume-range {
@@ -25,13 +25,13 @@
 }
 
 #song-range {
-  width: 500px;
+  width: 100%;
   height: 4px;
 }
 
 #shuffle-active,
 #repeat-active {
-  margin: 1px;
+  margin-bottom: -10px;
 }
 
 .controller-icon,

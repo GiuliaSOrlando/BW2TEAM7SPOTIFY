@@ -73,6 +73,13 @@ button {
   #volume {
     fill: #1db954;
   }
+
+  #about,
+  #queue,
+  #connect,
+  #volume {
+    transform: scale(1.05);
+  }
 }
 
 #artist {

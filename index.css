@@ -31,39 +31,43 @@ body {
   width: 60%;
   border-radius: 10px;
 }
-.main-content {
+.main-content,
+#library-deck {
   scrollbar-width: thin;
   scrollbar-color: #b2b2b2 #000000;
 }
 
 /* Chrome, Edge and Safari */
-.main-content::-webkit-scrollbar {
-  width: 10px;
-  width: 10px;
+.main-content::-webkit-scrollbar,
+#library-deck::-webkit-scrollbar {
+  width: 15px;
 }
-.main-content::-webkit-scrollbar-track {
+.main-content::-webkit-scrollbar-track,
+#library-deck::-webkit-scrollbar-track {
   border-radius: 5px;
   background-color: #000000;
 }
 
-.main-content::-webkit-scrollbar-track:hover {
+.main-content::-webkit-scrollbar-track:hover,
+#library-deck::-webkit-scrollbar-track:hover,
+.main-content::-webkit-scrollbar-track:active,
+#library-deck::-webkit-scrollbar-track:active {
   background-color: #000000;
 }
 
-.main-content::-webkit-scrollbar-track:active {
-  background-color: #000000;
-}
-
-.main-content::-webkit-scrollbar-thumb {
+.main-content::-webkit-scrollbar-thumb,
+#library-deck::-webkit-scrollbar-thumb {
   border-radius: none;
   background-color: #b2b2b2;
 }
 
-.main-content::-webkit-scrollbar-thumb:hover {
+.main-content::-webkit-scrollbar-thumb:hover,
+#library-deck::-webkit-scrollbar-thumb:hover {
   background-color: #929292;
 }
 
-.main-content::-webkit-scrollbar-thumb:active {
+.main-content::-webkit-scrollbar-thumb:active,
+#library-deck::-webkit-scrollbar-thumb:active {
   background-color: #828282;
 }
 
@@ -81,8 +85,6 @@ body {
   border-radius: 10px;
   overflow-x: hidden;
   flex-grow: 1;
-}
-.main-content-body {
 }
 .prova-img {
   width: 100%;
@@ -151,4 +153,36 @@ body {
 
 .play-card:hover {
   transform: scale(1.1);
+}
+
+body {
+  background-color: #000000;
+}
+.libreria,
+.card-libreria {
+  background-color: #121212;
+}
+.card-libreria:hover {
+  cursor: pointer;
+  background-color: #181818;
+}
+a i {
+  color: white;
+}
+.img-libreria {
+  height: 50px;
+  width: 50px;
+}
+
+.btn-libreria {
+  background-color: white;
+}
+.btn-libreria:hover {
+  background-color: white;
+}
+.bg-aside {
+  background-color: #121212;
+}
+.navbar {
+  background-color: #121212;
 }

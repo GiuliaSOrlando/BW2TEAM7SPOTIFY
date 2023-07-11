@@ -77,7 +77,7 @@ const generateImage = function () {
 
 const start = function () {
   // prendo il riferimento all'immagine del dom
-  let imgReference = document.querySelector('#img')
+  let imgReference = document.querySelector('#album-img')
 
   // creo il context 2d dell'immagine selezionata
   let context = draw(imgReference)

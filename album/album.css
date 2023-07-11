@@ -31,15 +31,15 @@
     border-radius: 10px;
 }
 #album-section {
-    scrollbar-width: thin;
+    scrollbar-width: 10px;
     scrollbar-color: #B2B2B2 #000000;
     
   }
   
   /* Chrome, Edge and Safari */
   #album-section::-webkit-scrollbar {
-    width: 10px;
-    width: 10px;
+    width: 13px;
+    width: 13px;
   }
   #album-section::-webkit-scrollbar-track {
     border-radius: 5px;
@@ -55,7 +55,7 @@
   }
   
   #album-section::-webkit-scrollbar-thumb {
-    border-radius: 5px;
+    border-radius: none;
     background-color: #B2B2B2;
   }
   
@@ -143,6 +143,7 @@ nav{
     font-size: 1.2rem;
 }
 #play-button-nav{
+    margin-left: 1rem;
     width: 3.5rem;
     height: 3.5rem;
     background-color: #1db954;
@@ -169,7 +170,7 @@ nav{
     margin-top: 1.5rem;
     padding-bottom: 1rem;
     position: sticky;
-    top: 3.2rem;
+    top: 4.4rem;
     background-color: black;
 }
 .tracks-header .song-title{
@@ -209,4 +210,11 @@ nav{
     align-items: center;
  width: 5rem;
  color: #b2b2b2;
+}
+#reproduce{
+    transition: 0.5s;
+}
+#testo-canzone-nav{
+    font-size: 1.5rem;
+    margin-left: .5rem;
 }

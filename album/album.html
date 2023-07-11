@@ -41,6 +41,7 @@
                     ></i
                   ></a>
                 </li>
+                <div id="reproduce" class="d-none"><button id="play-button-nav" ><i class="fas fa-play"></i></button><span id="testo-canzone-nav">Canzone</span></div>
                 <!-- <form class="d-flex" role="search">
                   <div class="d-flex align-items-center">
                     <i
@@ -122,7 +123,7 @@
       </nav> 
         <div class="album-heading-wrapper">
             <div class="scritte-immagini">
-            <div class="album-img">
+            <div id="album-img" class="album-img">
                 <img src="https://images.genius.com/026447f265b15f5807c4ef22fac092f3.1000x1000x1.jpg" alt="">
             </div>
             <div class="album-title">
@@ -313,8 +314,12 @@
     </section>
   </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <script src="avrg_color.js"></script>
     <script>
+      // let avgColor = start()
+
       let albumSection = document.getElementById('album-section')
+      
       albumSection.addEventListener('scroll', function(){
         
         let y = albumSection.scrollTop;
@@ -322,15 +327,16 @@
         console.log(y)
         let nav = document.getElementById('navbar')
         let navButtonsContainer = document.getElementById('buttons-container')
+        let playButtonNav = document.getElementById('reproduce')
         if(y > 25){
           
           nav.classList.remove('bg-transparent')
-            if( y > 264 ){
-              let playButton = document.createElement('div');
-              playButton.innerHTML = `
-              <button id="play-button-nav"><i class="fas fa-play"></i></button>
-              `
-              navButtonsContainer.appendChild(playButton)
+            if( y > 264){
+              playButtonNav.classList.remove('d-none');
+              playButtonNav.classList.add('d-flex', 'justify-content-center','align-items-center')
+              
+            } else{
+              playButtonNav.classList.add('d-none');
             }
             if(y > 368){
               tracksHeader.style.backgroundColor = "#272727;"
@@ -339,6 +345,7 @@
         } else{
           nav.classList.add('bg-transparent')
         }
+      
       })
       let tracks = document.querySelectorAll('.track')
       tracks.forEach(track => {
@@ -354,6 +361,6 @@
         })
       })
     </script>
-    <script src="avrg_color.js"></script>
+    
 </body>
 </html>

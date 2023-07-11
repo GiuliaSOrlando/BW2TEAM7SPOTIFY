@@ -27,7 +27,8 @@ const populateGreetings = function (elements) {
   for (let i = 0; i < 6; i++) {
     const greetingsRow = document.getElementById("greetings-row")
     const newCol = document.createElement("div")
-    newCol.classList.add("col", "mb-2")
+    newCol.classList.add("col", "mb-2", "col-lg-4", "col-md-6", "col-sm-12");
+
     newCol.innerHTML = `
       <div class="card p-0 border-0">
                     <div
@@ -36,7 +37,7 @@ const populateGreetings = function (elements) {
                       <div class="col p-0">
                         <img
                           src="${elements.data[i].album.cover_medium}"
-                          class="img-fluid rounded-start"
+                          class="img-fluid h-100 rounded-start"
                           alt="..."
                         />
                       </div>
@@ -59,10 +60,10 @@ const populateAlbums = function (elements) {
   for (let i = 6; i < 10; i++) {
     const albumRow = document.getElementById("album-row")
     const newCol = document.createElement("div")
-    newCol.classList.add("col-md-3")
+    newCol.classList.add("col-md-6", "col-xs-12", "col-lg-4", "col-xl-3", );
     newCol.innerHTML = `
                             <a href="./album-page.html?id=${elements.data[i].id}">
-                              <div class="card text-white">
+                              <div class="card h-100 text-white">
                         <div id="c-img">
                           <img
                             src="${elements.data[i].album.cover_medium}"

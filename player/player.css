@@ -54,14 +54,12 @@ button {
   border: none;
 }
 
-/* Il click va poi aggiustato su JS, con classList.toggle sui bottoni */
-
 #shuffle-active,
 #repeat-active {
   display: none;
 }
 
-button:focus {
+.active-btn {
   #shuffle-active,
   #repeat-active {
     display: block;

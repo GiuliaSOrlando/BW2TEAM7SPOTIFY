@@ -41,6 +41,7 @@ body {
 .main-content::-webkit-scrollbar,
 #library-deck::-webkit-scrollbar {
   width: 15px;
+  height: 10px;
 }
 .main-content::-webkit-scrollbar-track,
 #library-deck::-webkit-scrollbar-track {
@@ -185,4 +186,23 @@ a i {
 }
 .navbar {
   background-color: #121212;
+}
+
+@media only screen and (max-width: 600px) {
+  #left-element {
+    display: none;
+  }
+
+  #right-element {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  #right-element {
+    display: none;
+  }
+  #album-cover {
+    display: none;
+  }
 }

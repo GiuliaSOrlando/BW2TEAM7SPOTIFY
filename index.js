@@ -43,7 +43,7 @@ const populateGreetings = function (elements) {
                       </div>
                       <div class="col-md-8 d-flex">
                         <div class="card-body">
-                          <h5 class="card-title text-white">${elements.data[i].album.title}</h5>
+                          <h5 class="card-title text-sm text-md text-lg text-white">${elements.data[i].album.title}</h5>
                         </div>
                       </div>
                     </div>
@@ -89,8 +89,8 @@ const populateAlbums = function (elements) {
                           </svg>
                         </div>
                         <div class="card-body text-white">
-                          <h5 class="card-title">${elements.data[i].album.title}</h5>
-                          <h6 class="card-subtitle mb-2">${elements.data[i].artist}</h6>
+                          <h5 class="card-title text-sm text-md text-lg">${elements.data[i].album.title}</h5>
+                          <h6 class="card-subtitle text-sm text-md text-lg mb-2">${elements.data[i].artist}</h6>
                         </div>
                       </div>
                             </a>

@@ -1,12 +1,28 @@
 @font-face {
     font-family: "Circular";
+    
     src: url(./assets/fonts/CircularStd-Black.otf);
-    src: url(./assets/fonts/CircularStd-BlackItalic.otf);
+    /* src: url(./assets/fonts/CircularStd-BlackItalic.otf);
     src:url(./assets/fonts/CircularStd-Bold.otf);
     src: url(./assets/fonts/CircularStd-BoldItalic.otf);
-    src: url(./assets/fonts/CircularStd-Book.otf)
+    src: url(./assets/fonts/CircularStd-Book.otf);
+    src: url(./assets/fonts/CircularStd-BookItalic.otf);
+    src: url(./assets/fonts/CircularStd-Light.otf);
+    src: url(./assets/fonts/CircularStd-LightItalic.otf);
+    src: url(./assets/fonts/CircularStd-Medium.otf);
+    src: url(./assets/fonts/CircularStd-MediumItalic.otf); */
 }
 
+@font-face {
+    font-family: "Circular";
+    font-weight: 100;
+    src: url(./assets/fonts/CircularStd-Light.otf);
+}
+@font-face {
+    font-family: "Circular";
+    font-weight: 500;
+    src: url(./assets/fonts/CircularStd-Medium.otf);
+}
 /* Firefox */
 #section-hidden{
     overflow:hidden;
@@ -53,16 +69,19 @@
 
 #album-section{
     font-family: "Circular", sans-serif;
+    font-weight: 500;
+    font-style: ;
     background-color: black;
     color: white;
     width: 100%;
     border-radius:10px;
-   height: 95vh;
+   height: 60vh;
     
     overflow-y: scroll;
 }
 .album-heading-wrapper{
     padding-top: 5rem;
+    margin-top: -3.4rem;
     display: flex;
     flex-direction: column;
     background: linear-gradient(180deg, #AB9595, #584d4d)
@@ -71,6 +90,7 @@ nav{
     position: sticky !important;
     width: 100%;
     top: 0;
+    z-index: 2;
 
 }
 .scritte-immagini{
@@ -150,6 +170,10 @@ nav{
     display: flex;
     padding: .4rem;
 
+}
+.track:hover{
+    border-radius: 4px;
+    background-color: #2A2A2A;
 }
 .song{
     flex-grow: 1;

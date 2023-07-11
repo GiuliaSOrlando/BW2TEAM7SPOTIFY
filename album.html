@@ -17,7 +17,7 @@
 <body>
   <div id="section-hidden">
     <section id="album-section">
-        <nav class="navbar bg-transparent navbar-expand">
+        <nav id="navbar" class="navbar bg-transparent navbar-expand" style="transition: 0.5s">
             <div class="container-fluid">
               <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul
@@ -308,7 +308,37 @@
   </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
     <script>
-      let albumSection = document.getElementById('')
+      let albumSection = document.getElementById('album-section')
+      albumSection.addEventListener('scroll', function(){
+        
+        let y = albumSection.scrollTop;
+        let tracksHeader = document.querySelector('.tracks-header')
+        console.log(y)
+        let nav = document.getElementById('navbar')
+        if(y > 25){
+          
+          nav.classList.remove('bg-transparent')
+            if(y > 368){
+              tracksHeader.style.backgroundColor = "#272727;"
+              tracksHeader.style.margin = "none"
+            }
+        } else{
+          nav.classList.add('bg-transparent')
+        }
+      })
+      let tracks = document.querySelectorAll('.track')
+      tracks.forEach(track => {
+        let trackNum = track.querySelector('.track-num')
+        let songNum = trackNum.innerText;
+        track.addEventListener('mouseover', ()=>{
+          
+          trackNum.innerHTML = `<i class="fas fa-play"></i>`
+        })
+      track.addEventListener('mouseout', ()=>{
+          let trackNum = track.querySelector('.track-num')
+          trackNum.innerHTML = `${songNum}`
+        })
+      })
     </script>
 </body>
 </html>

@@ -1,3 +1,28 @@
+@font-face {
+  font-family: circular;
+  src: url(assets/fonts/CircularStd-Book.otf);
+}
+@font-face {
+  font-family: circular-bold;
+  src: url(assets/fonts/CircularStd-Bold.otf);
+}
+
+@font-face {
+  font-family: circular-light;
+  src: url(assets/fonts/CircularStd-Light.otf);
+}
+body {
+  font-family: circular, sans-serif;
+}
+
+.cir-bold {
+  font-family: circular-bold, sans-serif;
+}
+
+.cir-light {
+  font-family: circular-light, sans-serif;
+}
+
 * {
   /* outline: 1px solid grey; */
   box-sizing: border-box;
@@ -155,8 +180,6 @@ body {
   transform: scale(1.1);
 }
 
-
-
 /* LIBRERIA /ASIDE ICON */
 body {
   background-color: #000000;
@@ -169,23 +192,23 @@ body {
   cursor: pointer;
   background-color: #181818;
 } */
-.a,.i {
+.a,
+.i {
   color: white;
   opacity: 0.5;
   font-size: 1.2em;
 }
-.i{
+.i {
   border: 1px solid transparent;
-  border-radius:50% ;
+  border-radius: 50%;
   padding: 0.5em;
-  
 }
-.a:hover,.i:hover {
+.a:hover,
+.i:hover {
   color: white;
   opacity: 1;
- 
 }
-.i:hover{
+.i:hover {
   border: 1px solid transparent;
   background-color: #0000004a;
 }
@@ -214,10 +237,19 @@ body {
 .custom-tooltip {
   font-weight: bold;
   font-size: 0.8em;
-  
+
   --bs-tooltip-bg: var(--bs-dark);
 }
 
+@media only screen and (max-width: 600px) {
+  #left-element {
+    display: none;
+  }
+
+  #right-element {
+    display: none;
+  }
+}
 @media only screen and (max-width: 700px) {
   #right-element {
     display: none;

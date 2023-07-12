@@ -83,7 +83,7 @@
                       <ul class="navbar-nav">
                         <li class="nav-item active">
                           <a
-                            href="#"
+                            href="index.html"
                             class="text-decoration-none text-white text-start fs-5 a"
                           >
                             <svg
@@ -294,16 +294,18 @@
                     <div id="buttons-container" class="d-flex">
                       <li class="nav-item">
                         <a
+                          onclick="history.back()"
                           class="nav-link active text-white"
                           aria-current="page"
-                          href="#"
                           ><i
                             class="bi bi-chevron-left bg-black opacity-50 rounded-circle fs-5 p-2 px-2"
                           ></i
                         ></a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link text-white" href="#"
+                        <a
+                          onclick="history.forward()"
+                          class="nav-link text-white"
                           ><i
                             class="bi bi-chevron-right bg-black rounded-circle fs-5 p-2 px-2"
                           ></i
@@ -404,7 +406,7 @@
                     alt=""
                   />
                 </div>
-                <div class="album-title">
+                <div id="album-info-section" class="album-title">
                   <p>Album</p>
                   <h1>Infernum</h1>
                   <p>Claver Gold Murubutu 2020 14 brani, 46 min 31sec.</p>

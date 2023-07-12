@@ -14,6 +14,13 @@ let greeting =
     : "Buonasera"
 greetingText.innerText = `${greeting}`
 
+let searchBarActivator = document.getElementById("search-bar-activator")
+searchBarActivator.addEventListener("click", function () {
+  let searchBar = document.getElementById("search-bar")
+  searchBar.classList.remove("d-none")
+  searchBar.classList.add("d-block")
+})
+
 //FETCH
 
 const QueenUrl =

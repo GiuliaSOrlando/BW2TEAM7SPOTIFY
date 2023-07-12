@@ -12,7 +12,7 @@ let albumID = addressBarContent.get("id")
 let dynamicUrl = originatingUrl + albumID
 console.log(dynamicUrl)
 
-const albumCover = function (elements) {
+const albumInfo = function (elements) {
   const albumDiv = document.getElementById("album-img")
   albumDiv.innerHTML = `
                      <img
@@ -20,6 +20,17 @@ const albumCover = function (elements) {
                     alt=""
                   />
       `
+  const albumTextualInfo = document.getElementById("album-info-section")
+  albumTextualInfo.innerHTML = `
+                  <p>Album</p>
+                  <h1 class="fs-1">${elements.title}</h1>
+                  <p>${elements.artist.name} ${elements.release_date.slice(
+    0,
+    4
+  )} ${elements.nb_tracks} brani, ${Math.floor(elements.duration / 60)} min ${
+    elements.duration % 60
+  } sec</p>
+  `
 }
 
 // Creo la lista nella libreria
@@ -91,6 +102,6 @@ const getDataNew = function (url, foo) {
     })
 }
 
-getDataNew(dynamicUrl, albumCover)
+getDataNew(dynamicUrl, albumInfo)
 getDataNew(dynamicUrl, populateTracks)
 getDataNew(rockUrl, populateLibrary)

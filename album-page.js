@@ -22,26 +22,6 @@ const albumCover = function (elements) {
       `
 }
 
-const populateTracks = function (elements) {
-  let trackList = elements.tracklist
-  console.log(trackList)
-  for (let i = 0; i < 6; i++) {
-    const tracksRow = document.getElementById("tracks-container")
-    const newCol = document.createElement("div")
-    newCol.classList.add("track")
-    newCol.innerHTML = `
-      <div class="track-num">${i}</div>
-            <div class="song">
-              <h3 class="song-title">${elements.data[i].title}</h3>
-              <p>authors</p>
-            </div>
-            <div class="song-length"><span></span>2:06 <span></span></div>
-      `
-
-    tracksRow.appendChild(newCol)
-  }
-}
-
 // Creo la lista nella libreria
 const populateLibrary = function (elements) {
   for (let i = 0; i < 15; i++) {
@@ -68,6 +48,28 @@ const populateLibrary = function (elements) {
 
     libraryDeck.appendChild(newCol)
   }
+}
+
+const populateTracks = function (elements, i) {
+  let tracksArray = elements.tracks.data
+  console.log(tracksArray)
+  tracksArray.forEach((tracks, i) => {
+    const tracksRow = document.getElementById("tracks-container")
+    const newCol = document.createElement("div")
+    newCol.classList.add("track")
+    newCol.innerHTML = `
+      <div class="track-num d-flex mb-3">${i + 1}</div>
+            <div class="song">
+              <h3 class="song-title fs-5 mb-0">${tracks.title}</h3>
+              <p>${tracks.artist.name}</p>
+            </div>
+            <div class="song-length"><span></span>${Math.floor(
+              tracks.duration / 60
+            )}:${tracks.duration % 60}<span></span></div>
+      `
+
+    tracksRow.appendChild(newCol)
+  })
 }
 
 // Funzione generica per la fetch

@@ -162,12 +162,28 @@ body {
 .card-libreria {
   background-color: #121212;
 }
-.card-libreria:hover {
+/* .card-libreria:hover {
   cursor: pointer;
   background-color: #181818;
-}
-a i {
+} */
+a,i {
   color: white;
+  opacity: 0.5;
+}
+i{
+  border: 1px solid transparent;
+  border-radius:50% ;
+  padding: 0.5em;
+  
+}
+a:hover,i:hover {
+  color: white;
+  opacity: 1;
+ 
+}
+i:hover{
+  border: 1px solid transparent;
+  background-color: #00000024;
 }
 .img-libreria {
   height: 50px;

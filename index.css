@@ -1,7 +1,33 @@
+@font-face {
+  font-family: circular;
+  src: url(assets/fonts/CircularStd-Book.otf);
+}
+@font-face {
+  font-family: circular-bold;
+  src: url(assets/fonts/CircularStd-Bold.otf);
+}
+
+@font-face {
+  font-family: circular-light;
+  src: url(assets/fonts/CircularStd-Light.otf);
+}
+body {
+  font-family: circular, sans-serif;
+}
+
+.cir-bold {
+  font-family: circular-bold, sans-serif;
+}
+
+.cir-light {
+  font-family: circular-light, sans-serif;
+}
+
 * {
   /* outline: 1px solid grey; */
   box-sizing: border-box;
 }
+
 html {
   margin: 0;
   padding: 0;
@@ -185,4 +211,23 @@ a i {
 }
 .navbar {
   background-color: #121212;
+}
+
+@media only screen and (max-width: 600px) {
+  #left-element {
+    display: none;
+  }
+
+  #right-element {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  #right-element {
+    display: none;
+  }
+  #album-cover {
+    display: none;
+  }
 }

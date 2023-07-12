@@ -11,6 +11,9 @@
   font-family: circular-light;
   src: url(assets/fonts/CircularStd-Light.otf);
 }
+.card-text {
+  font-size: medium;
+}
 body {
   font-family: circular, sans-serif;
 }
@@ -22,6 +25,7 @@ body {
 .cir-light {
   font-family: circular-light, sans-serif;
 }
+
 footer {
   background-color: #121212;
 }

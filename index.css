@@ -155,6 +155,9 @@ body {
   transform: scale(1.1);
 }
 
+
+
+/* LIBRERIA /ASIDE ICON */
 body {
   background-color: #000000;
 }
@@ -162,12 +165,29 @@ body {
 .card-libreria {
   background-color: #121212;
 }
-.card-libreria:hover {
+/* .card-libreria:hover {
   cursor: pointer;
   background-color: #181818;
-}
-a i {
+} */
+.a,.i {
   color: white;
+  opacity: 0.5;
+  font-size: 1.2em;
+}
+.i{
+  border: 1px solid transparent;
+  border-radius:50% ;
+  padding: 0.5em;
+  
+}
+.a:hover,.i:hover {
+  color: white;
+  opacity: 1;
+ 
+}
+.i:hover{
+  border: 1px solid transparent;
+  background-color: #0000004a;
 }
 .img-libreria {
   height: 50px;
@@ -175,14 +195,34 @@ a i {
 }
 
 .btn-libreria {
-  background-color: white;
+  border: 1px solid transparent;
+  background-color: #181818;
+  font-size: 0.9em;
+  padding: 0.4em 1.2em;
 }
 .btn-libreria:hover {
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.082);
 }
 .bg-aside {
   background-color: #121212;
 }
 .navbar {
   background-color: #121212;
+}
+
+/* TOOLTIP */
+.custom-tooltip {
+  font-weight: bold;
+  font-size: 0.8em;
+  
+  --bs-tooltip-bg: var(--bs-dark);
+}
+
+@media only screen and (max-width: 700px) {
+  #right-element {
+    display: none;
+  }
+  #album-cover {
+    display: none;
+  }
 }

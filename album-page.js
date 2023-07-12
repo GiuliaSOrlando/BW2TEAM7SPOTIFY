@@ -1,9 +1,12 @@
 const originatingUrl =
-  "https://striveschool-api.herokuapp.com/api/deezer/search?q=queen"
+  "https://striveschool-api.herokuapp.com/api/deezer/search?q=queen&&"
 
-URLSearchParams(location.search)
+let addressBarContent = new URLSearchParams(window.location.search)
+
 let albumID = addressBarContent.get("id")
+console.log(albumID)
 let dynamicUrl = originatingUrl + albumID
+console.log(dynamicUrl)
 
 const populateTracklist = function (elements) {
   for (let i = 0; i < 6; i++) {

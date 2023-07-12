@@ -1,25 +1,38 @@
 const originatingUrl =
-  "https://striveschool-api.herokuapp.com/api/deezer/search?q=queen"
+  "https://striveschool-api.herokuapp.com/api/deezer/album/"
 
-URLSearchParams(location.search)
+let addressBarContent = new URLSearchParams(location.search)
 let albumID = addressBarContent.get("id")
 let dynamicUrl = originatingUrl + albumID
+console.log(dynamicUrl)
 
-const populateTracklist = function (elements) {
+const albumCover = function (elements) {
+  const albumDiv = document.getElementById("album-img")
+  albumDiv.innerHTML = `
+                     <img
+                    src="${elements.cover}"
+                    alt=""
+                  />
+      `
+}
+
+const populateTracks = function (elements) {
+  let trackList = elements.tracklist
+  console.log(trackList)
   for (let i = 0; i < 6; i++) {
-    const tracksContainer = document.getElementById("tracks-container")
+    const tracksRow = document.getElementById("tracks-container")
     const newCol = document.createElement("div")
     newCol.classList.add("track")
     newCol.innerHTML = `
-                     <div class="track-num">1</div>
-                <div class="song">
-                  <h3 class="song-title">Song Title</h3>
-                  <p>authors</p>
-                </div>
-                <div class="song-length"><span></span>2:06 <span></span></div>
+      <div class="track-num">${i}</div>
+            <div class="song">
+              <h3 class="song-title">${elements.data[i].title}</h3>
+              <p>authors</p>
+            </div>
+            <div class="song-length"><span></span>2:06 <span></span></div>
       `
 
-    tracksContainer.appendChild(newCol)
+    tracksRow.appendChild(newCol)
   }
 }
 
@@ -36,13 +49,11 @@ const getDataNew = function (url, foo) {
     .then((elements) => {
       console.log(elements)
       foo(elements)
-      elements.forEach((element) => {
-        console.log(element.data[i].album.tracklist)
-      })
     })
     .catch((err) => {
       console.log(err)
     })
 }
 
-getDataNew(dynamicUrl)
+getDataNew(dynamicUrl, albumCover)
+getDataNew(dynamicUrl, populateTracks)

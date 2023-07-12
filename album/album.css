@@ -1,8 +1,8 @@
 @font-face {
-    font-family: "Circular";
-    
-    src: url(../assets/fonts/CircularStd-Black.otf);
-    /* src: url(./assets/fonts/CircularStd-BlackItalic.otf);
+  font-family: "Circular";
+
+  src: url(../assets/fonts/CircularStd-Black.otf);
+  /* src: url(./assets/fonts/CircularStd-BlackItalic.otf);
     src:url(./assets/fonts/CircularStd-Bold.otf);
     src: url(./assets/fonts/CircularStd-BoldItalic.otf);
     src: url(./assets/fonts/CircularStd-Book.otf);
@@ -14,199 +14,201 @@
 }
 
 @font-face {
-    font-family: "Circular";
-    font-weight: 100;
-    src: url(../assets/fonts/CircularStd-Light.otf);
+  font-family: "Circular";
+  font-weight: 100;
+  src: url(../assets/fonts/CircularStd-Light.otf);
 }
 @font-face {
-    font-family: "Circular";
-    font-weight: 500;
-    src: url(../assets/fonts/CircularStd-Medium.otf);
+  font-family: "Circular";
+  font-weight: 500;
+  src: url(../assets/fonts/CircularStd-Medium.otf);
 }
 /* Firefox */
-#section-hidden{
-    overflow:hidden;
-    background-color: #000000;
-    width: 60%;
-    border-radius: 10px;
+#section-hidden {
+  overflow: hidden;
+  background-color: #000000;
+  width: 60%;
+  border-radius: 10px;
 }
 #album-section {
-    scrollbar-width: thin;
-    scrollbar-color: #B2B2B2 #000000;
-    
-  }
-  
-  /* Chrome, Edge and Safari */
-  #album-section::-webkit-scrollbar {
-    width: 10px;
-    width: 10px;
-  }
-  #album-section::-webkit-scrollbar-track {
-    border-radius: 5px;
-    background-color: #000000;
-  }
-  
-  #album-section::-webkit-scrollbar-track:hover {
-    background-color: #000000;
-  }
-  
-  #album-section::-webkit-scrollbar-track:active {
-    background-color: #000000;
-  }
-  
-  #album-section::-webkit-scrollbar-thumb {
-    border-radius: 5px;
-    background-color: #B2B2B2;
-  }
-  
-  #album-section::-webkit-scrollbar-thumb:hover {
-    background-color: #929292;
-  }
-  
-  #album-section::-webkit-scrollbar-thumb:active {
-    background-color: #828282;
-  }
+  scrollbar-width: 10px;
+  scrollbar-color: #b2b2b2 #000000;
+}
 
-#album-section{
-    font-family: "Circular", sans-serif;
-    font-weight: 500;
-    
-    background-color: black;
-    color: white;
-    width: 100%;
-    border-radius:10px;
-   height: 60vh;
-    overflow-x: hidden;
-    overflow-y: scroll;
+/* Chrome, Edge and Safari */
+#album-section::-webkit-scrollbar {
+  width: 13px;
+  width: 13px;
 }
-.album-heading-wrapper{
-    padding-top: 5rem;
-    margin-top: -3.4rem;
-    display: flex;
-    flex-direction: column;
-    background: linear-gradient(180deg, #AB9595, #584d4d)
+#album-section::-webkit-scrollbar-track {
+  border-radius: 5px;
+  background-color: #000000;
 }
-nav{
-    position: sticky !important;
-    width: 100%;
-    top: 0;
-    z-index: 2;
 
+#album-section::-webkit-scrollbar-track:hover {
+  background-color: #000000;
 }
-#navbar{
-    transition: 0.5s;
 
+#album-section::-webkit-scrollbar-track:active {
+  background-color: #000000;
 }
-.scritte-immagini{
-    display: flex;
-    gap: 1rem;
-    margin-left: 1rem;
-}
-.album-img{
-    height: 200px;
-}
-.album-img img{
-    height: 100%;
-}
-.album-title{
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-}
-.album-title h1{
-    font-size: 4rem;
-    font-weight: 900;
 
+#album-section::-webkit-scrollbar-thumb {
+  border-radius: none;
+  background-color: #b2b2b2;
 }
-.album-title p{
-    font-weight: bold;
-    font-size: .85rem;
-    
-}
-.bottoni{
-    margin-top: 2rem;
-    margin-left: 1rem;
-    padding-bottom: 2rem;
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-}
-#play-button{
-    width: 3.5rem;
-    height: 3.5rem;
-    background-color: #1db954;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: none;
-    border-radius: 10rem;
-    font-size: 1.2rem;
-}
-#play-button-nav{
-    width: 3.5rem;
-    height: 3.5rem;
-    background-color: #1db954;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: none;
-    border-radius: 10rem;
-    font-size: 1.2rem;
-}
-#fav-button{
-    background-color: transparent;
-    color: #1db954;
-    border: none;
-    font-size: 2rem;
-}
-#ellipsis-button{
-    color:#B2B2B2;
-    background-color: transparent;
-    border: none;
-}
-.tracks-header{
-    border-bottom: 1px solid #B2B2B2;
-    margin-top: 1.5rem;
-    padding-bottom: 1rem;
-    position: sticky;
-    top: 3.2rem;
-    background-color: black;
-}
-.tracks-header .song-title{
-    color: #b2b2b2;
-}
-#tracks-container{
-    display: flex; 
-    flex-direction: column;
-    margin-left: 2rem;
-    margin-right: 1rem;
-}
-.track{
-    display: flex;
-    padding: .4rem;
 
+#album-section::-webkit-scrollbar-thumb:hover {
+  background-color: #929292;
 }
-.track:hover{
-    border-radius: 4px;
-    background-color: #2A2A2A;
+
+#album-section::-webkit-scrollbar-thumb:active {
+  background-color: #828282;
 }
-.song{
-    flex-grow: 1;
+
+#album-section {
+  font-family: "Circular", sans-serif;
+  font-weight: 500;
+
+  background-color: black;
+  color: white;
+  width: 100%;
+  border-radius: 10px;
+  height: 60vh;
+  overflow-x: hidden;
+  overflow-y: scroll;
 }
-.song p{
-    color: #b2b2b2;
+.album-heading-wrapper {
+  padding-top: 5rem;
+  margin-top: -3.4rem;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(180deg, #ab9595, #584d4d);
 }
-.track-num{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 2rem;
-    color: #b2b2b2;
+nav {
+  position: sticky !important;
+  width: 100%;
+  top: 0;
+  z-index: 2;
 }
-.song-length{
-    display: flex;
-    justify-content: center;
-    align-items: center;
- width: 5rem;
- color: #b2b2b2;
+#navbar {
+  transition: 0.5s;
+}
+.scritte-immagini {
+  display: flex;
+  gap: 1rem;
+  margin-left: 1rem;
+}
+.album-img {
+  height: 200px;
+}
+.album-img img {
+  height: 100%;
+}
+.album-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.album-title h1 {
+  font-size: 4rem;
+  font-weight: 900;
+}
+.album-title p {
+  font-weight: bold;
+  font-size: 0.85rem;
+}
+.bottoni {
+  margin-top: 2rem;
+  margin-left: 1rem;
+  padding-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+#play-button-album {
+  width: 3.5rem;
+  height: 3.5rem;
+  background-color: #1db954;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  border-radius: 10rem;
+  font-size: 1.2rem;
+}
+#play-button-nav {
+  margin-left: 1rem;
+  width: 3.5rem;
+  height: 3.5rem;
+  background-color: #1db954;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  border-radius: 10rem;
+  font-size: 1.2rem;
+}
+#fav-button {
+  background-color: transparent;
+  color: #1db954;
+  border: none;
+  font-size: 2rem;
+}
+#ellipsis-button {
+  color: #b2b2b2;
+  background-color: transparent;
+  border: none;
+}
+.tracks-header {
+  border-bottom: 1px solid #b2b2b2;
+  margin-top: 1.5rem;
+  padding-bottom: 1rem;
+  position: sticky;
+  top: 4.4rem;
+  background-color: black;
+}
+.tracks-header .song-title {
+  color: #b2b2b2;
+}
+#tracks-container {
+  display: flex;
+  flex-direction: column;
+  margin-left: 2rem;
+  margin-right: 1rem;
+}
+.track {
+  display: flex;
+  padding: 0.4rem;
+}
+.track:hover {
+  border-radius: 4px;
+  background-color: #2a2a2a;
+}
+.song {
+  flex-grow: 1;
+}
+.song p {
+  color: #b2b2b2;
+}
+.track-num {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 2rem;
+  color: #b2b2b2;
+}
+.song-length {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 5rem;
+  color: #b2b2b2;
+}
+#reproduce {
+  transition: 0.5s;
+}
+#testo-canzone-nav {
+  font-size: 1.5rem;
+  margin-left: 0.5rem;
 }

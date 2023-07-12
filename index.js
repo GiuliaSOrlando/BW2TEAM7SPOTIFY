@@ -62,7 +62,7 @@ const populateAlbums = function (elements) {
     const newCol = document.createElement("div")
     newCol.classList.add("col-md-6", "col-xs-12", "col-lg-4", "col-xl-3")
     newCol.innerHTML = `
-                            <a href="./album-page.html?id=${elements.data[i].id}" class="text-decoration-none">
+                            <a href="./album-page.html?id=${elements.data[i].album.id}" class="text-decoration-none">
                               <div class="card h-100 text-white">
                         <div id="c-img">
                           <img

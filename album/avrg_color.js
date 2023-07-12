@@ -56,28 +56,29 @@ const pad = function (hex) {
   return ('000000' + hex).slice(-6)
 }
 
-const generateImage = function () {
-  // genero dinamicamente un tag <img /> in un <div> vuoto
+// const generateImage = function () {
+//   // genero dinamicamente un tag <img /> in un <div> vuoto
 
-  let imageSrc =
-    'https://e-cdns-images.dzcdn.net/images/artist/7f6e8be161417ad8ce8f09b45721544f/500x500-000000-80-0-0.jpg'
+//   let imageSrc =
+//     'https://e-cdns-images.dzcdn.net/images/artist/7f6e8be161417ad8ce8f09b45721544f/500x500-000000-80-0-0.jpg'
 
-  let reference = document.getElementById('container')
+//   let reference = document.getElementById('container')
 
-  // l'event listener "onload" nel tag <img /> si occupa di lanciare la funzione "start()" solamente
-  // al termine del caricamento della src
-  reference.innerHTML = `
-    <img
-      src=${imageSrc}
-      id="img"
-      crossorigin="anonymous"
-      onload="start()"
-    />`
-}
+//   // l'event listener "onload" nel tag <img /> si occupa di lanciare la funzione "start()" solamente
+//   // al termine del caricamento della src
+//   reference.innerHTML = `
+//     <img
+//       src=${imageSrc}
+//       id="img"
+//       crossorigin="anonymous"
+//       onload="start()"
+//     />`
+// }
 
 const start = function () {
   // prendo il riferimento all'immagine del dom
-  let imgReference = document.querySelector('#album-img')
+  let imgReference = document.querySelector('#album-img img')
+  
 
   // creo il context 2d dell'immagine selezionata
   let context = draw(imgReference)
@@ -95,4 +96,5 @@ const start = function () {
   console.log(mostRecurrentHex)
 }
 
-generateImage()
+// generateImage()
+// start()

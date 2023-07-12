@@ -117,8 +117,8 @@ const populateLibrary = function (elements) {
                         </div>
                         <div class="col-9 p-0">
                           <div class="card-body p-0 flex-row">
-                            <p class="card-title text-white">${elements.data[i].album.title}</p>
-                            <p class="card-text text-white">${elements.data[i].artist.name}</p>
+                            <p class="card-title cir-bold text-white">${elements.data[i].album.title}</p>
+                            <p class="card-text cir-light text-white">${elements.data[i].artist.name}</p>
                           </div>
                         </div>
                       </div>

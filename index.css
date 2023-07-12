@@ -181,6 +181,9 @@ body {
   transform: scale(1.1);
 }
 
+
+
+/* LIBRERIA /ASIDE ICON */
 body {
   background-color: #000000;
 }
@@ -188,12 +191,29 @@ body {
 .card-libreria {
   background-color: #121212;
 }
-.card-libreria:hover {
+/* .card-libreria:hover {
   cursor: pointer;
   background-color: #181818;
-}
-a i {
+} */
+.a,.i {
   color: white;
+  opacity: 0.5;
+  font-size: 1.2em;
+}
+.i{
+  border: 1px solid transparent;
+  border-radius:50% ;
+  padding: 0.5em;
+  
+}
+.a:hover,.i:hover {
+  color: white;
+  opacity: 1;
+ 
+}
+.i:hover{
+  border: 1px solid transparent;
+  background-color: #0000004a;
 }
 .img-libreria {
   height: 50px;
@@ -213,14 +233,12 @@ a i {
   background-color: #121212;
 }
 
-@media only screen and (max-width: 600px) {
-  #left-element {
-    display: none;
-  }
-
-  #right-element {
-    display: none;
-  }
+/* TOOLTIP */
+.custom-tooltip {
+  font-weight: bold;
+  font-size: 0.8em;
+  
+  --bs-tooltip-bg: var(--bs-dark);
 }
 
 @media only screen and (max-width: 700px) {

@@ -107,7 +107,7 @@ const populateLibrary = function (elements) {
     const newCol = document.createElement("div")
     newCol.classList.add("card", "card-libreria")
     newCol.innerHTML = `
-                                                           <div class="row no-gutters">
+                        <div class="row no-gutters">
                         <div class="col-3">
                           <img
                             src="${elements.data[i].album.cover_small}"

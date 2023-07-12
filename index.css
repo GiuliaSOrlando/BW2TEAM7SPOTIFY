@@ -195,10 +195,13 @@ body {
 }
 
 .btn-libreria {
-  background-color: white;
+  border: 1px solid transparent;
+  background-color: #181818;
+  font-size: 0.9em;
+  padding: 0.4em 1.2em;
 }
 .btn-libreria:hover {
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.082);
 }
 .bg-aside {
   background-color: #121212;

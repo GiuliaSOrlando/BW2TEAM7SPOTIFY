@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Artist Info</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
+
+    <style>
+      #artist-info-card {
+        background-color: black;
+        padding: 20px;
+        border: none;
+      }
+
+      .artist-carousel-img {
+        width: 500px;
+        height: 300px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <button
+            id="artist-info-card"
+            type="button"
+            data-bs-toggle="modal"
+            data-bs-target="#staticBackdrop"
+          >
+            <h4 class="text-start fw-bold text-white">Informazioni</h4>
+            <div class="card text-bg-dark">
+              <img
+                src="../assets/imgs/main/image-6.jpg"
+                class="card-img"
+                alt="..."
+              />
+              <div
+                class="card-img-overlay d-flex flex-column justify-content-end"
+              >
+                <h5 class="card-title text-white fw-bold text-start">
+                  123.456.789 ascoltatori mensili
+                </h5>
+                <p class="card-text text-white text-truncate text-start">
+                  This is a wider card with supporting text below as a natural
+                  lead-in to additional content. This content is a little bit
+                  longer. This is a wider card with supporting text below as a
+                  natural lead-in to additional content. This content is a
+                  little bit longer. This is a wider card with supporting text
+                  below as a natural lead-in to additional content. This content
+                  is a little bit longer. This is a wider card with supporting
+                  text below as a natural lead-in to additional content. This
+                  content is a little bit longer.
+                </p>
+              </div>
+            </div>
+          </button>
+          <div
+            class="modal fade"
+            id="staticBackdrop"
+            data-bs-backdrop="static"
+            data-bs-keyboard="false"
+            tabindex="-1"
+            aria-labelledby="staticBackdropLabel"
+            aria-hidden="true"
+          >
+            <div
+              class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg"
+              data-bs-theme="dark"
+            >
+              <div class="modal-content bg-black">
+                <div class="modal-body text-white-50">
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
+                  <div id="carouselExample" class="carousel slide">
+                    <div class="carousel-inner">
+                      <div class="carousel-item active text-center">
+                        <img
+                          src="../assets/imgs/main/image-6.jpg"
+                          class="card-img artist-carousel-img center"
+                          alt="..."
+                        />
+                      </div>
+                      <div class="carousel-item text-center">
+                        <img
+                          src="../assets/imgs/main/image-7.jpg"
+                          class="card-img artist-carousel-img"
+                          alt="..."
+                        />
+                      </div>
+                      <div class="carousel-item text-center">
+                        <img
+                          src="../assets/imgs/main/image-8.jpg"
+                          class="card-img artist-carousel-img"
+                          alt="..."
+                        />
+                      </div>
+                    </div>
+                    <button
+                      class="carousel-control-prev carousel-control-next bg-body-secondary bg-opacity-75 rounded-circle top-50 ms-4"
+                      type="button"
+                      data-bs-target="#carouselExample"
+                      data-bs-slide="prev"
+                      style="height: 40px; width: 40px"
+                    >
+                      <span
+                        class="carousel-control-prev-icon"
+                        aria-hidden="true"
+                      ></span>
+                      <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button
+                      class="carousel-control-next bg-body-secondary bg-opacity-75 rounded-circle top-50 me-4"
+                      type="button"
+                      data-bs-target="#carouselExample"
+                      data-bs-slide="next"
+                      style="height: 40px; width: 40px"
+                    >
+                      <span
+                        class="carousel-control-next-icon"
+                        aria-hidden="true"
+                      ></span>
+                      <span class="visually-hidden">Next</span>
+                    </button>
+                  </div>
+                  <div class="row">
+                    <div class="col-4">
+                      <p class="pt-5 fw-bolder text-white">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Delectus aliquid, quod iste magnam culpa alias debitis
+                        illum deleniti, sint atque, quo rem veritatis veniam
+                        provident quas. Veritatis repellendus mollitia modi!
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Minima esse maxime non officia fugiat repellendus,
+                        exercitationem, assumenda consequuntur dolorem
+                        laudantium quo, obcaecati perferendis. Minus doloremque
+                        repellendus totam voluptas tempora itaque? Lorem ipsum
+                        dolor sit amet, consectetur adipisicing elit. Incidunt
+                        praesentium modi atque magni laborum natus velit
+                        excepturi fuga eligendi iste ab hic quos, voluptate unde
+                        eaque saepe aperiam suscipit inventore.
+                      </p>
+                    </div>
+                    <div class="col-8">
+                      <p class="pt-5">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Quo a ipsa earum commodi quis iste molestiae hic id
+                        tempore in? Perferendis maxime iusto accusamus sequi
+                        nobis pariatur voluptatibus officia expedita. Lorem
+                        ipsum dolor sit amet consectetur adipisicing elit. Vel
+                        esse sapiente tempora deserunt! Placeat quisquam
+                        repudiandae sunt nihil ut qui et, eaque fuga aut aliquam
+                        facilis excepturi nemo, animi eum. Lorem ipsum dolor
+                        sit, amet consectetur adipisicing elit. Saepe nostrum
+                        provident recusandae quaerat, officiis sapiente
+                        explicabo illo, labore, magni veritatis quam
+                        repudiandae. Dicta vero ut laboriosam nihil non
+                        recusandae modi. Lorem ipsum, dolor sit amet consectetur
+                        adipisicing elit. Impedit exercitationem dicta nisi,
+                        ducimus delectus assumenda doloribus. Distinctio ratione
+                        unde enim repudiandae delectus vel exercitationem est
+                        laudantium beatae, quae facere perferendis? Lorem ipsum
+                        dolor sit amet, consectetur adipisicing elit. Vel
+                        consequuntur voluptatibus dolores dolorum. Ex voluptas,
+                        labore accusamus, fugiat numquam quam dolore eos tempore
+                        atque, asperiores vel modi ipsam repellat similique?
+                        Lorem ipsum dolor sit, amet consectetur adipisicing
+                        elit. Rem asperiores eius numquam ducimus, eaque illum
+                        doloremque similique corporis eligendi autem
+                        exercitationem cumque soluta inventore temporibus
+                        eveniet vel qui beatae eos. Lorem, ipsum dolor sit amet
+                        consectetur adipisicing elit. Fugit ad quisquam
+                        veritatis quas dolorem voluptas nihil reprehenderit,
+                        eius asperiores laboriosam in voluptates similique vero
+                        aliquid cumque harum ipsa ratione dignissimos.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

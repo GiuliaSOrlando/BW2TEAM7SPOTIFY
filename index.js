@@ -27,7 +27,7 @@ const populateGreetings = function (elements) {
   for (let i = 0; i < 6; i++) {
     const greetingsRow = document.getElementById("greetings-row")
     const newCol = document.createElement("div")
-    newCol.classList.add("col", "mb-2", "col-lg-4", "col-md-6", "col-sm-12");
+    newCol.classList.add("col", "mb-2", "col-lg-4", "col-md-6", "col-sm-12")
 
     newCol.innerHTML = `
       <div class="card p-0 border-0">
@@ -60,7 +60,7 @@ const populateAlbums = function (elements) {
   for (let i = 6; i < 10; i++) {
     const albumRow = document.getElementById("album-row")
     const newCol = document.createElement("div")
-    newCol.classList.add("col-md-6", "col-xs-12", "col-lg-4", "col-xl-3", );
+    newCol.classList.add("col-md-6", "col-xs-12", "col-lg-4", "col-xl-3")
     newCol.innerHTML = `
                             <a href="./album-page.html?id=${elements.data[i].id}">
                               <div class="card h-100 text-white">
@@ -150,6 +150,8 @@ const getData = function (url, foo) {
 getData(QueenUrl, populateGreetings)
 getData(QueenUrl, populateAlbums)
 getData(rockUrl, populateLibrary)
+
+// Associo la funzione di popolazione della libreria al click dei pulsanti 'album' e 'artisti'
 
 const albumBtn = document.getElementById("album-btn")
 const artistBtn = document.getElementById("artist-btn")

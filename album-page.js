@@ -1,3 +1,9 @@
+const QueenUrl =
+  "https://striveschool-api.herokuapp.com/api/deezer/search?q=queen"
+
+const rockUrl =
+  "https://striveschool-api.herokuapp.com/api/deezer/search?q=rock"
+
 const originatingUrl =
   "https://striveschool-api.herokuapp.com/api/deezer/album/"
 
@@ -36,6 +42,34 @@ const populateTracks = function (elements) {
   }
 }
 
+// Creo la lista nella libreria
+const populateLibrary = function (elements) {
+  for (let i = 0; i < 15; i++) {
+    const libraryDeck = document.getElementById("library-deck")
+    const newCol = document.createElement("div")
+    newCol.classList.add("card", "card-libreria")
+    newCol.innerHTML = `
+                                                           <div class="row no-gutters">
+                        <div class="col-3">
+                          <img
+                            src="${elements.data[i].album.cover_small}"
+                            class="card-img-top img-libreria flex-column"
+                            alt="Album 1"
+                          />
+                        </div>
+                        <div class="col-9 p-0">
+                          <div class="card-body p-0 flex-row">
+                            <p class="card-title text-white">${elements.data[i].album.title}</p>
+                            <p class="card-text text-white">${elements.data[i].artist.name}</p>
+                          </div>
+                        </div>
+                      </div>
+      `
+
+    libraryDeck.appendChild(newCol)
+  }
+}
+
 // Funzione generica per la fetch
 const getDataNew = function (url, foo) {
   fetch(url)
@@ -57,3 +91,4 @@ const getDataNew = function (url, foo) {
 
 getDataNew(dynamicUrl, albumCover)
 getDataNew(dynamicUrl, populateTracks)
+getDataNew(rockUrl, populateLibrary)

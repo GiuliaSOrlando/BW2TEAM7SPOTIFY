@@ -74,4 +74,42 @@ const getData = function (url, foo) {
 // let trackListUrl = getData(dynamicUrl, (elements)=>{
 //     return elements.tracklist
 // })
-getData(dynamicUrl, elements => console.log(elements.tracklist) )
+const populateTracks = function(elements){
+    let tracksContainer = document.getElementById('tracks-container')
+    tracksContainer.innerHTML = ''
+   for(let i=0; i < elements.data.length; i++){
+    let track = document.createElement('div');
+    track.classList.add('track')
+    track.innerHTML = `
+    <div class="track-img">
+                    <img
+                      src=""
+                      alt=""
+                    />
+                  </div>
+                  <div class="song">
+                    <h3 class="song-title">${elements.data[i].title}</h3>
+                    <p>authors</p>
+                  </div>
+                  <div class="views d-flex align-items-center">23456</div>
+                  <div class="song-length"><span></span>${Math.floor(elements.data[i].duration/60)}:${Math.floor((elements.data[i].duration % 60) * 10 / 6)} <span></span></div>
+    `
+    tracksContainer.appendChild(track)
+    console.log(elements.data[i].title)
+   }
+    
+    
+}
+// getData('https://striveschool-api.herokuapp.com/api/deezer/artist/64932/top?limit=50', function(elements){
+//     populateTracks(elements)
+// })
+getData(dynamicUrl, function(el){
+    getData(el.tracklist, function(el){
+        populateTracks(el)
+    })
+})
+// let trackListUrl = ""
+// getData(dynamicUrl, (elements) =>{
+//     trackListUrl = elements.tracklist
+//     console.log(trackListUrl)
+// })

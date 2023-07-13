@@ -935,16 +935,16 @@
       })
       let tracks = document.querySelectorAll(".track")
       tracks.forEach((track) => {
-        let trackImg = track.querySelector(".track-img")
-        let songImg = trackImg.innerText
+        let trackImg = track.querySelector(".track-img");
+        let songImg = trackImg.innerHTML;
         track.addEventListener("mouseover", () => {
           trackImg.innerHTML = `<i class="fas fa-play"></i>`
         })
         track.addEventListener("mouseout", () => {
-          let trackImg = track.querySelector(".track-num")
-          trackImg.innerHTML = `${songImg}`
-        })
-      })
+          let trackImg = track.querySelector(".track-img");
+          trackImg.innerHTML = songImg;
+        });
+      });
     </script>
     <script src="artist-page.js"></script>
   </body>

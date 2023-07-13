@@ -26,7 +26,7 @@ const PopUrl =
   "https://striveschool-api.herokuapp.com/api/deezer/search?q=amicidimariadefilippi"
 
 const MetalUrl =
-  "https://striveschool-api.herokuapp.com/api/deezer/search?q=heavymetal"
+  "https://striveschool-api.herokuapp.com/api/deezer/search?q=ironmaiden"
 
 const MerolaUrl =
   "https://striveschool-api.herokuapp.com/api/deezer/search?q=mariomerola"
@@ -44,11 +44,11 @@ const populateGreetings = function (elements) {
     const newCol = document.createElement("div")
     newCol.classList.add("col", "mb-2",  "col-md-4", "col-sm-6","col-4" )
     
-    newCol.innerHTML = `
+    newCol.innerHTML = ` 
       <div class="card p-0 border-0">
                     <a href="./album-page.html?id=${elements.data[i].album.id}" class="text-decoration-none">
                     <div
-                      class="row row-cols-1 row-cols-md-3 h-25 align-items-center colo p-0 m-0"
+                      class="row row-cols-1 row-cols-md-1 h-25 align-items-center colo p-0 m-0"
                     >
                       <div class="col p-0">
                         <img
@@ -57,7 +57,7 @@ const populateGreetings = function (elements) {
                           alt="..."
                         />
                       </div>
-                      <div class="col-md-8 d-flex d-none d-md-block ">
+                      <div class="col-md-8 d-flex d-none d-lg-block ">
                         <div class="card-body ">
                           <h5 class="card-title text-white ">${elements.data[i].album.title}</h5>
                         </div>
@@ -77,9 +77,9 @@ const populateAlbums1 = function (elements) {
   for (let i = 6; i < 10; i++) {
     const albumRow = document.getElementById("album-row1")
     const newCol = document.createElement("div")
-    newCol.classList.add("col-xs-12", "col-md-6", "col-lg-4", "col-xl-3")
+    newCol.classList.add("col-6", "col-md-6", "col-lg-4", "col-xl-3")
     newCol.innerHTML = `
-                            <a href="./album-page.html?id=${elements.data[i].album.id}" class="text-decoration-none">
+                            <a href="./album-page.html?id=${elements.data[i].album.id}" class="text-decoration-none text-white">
                               <div class="card h-100 text-white">
                         <div id="c-img">
                           <img
@@ -107,8 +107,8 @@ const populateAlbums1 = function (elements) {
                         </div>
                         <div class="card-body text-white">
                           <h5 class="card-title card-text text-truncate">${elements.data[i].album.title}</h5>
-                          <a href="./artist-page.html?id=${elements.data[i].artist.id}">
-                           <h6 class="card-subtitle card-text mb-2">${elements.data[i].artist.name}</h6>
+                          <a href="./artist-page.html?id=${elements.data[i].artist.id}" class="text-decoration-none mt-1 text-white" >
+                           <h6 class="card-subtitle card-text mt-1 mb-2">${elements.data[i].artist.name}</h6>
                           </a>
                         </div>
                       </div>
@@ -123,9 +123,9 @@ const populateAlbums2 = function (elements) {
   for (let i = 6; i < 10; i++) {
     const albumRow = document.getElementById("album-row2")
     const newCol = document.createElement("div")
-    newCol.classList.add("col-md-6", "col-xs-12", "col-lg-4", "col-xl-3")
-    newCol.innerHTML = `
-                            <a href="./album-page.html?id=${elements.data[i].album.id}" class="text-decoration-none">
+    newCol.classList.add("col-6", "col-md-6", "col-lg-4", "col-xl-3")   
+     newCol.innerHTML = `
+                            <a href="./album-page.html?id=${elements.data[i].album.id}" class="text-decoration-none mt-1 text-white">
                               <div class="card h-100 text-white">
                         <div id="c-img">
                           <img
@@ -153,8 +153,8 @@ const populateAlbums2 = function (elements) {
                         </div>
                         <div class="card-body text-white">
                           <h5 class="card-title card-text text-truncate ">${elements.data[i].album.title}</h5>
-                          <a href="./artist-page.html?id=${elements.data[i].artist.id}">
-                          <h6 class="card-subtitle card-text mb-2">${elements.data[i].artist.name}</h6>
+                          <a href="./artist-page.html?id=${elements.data[i].artist.id}" class="text-decoration-none mt-1 text-white">
+                          <h6 class="card-subtitle card-text mt-1 mb-2">${elements.data[i].artist.name}</h6>
                           </a>
                         </div>
                       </div>
@@ -169,9 +169,9 @@ const populateAlbums3 = function (elements) {
   for (let i = 6; i < 10; i++) {
     const albumRow = document.getElementById("album-row3")
     const newCol = document.createElement("div")
-    newCol.classList.add("col-md-6", "col-xs-12", "col-lg-4", "col-xl-3")
-    newCol.innerHTML = `
-                            <a href="./album-page.html?id=${elements.data[i].album.id}" class="text-decoration-none">
+    newCol.classList.add("col-6", "col-md-6", "col-lg-4", "col-xl-3")  
+      newCol.innerHTML = `
+                            <a href="./album-page.html?id=${elements.data[i].album.id}" class="text-decoration-none mt-1 text-white"">
                               <div class="card h-100 text-white">
                         <div id="c-img">
                           <img
@@ -199,8 +199,8 @@ const populateAlbums3 = function (elements) {
                         </div>
                         <div class="card-body text-white">
                           <h5 class="card-title card-text text-truncate ">${elements.data[i].album.title}</h5>
-                          <a href="./artist-page.html?id=${elements.data[i].artist.id}">
-                          <h6 class="card-subtitle card-text mb-2">${elements.data[i].artist.name}</h6>
+                          <a href="./artist-page.html?id=${elements.data[i].artist.id}" class="text-decoration-none mt-1 text-white">
+                          <h6 class="card-subtitle card-text mt-1 mb-2">${elements.data[i].artist.name}</h6>
                           </a>
                         </div>
                       </div>

@@ -1,10 +1,12 @@
 // CODICE NON LEGATO ALL'API
 //player
-for (let e of document.querySelectorAll('input[type="range"].slider-progress')) {
-  e.style.setProperty('--value', e.value);
-  e.style.setProperty('--min', e.min == '' ? '0' : e.min);
-  e.style.setProperty('--max', e.max == '' ? '100' : e.max);
-  e.addEventListener('input', () => e.style.setProperty('--value', e.value));
+for (let e of document.querySelectorAll(
+  'input[type="range"].slider-progress'
+)) {
+  e.style.setProperty("--value", e.value)
+  e.style.setProperty("--min", e.min == "" ? "0" : e.min)
+  e.style.setProperty("--max", e.max == "" ? "100" : e.max)
+  e.addEventListener("input", () => e.style.setProperty("--value", e.value))
 }
 
 document.querySelectorAll('[data-bs-toggle="tooltip"]').forEach((tooltip) => {
@@ -42,8 +44,8 @@ const populateGreetings = function (elements) {
   for (let i = 0; i < 6; i++) {
     const greetingsRow = document.getElementById("greetings-row")
     const newCol = document.createElement("div")
-    newCol.classList.add("col", "mb-2",  "col-md-4", "col-sm-6","col-4" )
-    
+    newCol.classList.add("col", "mb-2", "col-md-4", "col-sm-6", "col-4")
+
     newCol.innerHTML = ` 
       <div class="card p-0 border-0">
                     <a href="./album-page.html?id=${elements.data[i].album.id}" class="text-decoration-none">
@@ -123,8 +125,8 @@ const populateAlbums2 = function (elements) {
   for (let i = 6; i < 10; i++) {
     const albumRow = document.getElementById("album-row2")
     const newCol = document.createElement("div")
-    newCol.classList.add("col-6", "col-md-6", "col-lg-4", "col-xl-3")   
-     newCol.innerHTML = `
+    newCol.classList.add("col-6", "col-md-6", "col-lg-4", "col-xl-3")
+    newCol.innerHTML = `
                             <a href="./album-page.html?id=${elements.data[i].album.id}" class="text-decoration-none mt-1 text-white">
                               <div class="card h-100 text-white">
                         <div id="c-img">
@@ -169,8 +171,8 @@ const populateAlbums3 = function (elements) {
   for (let i = 6; i < 10; i++) {
     const albumRow = document.getElementById("album-row3")
     const newCol = document.createElement("div")
-    newCol.classList.add("col-6", "col-md-6", "col-lg-4", "col-xl-3")  
-      newCol.innerHTML = `
+    newCol.classList.add("col-6", "col-md-6", "col-lg-4", "col-xl-3")
+    newCol.innerHTML = `
                             <a href="./album-page.html?id=${elements.data[i].album.id}" class="text-decoration-none mt-1 text-white"">
                               <div class="card h-100 text-white">
                         <div id="c-img">

@@ -634,11 +634,9 @@
               </div>
             </div>
             <div id="Sezione 1">
-                <h3>Album</h3>
-                <div id="album-row" class="row container-card"></div>
-              </div>
-              
-
+              <h3>Album</h3>
+              <div id="album-row" class="row container-card"></div>
+            </div>
           </section>
         </div>
       </div>
@@ -895,53 +893,53 @@
       integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
       crossorigin="anonymous"
     ></script>
-    <script src="player/player.js"></script>
+    <script src="Elementi singoli/player/player.js"></script>
     <!-- <script src="avrg_color.js"></script> n-->
     <script>
       //toast script
       document
         .querySelectorAll('[data-bs-toggle="tooltip"]')
         .forEach((tooltip) => {
-          new bootstrap.Tooltip(tooltip);
-        });
+          new bootstrap.Tooltip(tooltip)
+        })
       // let avgColor = start()
 
-      let albumSection = document.getElementById("album-section");
+      let albumSection = document.getElementById("album-section")
 
       albumSection.addEventListener("scroll", function () {
-        let y = albumSection.scrollTop;
-        let tracksHeader = document.querySelector(".tracks-header");
-        console.log(y);
-        let nav = document.getElementById("navbar");
-        let navButtonsContainer = document.getElementById("buttons-container");
-        let playButtonNav = document.getElementById("reproduce");
+        let y = albumSection.scrollTop
+        let tracksHeader = document.querySelector(".tracks-header")
+        console.log(y)
+        let nav = document.getElementById("navbar")
+        let navButtonsContainer = document.getElementById("buttons-container")
+        let playButtonNav = document.getElementById("reproduce")
         if (y > 25) {
-          nav.classList.remove("bg-transparent");
+          nav.classList.remove("bg-transparent")
           if (y > 264) {
-            playButtonNav.classList.remove("d-none");
+            playButtonNav.classList.remove("d-none")
             playButtonNav.classList.add(
               "d-flex",
               "justify-content-center",
               "align-items-center"
-            );
+            )
           } else {
-            playButtonNav.classList.add("d-none");
+            playButtonNav.classList.add("d-none")
           }
           if (y > 368) {
-            tracksHeader.style.backgroundColor = "#272727;";
-            tracksHeader.style.margin = "none";
+            tracksHeader.style.backgroundColor = "#272727;"
+            tracksHeader.style.margin = "none"
           }
         } else {
-          nav.classList.add("bg-transparent");
+          nav.classList.add("bg-transparent")
         }
-      });
-      let tracks = document.querySelectorAll(".track");
+      })
+      let tracks = document.querySelectorAll(".track")
       tracks.forEach((track) => {
         let trackImg = track.querySelector(".track-img");
         let songImg = trackImg.innerHTML;
         track.addEventListener("mouseover", () => {
-          trackImg.innerHTML = `<i class="fas fa-play"></i>`;
-        });
+          trackImg.innerHTML = `<i class="fas fa-play"></i>`
+        })
         track.addEventListener("mouseout", () => {
           let trackImg = track.querySelector(".track-img");
           trackImg.innerHTML = songImg;

@@ -1,4 +1,11 @@
 // CODICE NON LEGATO ALL'API
+//player
+for (let e of document.querySelectorAll('input[type="range"].slider-progress')) {
+  e.style.setProperty('--value', e.value);
+  e.style.setProperty('--min', e.min == '' ? '0' : e.min);
+  e.style.setProperty('--max', e.max == '' ? '100' : e.max);
+  e.addEventListener('input', () => e.style.setProperty('--value', e.value));
+}
 
 document.querySelectorAll('[data-bs-toggle="tooltip"]').forEach((tooltip) => {
   new bootstrap.Tooltip(tooltip)
@@ -15,8 +22,8 @@ let greeting =
 greetingText.innerText = `${greeting}`
 
 //FETCH
-const PopUrl =
-  "https://striveschool-api.herokuapp.com/api/deezer/search?q=amicidimariadefilippi"
+const LoveUrl =
+  "https://striveschool-api.herokuapp.com/api/deezer/search?q=Love"
 
 const MetalUrl =
   "https://striveschool-api.herokuapp.com/api/deezer/search?q=ironmaiden"
@@ -41,7 +48,7 @@ const populateGreetings = function (elements) {
       <div class="card p-0 border-0">
                     <a href="./album-page.html?id=${elements.data[i].album.id}" class="text-decoration-none">
                     <div
-                      class="row row-cols-1 row-cols-md-1 h-25 align-items-center colo p-0 m-0"
+                      class="row row-cols-1 row-cols-lg-2 h-25 align-items-center colo p-0 m-0"
                     >
                       <div class="col p-0">
                         <img
@@ -250,7 +257,7 @@ const getData = function (url, foo) {
     })
 }
 
-getData(PopUrl, populateGreetings)
+getData(LoveUrl, populateGreetings)
 getData(MetalUrl, populateAlbums1)
 getData(LigabueUrl, populateAlbums2)
 getData(MerolaUrl, populateAlbums3)

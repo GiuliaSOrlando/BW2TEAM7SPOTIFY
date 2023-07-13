@@ -1,5 +1,12 @@
 // CODICE NON LEGATO ALL'API
 
+for (let e of document.querySelectorAll('input[type="range"].slider-progress')) {
+  e.style.setProperty('--value', e.value);
+  e.style.setProperty('--min', e.min == '' ? '0' : e.min);
+  e.style.setProperty('--max', e.max == '' ? '100' : e.max);
+  e.addEventListener('input', () => e.style.setProperty('--value', e.value));
+}
+
 document.querySelectorAll('[data-bs-toggle="tooltip"]').forEach((tooltip) => {
   new bootstrap.Tooltip(tooltip)
 })
@@ -11,10 +18,11 @@ window.addEventListener("load", function () {
   searchBar.classList.add("d-block")
 })
 
+
 //FETCH
 
 const QueenUrl =
-  "https://striveschool-api.herokuapp.com/api/deezer/search?q=queen"
+"https://striveschool-api.herokuapp.com/api/deezer/search?q=queen"
 
 const rockUrl =
   "https://striveschool-api.herokuapp.com/api/deezer/search?q=rock"
@@ -64,6 +72,7 @@ const populateAlbums = function (elements) {
   }
 }
 
+
 // Creo la lista nella libreria
 const populateLibrary = function (elements) {
   for (let i = 0; i < 15; i++) {
@@ -111,8 +120,28 @@ const getData = function (url, foo) {
     })
 }
 
-getData(QueenUrl, populateAlbums)
+// getData(QueenUrl, populateAlbums)
 getData(rockUrl, populateLibrary)
+
+const populateSearch = function () {
+  
+let searchForm = document.getElementById("search-bar")
+searchForm.addEventListener("submit", function (e) {
+  e.preventDefault()
+  const query = document.getElementById("search-bar-input-field")
+  let queryValue = query.value
+  console.log(queryValue);
+  const searchUrl = `https://striveschool-api.herokuapp.com/api/deezer/search?q=${queryValue}`
+  console.log(searchUrl)
+  const ricerche=document.getElementById("ricerche")
+  ricerche.innerHTML=`"${queryValue}"`
+getData(searchUrl, populateAlbums)
+})
+ricerche.innerHTML=`"${queryValue}"`
+
+  }
+
+populateSearch()
 
 const searchCard = function () {
   let queryLink = document.querySelectorAll(".search-card a")
@@ -127,6 +156,10 @@ const searchCard = function () {
 }
 
 searchCard()
+
+
+
+
 
 //./album-page.html?id=${elements.data[i].album.id}
 

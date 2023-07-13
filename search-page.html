@@ -281,6 +281,8 @@
                           placeholder="Cosa vuoi ascoltare?"
                           aria-label="Search"
                           autofocus
+                          id="search-bar-input-field"
+
                         />
                       </div>
                     </form>
@@ -360,7 +362,7 @@
               class="container rounded rounded-top-0 rounded-bottom-0 container-album text-white"
             >
               <div id="Sezione 1">
-                <h3>Album</h3>
+                <h3 id="ricerche"></h3>
                 <div id="album-row" class="row container-card p-0 py-5"></div>
               </div>
             </div>
@@ -370,7 +372,7 @@
             </h3>
             <div class="container">
               <div
-                class="row row-cols-2 row-cols-sm-3 row-cols-md-4 row-cols-lg-5 back-search pt-3"
+                class="row row-cols-2 row-cols-sm-3 row-cols-md-4 row-cols-lg-5 back-search pt-3" id="result"
               >
                 <div class="col mb-5 search-card">
                   <a href="#" class="text-decoration-none">
@@ -1186,7 +1188,7 @@
               </div>
             </div>
             <div class="col">
-              <input type="range" id="song-range" />
+              <input type="range" id="song-range"  class="styled-slider slider-progress" />
             </div>
           </div>
         </div>
@@ -1281,7 +1283,7 @@
               </button>
             </div>
             <div class="col" id="volume-range-div">
-              <input type="range" id="volume-range" />
+              <input type="range" id="volume-range" class="styled-slider slider-progress" />
             </div>
           </div>
         </div>

@@ -282,3 +282,6 @@ body {
 
   --bs-tooltip-bg: var(--bs-dark);
 }
+
+@media (min-width: 350px) and (max-width: 500px) {
+}

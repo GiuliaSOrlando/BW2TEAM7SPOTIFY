@@ -70,7 +70,7 @@ const populateAlbums1 = function (elements) {
   for (let i = 6; i < 12; i++) {
     const albumRow = document.getElementById("album-row1")
     const newCol = document.createElement("div")
-    newCol.classList.add("col-md-6", "col-xs-12", "col-lg-4", "col-xl-2")
+    newCol.classList.add("col-xs-12", "col-md-6", "col-lg-4", "col-xl-2")
     newCol.innerHTML = `
                             <a href="./album-page.html?id=${elements.data[i].album.id}" class="text-decoration-none">
                               <div class="card h-100 text-white">

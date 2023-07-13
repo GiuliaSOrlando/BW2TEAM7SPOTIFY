@@ -15,8 +15,8 @@ let greeting =
 greetingText.innerText = `${greeting}`
 
 //FETCH
-const PopUrl =
-  "https://striveschool-api.herokuapp.com/api/deezer/search?q=amicidimariadefilippi"
+const LoveUrl =
+  "https://striveschool-api.herokuapp.com/api/deezer/search?q=Love"
 
 const MetalUrl =
   "https://striveschool-api.herokuapp.com/api/deezer/search?q=ironmaiden"
@@ -250,7 +250,7 @@ const getData = function (url, foo) {
     })
 }
 
-getData(PopUrl, populateGreetings)
+getData(LoveUrl, populateGreetings)
 getData(MetalUrl, populateAlbums1)
 getData(LigabueUrl, populateAlbums2)
 getData(MerolaUrl, populateAlbums3)

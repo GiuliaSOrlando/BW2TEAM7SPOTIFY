@@ -69,7 +69,7 @@ const populateTracks = function (elements, i) {
     const newCol = document.createElement("div")
     newCol.classList.add("track")
     newCol.innerHTML = `
-      <div class="track-num d-flex mb-3">${i + 1}</div>
+      <div id="song-button${i}" class="track-num d-flex mb-3">${i + 1}</div>
             <div class="song">
               <h3 class="song-title fs-5 mb-0">${tracks.title}</h3>
               <p>${tracks.artist.name}</p>
@@ -80,6 +80,13 @@ const populateTracks = function (elements, i) {
       `
 
     tracksRow.appendChild(newCol)
+
+    let songBtnArr = []
+    let songBtn = document.getElementById(`song-button${i}`)
+    console.log(songBtn)
+    songBtn.addEventListener("click", function () {
+      console.log(`L'url della traccia da riprodurre è ${tracks.preview}`)
+    })
   })
 }
 

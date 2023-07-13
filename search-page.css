@@ -1,0 +1,50 @@
+.color1 {
+  background-color: #e13300;
+}
+.color2 {
+  background-color: #7358ff;
+}
+.color3 {
+  background-color: #1e3264;
+}
+.color4 {
+  background-color: #e8115b;
+}
+.color5 {
+  background-color: #27856a;
+}
+.color6 {
+  background-color: #148a08;
+}
+.color7 {
+  background-color: #bc5900;
+}
+.color8 {
+  background-color: #e1118c;
+}
+.color9 {
+  background-color: #2d46b9;
+}
+.color10 {
+  background-color: #503750;
+}
+.color11 {
+  background-color: #7d4b32;
+}
+.color12 {
+  background-color: #e91429;
+}
+
+.div-cont {
+  /* width: 200px; */
+  height: 25vh;
+  color: white;
+  padding: 1em;
+  position: relative;
+  overflow: hidden;
+}
+.ro {
+  transform: rotate(30deg);
+  left: 58%;
+  box-shadow: -3px 3px 10px gray;
+}

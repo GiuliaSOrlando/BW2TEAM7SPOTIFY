@@ -4,15 +4,12 @@ document.querySelectorAll('[data-bs-toggle="tooltip"]').forEach((tooltip) => {
   new bootstrap.Tooltip(tooltip)
 })
 
-let greetingText = document.getElementById("greeting-message")
-const timeNow = new Date().getHours()
-let greeting =
-  timeNow >= 5 && timeNow < 12
-    ? "Buongiorno"
-    : timeNow >= 12 && timeNow < 18
-    ? "Buon pomeriggio"
-    : "Buonasera"
-greetingText.innerText = `${greeting}`
+// SEARCH FUNCTION
+window.addEventListener("load", function () {
+  let searchBar = document.getElementById("search-bar")
+  searchBar.classList.remove("d-none")
+  searchBar.classList.add("d-block")
+})
 
 //FETCH
 
@@ -21,41 +18,6 @@ const QueenUrl =
 
 const rockUrl =
   "https://striveschool-api.herokuapp.com/api/deezer/search?q=rock"
-
-// Creo le tessere sotto il saluti
-const populateGreetings = function (elements) {
-  for (let i = 0; i < 6; i++) {
-    const greetingsRow = document.getElementById("greetings-row")
-    const newCol = document.createElement("div")
-    newCol.classList.add("col", "mb-2", "col-lg-4", "col-md-6", "col-sm-12")
-
-    newCol.innerHTML = `
-      <div class="card p-0 border-0">
-                    <a href="./album-page.html?id=${elements.data[i].album.id}" class="text-decoration-none">
-                    <div
-                      class="row row-cols-2 row-cols-md-3 h-25 align-items-center colo p-0 m-0"
-                    >
-                      <div class="col p-0">
-                        <img
-                          src="${elements.data[i].album.cover_medium}"
-                          class="img-fluid h-100 rounded-start"
-                          alt="..."
-                        />
-                      </div>
-                      <div class="col-md-8 d-flex">
-                        <div class="card-body">
-                          <h5 class="card-title text-white">${elements.data[i].album.title}</h5>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                    </a>
-      `
-
-    greetingsRow.appendChild(newCol)
-  }
-}
 
 // Creo la sezione con quattro album
 const populateAlbums = function (elements) {
@@ -149,7 +111,6 @@ const getData = function (url, foo) {
     })
 }
 
-getData(QueenUrl, populateGreetings)
 getData(QueenUrl, populateAlbums)
 getData(rockUrl, populateLibrary)
 

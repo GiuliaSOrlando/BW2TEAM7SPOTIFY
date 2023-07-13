@@ -81,9 +81,7 @@ const populateTracks = function (elements, i) {
 
     tracksRow.appendChild(newCol)
 
-    let songBtnArr = []
     let songBtn = document.getElementById(`song-button${i}`)
-    console.log(songBtn)
     songBtn.addEventListener("click", function () {
       console.log(`L'url della traccia da riprodurre è ${tracks.preview}`)
     })

@@ -19,7 +19,7 @@ const PopUrl =
   "https://striveschool-api.herokuapp.com/api/deezer/search?q=amicidimariadefilippi"
 
 const MetalUrl =
-  "https://striveschool-api.herokuapp.com/api/deezer/search?q=heavymetal"
+  "https://striveschool-api.herokuapp.com/api/deezer/search?q=ironmaiden"
 
 const MerolaUrl =
   "https://striveschool-api.herokuapp.com/api/deezer/search?q=mariomerola"

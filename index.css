@@ -282,21 +282,3 @@ body {
 
   --bs-tooltip-bg: var(--bs-dark);
 }
-
-@media only screen and (max-width: 600px) {
-  #left-element {
-    display: none;
-  }
-
-  #right-element {
-    display: none;
-  }
-}
-@media only screen and (max-width: 700px) {
-  #right-element {
-    display: none;
-  }
-  #album-cover {
-    display: none;
-  }
-}

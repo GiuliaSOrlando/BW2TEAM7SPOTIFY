@@ -37,7 +37,7 @@ const populateGreetings = function (elements) {
     const newCol = document.createElement("div")
     newCol.classList.add("col", "mb-2",  "col-md-4", "col-sm-6","col-4" )
     
-    newCol.innerHTML = `
+    newCol.innerHTML = ` 
       <div class="card p-0 border-0">
                     <a href="./album-page.html?id=${elements.data[i].album.id}" class="text-decoration-none">
                     <div

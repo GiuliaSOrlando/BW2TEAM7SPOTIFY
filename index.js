@@ -35,8 +35,8 @@ const populateGreetings = function (elements) {
   for (let i = 0; i < 6; i++) {
     const greetingsRow = document.getElementById("greetings-row")
     const newCol = document.createElement("div")
-    newCol.classList.add("col", "mb-2", "col-lg-4", "col-md-6", "col-sm-12")
-
+    newCol.classList.add("col", "mb-2", "col-lg-4", "col-md-12", "col-sm-12")
+   
     newCol.innerHTML = `
       <div class="card p-0 border-0">
                     <a href="./album-page.html?id=${elements.data[i].album.id}" class="text-decoration-none">
@@ -67,10 +67,10 @@ const populateGreetings = function (elements) {
 
 // Creo la sezione con 6 album
 const populateAlbums1 = function (elements) {
-  for (let i = 6; i < 12; i++) {
+  for (let i = 6; i < 10; i++) {
     const albumRow = document.getElementById("album-row1")
     const newCol = document.createElement("div")
-    newCol.classList.add("col-xs-12", "col-md-6", "col-lg-4", "col-xl-2")
+    newCol.classList.add("col-xs-12", "col-md-6", "col-lg-4", "col-xl-3")
     newCol.innerHTML = `
                             <a href="./album-page.html?id=${elements.data[i].album.id}" class="text-decoration-none">
                               <div class="card h-100 text-white">
@@ -99,7 +99,7 @@ const populateAlbums1 = function (elements) {
                           </svg>
                         </div>
                         <div class="card-body text-white">
-                          <h5 class="card-title card-text ">${elements.data[i].album.title}</h5>
+                          <h5 class="card-title card-text text-truncate">${elements.data[i].album.title}</h5>
                           <a href="./artist-page.html?id=${elements.data[i].artist.id}">
                            <h6 class="card-subtitle card-text mb-2">${elements.data[i].artist.name}</h6>
                           </a>
@@ -113,10 +113,10 @@ const populateAlbums1 = function (elements) {
 }
 
 const populateAlbums2 = function (elements) {
-  for (let i = 6; i < 12; i++) {
+  for (let i = 6; i < 10; i++) {
     const albumRow = document.getElementById("album-row2")
     const newCol = document.createElement("div")
-    newCol.classList.add("col-md-6", "col-xs-12", "col-lg-4", "col-xl-2")
+    newCol.classList.add("col-md-6", "col-xs-12", "col-lg-4", "col-xl-3")
     newCol.innerHTML = `
                             <a href="./album-page.html?id=${elements.data[i].album.id}" class="text-decoration-none">
                               <div class="card h-100 text-white">
@@ -145,7 +145,7 @@ const populateAlbums2 = function (elements) {
                           </svg>
                         </div>
                         <div class="card-body text-white">
-                          <h5 class="card-title card-text ">${elements.data[i].album.title}</h5>
+                          <h5 class="card-title card-text text-truncate ">${elements.data[i].album.title}</h5>
                           <a href="./artist-page.html?id=${elements.data[i].artist.id}">
                           <h6 class="card-subtitle card-text mb-2">${elements.data[i].artist.name}</h6>
                           </a>
@@ -159,10 +159,10 @@ const populateAlbums2 = function (elements) {
 }
 
 const populateAlbums3 = function (elements) {
-  for (let i = 6; i < 12; i++) {
+  for (let i = 6; i < 10; i++) {
     const albumRow = document.getElementById("album-row3")
     const newCol = document.createElement("div")
-    newCol.classList.add("col-md-6", "col-xs-12", "col-lg-4", "col-xl-2")
+    newCol.classList.add("col-md-6", "col-xs-12", "col-lg-4", "col-xl-3")
     newCol.innerHTML = `
                             <a href="./album-page.html?id=${elements.data[i].album.id}" class="text-decoration-none">
                               <div class="card h-100 text-white">
@@ -191,7 +191,7 @@ const populateAlbums3 = function (elements) {
                           </svg>
                         </div>
                         <div class="card-body text-white">
-                          <h5 class="card-title card-text ">${elements.data[i].album.title}</h5>
+                          <h5 class="card-title card-text text-truncate ">${elements.data[i].album.title}</h5>
                           <a href="./artist-page.html?id=${elements.data[i].artist.id}">
                           <h6 class="card-subtitle card-text mb-2">${elements.data[i].artist.name}</h6>
                           </a>

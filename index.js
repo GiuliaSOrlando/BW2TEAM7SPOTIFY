@@ -100,7 +100,9 @@ const populateAlbums1 = function (elements) {
                         </div>
                         <div class="card-body text-white">
                           <h5 class="card-title card-text text-truncate">${elements.data[i].album.title}</h5>
-                          <h6 class="card-subtitle card-text mb-2">${elements.data[i].artist.name}</h6>
+                          <a href="./artist-page.html?id=${elements.data[i].artist.id}">
+                           <h6 class="card-subtitle card-text mb-2">${elements.data[i].artist.name}</h6>
+                          </a>
                         </div>
                       </div>
                             </a>
@@ -144,7 +146,9 @@ const populateAlbums2 = function (elements) {
                         </div>
                         <div class="card-body text-white">
                           <h5 class="card-title card-text text-truncate ">${elements.data[i].album.title}</h5>
+                          <a href="./artist-page.html?id=${elements.data[i].artist.id}">
                           <h6 class="card-subtitle card-text mb-2">${elements.data[i].artist.name}</h6>
+                          </a>
                         </div>
                       </div>
                             </a>
@@ -188,7 +192,9 @@ const populateAlbums3 = function (elements) {
                         </div>
                         <div class="card-body text-white">
                           <h5 class="card-title card-text text-truncate ">${elements.data[i].album.title}</h5>
+                          <a href="./artist-page.html?id=${elements.data[i].artist.id}">
                           <h6 class="card-subtitle card-text mb-2">${elements.data[i].artist.name}</h6>
+                          </a>
                         </div>
                       </div>
                             </a>

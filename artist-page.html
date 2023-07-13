@@ -1,0 +1,953 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spotify - Web Player: Music for everyone</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"
+    />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="assets/svg-spotify/Spotify_icon.png"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="./Elementi singoli/nav/css/nav.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="artist/artist.css" />
+    <!-- <style>
+      body {
+        background-color: #000000;
+      }
+      .libreria,
+      .card-libreria {
+        background-color: #121212;
+      }
+      .card-libreria:hover {
+        cursor: pointer;
+        background-color: #181818;
+      }
+      a i {
+        color: white;
+      }
+      .img-libreria {
+        height: 50px;
+        width: 50px;
+      }
+
+      .btn-libreria {
+        background-color: white;
+      }
+      .btn-libreria:hover {
+        background-color: white;
+      }
+      .bg-aside {
+        background-color: #121212;
+      }
+      .navbar {
+        background-color: #121212;
+      }
+    </style> -->
+    <!-- <link rel="stylesheet" href="./nav/css/nav.css" /> -->
+    <link rel="stylesheet" href="./Elementi singoli/player/player.css" />
+  </head>
+  <body>
+    <div class="margin-div">
+      <div class="home-container">
+        <div class="home-aside">
+          <!-- ASIDE: Home/Search -->
+          <div class="container bg-black">
+            <!-- <div class="sidebar-brand">
+                  <a href="#" class="text-decoration-none text-white text-">...</a>
+                </div> -->
+            <div class="col text-white bg-aside p-3 mb-2 rounded">
+              <nav class="sidebar-content bg-aside">
+                <div class="row flex-column ps-2">
+                  <div>
+                    <div class="sidebar-menu">
+                      <ul class="navbar-nav">
+                        <li class="nav-item active">
+                          <a
+                            href="index.html"
+                            class="text-decoration-none text-white text-start fs-5 a"
+                          >
+                            <svg
+                              version="1.0"
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="25.000000pt"
+                              height="35.000000pt"
+                              viewBox="0 0 140.000000 146.000000"
+                              preserveAspectRatio="xMidYMid meet"
+                            >
+                              <metadata>
+                                Created by potrace 1.10, written by Peter
+                                Selinger 2001-2011
+                              </metadata>
+                              <g
+                                transform="translate(0.000000,146.000000) scale(0.050000,-0.050000)"
+                                fill="#ffffff"
+                                stroke="none"
+                              >
+                                <path
+                                  d="M1083 2639 c-249 -135 -486 -277 -646 -385 l-153 -104 -15 -290 c-20
+-401 -2 -1135 29 -1166 17 -17 131 -24 382 -24 463 0 428 -33 436 413 l7 341
+137 -7 c176 -10 162 19 182 -379 10 -190 23 -350 30 -356 25 -26 765 -13 792
+14 29 29 51 1142 26 1340 -17 139 -248 306 -804 583 -243 121 -221 120 -403
+20z m372 -110 c342 -185 705 -411 727 -454 24 -43 16 -1284 -8 -1308 -17 -16
+-609 -18 -626 -2 -9 9 -21 170 -28 358 -14 409 -6 397 -251 397 -236 0 -236 1
+-252 -417 -7 -183 -14 -335 -15 -338 -1 -3 -141 -5 -312 -5 l-310 0 0 676 0
+676 355 208 c511 298 513 300 533 300 10 0 95 -41 187 -91z m-1120 -1374 c-4
+-135 -6 -24 -6 245 0 270 2 380 6 245 3 -135 3 -355 0 -490z"
+                                />
+                              </g>
+                            </svg>
+                            Home</a
+                          >
+                        </li>
+                        <br />
+                        <li class="nav-item active">
+                          <a
+                            href="#"
+                            class="text-decoration-none text-white fs-5 a"
+                          >
+                            <svg
+                              version="1.0"
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="25.000000pt"
+                              height="35.000000pt"
+                              viewBox="0 0 114.000000 135.000000"
+                              preserveAspectRatio="xMidYMid meet"
+                            >
+                              <metadata>
+                                Created by potrace 1.10, written by Peter
+                                Selinger 2001-2011
+                              </metadata>
+                              <g
+                                transform="translate(0.000000,135.000000) scale(0.050000,-0.050000)"
+                                fill="#ffffff"
+                                stroke="none"
+                              >
+                                <path
+                                  d="M827 2299 c-512 -101 -811 -696 -589 -1170 210 -451 818 -629 1225
+-359 l79 52 194 -188 c233 -225 262 -243 321 -202 59 42 40 73 -191 315 -104
+108 -185 202 -182 210 3 7 35 72 71 143 316 631 -231 1337 -928 1199z m317
+-181 c509 -105 699 -735 333 -1101 -264 -264 -716 -252 -967 27 -425 473 6
+1204 634 1074z"
+                                />
+                              </g>
+                            </svg>
+                            Cerca
+                          </a>
+                        </li>
+                        <br />
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </nav>
+            </div>
+            <!-- ASIDE: Library -->
+            <div class="container libreria rounded">
+              <div class="row">
+                <div class="col">
+                  <nav
+                    class="navbar navbar-expand justify-content-between align-items-center pb-0"
+                  >
+                    <div
+                      class="d-flex justify-content-start align-items-center"
+                    >
+                      <a
+                        class="navbar-link text-decoration-none a"
+                        href="#"
+                        data-bs-toggle="tooltip"
+                        data-bs-title="Comprimi la tua libreria"
+                        data-bs-placement="top"
+                        data-bs-custom-class="custom-tooltip"
+                      >
+                        <svg
+                          version="1.0"
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="23.000000pt"
+                          height="20.000000pt"
+                          viewBox="0 0 227.000000 224.000000"
+                          preserveAspectRatio="xMidYMid meet"
+                        >
+                          <g
+                            transform="translate(0.000000,224.000000) scale(0.100000,-0.100000)"
+                            fill="#ffff"
+                            stroke="none"
+                          >
+                            <path
+                              d="M333 2100 c-12 -5 -30 -21 -40 -37 -17 -26 -18 -72 -16 -873 l3 -845
+        25 -22 c33 -29 84 -30 117 -3 l26 20 7 703 c4 387 4 773 0 857 -7 151 -8 155
+        -35 182 -29 29 -49 33 -87 18z"
+                            />
+                            <path
+                              d="M856 2080 l-36 -32 0 -667 c0 -366 3 -751 7 -855 6 -171 8 -190 27
+        -207 24 -23 83 -25 111 -3 31 23 34 101 34 955 l1 786 -23 21 c-13 12 -37 24
+        -54 28 -25 5 -37 0 -67 -26z"
+                            />
+                            <path
+                              d="M1401 2084 l-31 -26 0 -849 0 -850 22 -29 22 -30 316 0 317 0 21 23
+        22 23 0 702 0 701 -42 29 c-135 92 -571 332 -604 332 -7 0 -26 -12 -43 -26z"
+                            />
+                          </g>
+                        </svg>
+
+                        La tua libreria</a
+                      >
+                    </div>
+                    <div class="">
+                      <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                          <a
+                            class="nav-link i"
+                            href="#"
+                            data-bs-toggle="tooltip"
+                            data-bs-title="Crea una playlist o una cartella"
+                            data-bs-placement="top"
+                            data-bs-custom-class="custom-tooltip"
+                          >
+                            <i class="fas fa-plus"></i>
+                          </a>
+                        </li>
+                        <li class="nav-item">
+                          <a
+                            class="nav-link i"
+                            href="#"
+                            data-bs-toggle="tooltip"
+                            data-bs-title="Allarga la tua libreria"
+                            data-bs-placement="top"
+                            data-bs-custom-class="custom-tooltip"
+                          >
+                            <i class="fas fa-arrow-right"></i>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </nav>
+                </div>
+              </div>
+              <div class="row mt-3">
+                <div class="col text-start">
+                  <button
+                    id="album-btn"
+                    class="btn btn-libreria text-white rounded-pill me-1 fw-medium"
+                  >
+                    Album
+                  </button>
+                  <button
+                    id="artist-btn"
+                    class="btn btn-libreria text-white rounded-pill fw-medium"
+                  >
+                    Artisti
+                  </button>
+                </div>
+              </div>
+              <div class="row mt-3">
+                <div class="col">
+                  <div
+                    id="library-deck"
+                    class="card-deck"
+                    style="
+                      overflow-y: scroll;
+                      max-height: 580px;
+                      overflow-x: hidden;
+                    "
+                  ></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- MAIN CONTENT  -->
+        <div id="section-hidden">
+          <section id="album-section">
+            <nav id="navbar" class="navbar bg-transparent navbar-expand">
+              <div class="container-fluid">
+                <div
+                  class="collapse navbar-collapse"
+                  id="navbarSupportedContent"
+                >
+                  <ul
+                    class="navbar-nav me-auto mb-2 mb-lg-0 w-100 justify-content-between"
+                  >
+                    <div id="buttons-container" class="d-flex">
+                      <li class="nav-item">
+                        <a
+                          class="nav-link active text-white"
+                          aria-current="page"
+                          href="#"
+                          ><i
+                            class="bi bi-chevron-left p-2 px-2 bg-black opacity-50 rounded-circle fs-5 p-1 px-2"
+                          ></i
+                        ></a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link text-white" href="#"
+                          ><i
+                            class="bi bi-chevron-right p-2 px-2 bg-black rounded-circle fs-5 p-1 px-2"
+                          ></i
+                        ></a>
+                      </li>
+                      <div id="reproduce" class="d-none">
+                        <button id="play-button-nav">
+                          <i class="fas fa-play"></i></button
+                        ><span id="testo-canzone-nav">Artista</span>
+                      </div>
+                      <!-- <form class="d-flex" role="search">
+                        <div class="d-flex align-items-center">
+                          <i
+                            class="bi bi-search text-white fs-6 mx-2 position-absolute"
+                          ></i>
+                          <input
+                            class="border-0 rounded-5 pe-5 fs-6 text-white"
+                            type="search"
+                            placeholder="Cosa vuoi ascoltare?"
+                            aria-label="Search"
+                            autofocus
+                          />
+                        </div>
+                      </form> -->
+                    </div>
+                    <div class="d-flex align-items-center">
+                      <ul class="d-flex navbar-nav align-items-center">
+                        <li class="nav-item">
+                          <a
+                            class="nav-link text-black rounded-5 bg-white py-1 fw-bold me-2 px-3 ulhov"
+                            href="#"
+                          >
+                            Esplora Premium</a
+                          >
+                        </li>
+                        <li class="nav-item">
+                          <a
+                            class="nav-link text-white rounded-5 bg-black bg-opacity-25 py-1 fw-bold px-3 d-flex align-items-center ulhov"
+                            href="#"
+                          >
+                            <i class="bi bi-arrow-down-circle fs-6 me-1"></i
+                            >Installa app</a
+                          >
+                        </li>
+                      </ul>
+
+                      <li class="nav-item dropdown">
+                        <a
+                          class="nav-link dropdown-toggle ulhov"
+                          href="#"
+                          role="button"
+                          data-bs-toggle="dropdown"
+                          aria-expanded="false"
+                        >
+                          <i
+                            class="bi bi-person rounded-circle fs-5 p-1 px-2 bg-black bg-opacity-25 text-white ahover"
+                            data-bs-toggle="tooltip"
+                            data-bs-title="user"
+                            data-bs-placement="bottom"
+                            data-bs-custom-class="custom-tooltip"
+                          ></i>
+                        </a>
+                        <ul class="dropdown-menu drop">
+                          <li>
+                            <a
+                              class="dropdown-item d-flex justify-content-between"
+                              href="#"
+                              >Account
+                              <i class="bi bi-box-arrow-up-right ms-1"></i
+                            ></a>
+                          </li>
+                          <li><a class="dropdown-item" href="#">Profilo</a></li>
+                          <li>
+                            <a
+                              class="dropdown-item d-flex justify-content-between fs-6"
+                              href="#"
+                              >Effettua l' upgrade a Premium
+                              <i class="bi bi-box-arrow-up-right ms-1"></i
+                            ></a>
+                          </li>
+                          <li>
+                            <a class="dropdown-item" href="#">Impostazioni</a>
+                          </li>
+                          <li><hr class="dropdown-divider bg-secondary" /></li>
+                          <li><a class="dropdown-item" href="#">Esci</a></li>
+                        </ul>
+                      </li>
+                    </div>
+                  </ul>
+                </div>
+              </div>
+            </nav>
+            <div class="artist-heading-wrapper">
+              <div class="scritte-immagini">
+                <div class="album-title">
+                  <p>artista verificato</p>
+                  <h1>Artista</h1>
+                  <p>1000 ascoltatori mensili</p>
+                </div>
+              </div>
+            </div>
+
+            <div id="buttons-and-tracks-container">
+              <div class="bottoni">
+                <button id="play-button-album">
+                  <i class="fas fa-play"></i>
+                </button>
+
+                <button
+                  id="follow-button"
+                  type="button"
+                  class="btn btn-outline-light"
+                >
+                  SEGUI
+                </button>
+
+                <button id="ellipsis-button">
+                  <i class="fas fa-ellipsis-h"></i>
+                </button>
+              </div>
+              <div id="tracks-container">
+                <div class="track">
+                  <div class="track-img">
+                    <img
+                      src="https://i.pinimg.com/236x/a1/ca/de/a1cade6cd6c09804d486c3614672c507--linkin-park-albums-linkin-park-album-cover.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="song">
+                    <h3 class="song-title">Song Title</h3>
+                    <p>authors</p>
+                  </div>
+                  <div class="views d-flex align-items-center">23456</div>
+                  <div class="song-length"><span></span>2:06 <span></span></div>
+                </div>
+
+                <div class="track">
+                  <div class="track-img">
+                    <img
+                      src="https://i.pinimg.com/236x/a1/ca/de/a1cade6cd6c09804d486c3614672c507--linkin-park-albums-linkin-park-album-cover.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="song">
+                    <h3 class="song-title">Song Title</h3>
+                    <p>authors</p>
+                  </div>
+                  <div class="views d-flex align-items-center">23456</div>
+                  <div class="song-length"><span></span>2:06 <span></span></div>
+                </div>
+
+                <div class="track">
+                  <div class="track-img">
+                    <img
+                      src="https://i.pinimg.com/236x/a1/ca/de/a1cade6cd6c09804d486c3614672c507--linkin-park-albums-linkin-park-album-cover.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="song">
+                    <h3 class="song-title">Song Title</h3>
+                    <p>authors</p>
+                  </div>
+                  <div class="views d-flex align-items-center">23456</div>
+                  <div class="song-length"><span></span>2:06 <span></span></div>
+                </div>
+
+                <div class="track">
+                  <div class="track-img">
+                    <img
+                      src="https://i.pinimg.com/236x/a1/ca/de/a1cade6cd6c09804d486c3614672c507--linkin-park-albums-linkin-park-album-cover.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="song">
+                    <h3 class="song-title">Song Title</h3>
+                    <p>authors</p>
+                  </div>
+                  <div class="views d-flex align-items-center">23456</div>
+                  <div class="song-length"><span></span>2:06 <span></span></div>
+                </div>
+
+                <div class="track">
+                  <div class="track-img">
+                    <img
+                      src="https://i.pinimg.com/236x/a1/ca/de/a1cade6cd6c09804d486c3614672c507--linkin-park-albums-linkin-park-album-cover.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="song">
+                    <h3 class="song-title">Song Title</h3>
+                    <p>authors</p>
+                  </div>
+                  <div class="views d-flex align-items-center">23456</div>
+                  <div class="song-length"><span></span>2:06 <span></span></div>
+                </div>
+
+                <div class="track">
+                  <div class="track-img">
+                    <img
+                      src="https://i.pinimg.com/236x/a1/ca/de/a1cade6cd6c09804d486c3614672c507--linkin-park-albums-linkin-park-album-cover.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="song">
+                    <h3 class="song-title">Song Title</h3>
+                    <p>authors</p>
+                  </div>
+                  <div class="views d-flex align-items-center">23456</div>
+                  <div class="song-length"><span></span>2:06 <span></span></div>
+                </div>
+
+                <div class="track">
+                  <div class="track-img">
+                    <img
+                      src="https://i.pinimg.com/236x/a1/ca/de/a1cade6cd6c09804d486c3614672c507--linkin-park-albums-linkin-park-album-cover.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="song">
+                    <h3 class="song-title">Song Title</h3>
+                    <p>authors</p>
+                  </div>
+                  <div class="views d-flex align-items-center">23456</div>
+                  <div class="song-length"><span></span>2:06 <span></span></div>
+                </div>
+
+                <div class="track">
+                  <div class="track-img">
+                    <img
+                      src="https://i.pinimg.com/236x/a1/ca/de/a1cade6cd6c09804d486c3614672c507--linkin-park-albums-linkin-park-album-cover.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="song">
+                    <h3 class="song-title">Song Title</h3>
+                    <p>authors</p>
+                  </div>
+                  <div class="views d-flex align-items-center">23456</div>
+                  <div class="song-length"><span></span>2:06 <span></span></div>
+                </div>
+
+                <div class="track">
+                  <div class="track-img">
+                    <img
+                      src="https://i.pinimg.com/236x/a1/ca/de/a1cade6cd6c09804d486c3614672c507--linkin-park-albums-linkin-park-album-cover.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="song">
+                    <h3 class="song-title">Song Title</h3>
+                    <p>authors</p>
+                  </div>
+                  <div class="views d-flex align-items-center">23456</div>
+                  <div class="song-length"><span></span>2:06 <span></span></div>
+                </div>
+
+                <div class="track">
+                  <div class="track-img">
+                    <img
+                      src="https://i.pinimg.com/236x/a1/ca/de/a1cade6cd6c09804d486c3614672c507--linkin-park-albums-linkin-park-album-cover.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="song">
+                    <h3 class="song-title">Song Title</h3>
+                    <p>authors</p>
+                  </div>
+                  <div class="views d-flex align-items-center">23456</div>
+                  <div class="song-length"><span></span>2:06 <span></span></div>
+                </div>
+
+                <div class="track">
+                  <div class="track-img">
+                    <img
+                      src="https://i.pinimg.com/236x/a1/ca/de/a1cade6cd6c09804d486c3614672c507--linkin-park-albums-linkin-park-album-cover.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="song">
+                    <h3 class="song-title">Song Title</h3>
+                    <p>authors</p>
+                  </div>
+                  <div class="views d-flex align-items-center">23456</div>
+                  <div class="song-length"><span></span>2:06 <span></span></div>
+                </div>
+
+                <div class="track">
+                  <div class="track-img">
+                    <img
+                      src="https://i.pinimg.com/236x/a1/ca/de/a1cade6cd6c09804d486c3614672c507--linkin-park-albums-linkin-park-album-cover.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="song">
+                    <h3 class="song-title">Song Title</h3>
+                    <p>authors</p>
+                  </div>
+                  <div class="views d-flex align-items-center">23456</div>
+                  <div class="song-length"><span></span>2:06 <span></span></div>
+                </div>
+
+                <div class="track">
+                  <div class="track-img">
+                    <img
+                      src="https://i.pinimg.com/236x/a1/ca/de/a1cade6cd6c09804d486c3614672c507--linkin-park-albums-linkin-park-album-cover.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="song">
+                    <h3 class="song-title">Song Title</h3>
+                    <p>authors</p>
+                  </div>
+                  <div class="views d-flex align-items-center">23456</div>
+                  <div class="song-length"><span></span>2:06 <span></span></div>
+                </div>
+
+                <div class="track">
+                  <div class="track-img">
+                    <img
+                      src="https://i.pinimg.com/236x/a1/ca/de/a1cade6cd6c09804d486c3614672c507--linkin-park-albums-linkin-park-album-cover.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="song">
+                    <h3 class="song-title">Song Title</h3>
+                    <p>authors</p>
+                  </div>
+                  <div class="views d-flex align-items-center">23456</div>
+                  <div class="song-length"><span></span>2:06 <span></span></div>
+                </div>
+              </div>
+            </div>
+            <div id="Sezione 1">
+                <h3>Album</h3>
+                <div id="album-row" class="row container-card"></div>
+              </div>
+              
+
+          </section>
+        </div>
+      </div>
+    </div>
+    <div
+      id="player"
+      class="container-fluid bg-black text-white"
+      data-bs-theme="dark"
+    >
+      <div class="row">
+        <div id="left-element" class="col-4">
+          <div class="row mt-3">
+            <div class="col-2">
+              <img
+                src="/assets/imgs/main/image-1.jpg"
+                alt=""
+                id="album-cover"
+              />
+            </div>
+            <div class="col-4 mt-3 ms-3">
+              <h3 id="title">Song title</h3>
+              <p id="artist">Artist</p>
+            </div>
+            <div class="col">
+              <p class="fs-3 fw-lighter player-extra-icons" id="heart">
+                &#9825;
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-4 text-center mt-4">
+          <div class="row flex-column">
+            <div class="col">
+              <div class="row justify-content-center">
+                <div class="col-1 mt-2 mx-1">
+                  <button id="shuffle-button">
+                    <svg
+                      class="controller-icon"
+                      width="19"
+                      height="20"
+                      viewBox="0 0 59 50"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <g>
+                        <path
+                          id="shuffle"
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M47.2475 42.0835C47.3524 42.0835 47.4479 42.138 47.486 42.2378C47.5338 42.3286 47.5057 42.4375 47.4294 42.51C46.6373 43.2632 45.0527 44.7695 45.0527 44.7695C43.9648 45.8039 43.9648 47.4825 45.0527 48.517C46.1405 49.5514 47.8967 49.5514 48.9845 48.517C48.9845 48.517 56.208 41.6571 58.1261 39.8242C58.2501 39.7062 58.3169 39.5428 58.3169 39.3795C58.3169 39.2162 58.2501 39.0528 58.1261 38.9349C56.208 37.1019 48.9845 30.2419 48.9845 30.2419C47.8967 29.2075 46.1405 29.2075 45.0527 30.2419C43.9648 31.2763 43.9648 32.9551 45.0527 33.9895C45.0527 33.9895 46.7228 35.5774 47.5434 36.3578C47.6198 36.4304 47.6486 36.5393 47.6009 36.63C47.5627 36.7298 47.4673 36.7844 47.3623 36.7844C45.9118 36.7844 42.5149 36.7752 42.5149 36.7752C41.2362 36.7752 39.9569 36.1854 38.6114 35.3233C36.9032 34.2163 35.1762 32.6557 33.4203 30.8409C33.4203 30.8409 32.3899 29.7792 31.8555 29.2257C31.7696 29.1349 31.6551 29.0805 31.5215 29.0805C31.3974 29.0715 31.2734 29.1167 31.1875 29.1984C30.4145 29.8789 28.5631 31.4942 27.7902 32.1747C27.6947 32.2564 27.6373 32.3653 27.6373 32.4833C27.6278 32.6012 27.6759 32.7192 27.7618 32.8099C28.2962 33.3634 29.3267 34.4252 29.3267 34.4252C33.8022 39.0438 38.3637 42.0654 42.5052 42.0654C42.5052 42.0654 45.8256 42.0744 47.2475 42.0835ZM47.4294 7.57519C47.5057 7.64778 47.5338 7.74759 47.486 7.8474C47.4479 7.93814 47.3524 8.00159 47.2475 8.00159C45.8256 8.00159 42.5052 8.01063 42.5052 8.01063C39.5947 8.01063 36.4935 9.4172 33.4017 11.8853C29.5178 14.9886 25.4902 19.8251 21.4823 24.6797C17.7225 29.2166 13.9919 33.7808 10.3562 36.6844C8.43811 38.2179 6.63396 39.3251 4.83039 39.3251C4.83039 39.3251 1.85309 39.3251 0.679342 39.3251C0.412148 39.3251 0.202209 39.5246 0.202209 39.7696C0.202209 40.7768 0.202209 43.1633 0.202209 44.1614C0.202209 44.2885 0.250519 44.3973 0.336403 44.4881C0.431829 44.5697 0.545745 44.6151 0.679342 44.6151C1.47138 44.6151 2.98896 44.6151 2.98896 44.6151H4.83039C7.75045 44.6151 10.8429 43.2178 13.9347 40.7406C17.8185 37.6373 21.8455 32.8009 25.863 27.9463C29.6133 23.4093 33.3534 18.845 36.9891 15.9413C38.9072 14.4078 40.7017 13.3008 42.5052 13.3008H42.5149C42.5149 13.3008 45.9118 13.2918 47.3623 13.2918C47.4673 13.2918 47.5627 13.3552 47.6009 13.446C47.6486 13.5367 47.6198 13.6456 47.5434 13.7182C46.7228 14.5076 45.0527 16.0957 45.0527 16.0957C43.9648 17.1301 43.9648 18.7997 45.0527 19.8341C46.1405 20.8685 47.8967 20.8685 48.9845 19.8341C48.9845 19.8341 56.208 12.9741 58.1261 11.1412C58.2501 11.0232 58.3169 10.8691 58.3169 10.6967C58.3169 10.5333 58.2501 10.37 58.1261 10.252C56.208 8.42814 48.9845 1.55906 48.9845 1.55906C47.8967 0.533699 46.1405 0.533699 45.0527 1.55906C43.9648 2.59349 43.9648 4.27225 45.0527 5.30669C45.0527 5.30669 46.6373 6.81297 47.4294 7.57519ZM2.98896 10.7601H4.83039C6.43356 10.7601 8.03717 11.6493 9.72622 12.9106C11.8638 14.4985 14.0301 16.7127 16.2249 19.1809C16.2249 19.1809 17.1977 20.2788 17.713 20.8595C17.7893 20.9503 17.914 21.0047 18.038 21.0137C18.1621 21.0319 18.2855 20.9865 18.381 20.9139C19.1825 20.2697 21.1006 18.727 21.9117 18.0828C22.0072 18.0011 22.0647 17.8923 22.0743 17.7744C22.0838 17.6564 22.0455 17.5383 21.9691 17.4476C21.4538 16.8668 20.4714 15.7689 20.4714 15.7689C17.4845 12.4024 14.5069 9.48973 11.6251 7.684C9.32528 6.24124 7.03475 5.46087 4.83039 5.46087H0.202209V10.7601H2.98896Z"
+                          fill="white"
+                        />
+                      </g>
+                    </svg>
+                    <p id="shuffle-active">•</p>
+                  </button>
+                </div>
+                <div class="col-1 mt-2 mx-1">
+                  <button>
+                    <svg
+                      class="controller-icon"
+                      width="19"
+                      height="20"
+                      viewBox="0 0 49 50"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <g id="Previous">
+                        <path
+                          id="Previous_2"
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M11.145 28.8432L11.145 47.4046C11.145 48.3233 10.4307 49.0697 9.44864 49.0697L2.48474 49.0697C1.59193 49.0697 0.877685 48.3233 0.877685 47.4046L0.877689 2.59642C0.877689 1.67772 1.59194 0.932261 2.48474 0.932261L9.44864 0.932262C10.4307 0.932262 11.145 1.67772 11.145 2.59642L11.145 21.1579L45.0717 1.56168C45.8752 1.10009 46.8573 1.1001 47.6608 1.56168C48.4643 2.02326 49 2.87585 49 3.79901C49 13.5199 49 36.4811 49 46.2029C49 47.1251 48.4643 47.9778 47.6608 48.4393C46.8573 48.9009 45.8752 48.901 45.0717 48.4403L11.145 28.8432Z"
+                          fill="white"
+                        />
+                      </g>
+                    </svg>
+                  </button>
+                </div>
+                <div class="col-2 mx-1">
+                  <button>
+                    <svg
+                      id="play-button"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="48"
+                      height="48"
+                      viewBox="0 0 24 24"
+                      fill="white"
+                      stroke-width="1"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="feather feather-play-circle"
+                    >
+                      <circle cx="12" cy="12" r="10"></circle>
+                      <polygon
+                        points="10 8 16 12 10 16 10 8"
+                        fill="black"
+                      ></polygon>
+                    </svg>
+                  </button>
+                </div>
+                <div class="col-1 mt-2 mx-1">
+                  <button>
+                    <svg
+                      class="controller-icon"
+                      width="19"
+                      height="20"
+                      viewBox="0 0 49 50"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <g id="Next">
+                        <path
+                          id="Next_2"
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M37.855 21.1588V2.59737C37.855 1.67867 38.5693 0.932251 39.5514 0.932251H46.5153C47.4081 0.932251 48.1223 1.67867 48.1223 2.59737V47.4055C48.1223 48.3242 47.4081 49.0697 46.5153 49.0697H39.5514C38.5693 49.0697 37.855 48.3242 37.855 47.4055V28.844L3.92835 48.4403C3.12483 48.9019 2.14274 48.9019 1.33921 48.4403C0.535685 47.9787 0 47.1261 0 46.2029C0 36.4821 0 13.5209 0 3.79908C0 2.87681 0.535685 2.0242 1.33921 1.56262C2.14274 1.10104 3.12483 1.10097 3.92835 1.56166L37.855 21.1588Z"
+                          fill="white"
+                        />
+                      </g>
+                    </svg>
+                  </button>
+                </div>
+                <div class="col-1 mt-2 mx-1">
+                  <button id="repeat-button">
+                    <svg
+                      class="controller-icon"
+                      width="19"
+                      height="20"
+                      viewBox="0 0 58 52"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <g>
+                        <path
+                          id="repeat"
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M32.5599 39.5149L35.6426 36.5749C36.7305 35.5405 36.7305 33.871 35.6426 32.8365C34.5643 31.8021 32.7986 31.8021 31.7107 32.8365L22.101 41.974L31.7107 51.1116C32.7986 52.1369 34.5643 52.1369 35.6426 51.1116C36.7305 50.0771 36.7305 48.3984 35.6426 47.3639L32.5599 44.4331H43.8582C51.1774 44.4331 57.1225 38.7708 57.1225 31.8111V13.3455C57.1225 6.38576 51.1774 0.732666 43.8582 0.732666H14.1903C6.86151 0.732666 0.91629 6.38576 0.91629 13.3455V31.8111C0.91629 38.7708 6.86151 44.4331 14.1903 44.4331H16.8242V39.5149H14.1903C9.71476 39.5149 6.0887 36.0577 6.0887 31.8111V13.3455C6.0887 9.09889 9.71476 5.64184 14.1903 5.64184H43.8582C48.3242 5.64184 51.9605 9.09889 51.9605 13.3455V31.8111C51.9605 36.0577 48.3242 39.5149 43.8582 39.5149H32.5599Z"
+                          fill="white"
+                        />
+                      </g>
+                    </svg>
+                    <p id="repeat-active">•</p>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <input type="range" id="song-range" />
+            </div>
+          </div>
+        </div>
+        <div id="right-element" class="col-4">
+          <div class="row float-end mt-5">
+            <div class="col-1 mx-1">
+              <button id="about-button">
+                <svg
+                  class="player-extra-icons"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 58 55"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g>
+                    <path
+                      id="about"
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M29.258 0.780212C13.608 0.780212 0.91629 12.8395 0.91629 27.6936C0.91629 42.5568 13.608 54.6163 29.258 54.6163C44.8125 54.6163 57.5042 42.5568 57.5042 27.6936C57.5042 12.8395 44.8125 0.780212 29.258 0.780212ZM29.258 6.07946C41.7588 6.07946 51.9695 15.7613 51.9695 27.6936C51.9695 39.635 41.7588 49.317 29.258 49.317C16.6617 49.317 6.45103 39.635 6.45103 27.6936C6.45103 15.7613 16.6617 6.07946 29.258 6.07946ZM31.4528 39.8347H26.3952V44.653H31.4528V39.8347ZM24.3912 22.2039C24.3912 19.8265 26.3952 17.8937 28.8763 17.8937C31.3573 17.8937 33.4567 19.8265 33.4567 22.2039C33.4567 23.4833 32.7887 24.3727 32.0253 25.1258C31.3573 25.8517 30.4985 26.4687 29.7351 27.0857C27.7311 28.7191 26.2997 30.4521 26.2997 32.639V35.0982H31.4528V32.639C31.4528 32.1762 31.8345 31.8859 32.2162 31.541C32.7887 31.0147 33.4567 30.5158 34.1247 29.9713C36.4149 28.093 38.6098 25.8244 38.6098 22.2039C38.6098 17.1134 34.2201 12.9757 28.8763 12.9757C23.5324 12.9757 19.1428 17.1134 19.1428 22.2039V24.6631H24.3912V22.2039Z"
+                      fill="white"
+                    />
+                  </g>
+                </svg>
+              </button>
+            </div>
+            <div class="col-1 mx-1">
+              <button id="queue-button">
+                <svg
+                  class="player-extra-icons"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 51 47"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g>
+                    <path
+                      id="queue"
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M48.095 41.4707C48.095 41.2892 47.9421 41.1531 47.7513 41.1531C43.7911 41.1531 6.28846 41.1531 2.32826 41.1531C2.14695 41.1531 1.99426 41.2892 1.99426 41.4707C1.99426 42.4144 1.99426 45.1729 1.99426 46.1257C1.99426 46.2981 2.14695 46.4433 2.32826 46.4433C6.28846 46.4433 43.7911 46.4433 47.7513 46.4433C47.9421 46.4433 48.095 46.2981 48.095 46.1257V41.4707ZM48.095 27.0794C48.095 26.907 47.9421 26.7618 47.7513 26.7618C43.7911 26.7618 6.28846 26.7618 2.32826 26.7618C2.14695 26.7618 1.99426 26.907 1.99426 27.0794C1.99426 28.0321 1.99426 30.7907 1.99426 31.7344C1.99426 31.9068 2.14695 32.052 2.32826 32.052C6.28846 32.052 43.7911 32.052 47.7513 32.052C47.9421 32.052 48.095 31.9068 48.095 31.7344V27.0794ZM0 8.77719C0 4.18575 3.91249 0.465271 8.73152 0.465271H41.3957C46.2148 0.465271 50.175 4.18575 50.175 8.77719C50.175 13.3596 46.2148 17.0799 41.3957 17.0799H8.73152C3.91249 17.0799 0 13.3596 0 8.77719ZM5.56307 8.77719C5.56307 7.10757 6.98522 5.76452 8.73152 5.76452H41.3957C43.142 5.76452 44.5642 7.10757 44.5642 8.77719C44.5642 10.4377 43.142 11.7897 41.3957 11.7897H8.73152C6.98522 11.7897 5.56307 10.4377 5.56307 8.77719Z"
+                      fill="white"
+                    />
+                  </g>
+                </svg>
+              </button>
+            </div>
+            <div class="col-1 mx-1">
+              <button id="connect-button">
+                <svg
+                  class="player-extra-icons"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 59 50"
+                  fill="fill"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g>
+                    <path
+                      id="connect"
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M9.93571 49.2968H14.6116V44.3786H7.3592V49.2968H9.93571ZM58.6032 6.71246C58.6032 3.40953 55.8359 0.732666 52.3051 0.732666H28.2576C24.7268 0.732666 21.9595 3.40953 21.9595 6.71246V43.2716C21.9595 46.5745 24.7268 49.2514 28.2576 49.2514H52.3051C55.8359 49.2514 58.6032 46.5745 58.6032 43.2716V6.71246ZM53.4502 6.71246V43.2716C53.4502 43.8614 52.9731 44.3422 52.3051 44.3422H28.2576C27.5896 44.3422 27.1125 43.8614 27.1125 43.2716V6.71246C27.1125 6.12265 27.5896 5.64166 28.2576 5.64166H52.3051C52.9731 5.64166 53.4502 6.12265 53.4502 6.71246ZM40.2813 25.0783C44.3847 25.0783 47.6292 28.2178 47.6292 32.0923C47.6292 35.9669 44.3847 39.1156 40.2813 39.1156C36.178 39.1156 32.9335 35.9669 32.9335 32.0923C32.9335 28.2178 36.178 25.0783 40.2813 25.0783ZM12.0351 0.732666H6.50036C2.96958 0.732666 0.202209 3.39138 0.202209 6.66709V29.2794C0.202209 32.5551 2.96958 35.2138 6.50036 35.2138H14.6116V30.3048H6.50036C5.83237 30.3048 5.35524 29.842 5.35524 29.2794V6.66709C5.35524 6.1045 5.83237 5.64166 6.50036 5.64166H14.6116V0.732666H12.0351ZM40.2813 10.9409C42.2853 10.9409 44.003 12.5107 44.003 14.4434C44.003 16.3853 42.2853 17.9552 40.2813 17.9552C38.2774 17.9552 36.5597 16.3853 36.5597 14.4434C36.5597 12.5107 38.2774 10.9409 40.2813 10.9409Z"
+                      fill="white"
+                    />
+                  </g>
+                </svg>
+              </button>
+            </div>
+            <div class="col-1 mx-1">
+              <button id="volume-button">
+                <svg
+                  class="player-extra-icons"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 58 55"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g>
+                    <path
+                      id="volume"
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M0.30078 24.0088C-0.0236701 26.1412 -0.0045848 28.3189 0.348493 30.4694C0.882882 33.7632 2.95379 36.6397 5.98835 38.3184C14.3 42.9189 33.9863 53.8168 33.9863 53.8168C34.8547 54.2887 35.9144 54.2887 36.7828 53.8168C37.6416 53.345 38.1762 52.4738 38.1762 51.5301V2.64857C38.1762 1.70487 37.6416 0.824625 36.7828 0.352777C35.9144 -0.11907 34.8547 -0.119106 33.9863 0.361816C33.9863 0.361816 14.3 11.2507 5.98835 15.8512C2.95379 17.5299 0.882882 20.4154 0.348493 23.7093L0.30078 24.0088ZM42.7566 7.40337C42.7566 7.30356 42.8043 7.20368 42.8998 7.14923C42.9857 7.08571 43.0996 7.0766 43.195 7.1129C51.7261 10.1255 57.7952 17.9381 57.7952 27.0847C57.7952 36.2404 51.7261 44.0441 43.195 47.0657C43.0996 47.102 42.9857 47.0839 42.8998 47.0294C42.8139 46.9659 42.7566 46.8751 42.7566 46.7753C42.7566 45.6682 42.7566 42.8282 42.7566 41.8392C42.7566 41.6305 42.8805 41.4308 43.0809 41.3401C48.5107 38.6814 52.2322 33.2913 52.2322 27.0847C52.2322 20.8781 48.5107 15.4972 43.0809 12.8386C42.8805 12.7387 42.7566 12.5482 42.7566 12.3304C42.7566 11.3414 42.7566 8.50133 42.7566 7.40337ZM5.84521 24.544V24.5259C6.12195 22.8109 7.21025 21.3047 8.78479 20.4336L32.6027 7.24901C32.6027 7.24901 32.6027 40.9135 32.6027 46.2218C32.6027 46.367 32.5268 46.5031 32.3932 46.5757C32.2596 46.6483 32.107 46.6483 31.9734 46.5757C25.5989 43.0459 14.5008 36.9119 8.78479 33.7451C7.21025 32.874 6.12195 31.3677 5.84521 29.6527C5.56847 27.9559 5.56847 26.2228 5.84521 24.5259V24.544ZM42.7566 17.6297C42.7566 17.5027 42.833 17.3846 42.9475 17.3302C43.0715 17.2757 43.2145 17.2848 43.3195 17.3665C46.3636 19.6169 48.3294 23.1375 48.3294 27.0847C48.3294 31.041 46.3636 34.5527 43.3195 36.8121C43.2145 36.8847 43.0715 36.8937 42.9475 36.8393C42.833 36.7848 42.7566 36.6669 42.7566 36.549C42.7566 33.5001 42.7566 20.6786 42.7566 17.6297ZM0.30078 23.9996L0.339547 23.7273C0.330004 23.8181 0.310323 23.9088 0.30078 23.9996L0.186716 24.6984L0.30078 24.0088V23.9996Z"
+                      fill="white"
+                    />
+                  </g>
+                </svg>
+              </button>
+            </div>
+            <div class="col" id="volume-range-div">
+              <input type="range" id="volume-range" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="player/player.js"></script>
+    <!-- <script src="avrg_color.js"></script> n-->
+    <script>
+      //toast script
+      document
+        .querySelectorAll('[data-bs-toggle="tooltip"]')
+        .forEach((tooltip) => {
+          new bootstrap.Tooltip(tooltip);
+        });
+      // let avgColor = start()
+
+      let albumSection = document.getElementById("album-section");
+
+      albumSection.addEventListener("scroll", function () {
+        let y = albumSection.scrollTop;
+        let tracksHeader = document.querySelector(".tracks-header");
+        console.log(y);
+        let nav = document.getElementById("navbar");
+        let navButtonsContainer = document.getElementById("buttons-container");
+        let playButtonNav = document.getElementById("reproduce");
+        if (y > 25) {
+          nav.classList.remove("bg-transparent");
+          if (y > 264) {
+            playButtonNav.classList.remove("d-none");
+            playButtonNav.classList.add(
+              "d-flex",
+              "justify-content-center",
+              "align-items-center"
+            );
+          } else {
+            playButtonNav.classList.add("d-none");
+          }
+          if (y > 368) {
+            tracksHeader.style.backgroundColor = "#272727;";
+            tracksHeader.style.margin = "none";
+          }
+        } else {
+          nav.classList.add("bg-transparent");
+        }
+      });
+      let tracks = document.querySelectorAll(".track");
+      tracks.forEach((track) => {
+        let trackImg = track.querySelector(".track-img");
+        let songImg = trackImg.innerText;
+        track.addEventListener("mouseover", () => {
+          trackImg.innerHTML = `<i class="fas fa-play"></i>`;
+        });
+        track.addEventListener("mouseout", () => {
+          let trackImg = track.querySelector(".track-num");
+          trackImg.innerHTML = `${songImg}`;
+        });
+      });
+    </script>
+    <script src="artist-page.js"></script>
+  </body>
+</html>

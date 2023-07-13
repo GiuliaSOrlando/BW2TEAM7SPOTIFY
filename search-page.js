@@ -4,7 +4,7 @@ document.querySelectorAll('[data-bs-toggle="tooltip"]').forEach((tooltip) => {
   new bootstrap.Tooltip(tooltip)
 })
 
-// SEARCH FUNCTION
+// FUNZIONE PER MOSTRARE LA BARRA DI RICERCA
 window.addEventListener("load", function () {
   let searchBar = document.getElementById("search-bar")
   searchBar.classList.remove("d-none")

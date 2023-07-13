@@ -83,7 +83,7 @@ const populateTracks = function(elements){
     track.innerHTML = `
     <div class="track-img">
                     <img
-                      src=""
+                      src="${elements.data[i].album.cover_small}"
                       alt=""
                     />
                   </div>

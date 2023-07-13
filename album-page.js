@@ -91,10 +91,10 @@ const populateTracks = function (elements, i) {
       const song = new Audio(tracks.preview)
       song.getAttribute("controls")
       console.log(song)
-      if (song.paused) {
-        song.play()
-      } else {
+      if (song.playing) {
         song.pause()
+      } else {
+        song.play()
       }
     })
   })

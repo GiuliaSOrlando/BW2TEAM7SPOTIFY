@@ -3,11 +3,12 @@ let addressBarContent = new URLSearchParams(location.search)
 let artistId = addressBarContent.get('id')
 let dynamicUrl = originatingUrl + artistId
 
+
 console.log(dynamicUrl)
 
 const populateAlbums = function (elements) {
     for (let i = 0; i < 48; i++) {
-      const albumRow = document.getElementById("album-row1")
+      const albumRow = document.getElementById("album-row")
       const newCol = document.createElement("div")
       newCol.classList.add("col-xs-12", "col-md-6", "col-lg-4", "col-xl-2")
       newCol.innerHTML = `
@@ -49,6 +50,7 @@ const populateAlbums = function (elements) {
     }
   }
 
+
   // Funzione generica per la fetch
 const getData = function (url, foo) {
     fetch(url)
@@ -68,4 +70,8 @@ const getData = function (url, foo) {
       })
   }
 
-// getData(dynamicUrl, )
+
+// let trackListUrl = getData(dynamicUrl, (elements)=>{
+//     return elements.tracklist
+// })
+getData(dynamicUrl, elements => console.log(elements.tracklist) )

@@ -4,6 +4,14 @@ document.querySelectorAll('[data-bs-toggle="tooltip"]').forEach((tooltip) => {
   new bootstrap.Tooltip(tooltip)
 })
 
+const originatingUrl =
+  "https://striveschool-api.herokuapp.com/api/deezer/search?q="
+
+let addressBarContent = new URLSearchParams(location.search)
+let pageUrl = addressBarContent.get("id")
+let correctUrl = originatingUrl + pageUrl
+console.log(correctUrl)
+
 //FETCH
 const MetalUrl =
   "https://striveschool-api.herokuapp.com/api/deezer/search?q=heavymetal"
@@ -11,9 +19,9 @@ const MetalUrl =
 const rockUrl =
   "https://striveschool-api.herokuapp.com/api/deezer/search?q=rock"
 
-// Creo la sezione con 6 album
+// Creo la sezione con 48 album
 const populateAlbums1 = function (elements) {
-  for (let i = 6; i < 12; i++) {
+  for (let i = 0; i < 48; i++) {
     const albumRow = document.getElementById("album-row1")
     const newCol = document.createElement("div")
     newCol.classList.add("col-xs-12", "col-md-6", "col-lg-4", "col-xl-2")
@@ -105,7 +113,7 @@ const getData = function (url, foo) {
 
 // Funzione per la ricerca di risultati nella searchbar
 
-let searchForm = document.getElementById("search-bar")
+/*let searchForm = document.getElementById("search-bar")
 searchForm.addEventListener("submit", function (e) {
   e.preventDefault()
   const query = document.getElementById("search-bar-input-field")
@@ -113,9 +121,10 @@ searchForm.addEventListener("submit", function (e) {
   const searchUrl = `https://striveschool-api.herokuapp.com/api/deezer/search?q=${queryValue}`
   console.log(searchUrl)
   getData(searchUrl, populateAlbums1)
-})
+})*/
 
 getData(rockUrl, populateLibrary)
+getData(correctUrl, populateAlbums1)
 
 // Associo la funzione di popolazione della libreria al click dei pulsanti 'album' e 'artisti'
 

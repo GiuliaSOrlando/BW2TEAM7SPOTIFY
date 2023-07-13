@@ -114,6 +114,22 @@ const getData = function (url, foo) {
 getData(QueenUrl, populateAlbums)
 getData(rockUrl, populateLibrary)
 
+const searchCard = function () {
+  let queryLink = document.querySelectorAll(".search-card a")
+  queryLink.forEach(function (element) {
+    let queryContent = element.querySelector("h3")
+    console.log(queryContent)
+    element.setAttribute(
+      "href",
+      `./search-page-results.html?id=${queryContent.innerText}`
+    )
+  })
+}
+
+searchCard()
+
+//./album-page.html?id=${elements.data[i].album.id}
+
 // Associo la funzione di popolazione della libreria al click dei pulsanti 'album' e 'artisti'
 
 const albumBtn = document.getElementById("album-btn")

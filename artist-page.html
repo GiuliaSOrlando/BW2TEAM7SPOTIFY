@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Spotify - Web Player: Music for everyone</title>
     <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"
+    />
+    <link
       rel="icon"
       type="image/x-icon"
       href="assets/svg-spotify/Spotify_icon.png"
@@ -20,18 +24,52 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="./Elementi singoli/nav/css/nav.css" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
     />
-    <style></style>
-    <link rel="stylesheet" href="./Elementi singoli/nav/css/nav.css" />
+    <link rel="stylesheet" href="artist/artist.css" />
+    <!-- <style>
+      body {
+        background-color: #000000;
+      }
+      .libreria,
+      .card-libreria {
+        background-color: #121212;
+      }
+      .card-libreria:hover {
+        cursor: pointer;
+        background-color: #181818;
+      }
+      a i {
+        color: white;
+      }
+      .img-libreria {
+        height: 50px;
+        width: 50px;
+      }
+
+      .btn-libreria {
+        background-color: white;
+      }
+      .btn-libreria:hover {
+        background-color: white;
+      }
+      .bg-aside {
+        background-color: #121212;
+      }
+      .navbar {
+        background-color: #121212;
+      }
+    </style> -->
+    <!-- <link rel="stylesheet" href="./nav/css/nav.css" /> -->
     <link rel="stylesheet" href="./Elementi singoli/player/player.css" />
   </head>
   <body>
     <div class="margin-div">
       <div class="home-container">
-        <div class="d-none d-md-block home-aside">
+        <div class="home-aside">
           <!-- ASIDE: Home/Search -->
           <div class="container bg-black">
             <!-- <div class="sidebar-brand">
@@ -45,49 +83,46 @@
                       <ul class="navbar-nav">
                         <li class="nav-item active">
                           <a
-                            href="#"
+                            href="index.html"
                             class="text-decoration-none text-white text-start fs-5 a"
                           >
-                            <div
-                              class="d-inline"
-                              style="margin-left: -15px !important"
+                            <svg
+                              version="1.0"
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="25.000000pt"
+                              height="35.000000pt"
+                              viewBox="0 0 140.000000 146.000000"
+                              preserveAspectRatio="xMidYMid meet"
                             >
-                              <svg
-                                version="1.0"
-                                xmlns="http://www.w3.org/2000/svg"
-                                width="39pt"
-                                height="45pt"
-                                viewBox="0 0 282.000000 282.000000"
-                                preserveAspectRatio="xMidYMid meet"
+                              <metadata>
+                                Created by potrace 1.10, written by Peter
+                                Selinger 2001-2011
+                              </metadata>
+                              <g
+                                transform="translate(0.000000,146.000000) scale(0.050000,-0.050000)"
+                                fill="#ffffff"
+                                stroke="none"
                               >
-                                <g
-                                  transform="translate(25.000000,282.000000) scale(0.100000,-0.100000)"
-                                  fill="#ffff"
-                                  stroke="none"
-                                >
-                                  <path
-                                    d="M1412 2056 c-17 -7 -37 -17 -44 -24 -7 -7 -20 -12 -29 -12 -10 0 -19
--4 -21 -8 -3 -9 -11 -13 -105 -62 -26 -14 -50 -28 -53 -32 -3 -4 -17 -12 -30
--18 -14 -5 -38 -19 -55 -30 -16 -11 -39 -24 -50 -30 -42 -23 -67 -38 -78 -49
--6 -6 -19 -11 -29 -11 -17 0 -18 -24 -18 -455 l0 -455 198 0 198 0 13 133 c7
-72 16 159 20 192 l6 60 125 0 125 0 7 -60 c3 -33 12 -120 19 -192 l13 -133
-196 0 197 0 7 258 c3 141 11 313 17 382 6 69 9 151 7 184 -3 55 -5 60 -35 76
--18 9 -47 28 -65 42 -18 13 -40 28 -48 31 -8 4 -28 16 -45 27 -16 11 -39 24
--50 30 -11 6 -33 19 -50 30 -16 11 -34 22 -40 24 -5 2 -17 7 -25 10 -8 3 -28
-15 -45 26 -16 11 -37 22 -45 25 -8 3 -28 13 -43 21 -16 7 -37 14 -47 14 -10 0
--22 5 -25 10 -8 12 -30 11 -73 -4z"
-                                  />
-                                </g>
-                              </svg>
-                            </div>
-
+                                <path
+                                  d="M1083 2639 c-249 -135 -486 -277 -646 -385 l-153 -104 -15 -290 c-20
+-401 -2 -1135 29 -1166 17 -17 131 -24 382 -24 463 0 428 -33 436 413 l7 341
+137 -7 c176 -10 162 19 182 -379 10 -190 23 -350 30 -356 25 -26 765 -13 792
+14 29 29 51 1142 26 1340 -17 139 -248 306 -804 583 -243 121 -221 120 -403
+20z m372 -110 c342 -185 705 -411 727 -454 24 -43 16 -1284 -8 -1308 -17 -16
+-609 -18 -626 -2 -9 9 -21 170 -28 358 -14 409 -6 397 -251 397 -236 0 -236 1
+-252 -417 -7 -183 -14 -335 -15 -338 -1 -3 -141 -5 -312 -5 l-310 0 0 676 0
+676 355 208 c511 298 513 300 533 300 10 0 95 -41 187 -91z m-1120 -1374 c-4
+-135 -6 -24 -6 245 0 270 2 380 6 245 3 -135 3 -355 0 -490z"
+                                />
+                              </g>
+                            </svg>
                             Home</a
                           >
                         </li>
                         <br />
                         <li class="nav-item active">
                           <a
-                            href="search-page.html"
+                            href="#"
                             class="text-decoration-none text-white fs-5 a"
                           >
                             <svg
@@ -119,6 +154,7 @@
                             Cerca
                           </a>
                         </li>
+                        <br />
                       </ul>
                     </div>
                   </div>
@@ -224,7 +260,7 @@
                 </div>
               </div>
               <div class="row mt-3">
-                <div class="col aside-height">
+                <div class="col">
                   <div
                     id="library-deck"
                     class="card-deck"
@@ -241,295 +277,369 @@
         </div>
 
         <!-- MAIN CONTENT  -->
-        <div class="main-content" style="margin-bottom: 112px">
-          <!-- NAVBAR -->
-          <nav class="navbar navbar-expand">
-            <div class="container-fluid">
-              <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul
-                  class="navbar-nav me-auto mb-2 mb-lg-0 w-100 justify-content-between"
+        <div id="section-hidden">
+          <section id="album-section">
+            <nav id="navbar" class="navbar bg-transparent navbar-expand">
+              <div class="container-fluid">
+                <div
+                  class="collapse navbar-collapse"
+                  id="navbarSupportedContent"
                 >
-                  <div class="d-flex">
-                    <li class="nav-item">
-                      <a
-                        onclick="history.back()"
-                        class="nav-link active text-white"
-                        aria-current="page"
-                        ><i
-                          class="bi bi-chevron-left bg-black opacity-50 rounded-circle fs-5 p-2 px-2"
-                        ></i
-                      ></a>
-                    </li>
-                    <li class="nav-item">
-                      <a onclick="history.forward()" class="nav-link text-white"
-                        ><i
-                          class="bi bi-chevron-right bg-black rounded-circle fs-5 p-2 px-2"
-                        ></i
-                      ></a>
-                    </li>
-                    <form id="search-bar" class="d-flex d-none" role="search">
-                      <div class="d-flex align-items-center">
-                        <i
-                          class="bi bi-search text-white fs-6 mx-2 position-absolute"
-                        ></i>
-                        <input
-                          class="border-0 rounded-5 pe-5 fs-6 text-white"
-                          type="search"
-                          placeholder="Cosa vuoi ascoltare?"
-                          aria-label="Search"
-                          autofocus
-                        />
-                      </div>
-                    </form>
-                  </div>
-                  <div class="d-flex align-items-center">
-                    <ul
-                      class="d-flex navbar-nav align-items-center d-none d-md-block"
-                    >
-                      <li class="nav-item">
-                        <a
-                          class="nav-link text-black rounded-5 bg-white py-1 fw-bold me-2 px-3 ulhov"
-                          href="#"
-                        >
-                          Esplora Premium</a
-                        >
-                      </li>
-                      <li class="nav-item">
-                        <a
-                          class="nav-link text-white rounded-5 bg-black bg-opacity-25 py-1 fw-bold px-3 d-flex align-items-center ulhov"
-                          href="#"
-                        >
-                          <i class="bi bi-arrow-down-circle fs-6 me-1"></i
-                          >Installa app</a
-                        >
-                      </li>
-                    </ul>
-
-                    <li class="nav-item dropdown">
-                      <a
-                        class="nav-link dropdown-toggle ulhov"
-                        href="#"
-                        role="button"
-                        data-bs-toggle="dropdown"
-                        aria-expanded="false"
-                      >
-                        <i
-                          class="bi bi-person rounded-circle fs-5 p-1 px-2 bg-black bg-opacity-25 text-white ahover"
-                          data-bs-toggle="tooltip"
-                          data-bs-title="user"
-                          data-bs-placement="bottom"
-                          data-bs-custom-class="custom-tooltip d-none d-md-block"
-                        ></i>
-                      </a>
-                      <ul class="dropdown-menu drop">
-                        <li>
-                          <a
-                            class="dropdown-item d-flex justify-content-between"
-                            href="#"
-                            >Account
-                            <i class="bi bi-box-arrow-up-right ms-1"></i
-                          ></a>
-                        </li>
-                        <li><a class="dropdown-item" href="#">Profilo</a></li>
-                        <li>
-                          <a
-                            class="dropdown-item d-flex justify-content-between fs-6"
-                            href="#"
-                            >Effettua l' upgrade a Premium
-                            <i class="bi bi-box-arrow-up-right ms-1"></i
-                          ></a>
-                        </li>
-                        <li>
-                          <a class="dropdown-item" href="#">Impostazioni</a>
-                        </li>
-                        <li><hr class="dropdown-divider bg-secondary" /></li>
-                        <li><a class="dropdown-item" href="#">Esci</a></li>
-                      </ul>
-                    </li>
-                  </div>
-                </ul>
-              </div>
-            </div>
-          </nav>
-
-          <!-- CONTENUTI HOME -->
-          <div class="main-content-body">
-            <!--HERO SECTION-->
-            <div class="d-none d-md-block container">
-              <div class="row he">
-                <div class="col col-md-2 bg-success bg-lin position-relative">
-                  <div class="d-flex flex-column">
-                    <h2 class="fs-4 text-white">Presentato da</h2>
-                    <p class="text-white">lorem</p>
-                  </div>
-                  <img
-                    src="../assets/imgs/main/image-10.jpg"
-                    alt=""
-                    class="position-absolute abs w-100"
-                  />
-                </div>
-                <div class="col bg-img p-0">
-                  <div class="bg-lin h-100">
-                    <div
-                      class="col d-flex justify-content-end h-100 flex-column align-items-start tw ms-5"
-                    >
-                      <p class="text-white fs-4">PLAYLIST</p>
-                      <h1 class="text-white">Hit Italiane</h1>
-                      <p class="text-white">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Consequuntur nulla debitis
-                      </p>
-                      <div class="d-flex justify-content-between w-100 mb-3">
-                        <button
-                          class="btn btn-success rounded-5 text-black fw-bold px-4"
-                        >
-                          Play
-                        </button>
-                        <button
-                          class="btn bg-black bg-opacity-25 rounded-5 text-white fw-bold px-4"
-                        >
-                          Segui
-                        </button>
-                        <button class="btn bg-transparent text-white fw-bold">
-                          . . .
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!--GREETINGS-->
-            <div class="container p-0">
-              <h1
-                id="greeting-message"
-                class="text-white my-4 d-none d-md-block"
-              >
-                Buongiorno
-              </h1>
-              <div
-                id="greetings-row"
-                class="row row-cols-2 row-cols-md-3 justify-content-between"
-              ></div>
-              <!--CARDS SECTION-->
-              <div
-                class="container rounded rounded-bottom-0 container-album text-white"
-              >
-                <div id="Sezione 1">
-                  <h3>Album</h3>
-                  <div id="album-row1" class="row container-card"></div>
-                </div>
-                <div id="Sezione 2">
-                  <h3>Ligabue</h3>
-                  <div id="album-row2" class="row container-card"></div>
-                </div>
-                <div id="Sezione 3">
-                  <h3>Mario Merola</h3>
-                  <div id="album-row3" class="row container-card"></div>
-                </div>
-              </div>
-            </div>
-            <!--FOOTER-->
-            <footer class="container py-5 rounded rounded-top-0">
-              <div class="row">
-                <div class="col m-3">
-                  <div class="row d-flex justify-content-between">
-                    <div class="col">
-                      <div class="section">
-                        <h5>Azienda</h5>
-                        <div class="m-3 ms-0">
-                          <a href="about-us.html">Chi siamo</a>
-                        </div>
-                        <div class="m-3 ms-0">
-                          <a href="#">Opportunità di Lavoro</a>
-                        </div>
-                        <div class="m-3 ms-0">
-                          <a href="#">For the Record</a>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col">
-                      <div class="section">
-                        <h5>Community</h5>
-                        <div class="m-3 ms-0">
-                          <a href="#"> Per artisti </a>
-                        </div>
-                        <div class="m-3 ms-0">
-                          <a href="#"> Sviluppatori </a>
-                        </div>
-                        <div class="m-3 ms-0">
-                          <a href="#"> Pubblicità </a>
-                        </div>
-                        <div class="m-3 ms-0">
-                          <a href="#"> Investitori </a>
-                        </div>
-                        <div class="m-3 ms-0">
-                          <a href="#"> Venditori </a>
-                        </div>
-                        <div class="m-3 ms-0">
-                          <a href="#"> Spotify for Work </a>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col">
-                      <div class="section">
-                        <h5>Link utili</h5>
-                        <div class="m-3 ms-0">
-                          <a href="#"> Assistenza </a>
-                        </div>
-                        <div class="m-3 ms-0">
-                          <a href="#"> App per cellulare gratuita </a>
-                        </div>
-                        <div class="m-3 ms-0">
-                          <a href="#"> Diritti del consumatore </a>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col">
-                      <div class="section d-flex justify-content-end">
-                        <div
-                          class="i-footer d-flex justify-content-center align-items-center rounded-circle"
-                        >
-                          <i class="fa-brands fa-instagram"></i>
-                        </div>
-                        <div
-                          class="i-footer d-flex justify-content-center align-items-center rounded-circle"
-                        >
-                          <i class="fa-brands fa-twitter"></i>
-                        </div>
-                        <div
-                          class="i-footer d-flex justify-content-center align-items-center rounded-circle"
-                        >
-                          <i class="fa-brands fa-facebook"></i>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col">
-                  <div class="divider"></div>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col">
-                  <div
-                    class="section d-flex justify-content-between align-items-center my-5"
+                  <ul
+                    class="navbar-nav me-auto mb-2 mb-lg-0 w-100 justify-content-between"
                   >
-                    <!-- Contenuto della sezione inferiore -->
-                    <a href="#"> Informazioni legali </a>
-                    <a href="#"> Centro sulla privacy </a>
-                    <a href="#"> Informativa sulla privacy </a>
-                    <a href="#"> Impostazioni Cookie</a>
-                    <a href="#"> Info annunci </a>
-                    <a href="#"> Accessibilità </a>
-                    <p class="mb-0">&copy;<span id="year"></span> Spotify AB</p>
-                  </div>
+                    <div id="buttons-container" class="d-flex">
+                      <li class="nav-item">
+                        <a
+                          class="nav-link active text-white"
+                          aria-current="page"
+                          href="#"
+                          ><i
+                            class="bi bi-chevron-left p-2 px-2 bg-black opacity-50 rounded-circle fs-5 p-1 px-2"
+                          ></i
+                        ></a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link text-white" href="#"
+                          ><i
+                            class="bi bi-chevron-right p-2 px-2 bg-black rounded-circle fs-5 p-1 px-2"
+                          ></i
+                        ></a>
+                      </li>
+                      <div id="reproduce" class="d-none">
+                        <button id="play-button-nav">
+                          <i class="fas fa-play"></i></button
+                        ><span id="testo-canzone-nav">Artista</span>
+                      </div>
+                      <!-- <form class="d-flex" role="search">
+                        <div class="d-flex align-items-center">
+                          <i
+                            class="bi bi-search text-white fs-6 mx-2 position-absolute"
+                          ></i>
+                          <input
+                            class="border-0 rounded-5 pe-5 fs-6 text-white"
+                            type="search"
+                            placeholder="Cosa vuoi ascoltare?"
+                            aria-label="Search"
+                            autofocus
+                          />
+                        </div>
+                      </form> -->
+                    </div>
+                    <div class="d-flex align-items-center">
+                      <ul class="d-flex navbar-nav align-items-center">
+                        <li class="nav-item">
+                          <a
+                            class="nav-link text-black rounded-5 bg-white py-1 fw-bold me-2 px-3 ulhov"
+                            href="#"
+                          >
+                            Esplora Premium</a
+                          >
+                        </li>
+                        <li class="nav-item">
+                          <a
+                            class="nav-link text-white rounded-5 bg-black bg-opacity-25 py-1 fw-bold px-3 d-flex align-items-center ulhov"
+                            href="#"
+                          >
+                            <i class="bi bi-arrow-down-circle fs-6 me-1"></i
+                            >Installa app</a
+                          >
+                        </li>
+                      </ul>
+
+                      <li class="nav-item dropdown">
+                        <a
+                          class="nav-link dropdown-toggle ulhov"
+                          href="#"
+                          role="button"
+                          data-bs-toggle="dropdown"
+                          aria-expanded="false"
+                        >
+                          <i
+                            class="bi bi-person rounded-circle fs-5 p-1 px-2 bg-black bg-opacity-25 text-white ahover"
+                            data-bs-toggle="tooltip"
+                            data-bs-title="user"
+                            data-bs-placement="bottom"
+                            data-bs-custom-class="custom-tooltip"
+                          ></i>
+                        </a>
+                        <ul class="dropdown-menu drop">
+                          <li>
+                            <a
+                              class="dropdown-item d-flex justify-content-between"
+                              href="#"
+                              >Account
+                              <i class="bi bi-box-arrow-up-right ms-1"></i
+                            ></a>
+                          </li>
+                          <li><a class="dropdown-item" href="#">Profilo</a></li>
+                          <li>
+                            <a
+                              class="dropdown-item d-flex justify-content-between fs-6"
+                              href="#"
+                              >Effettua l' upgrade a Premium
+                              <i class="bi bi-box-arrow-up-right ms-1"></i
+                            ></a>
+                          </li>
+                          <li>
+                            <a class="dropdown-item" href="#">Impostazioni</a>
+                          </li>
+                          <li><hr class="dropdown-divider bg-secondary" /></li>
+                          <li><a class="dropdown-item" href="#">Esci</a></li>
+                        </ul>
+                      </li>
+                    </div>
+                  </ul>
                 </div>
               </div>
-            </footer>
-          </div>
+            </nav>
+            <div class="artist-heading-wrapper">
+              <div class="scritte-immagini">
+                <div class="album-title">
+                  <p>artista verificato</p>
+                  <h1>Artista</h1>
+                  <p>1000 ascoltatori mensili</p>
+                </div>
+              </div>
+            </div>
+
+            <div id="buttons-and-tracks-container">
+              <div class="bottoni">
+                <button id="play-button-album">
+                  <i class="fas fa-play"></i>
+                </button>
+
+                <button
+                  id="follow-button"
+                  type="button"
+                  class="btn btn-outline-light"
+                >
+                  SEGUI
+                </button>
+
+                <button id="ellipsis-button">
+                  <i class="fas fa-ellipsis-h"></i>
+                </button>
+              </div>
+              <div id="tracks-container">
+                <div class="track">
+                  <div class="track-img">
+                    <img
+                      src="https://i.pinimg.com/236x/a1/ca/de/a1cade6cd6c09804d486c3614672c507--linkin-park-albums-linkin-park-album-cover.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="song">
+                    <h3 class="song-title">Song Title</h3>
+                    <p>authors</p>
+                  </div>
+                  <div class="views d-flex align-items-center">23456</div>
+                  <div class="song-length"><span></span>2:06 <span></span></div>
+                </div>
+
+                <div class="track">
+                  <div class="track-img">
+                    <img
+                      src="https://i.pinimg.com/236x/a1/ca/de/a1cade6cd6c09804d486c3614672c507--linkin-park-albums-linkin-park-album-cover.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="song">
+                    <h3 class="song-title">Song Title</h3>
+                    <p>authors</p>
+                  </div>
+                  <div class="views d-flex align-items-center">23456</div>
+                  <div class="song-length"><span></span>2:06 <span></span></div>
+                </div>
+
+                <div class="track">
+                  <div class="track-img">
+                    <img
+                      src="https://i.pinimg.com/236x/a1/ca/de/a1cade6cd6c09804d486c3614672c507--linkin-park-albums-linkin-park-album-cover.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="song">
+                    <h3 class="song-title">Song Title</h3>
+                    <p>authors</p>
+                  </div>
+                  <div class="views d-flex align-items-center">23456</div>
+                  <div class="song-length"><span></span>2:06 <span></span></div>
+                </div>
+
+                <div class="track">
+                  <div class="track-img">
+                    <img
+                      src="https://i.pinimg.com/236x/a1/ca/de/a1cade6cd6c09804d486c3614672c507--linkin-park-albums-linkin-park-album-cover.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="song">
+                    <h3 class="song-title">Song Title</h3>
+                    <p>authors</p>
+                  </div>
+                  <div class="views d-flex align-items-center">23456</div>
+                  <div class="song-length"><span></span>2:06 <span></span></div>
+                </div>
+
+                <div class="track">
+                  <div class="track-img">
+                    <img
+                      src="https://i.pinimg.com/236x/a1/ca/de/a1cade6cd6c09804d486c3614672c507--linkin-park-albums-linkin-park-album-cover.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="song">
+                    <h3 class="song-title">Song Title</h3>
+                    <p>authors</p>
+                  </div>
+                  <div class="views d-flex align-items-center">23456</div>
+                  <div class="song-length"><span></span>2:06 <span></span></div>
+                </div>
+
+                <div class="track">
+                  <div class="track-img">
+                    <img
+                      src="https://i.pinimg.com/236x/a1/ca/de/a1cade6cd6c09804d486c3614672c507--linkin-park-albums-linkin-park-album-cover.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="song">
+                    <h3 class="song-title">Song Title</h3>
+                    <p>authors</p>
+                  </div>
+                  <div class="views d-flex align-items-center">23456</div>
+                  <div class="song-length"><span></span>2:06 <span></span></div>
+                </div>
+
+                <div class="track">
+                  <div class="track-img">
+                    <img
+                      src="https://i.pinimg.com/236x/a1/ca/de/a1cade6cd6c09804d486c3614672c507--linkin-park-albums-linkin-park-album-cover.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="song">
+                    <h3 class="song-title">Song Title</h3>
+                    <p>authors</p>
+                  </div>
+                  <div class="views d-flex align-items-center">23456</div>
+                  <div class="song-length"><span></span>2:06 <span></span></div>
+                </div>
+
+                <div class="track">
+                  <div class="track-img">
+                    <img
+                      src="https://i.pinimg.com/236x/a1/ca/de/a1cade6cd6c09804d486c3614672c507--linkin-park-albums-linkin-park-album-cover.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="song">
+                    <h3 class="song-title">Song Title</h3>
+                    <p>authors</p>
+                  </div>
+                  <div class="views d-flex align-items-center">23456</div>
+                  <div class="song-length"><span></span>2:06 <span></span></div>
+                </div>
+
+                <div class="track">
+                  <div class="track-img">
+                    <img
+                      src="https://i.pinimg.com/236x/a1/ca/de/a1cade6cd6c09804d486c3614672c507--linkin-park-albums-linkin-park-album-cover.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="song">
+                    <h3 class="song-title">Song Title</h3>
+                    <p>authors</p>
+                  </div>
+                  <div class="views d-flex align-items-center">23456</div>
+                  <div class="song-length"><span></span>2:06 <span></span></div>
+                </div>
+
+                <div class="track">
+                  <div class="track-img">
+                    <img
+                      src="https://i.pinimg.com/236x/a1/ca/de/a1cade6cd6c09804d486c3614672c507--linkin-park-albums-linkin-park-album-cover.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="song">
+                    <h3 class="song-title">Song Title</h3>
+                    <p>authors</p>
+                  </div>
+                  <div class="views d-flex align-items-center">23456</div>
+                  <div class="song-length"><span></span>2:06 <span></span></div>
+                </div>
+
+                <div class="track">
+                  <div class="track-img">
+                    <img
+                      src="https://i.pinimg.com/236x/a1/ca/de/a1cade6cd6c09804d486c3614672c507--linkin-park-albums-linkin-park-album-cover.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="song">
+                    <h3 class="song-title">Song Title</h3>
+                    <p>authors</p>
+                  </div>
+                  <div class="views d-flex align-items-center">23456</div>
+                  <div class="song-length"><span></span>2:06 <span></span></div>
+                </div>
+
+                <div class="track">
+                  <div class="track-img">
+                    <img
+                      src="https://i.pinimg.com/236x/a1/ca/de/a1cade6cd6c09804d486c3614672c507--linkin-park-albums-linkin-park-album-cover.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="song">
+                    <h3 class="song-title">Song Title</h3>
+                    <p>authors</p>
+                  </div>
+                  <div class="views d-flex align-items-center">23456</div>
+                  <div class="song-length"><span></span>2:06 <span></span></div>
+                </div>
+
+                <div class="track">
+                  <div class="track-img">
+                    <img
+                      src="https://i.pinimg.com/236x/a1/ca/de/a1cade6cd6c09804d486c3614672c507--linkin-park-albums-linkin-park-album-cover.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="song">
+                    <h3 class="song-title">Song Title</h3>
+                    <p>authors</p>
+                  </div>
+                  <div class="views d-flex align-items-center">23456</div>
+                  <div class="song-length"><span></span>2:06 <span></span></div>
+                </div>
+
+                <div class="track">
+                  <div class="track-img">
+                    <img
+                      src="https://i.pinimg.com/236x/a1/ca/de/a1cade6cd6c09804d486c3614672c507--linkin-park-albums-linkin-park-album-cover.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="song">
+                    <h3 class="song-title">Song Title</h3>
+                    <p>authors</p>
+                  </div>
+                  <div class="views d-flex align-items-center">23456</div>
+                  <div class="song-length"><span></span>2:06 <span></span></div>
+                </div>
+              </div>
+            </div>
+            <div id="Sezione 1">
+                <h3>Album</h3>
+                <div id="album-row" class="row container-card"></div>
+              </div>
+              
+
+          </section>
         </div>
       </div>
     </div>
@@ -678,11 +788,7 @@
               </div>
             </div>
             <div class="col">
-              <input
-                type="range"
-                id="song-range"
-                class="styled-slider slider-progress"
-              />
+              <input type="range" id="song-range" />
             </div>
           </div>
         </div>
@@ -777,11 +883,7 @@
               </button>
             </div>
             <div class="col" id="volume-range-div">
-              <input
-                type="range"
-                id="volume-range"
-                class="styled-slider slider-progress"
-              />
+              <input type="range" id="volume-range" />
             </div>
           </div>
         </div>
@@ -793,11 +895,59 @@
       integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
       crossorigin="anonymous"
     ></script>
-    <script src="Elementi singoli/player/player.js"></script>
-    <script src="index.js"></script>
+    <script src="player/player.js"></script>
+    <!-- <script src="avrg_color.js"></script> n-->
     <script>
-      const anno = new Date().getFullYear()
-      document.getElementById("year").innerHTML = `${anno}`
+      //toast script
+      document
+        .querySelectorAll('[data-bs-toggle="tooltip"]')
+        .forEach((tooltip) => {
+          new bootstrap.Tooltip(tooltip);
+        });
+      // let avgColor = start()
+
+      let albumSection = document.getElementById("album-section");
+
+      albumSection.addEventListener("scroll", function () {
+        let y = albumSection.scrollTop;
+        let tracksHeader = document.querySelector(".tracks-header");
+        console.log(y);
+        let nav = document.getElementById("navbar");
+        let navButtonsContainer = document.getElementById("buttons-container");
+        let playButtonNav = document.getElementById("reproduce");
+        if (y > 25) {
+          nav.classList.remove("bg-transparent");
+          if (y > 264) {
+            playButtonNav.classList.remove("d-none");
+            playButtonNav.classList.add(
+              "d-flex",
+              "justify-content-center",
+              "align-items-center"
+            );
+          } else {
+            playButtonNav.classList.add("d-none");
+          }
+          if (y > 368) {
+            tracksHeader.style.backgroundColor = "#272727;";
+            tracksHeader.style.margin = "none";
+          }
+        } else {
+          nav.classList.add("bg-transparent");
+        }
+      });
+      let tracks = document.querySelectorAll(".track");
+      tracks.forEach((track) => {
+        let trackImg = track.querySelector(".track-img");
+        let songImg = trackImg.innerText;
+        track.addEventListener("mouseover", () => {
+          trackImg.innerHTML = `<i class="fas fa-play"></i>`;
+        });
+        track.addEventListener("mouseout", () => {
+          let trackImg = track.querySelector(".track-num");
+          trackImg.innerHTML = `${songImg}`;
+        });
+      });
     </script>
+    <script src="artist-page.js"></script>
   </body>
 </html>

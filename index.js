@@ -42,13 +42,13 @@ const populateGreetings = function (elements) {
   for (let i = 0; i < 6; i++) {
     const greetingsRow = document.getElementById("greetings-row")
     const newCol = document.createElement("div")
-    newCol.classList.add("col", "mb-2", "col-lg-4", "col-md-12", "col-sm-12")
-   
+    newCol.classList.add("col", "mb-2",  "col-md-4", "col-sm-6","col-4" )
+    
     newCol.innerHTML = `
       <div class="card p-0 border-0">
                     <a href="./album-page.html?id=${elements.data[i].album.id}" class="text-decoration-none">
                     <div
-                      class="row row-cols-2 row-cols-md-3 h-25 align-items-center colo p-0 m-0"
+                      class="row row-cols-1 row-cols-md-3 h-25 align-items-center colo p-0 m-0"
                     >
                       <div class="col p-0">
                         <img
@@ -57,9 +57,9 @@ const populateGreetings = function (elements) {
                           alt="..."
                         />
                       </div>
-                      <div class="col-md-8 d-flex">
-                        <div class="card-body">
-                          <h5 class="card-title text-white">${elements.data[i].album.title}</h5>
+                      <div class="col-md-8 d-flex d-none d-md-block ">
+                        <div class="card-body ">
+                          <h5 class="card-title text-white ">${elements.data[i].album.title}</h5>
                         </div>
                       </div>
                     </div>
@@ -107,7 +107,9 @@ const populateAlbums1 = function (elements) {
                         </div>
                         <div class="card-body text-white">
                           <h5 class="card-title card-text text-truncate">${elements.data[i].album.title}</h5>
-                          <h6 class="card-subtitle card-text mb-2">${elements.data[i].artist.name}</h6>
+                          <a href="./artist-page.html?id=${elements.data[i].artist.id}">
+                           <h6 class="card-subtitle card-text mb-2">${elements.data[i].artist.name}</h6>
+                          </a>
                         </div>
                       </div>
                             </a>
@@ -151,7 +153,9 @@ const populateAlbums2 = function (elements) {
                         </div>
                         <div class="card-body text-white">
                           <h5 class="card-title card-text text-truncate ">${elements.data[i].album.title}</h5>
+                          <a href="./artist-page.html?id=${elements.data[i].artist.id}">
                           <h6 class="card-subtitle card-text mb-2">${elements.data[i].artist.name}</h6>
+                          </a>
                         </div>
                       </div>
                             </a>
@@ -195,7 +199,9 @@ const populateAlbums3 = function (elements) {
                         </div>
                         <div class="card-body text-white">
                           <h5 class="card-title card-text text-truncate ">${elements.data[i].album.title}</h5>
+                          <a href="./artist-page.html?id=${elements.data[i].artist.id}">
                           <h6 class="card-subtitle card-text mb-2">${elements.data[i].artist.name}</h6>
+                          </a>
                         </div>
                       </div>
                             </a>

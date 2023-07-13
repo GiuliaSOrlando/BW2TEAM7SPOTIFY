@@ -72,7 +72,7 @@ const populateAlbums1 = function (elements) {
     const newCol = document.createElement("div")
     newCol.classList.add("col-xs-12", "col-md-6", "col-lg-4", "col-xl-3")
     newCol.innerHTML = `
-                            <a href="./album-page.html?id=${elements.data[i].album.id}" class="text-decoration-none">
+                            <a href="./album-page.html?id=${elements.data[i].album.id}" class="text-decoration-none text-white">
                               <div class="card h-100 text-white">
                         <div id="c-img">
                           <img
@@ -100,8 +100,8 @@ const populateAlbums1 = function (elements) {
                         </div>
                         <div class="card-body text-white">
                           <h5 class="card-title card-text text-truncate">${elements.data[i].album.title}</h5>
-                          <a href="./artist-page.html?id=${elements.data[i].artist.id}">
-                           <h6 class="card-subtitle card-text mb-2">${elements.data[i].artist.name}</h6>
+                          <a href="./artist-page.html?id=${elements.data[i].artist.id}" class="text-decoration-none mt-1 text-white" >
+                           <h6 class="card-subtitle card-text mt-1 mb-2">${elements.data[i].artist.name}</h6>
                           </a>
                         </div>
                       </div>

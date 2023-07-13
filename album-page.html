@@ -24,13 +24,13 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="index.css" />
-    <link rel="stylesheet" href="../nav/css/nav.css" />
+    <link rel="stylesheet" href="./Elementi singoli/nav/css/nav.css" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
     />
-    <link rel="stylesheet" href="album/album.css" />
-    <style>
+    <link rel="stylesheet" href="./Elementi singoli/album/album.css" />
+    <!-- <style>
       body {
         background-color: #000000;
       }
@@ -62,9 +62,9 @@
       .navbar {
         background-color: #121212;
       }
-    </style>
-    <link rel="stylesheet" href="./nav/css/nav.css" />
-    <link rel="stylesheet" href="player/player.css" />
+    </style> -->
+    <!-- <link rel="stylesheet" href="./nav/css/nav.css" /> -->
+    <link rel="stylesheet" href="./Elementi singoli/player/player.css" />
   </head>
   <body>
     <div class="margin-div">
@@ -75,7 +75,7 @@
             <!-- <div class="sidebar-brand">
                   <a href="#" class="text-decoration-none text-white text-">...</a>
                 </div> -->
-            <div class="col text-white bg-aside p-3 mx-1 rounded">
+            <div class="col text-white bg-aside p-3 mb-2 rounded">
               <nav class="sidebar-content bg-aside">
                 <div class="row flex-column ps-2">
                   <div>
@@ -83,22 +83,78 @@
                       <ul class="navbar-nav">
                         <li class="nav-item active">
                           <a
-                            href="#"
-                            class="text-decoration-none text-white text-start fs-5"
+                            href="index.html"
+                            class="text-decoration-none text-white text-start fs-5 a"
                           >
-                            <i class="fa-sharp fa-solid fa-house pe-3"></i>Home
-                          </a>
+                            <svg
+                              version="1.0"
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="25.000000pt"
+                              height="35.000000pt"
+                              viewBox="0 0 140.000000 146.000000"
+                              preserveAspectRatio="xMidYMid meet"
+                            >
+                              <metadata>
+                                Created by potrace 1.10, written by Peter
+                                Selinger 2001-2011
+                              </metadata>
+                              <g
+                                transform="translate(0.000000,146.000000) scale(0.050000,-0.050000)"
+                                fill="#ffffff"
+                                stroke="none"
+                              >
+                                <path
+                                  d="M1083 2639 c-249 -135 -486 -277 -646 -385 l-153 -104 -15 -290 c-20
+-401 -2 -1135 29 -1166 17 -17 131 -24 382 -24 463 0 428 -33 436 413 l7 341
+137 -7 c176 -10 162 19 182 -379 10 -190 23 -350 30 -356 25 -26 765 -13 792
+14 29 29 51 1142 26 1340 -17 139 -248 306 -804 583 -243 121 -221 120 -403
+20z m372 -110 c342 -185 705 -411 727 -454 24 -43 16 -1284 -8 -1308 -17 -16
+-609 -18 -626 -2 -9 9 -21 170 -28 358 -14 409 -6 397 -251 397 -236 0 -236 1
+-252 -417 -7 -183 -14 -335 -15 -338 -1 -3 -141 -5 -312 -5 l-310 0 0 676 0
+676 355 208 c511 298 513 300 533 300 10 0 95 -41 187 -91z m-1120 -1374 c-4
+-135 -6 -24 -6 245 0 270 2 380 6 245 3 -135 3 -355 0 -490z"
+                                />
+                              </g>
+                            </svg>
+                            Home</a
+                          >
                         </li>
                         <br />
                         <li class="nav-item active">
                           <a
                             href="#"
-                            class="text-decoration-none text-white fs-5"
+                            class="text-decoration-none text-white fs-5 a"
                           >
-                            <i class="fa-solid fa-magnifying-glass pe-3"></i
-                            >Cerca
+                            <svg
+                              version="1.0"
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="25.000000pt"
+                              height="35.000000pt"
+                              viewBox="0 0 114.000000 135.000000"
+                              preserveAspectRatio="xMidYMid meet"
+                            >
+                              <metadata>
+                                Created by potrace 1.10, written by Peter
+                                Selinger 2001-2011
+                              </metadata>
+                              <g
+                                transform="translate(0.000000,135.000000) scale(0.050000,-0.050000)"
+                                fill="#ffffff"
+                                stroke="none"
+                              >
+                                <path
+                                  d="M827 2299 c-512 -101 -811 -696 -589 -1170 210 -451 818 -629 1225
+-359 l79 52 194 -188 c233 -225 262 -243 321 -202 59 42 40 73 -191 315 -104
+108 -185 202 -182 210 3 7 35 72 71 143 316 631 -231 1337 -928 1199z m317
+-181 c509 -105 699 -735 333 -1101 -264 -264 -716 -252 -967 27 -425 473 6
+1204 634 1074z"
+                                />
+                              </g>
+                            </svg>
+                            Cerca
                           </a>
                         </li>
+                        <br />
                       </ul>
                     </div>
                   </div>
@@ -109,61 +165,96 @@
             <div class="container libreria rounded">
               <div class="row">
                 <div class="col">
-                  <nav class="navbar navbar-expand">
-                    <svg
-                      version="1.0"
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="23.000000pt"
-                      height="20.000000pt"
-                      viewBox="0 0 227.000000 224.000000"
-                      preserveAspectRatio="xMidYMid meet"
+                  <nav
+                    class="navbar navbar-expand justify-content-between align-items-center pb-0"
+                  >
+                    <div
+                      class="d-flex justify-content-start align-items-center"
                     >
-                      <g
-                        transform="translate(0.000000,224.000000) scale(0.100000,-0.100000)"
-                        fill="#ffff"
-                        stroke="none"
+                      <a
+                        class="navbar-link text-decoration-none a"
+                        href="#"
+                        data-bs-toggle="tooltip"
+                        data-bs-title="Comprimi la tua libreria"
+                        data-bs-placement="top"
+                        data-bs-custom-class="custom-tooltip"
                       >
-                        <path
-                          d="M333 2100 c-12 -5 -30 -21 -40 -37 -17 -26 -18 -72 -16 -873 l3 -845
-25 -22 c33 -29 84 -30 117 -3 l26 20 7 703 c4 387 4 773 0 857 -7 151 -8 155
--35 182 -29 29 -49 33 -87 18z"
-                        />
-                        <path
-                          d="M856 2080 l-36 -32 0 -667 c0 -366 3 -751 7 -855 6 -171 8 -190 27
--207 24 -23 83 -25 111 -3 31 23 34 101 34 955 l1 786 -23 21 c-13 12 -37 24
--54 28 -25 5 -37 0 -67 -26z"
-                        />
-                        <path
-                          d="M1401 2084 l-31 -26 0 -849 0 -850 22 -29 22 -30 316 0 317 0 21 23
-22 23 0 702 0 701 -42 29 c-135 92 -571 332 -604 332 -7 0 -26 -12 -43 -26z"
-                        />
-                      </g>
-                    </svg>
+                        <svg
+                          version="1.0"
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="23.000000pt"
+                          height="20.000000pt"
+                          viewBox="0 0 227.000000 224.000000"
+                          preserveAspectRatio="xMidYMid meet"
+                        >
+                          <g
+                            transform="translate(0.000000,224.000000) scale(0.100000,-0.100000)"
+                            fill="#ffff"
+                            stroke="none"
+                          >
+                            <path
+                              d="M333 2100 c-12 -5 -30 -21 -40 -37 -17 -26 -18 -72 -16 -873 l3 -845
+        25 -22 c33 -29 84 -30 117 -3 l26 20 7 703 c4 387 4 773 0 857 -7 151 -8 155
+        -35 182 -29 29 -49 33 -87 18z"
+                            />
+                            <path
+                              d="M856 2080 l-36 -32 0 -667 c0 -366 3 -751 7 -855 6 -171 8 -190 27
+        -207 24 -23 83 -25 111 -3 31 23 34 101 34 955 l1 786 -23 21 c-13 12 -37 24
+        -54 28 -25 5 -37 0 -67 -26z"
+                            />
+                            <path
+                              d="M1401 2084 l-31 -26 0 -849 0 -850 22 -29 22 -30 316 0 317 0 21 23
+        22 23 0 702 0 701 -42 29 c-135 92 -571 332 -604 332 -7 0 -26 -12 -43 -26z"
+                            />
+                          </g>
+                        </svg>
 
-                    <a class="navbar-brand text-white" href="#"
-                      >La tua libreria</a
-                    >
-                    <ul class="navbar-nav ml-auto">
-                      <li class="nav-item">
-                        <a class="nav-link" href="#">
-                          <i class="fas fa-arrow-right"></i>
-                        </a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="#">
-                          <i class="fas fa-plus"></i>
-                        </a>
-                      </li>
-                    </ul>
+                        La tua libreria</a
+                      >
+                    </div>
+                    <div class="">
+                      <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                          <a
+                            class="nav-link i"
+                            href="#"
+                            data-bs-toggle="tooltip"
+                            data-bs-title="Crea una playlist o una cartella"
+                            data-bs-placement="top"
+                            data-bs-custom-class="custom-tooltip"
+                          >
+                            <i class="fas fa-plus"></i>
+                          </a>
+                        </li>
+                        <li class="nav-item">
+                          <a
+                            class="nav-link i"
+                            href="#"
+                            data-bs-toggle="tooltip"
+                            data-bs-title="Allarga la tua libreria"
+                            data-bs-placement="top"
+                            data-bs-custom-class="custom-tooltip"
+                          >
+                            <i class="fas fa-arrow-right"></i>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
                   </nav>
                 </div>
               </div>
               <div class="row mt-3">
                 <div class="col text-start">
-                  <button id="album-btn" class="btn btn-libreria rounded-pill">
+                  <button
+                    id="album-btn"
+                    class="btn btn-libreria text-white rounded-pill me-1 fw-medium"
+                  >
                     Album
                   </button>
-                  <button id="artist-btn" class="btn btn-libreria rounded-pill">
+                  <button
+                    id="artist-btn"
+                    class="btn btn-libreria text-white rounded-pill fw-medium"
+                  >
                     Artisti
                   </button>
                 </div>
@@ -187,8 +278,11 @@
 
         <!-- MAIN CONTENT  -->
         <div id="section-hidden">
-          <section id="album-section">
-            <nav id="navbar" class="navbar bg-transparent navbar-expand">
+          <section
+            id="album-section"
+            style="height: 100%; padding-bottom: 120px"
+          >
+            <nav id="navbar" class="navbar bg-transparent navbar-expand p-0">
               <div class="container-fluid">
                 <div
                   class="collapse navbar-collapse"
@@ -200,18 +294,20 @@
                     <div id="buttons-container" class="d-flex">
                       <li class="nav-item">
                         <a
+                          onclick="history.back()"
                           class="nav-link active text-white"
                           aria-current="page"
-                          href="#"
                           ><i
-                            class="bi bi-chevron-left bg-black opacity-50 rounded-circle fs-5 p-1 px-2"
+                            class="bi bi-chevron-left bg-black opacity-50 rounded-circle fs-5 p-2 px-2"
                           ></i
                         ></a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link text-white" href="#"
+                        <a
+                          onclick="history.forward()"
+                          class="nav-link text-white"
                           ><i
-                            class="bi bi-chevron-right bg-black rounded-circle fs-5 p-1 px-2"
+                            class="bi bi-chevron-right bg-black rounded-circle fs-5 p-2 px-2"
                           ></i
                         ></a>
                       </li>
@@ -310,7 +406,7 @@
                     alt=""
                   />
                 </div>
-                <div class="album-title">
+                <div id="album-info-section" class="album-title">
                   <p>Album</p>
                   <h1>Infernum</h1>
                   <p>Claver Gold Murubutu 2020 14 brani, 46 min 31sec.</p>
@@ -335,15 +431,6 @@
                 <div class="song-length">
                   <i class="far fa-clock"></i>
                 </div>
-              </div>
-
-              <div class="track">
-                <div class="track-num">1</div>
-                <div class="song">
-                  <h3 class="song-title">Song Title</h3>
-                  <p>authors</p>
-                </div>
-                <div class="song-length"><span></span>2:06 <span></span></div>
               </div>
             </div>
           </section>
@@ -605,6 +692,12 @@
     <script src="player/player.js"></script>
     <!-- <script src="avrg_color.js"></script> n-->
     <script>
+      //toast script
+      document
+        .querySelectorAll('[data-bs-toggle="tooltip"]')
+        .forEach((tooltip) => {
+          new bootstrap.Tooltip(tooltip)
+        })
       // let avgColor = start()
 
       let albumSection = document.getElementById("album-section")

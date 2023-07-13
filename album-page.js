@@ -13,7 +13,7 @@ console.log(albumID)
 let dynamicUrl = originatingUrl + albumID
 console.log(dynamicUrl)
 
-const albumCover = function (elements) {
+const albumInfo = function (elements) {
   const albumDiv = document.getElementById("album-img")
   albumDiv.innerHTML = `
                      <img
@@ -21,26 +21,17 @@ const albumCover = function (elements) {
                     alt=""
                   />
       `
-}
-
-const populateTracks = function (elements) {
-  let trackList = elements.tracklist
-  console.log(trackList)
-  for (let i = 0; i < 6; i++) {
-    const tracksRow = document.getElementById("tracks-container")
-    const newCol = document.createElement("div")
-    newCol.classList.add("track")
-    newCol.innerHTML = `
-      <div class="track-num">${i}</div>
-            <div class="song">
-              <h3 class="song-title">${elements.data[i].title}</h3>
-              <p>authors</p>
-            </div>
-            <div class="song-length"><span></span>2:06 <span></span></div>
-      `
-
-    tracksRow.appendChild(newCol)
-  }
+  const albumTextualInfo = document.getElementById("album-info-section")
+  albumTextualInfo.innerHTML = `
+                  <p>Album</p>
+                  <h1 class="fs-1">${elements.title}</h1>
+                  <p>${elements.artist.name} ${elements.release_date.slice(
+    0,
+    4
+  )} ${elements.nb_tracks} brani, ${Math.floor(elements.duration / 60)} min ${
+    elements.duration % 60
+  } sec</p>
+  `
 }
 
 // Creo la lista nella libreria
@@ -60,8 +51,8 @@ const populateLibrary = function (elements) {
                         </div>
                         <div class="col-9 p-0">
                           <div class="card-body p-0 flex-row">
-                            <p class="card-title text-white">${elements.data[i].album.title}</p>
-                            <p class="card-text text-white">${elements.data[i].artist.name}</p>
+                            <p class="card-title cir-bold text-white">${elements.data[i].album.title}</p>
+                            <p class="card-text cir-light text-white">${elements.data[i].artist.name}</p>
                           </div>
                         </div>
                       </div>
@@ -69,6 +60,33 @@ const populateLibrary = function (elements) {
 
     libraryDeck.appendChild(newCol)
   }
+}
+
+const populateTracks = function (elements, i) {
+  let tracksArray = elements.tracks.data
+  console.log(tracksArray)
+  tracksArray.forEach((tracks, i) => {
+    const tracksRow = document.getElementById("tracks-container")
+    const newCol = document.createElement("div")
+    newCol.classList.add("track")
+    newCol.innerHTML = `
+      <div id="song-button${i}" class="track-num d-flex mb-3">${i + 1}</div>
+            <div class="song">
+              <h3 class="song-title fs-5 mb-0">${tracks.title}</h3>
+              <p>${tracks.artist.name}</p>
+            </div>
+            <div class="song-length"><span></span>${Math.floor(
+              tracks.duration / 60
+            )}:${tracks.duration % 60}<span></span></div>
+      `
+
+    tracksRow.appendChild(newCol)
+
+    let songBtn = document.getElementById(`song-button${i}`)
+    songBtn.addEventListener("click", function () {
+      console.log(`L'url della traccia da riprodurre è ${tracks.preview}`)
+    })
+  })
 }
 
 // Funzione generica per la fetch
@@ -90,6 +108,6 @@ const getDataNew = function (url, foo) {
     })
 }
 
-getDataNew(dynamicUrl, albumCover)
+getDataNew(dynamicUrl, albumInfo)
 getDataNew(dynamicUrl, populateTracks)
 getDataNew(rockUrl, populateLibrary)

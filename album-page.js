@@ -1,3 +1,5 @@
+let playing = false
+
 const QueenUrl =
   "https://striveschool-api.herokuapp.com/api/deezer/search?q=queen"
 
@@ -85,6 +87,8 @@ const populateTracks = function (elements, i) {
     let songBtn = document.getElementById(`song-button${i}`)
     songBtn.addEventListener("click", function () {
       console.log(`L'url della traccia da riprodurre è ${tracks.preview}`)
+      const song = new Audio(tracks.preview)
+      song.play()
     })
   })
 }

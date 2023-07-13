@@ -113,7 +113,7 @@ const getData = function (url, foo) {
 
 // Funzione per la ricerca di risultati nella searchbar
 
-/*let searchForm = document.getElementById("search-bar")
+let searchForm = document.getElementById("search-bar")
 searchForm.addEventListener("submit", function (e) {
   e.preventDefault()
   const query = document.getElementById("search-bar-input-field")
@@ -121,7 +121,7 @@ searchForm.addEventListener("submit", function (e) {
   const searchUrl = `https://striveschool-api.herokuapp.com/api/deezer/search?q=${queryValue}`
   console.log(searchUrl)
   getData(searchUrl, populateAlbums1)
-})*/
+})
 
 getData(rockUrl, populateLibrary)
 getData(correctUrl, populateAlbums1)

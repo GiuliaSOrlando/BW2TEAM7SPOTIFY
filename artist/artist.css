@@ -1,5 +1,3 @@
-
-
 /* *{
     box-sizing: border-box;
 }
@@ -19,12 +17,11 @@ html, body{
     overflow-x: hidden;
 } */
 
-
 @font-face {
-    font-family: "Circular";
-  
-    src: url(../assets/fonts/CircularStd-Black.otf);
-    /* src: url(./assets/fonts/CircularStd-BlackItalic.otf);
+  font-family: "Circular";
+
+  src: url(../assets/fonts/CircularStd-Black.otf);
+  /* src: url(./assets/fonts/CircularStd-BlackItalic.otf);
       src:url(./assets/fonts/CircularStd-Bold.otf);
       src: url(./assets/fonts/CircularStd-BoldItalic.otf);
       src: url(./assets/fonts/CircularStd-Book.otf);
@@ -33,217 +30,212 @@ html, body{
       src: url(./assets/fonts/CircularStd-LightItalic.otf);
       src: url(./assets/fonts/CircularStd-Medium.otf);
       src: url(./assets/fonts/CircularStd-MediumItalic.otf); */
-  }
-  
-  @font-face {
-    font-family: "Circular";
-    font-weight: 100;
-    src: url(../assets/fonts/CircularStd-Light.otf);
-  }
-  @font-face {
-    font-family: "Circular";
-    font-weight: 500;
-    src: url(../assets/fonts/CircularStd-Medium.otf);
-  }
-  /* Firefox */
-  #section-hidden {
-    overflow: hidden;
-    background-color: #000000;
-    width: 100%;
-    border-radius: 10px;
-    padding-bottom: 120px;
-  }
-  #album-section {
-    scrollbar-width: 10px;
-    scrollbar-color: #b2b2b2 #000000;
-    height: 100%;
-  }
-  
-  /* Chrome, Edge and Safari */
-  #album-section::-webkit-scrollbar {
-    width: 13px;
-    width: 13px;
-  }
-  #album-section::-webkit-scrollbar-track {
-    border-radius: 5px;
-    background-color: #000000;
-  }
-  
-  #album-section::-webkit-scrollbar-track:hover {
-    background-color: #000000;
-  }
-  
-  #album-section::-webkit-scrollbar-track:active {
-    background-color: #000000;
-  }
-  
-  #album-section::-webkit-scrollbar-thumb {
-    border-radius: none;
-    background-color: #b2b2b2;
-  }
-  
-  #album-section::-webkit-scrollbar-thumb:hover {
-    background-color: #929292;
-  }
-  
-  #album-section::-webkit-scrollbar-thumb:active {
-    background-color: #828282;
-  }
-  
-  #album-section {
-    font-family: "Circular", sans-serif;
-    font-weight: 500;
-  
-    background-color: black;
-    color: white;
-    width: 100%;
-    border-radius: 10px;
-    height: 100%;
-    overflow-x: hidden;
-    overflow-y: scroll;
-    
-  }
-  .artist-heading-wrapper {
-    padding-top: 5rem;
-    margin-top: -3.4rem;
-    display: flex;
-    flex-direction: column;
-    background-image: url(https://3.bp.blogspot.com/-w5o9acPTrdc/UBKDwmNW77I/AAAAAAAADBg/BBjLFFTC2fI/s1600/Linkin_Park_LP_Cool_HD_Music_Wallpaper-Vvallpaper.Net.jpg);
-    background-position: top;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-  }
-  nav {
-    position: sticky !important;
-    width: 100%;
-    top: 0;
-    z-index: 2;
-  }
-  #navbar {
-    transition: 0.5s;
-  }
-  .scritte-immagini {
-    display: flex;
-    gap: 1rem;
-    margin-left: 1rem;
-  }
-  .album-img {
-    height: 200px;
-  }
-  .album-img img {
-    height: 100%;
-  }
-  .album-title {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-  }
-  .album-title h1 {
-    font-size: 4rem;
-    font-weight: 900;
-  }
-  .album-title p {
-    font-weight: bold;
-    font-size: 0.85rem;
-  }
-  .bottoni {
-    margin-top: 2rem;
-    margin-left: 1rem;
-    padding-bottom: 2rem;
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-  }
-  #play-button-album {
-    width: 3.5rem;
-    height: 3.5rem;
-    background-color: #1db954;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: none;
-    border-radius: 10rem;
-    font-size: 1.2rem;
-  }
-  #play-button-nav {
-    margin-left: 1rem;
-    width: 3.5rem;
-    height: 3.5rem;
-    background-color: #1db954;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: none;
-    border-radius: 10rem;
-    font-size: 1.2rem;
-  }
-  #follow-button {
-    
-  }
-  #ellipsis-button {
-    color: #b2b2b2;
-    background-color: transparent;
-    border: none;
-  }
-  
-  #tracks-container {
-    display: flex;
-    flex-direction: column;
-    margin-left: 2rem;
-    margin-right: 1rem;
-  }
-  .track {
-    display: flex;
-    padding: 0.4rem;
-  }
-  .track:hover {
-    border-radius: 4px;
-    background-color: #2a2a2a;
-  }
-  .song {
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    margin-left: 1rem;
+}
 
-  }
-  .song p {
-    color: #b2b2b2;
-    margin: 0 !important;
-    
-  }
-  .track-img {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 2rem;
-    color: #b2b2b2;
-  }
-  .track-img img{
-    width: 100%;
-  }
-  .song-length {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 5rem;
-    color: #b2b2b2;
-  }
-  #reproduce {
-    transition: 0.5s;
-  }
-  #testo-canzone-nav {
-    font-size: 1.5rem;
-    margin-left: 0.5rem;
-  }
-  #buttons-and-tracks-container{
-    background: linear-gradient(180deg, #1E3A4C, black, black);
-    padding-top: 1rem;
-  }
-  .song-title{
-    font-size: 1rem !important;
-    margin: 0 !important;
-  }
+@font-face {
+  font-family: "Circular";
+  font-weight: 100;
+  src: url(../assets/fonts/CircularStd-Light.otf);
+}
+@font-face {
+  font-family: "Circular";
+  font-weight: 500;
+  src: url(../assets/fonts/CircularStd-Medium.otf);
+}
+/* Firefox */
+#section-hidden {
+  overflow: hidden;
+  background-color: #000000;
+  width: 100%;
+  border-radius: 10px;
+  padding-bottom: 120px;
+}
+#album-section {
+  scrollbar-width: 10px;
+  scrollbar-color: #b2b2b2 #000000;
+  height: 100%;
+}
+
+/* Chrome, Edge and Safari */
+#album-section::-webkit-scrollbar {
+  width: 13px;
+  width: 13px;
+}
+#album-section::-webkit-scrollbar-track {
+  border-radius: 5px;
+  background-color: #000000;
+}
+
+#album-section::-webkit-scrollbar-track:hover {
+  background-color: #000000;
+}
+
+#album-section::-webkit-scrollbar-track:active {
+  background-color: #000000;
+}
+
+#album-section::-webkit-scrollbar-thumb {
+  border-radius: none;
+  background-color: #b2b2b2;
+}
+
+#album-section::-webkit-scrollbar-thumb:hover {
+  background-color: #929292;
+}
+
+#album-section::-webkit-scrollbar-thumb:active {
+  background-color: #828282;
+}
+
+#album-section {
+  font-family: "Circular", sans-serif;
+  font-weight: 500;
+
+  background-color: black;
+  color: white;
+  width: 100%;
+  border-radius: 10px;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+.artist-heading-wrapper {
+  padding-top: 5rem;
+  margin-top: -3.4rem;
+  display: flex;
+  flex-direction: column;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+nav {
+  position: sticky !important;
+  width: 100%;
+  top: 0;
+  z-index: 2;
+}
+#navbar {
+  transition: 0.5s;
+}
+.scritte-immagini {
+  display: flex;
+  gap: 1rem;
+  margin-left: 1rem;
+}
+.album-img {
+  height: 200px;
+}
+.album-img img {
+  height: 100%;
+}
+.album-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.album-title h1 {
+  font-size: 4rem;
+  font-weight: 900;
+}
+.album-title p {
+  font-weight: bold;
+  font-size: 0.85rem;
+}
+.bottoni {
+  margin-top: 2rem;
+  margin-left: 1rem;
+  padding-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+#play-button-album {
+  width: 3.5rem;
+  height: 3.5rem;
+  background-color: #1db954;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  border-radius: 10rem;
+  font-size: 1.2rem;
+}
+#play-button-nav {
+  margin-left: 1rem;
+  width: 3.5rem;
+  height: 3.5rem;
+  background-color: #1db954;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  border-radius: 10rem;
+  font-size: 1.2rem;
+}
+#follow-button {
+}
+#ellipsis-button {
+  color: #b2b2b2;
+  background-color: transparent;
+  border: none;
+}
+
+#tracks-container {
+  display: flex;
+  flex-direction: column;
+  margin-left: 2rem;
+  margin-right: 1rem;
+}
+.track {
+  display: flex;
+  padding: 0.4rem;
+}
+.track:hover {
+  border-radius: 4px;
+  background-color: #2a2a2a;
+}
+.song {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  margin-left: 1rem;
+}
+.song p {
+  color: #b2b2b2;
+  margin: 0 !important;
+}
+.track-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 2rem;
+  color: #b2b2b2;
+}
+.track-img img {
+  width: 100%;
+}
+.song-length {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 5rem;
+  color: #b2b2b2;
+}
+#reproduce {
+  transition: 0.5s;
+}
+#testo-canzone-nav {
+  font-size: 1.5rem;
+  margin-left: 0.5rem;
+}
+#buttons-and-tracks-container {
+  background: linear-gradient(180deg, #1e3a4c, black, black);
+  padding-top: 1rem;
+}
+.song-title {
+  font-size: 1rem !important;
+  margin: 0 !important;
+}

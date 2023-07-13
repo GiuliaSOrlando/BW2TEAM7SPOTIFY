@@ -84,19 +84,37 @@ const populateTracks = function (elements, i) {
 
     tracksRow.appendChild(newCol)
 
+    // Play/pause canzone
     const song = new Audio(tracks.preview)
     let songBtn = document.getElementById(`song-button${i}`)
     songBtn.addEventListener("click", function () {
       console.log(`L'url della traccia da riprodurre è ${tracks.preview}`)
       const song = new Audio(tracks.preview)
       song.getAttribute("controls")
-      console.log(song)
       if (song.playing) {
         song.pause()
       } else {
         song.play()
       }
     })
+
+    // Sincronizza immagine dell'album nel player
+
+    songBtn.addEventListener("click", function () {
+      let playerAlbumImg = document.getElementById("album-cover")
+      playerAlbumImg.setAttribute("src", elements.cover)
+      let playerTitle = document.getElementById("player-title")
+      playerTitle.innerText = tracks.title_short
+      let playerArtist = document.getElementById("player-artist")
+      playerArtist.innerText = elements.artist.name
+    })
+
+    let playerArtistLink = document.getElementById("player-artist-link")
+    console.log(elements)
+    playerArtistLink.setAttribute(
+      "href",
+      `./artist-page.html?id=${elements.artist.id}`
+    )
   })
 }
 

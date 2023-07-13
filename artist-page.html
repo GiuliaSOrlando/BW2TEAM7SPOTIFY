@@ -393,7 +393,7 @@
                 </div>
               </div>
             </nav>
-            <div class="artist-heading-wrapper">
+            <div class="artist-heading-wrapper" id="heading-wrapper">
               <div class="scritte-immagini">
                 <div class="album-title">
                   <p>artista verificato</p>
@@ -657,8 +657,8 @@
               />
             </div>
             <div class="col-4 mt-3 ms-3">
-              <h3 id="title">Song title</h3>
-              <p id="artist">Artist</p>
+              <h3 id="player-title">Song title</h3>
+              <p id="player-artist">Artist</p>
             </div>
             <div class="col">
               <p class="fs-3 fw-lighter player-extra-icons" id="heart">
@@ -935,16 +935,16 @@
       })
       let tracks = document.querySelectorAll(".track")
       tracks.forEach((track) => {
-        let trackImg = track.querySelector(".track-img");
-        let songImg = trackImg.innerHTML;
+        let trackImg = track.querySelector(".track-img")
+        let songImg = trackImg.innerHTML
         track.addEventListener("mouseover", () => {
           trackImg.innerHTML = `<i class="fas fa-play"></i>`
         })
         track.addEventListener("mouseout", () => {
-          let trackImg = track.querySelector(".track-img");
-          trackImg.innerHTML = songImg;
-        });
-      });
+          let trackImg = track.querySelector(".track-img")
+          trackImg.innerHTML = songImg
+        })
+      })
     </script>
     <script src="artist-page.js"></script>
   </body>

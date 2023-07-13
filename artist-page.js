@@ -1,17 +1,17 @@
-const originatingUrl = "https://striveschool-api.herokuapp.com/api/deezer/artist/"
+const originatingUrl =
+  "https://striveschool-api.herokuapp.com/api/deezer/artist/"
 let addressBarContent = new URLSearchParams(location.search)
-let artistId = addressBarContent.get('id')
+let artistId = addressBarContent.get("id")
 let dynamicUrl = originatingUrl + artistId
-
 
 console.log(dynamicUrl)
 
 const populateAlbums = function (elements) {
-    for (let i = 0; i < 48; i++) {
-      const albumRow = document.getElementById("album-row")
-      const newCol = document.createElement("div")
-      newCol.classList.add("col-xs-12", "col-md-6", "col-lg-4", "col-xl-2")
-      newCol.innerHTML = `
+  for (let i = 0; i < 48; i++) {
+    const albumRow = document.getElementById("album-row")
+    const newCol = document.createElement("div")
+    newCol.classList.add("col-xs-12", "col-md-6", "col-lg-4", "col-xl-2")
+    newCol.innerHTML = `
                               <a href="./album-page.html?id=${elements.data[i].album.id}" class="text-decoration-none">
                                 <div class="card h-100 text-white">
                           <div id="c-img">
@@ -45,41 +45,39 @@ const populateAlbums = function (elements) {
                         </div>
                               </a>
         `
-  
-      albumRow.appendChild(newCol)
-    }
+
+    albumRow.appendChild(newCol)
   }
+}
 
-
-  // Funzione generica per la fetch
+// Funzione generica per la fetch
 const getData = function (url, foo) {
-    fetch(url)
-      .then((res) => {
-        if (res.ok) {
-          return res.json()
-        } else {
-          throw new Error("Errore nella chiamata")
-        }
-      })
-      .then((elements) => {
-        console.log(elements)
-        foo(elements)
-      })
-      .catch((err) => {
-        console.log(err)
-      })
-  }
-
+  fetch(url)
+    .then((res) => {
+      if (res.ok) {
+        return res.json()
+      } else {
+        throw new Error("Errore nella chiamata")
+      }
+    })
+    .then((elements) => {
+      console.log(elements)
+      foo(elements)
+    })
+    .catch((err) => {
+      console.log(err)
+    })
+}
 
 // let trackListUrl = getData(dynamicUrl, (elements)=>{
 //     return elements.tracklist
 // })
-const populateTracks = function(elements){
-    let tracksContainer = document.getElementById('tracks-container')
-    tracksContainer.innerHTML = ''
-   for(let i=0; i < elements.data.length; i++){
-    let track = document.createElement('div');
-    track.classList.add('track')
+const populateTracks = function (elements) {
+  let tracksContainer = document.getElementById("tracks-container")
+  tracksContainer.innerHTML = ""
+  for (let i = 0; i < elements.data.length; i++) {
+    let track = document.createElement("div")
+    track.classList.add("track")
     track.innerHTML = `
     <div class="track-img">
                     <img
@@ -92,24 +90,37 @@ const populateTracks = function(elements){
                     <p>authors</p>
                   </div>
                   <div class="views d-flex align-items-center">23456</div>
-                  <div class="song-length"><span></span>${Math.floor(elements.data[i].duration/60)}:${Math.floor((elements.data[i].duration % 60) * 10 / 6)} <span></span></div>
+                  <div class="song-length"><span></span>${Math.floor(
+                    elements.data[i].duration / 60
+                  )}:${Math.floor(
+      ((elements.data[i].duration % 60) * 10) / 6
+    )} <span></span></div>
     `
     tracksContainer.appendChild(track)
     console.log(elements.data[i].title)
-   }
-    
-    
+  }
 }
 // getData('https://striveschool-api.herokuapp.com/api/deezer/artist/64932/top?limit=50', function(elements){
 //     populateTracks(elements)
 // })
-getData(dynamicUrl, function(el){
-    getData(el.tracklist, function(el){
-        populateTracks(el)
-    })
+getData(dynamicUrl, function (el) {
+  getData(el.tracklist, function (el) {
+    populateTracks(el)
+  })
 })
 // let trackListUrl = ""
 // getData(dynamicUrl, (elements) =>{
 //     trackListUrl = elements.tracklist
 //     console.log(trackListUrl)
 // })
+
+// Aggiungo dinamicamente l'immagine header
+
+const generateWrapperImage = function (el) {
+  let headerWrapper = document.getElementById("heading-wrapper")
+  headerWrapper.style.backgroundImage = `url('${el.picture_xl}')`
+}
+
+getData(dynamicUrl, function (el) {
+  generateWrapperImage(el)
+})

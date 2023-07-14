@@ -416,6 +416,9 @@
                 <button id="play-button-album">
                   <i class="fas fa-play"></i>
                 </button>
+                <button id="pause-button-album" class="d-none">
+                  <i class="fas fa-pause"></i>
+                </button>
                 <button id="fav-button"><i class="fas fa-heart"></i></button>
                 <button id="ellipsis-button">
                   <i class="fas fa-ellipsis-h"></i>
@@ -453,14 +456,14 @@
               />
             </div>
             <div class="col-4 mt-3 ms-3">
-              <a href="#" class="text-decoration-none"
+              <a href="#" class="text-decoration-none fs-4" id="player-title"
                 ><h3 id="player-title-link">Song title</h3></a
               >
               <a
                 href="#"
-                id="player-artist-link"
+                id="player-artist"
                 class="text-decoration-none text-white"
-                ><p id="player-artist">Artist</p></a
+                ><p id="player-artist-link">Artist</p></a
               >
             </div>
             <div class="col">
@@ -520,9 +523,26 @@
                   </button>
                 </div>
                 <div class="col-2 mx-1">
-                  <button>
+                  <button id="pause-button" class="d-none">
                     <svg
-                      id="play-button"
+                      width="44"
+                      height="47"
+                      viewBox="-5 0 115 110"
+                      fill="white"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <g>
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M55.0039 0C85.3632 0 110.008 24.6441 110.008 54.9995C110.008 85.3559 85.3632 110 55.0039 110C24.6446 110 0 85.3559 0 54.9995C0 24.6441 24.6446 0 55.0039 0ZM48.5749 33.0133C48.5749 31.7902 47.5034 30.7965 46.3426 30.7965H37.0562C35.8061 30.7965 34.8239 31.7902 34.8239 33.0133V76.7162C34.8239 77.9402 35.8061 78.9339 37.0562 78.9339H46.3426C47.5034 78.9339 48.5749 77.9402 48.5749 76.7162V33.0133ZM76.0769 33.0133C76.0769 31.7902 75.0947 30.7965 73.8446 30.7965H64.5582C63.3081 30.7965 62.3259 31.7902 62.3259 33.0133V76.7162C62.3259 77.9402 63.3081 78.9339 64.5582 78.9339H73.8446C75.0947 78.9339 76.0769 77.9402 76.0769 76.7162V33.0133Z"
+                          fill="white"
+                        />
+                      </g>
+                    </svg>
+                  </button>
+                  <button id="play-button">
+                    <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="48"
                       height="48"
@@ -692,6 +712,9 @@
                 type="range"
                 id="volume-range"
                 class="styled-slider slider-progress"
+                max="1"
+                min="0"
+                step="0.01"
               />
             </div>
           </div>

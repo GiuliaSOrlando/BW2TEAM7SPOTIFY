@@ -104,19 +104,46 @@ const populateTracks = function (elements, i) {
 
     tracksRow.appendChild(newCol)
 
-    // Play/pause canzone
+    // Play/pause canzone del player
     const song = new Audio(tracks.preview)
     let songBtn = document.getElementById(`song-button${i}`)
     let pauseBtn = document.getElementById(`pause-button${i}`)
     songBtn.addEventListener("click", function () {
-      console.log(`L'url della traccia da riprodurre è ${tracks.preview}`)
       song.play()
+      let playerPlayBtn = document.getElementById("play-button")
+      playerPlayBtn.classList.add("d-none")
+      let playerPauseBtn = document.getElementById("pause-button")
+      playerPauseBtn.classList.remove("d-none")
+      playerPauseBtn.classList.add("d-block")
+      playerPauseBtn.addEventListener("click", function () {
+        song.pause()
+        playerPauseBtn.classList.remove("d-block")
+        playerPauseBtn.classList.add("d-none")
+        playerPlayBtn.classList.remove("d-none")
+        playerPlayBtn.classList.add("d-block")
+      })
+
+      playerPlayBtn.addEventListener("click", function () {
+        console.log(`L'url della traccia da riprodurre è ${tracks.preview}`)
+        song.play()
+        playerPauseBtn.classList.remove("d-none")
+        playerPauseBtn.classList.add("d-block")
+        playerPlayBtn.classList.remove("d-block")
+        playerPlayBtn.classList.add("d-none")
+        playerPauseBtn.addEventListener("click", function () {
+          song.pause()
+          playerPauseBtn.classList.remove("d-block")
+          playerPauseBtn.classList.add("d-none")
+          playerPlayBtn.classList.remove("d-none")
+          playerPlayBtn.classList.add("d-block")
+        })
+      })
     })
+
     pauseBtn.addEventListener("click", function () {
       console.log(`L'url della traccia da riprodurre è ${tracks.preview}`)
       song.pause()
     })
-
     // Sincronizza immagine dell'album nel player
 
     songBtn.addEventListener("click", function () {
@@ -182,8 +209,8 @@ const artistBtn = document.getElementById("artist-btn")
 
 albumBtn.addEventListener("click", () => {
   let libraryDeck = document.getElementById("library-deck")
-  libraryDeck.innerHTML=""
-  getDataNew(rockUrl, function(elements){
+  libraryDeck.innerHTML = ""
+  getDataNew(rockUrl, function (elements) {
     console.log("papopepo", elements)
     populateLibrary(elements)
   })
@@ -191,8 +218,8 @@ albumBtn.addEventListener("click", () => {
 
 artistBtn.addEventListener("click", () => {
   let libraryDeck = document.getElementById("library-deck")
-  libraryDeck.innerHTML=""
-  getDataNew(LoveUrl, function(elements){
+  libraryDeck.innerHTML = ""
+  getDataNew(LoveUrl, function (elements) {
     populateLibrary(elements)
   })
 })

@@ -177,8 +177,8 @@ const populateLibrary = function (elements) {
     const newCol = document.createElement("div")
     newCol.classList.add("card", "card-libreria")
     newCol.innerHTML = `
-                      <a href="/HTML/album-page.html?id=${elements.data[i].album.id}" class="text-decoration-none">
-                      <div class="row no-gutters">
+    <a href="/HTML/album-page.html?id=${elements.data[i].album.id}" class="text-decoration-none">
+                      <div class="d-flex gap-4">
                         <div class="col-3">
                           <img
                             src="${elements.data[i].album.cover_small}"
@@ -188,8 +188,8 @@ const populateLibrary = function (elements) {
                         </div>
                         <div class="col-9 p-0">
                           <div class="card-body p-0 flex-row">
-                          <p class="card-title cir-bold text-white"> <a href="/HTML/album-page.html?id=${elements.data[i].album.id}">${elements.data[i].album.title}</a></p>
-                          <p class="card-text cir-light text-white"> <a href="/HTML/artist-page.html?id=${elements.data[i].artist.id}"> ${elements.data[i].artist.name} </a></p>
+                          <p class="card-title cir-bold text-white mb-0"> <a class="text-white text-decoration-none" href="/HTML/album-page.html?id=${elements.data[i].album.id}">${elements.data[i].album.title}</a></p>
+                          <p class="card-text cir-light text-white"> <a class="text-white text-decoration-none" href="/HTML/artist-page.html?id=${elements.data[i].artist.id}"> ${elements.data[i].artist.name} </a></p>
                           </div>
                         </div>
                       </div>

@@ -1,4 +1,4 @@
-let isPlaying = false
+let playing = false
 
 const QueenUrl =
   "https://striveschool-api.herokuapp.com/api/deezer/search?q=queen"
@@ -74,7 +74,9 @@ const populateTracks = function (elements, i) {
     newCol.innerHTML = `
       <div id="song-button${i}" class="track-num d-flex mb-3">${i + 1}</div>
             <div class="song">
-              <h3 class="song-title fs-5 mb-0">${tracks.title}</h3>
+              <h3 id="pause-button${i}" class="song-title fs-5 mb-0">${
+      tracks.title
+    }</h3>
               <p>${tracks.artist.name}</p>
             </div>
             <div class="song-length"><span></span>${Math.floor(
@@ -87,15 +89,14 @@ const populateTracks = function (elements, i) {
     // Play/pause canzone
     const song = new Audio(tracks.preview)
     let songBtn = document.getElementById(`song-button${i}`)
+    let pauseBtn = document.getElementById(`pause-button${i}`)
     songBtn.addEventListener("click", function () {
       console.log(`L'url della traccia da riprodurre è ${tracks.preview}`)
-      const song = new Audio(tracks.preview)
-      song.getAttribute("controls")
-      if (song.playing) {
-        song.pause()
-      } else {
-        song.play()
-      }
+      song.play()
+    })
+    pauseBtn.addEventListener("click", function () {
+      console.log(`L'url della traccia da riprodurre è ${tracks.preview}`)
+      song.pause()
     })
 
     // Sincronizza immagine dell'album nel player

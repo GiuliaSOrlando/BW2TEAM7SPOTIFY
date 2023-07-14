@@ -81,7 +81,9 @@ const populateTracks = function (elements, i) {
               <h3 id="pause-button${i}" class="song-title fs-5 mb-0">${
       tracks.title
     }</h3>
-              <p>${tracks.artist.name}</p>
+              <a href="./artist-page.html?id=${
+                elements.artist.id
+              }" class="text-decoration-none"><p>${tracks.artist.name}</p> </a>
             </div>
             <div class="song-length"><span></span>${Math.floor(
               tracks.duration / 60

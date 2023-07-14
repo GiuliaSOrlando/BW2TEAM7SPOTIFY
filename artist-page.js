@@ -124,6 +124,8 @@ getData(dynamicUrl, function (el) {
 getData(dynamicUrl, function (elements) {
   let numFan = document.getElementById("nb-fan")
   numFan.innerHTML = `${elements.nb_fan} ascoltatori mensili`
+  let headerArtistName = document.getElementById("header-artist-name")
+  headerArtistName.innerHTML = elements.name
 })
 
 getData(searchUrl, populateAlbums)

@@ -158,7 +158,7 @@ body {
 }
 
 .bg-img {
-  background-image: url("../assets/imgs/main/image-12.jpg");
+  background-image: url("../assets/imgs/digital-painting-mountain-with-colorful-tree-foreground.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -376,11 +376,13 @@ input[type="range"].styled-slider.slider-progress::-webkit-slider-runnable-track
 }
 
 input[type="range"].styled-slider.slider-progress:hover::-webkit-slider-runnable-track {
-  background: linear-gradient(green, green) 0 / var(--sx) 100% no-repeat, gray;
+  background: linear-gradient(#1db954, #1db954) 0 / var(--sx) 100% no-repeat,
+    gray;
 }
 
 input[type="range"].styled-slider.slider-progress:active::-webkit-slider-runnable-track {
-  background: linear-gradient(green, green) 0 / var(--sx) 100% no-repeat, gray;
+  background: linear-gradient(#1db954, #1db954) 0 / var(--sx) 100% no-repeat,
+    gray;
 }
 
 /*mozilla*/
@@ -422,11 +424,13 @@ input[type="range"].styled-slider.slider-progress::-moz-range-track {
 }
 
 input[type="range"].styled-slider.slider-progress:hover::-moz-range-track {
-  background: linear-gradient(green, green) 0 / var(--sx) 100% no-repeat, gray;
+  background: linear-gradient(#1db954, #1db954) 0 / var(--sx) 100% no-repeat,
+    gray;
 }
 
 input[type="range"].styled-slider.slider-progress:active::-moz-range-track {
-  background: linear-gradient(green, green) 0 / var(--sx) 100% no-repeat, gray;
+  background: linear-gradient(#1db954, #1db954) 0 / var(--sx) 100% no-repeat,
+    gray;
 }
 
 /*ms*/
@@ -486,11 +490,11 @@ input[type="range"].styled-slider.slider-progress::-ms-fill-lower {
 }
 
 input[type="range"].styled-slider.slider-progress:hover::-ms-fill-lower {
-  background: green;
+  background: #1db954;
 }
 
 input[type="range"].styled-slider.slider-progress:active::-ms-fill-lower {
-  background: green;
+  background: #1db954;
 }
 
 /* background card search */

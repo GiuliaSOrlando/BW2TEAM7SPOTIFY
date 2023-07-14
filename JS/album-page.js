@@ -104,7 +104,7 @@ const populateTracks = function (elements, i) {
 
     tracksRow.appendChild(newCol)
 
-    // Play/pause canzone
+    // Play/pause canzone del player
     const song = new Audio(tracks.preview)
     let songBtn = document.getElementById(`song-button${i}`)
     let pauseBtn = document.getElementById(`pause-button${i}`)
@@ -141,14 +141,9 @@ const populateTracks = function (elements, i) {
     })
 
     pauseBtn.addEventListener("click", function () {
-      shuffle.addEventListener("click", function () {
-        console.log(`L'url della traccia da riprodurre è ${tracks.preview}`)
-        song.play()
-      })
       console.log(`L'url della traccia da riprodurre è ${tracks.preview}`)
       song.pause()
     })
-
     // Sincronizza immagine dell'album nel player
 
     songBtn.addEventListener("click", function () {
@@ -214,8 +209,8 @@ const artistBtn = document.getElementById("artist-btn")
 
 albumBtn.addEventListener("click", () => {
   let libraryDeck = document.getElementById("library-deck")
-  libraryDeck.innerHTML=""
-  getDataNew(rockUrl, function(elements){
+  libraryDeck.innerHTML = ""
+  getDataNew(rockUrl, function (elements) {
     console.log("papopepo", elements)
     populateLibrary(elements)
   })
@@ -223,8 +218,8 @@ albumBtn.addEventListener("click", () => {
 
 artistBtn.addEventListener("click", () => {
   let libraryDeck = document.getElementById("library-deck")
-  libraryDeck.innerHTML=""
-  getDataNew(LoveUrl, function(elements){
+  libraryDeck.innerHTML = ""
+  getDataNew(LoveUrl, function (elements) {
     populateLibrary(elements)
   })
 })

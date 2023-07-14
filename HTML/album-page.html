@@ -416,6 +416,9 @@
                 <button id="play-button-album">
                   <i class="fas fa-play"></i>
                 </button>
+                <button id="pause-button-album" class="d-none">
+                  <i class="fas fa-pause"></i>
+                </button>
                 <button id="fav-button"><i class="fas fa-heart"></i></button>
                 <button id="ellipsis-button">
                   <i class="fas fa-ellipsis-h"></i>
@@ -709,6 +712,9 @@
                 type="range"
                 id="volume-range"
                 class="styled-slider slider-progress"
+                max="1"
+                min="0"
+                step="0.01"
               />
             </div>
           </div>

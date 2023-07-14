@@ -350,7 +350,7 @@
                     <p class="text-white">lorem</p>
                   </div>
                   <img
-                    src="../assets/imgs/main/image-10.jpg"
+                    src="assets/imgs/smaller-picture-digital.jpg"
                     alt=""
                     class="position-absolute abs w-100"
                   />
@@ -525,8 +525,8 @@
       class="container-fluid bg-black text-white"
       data-bs-theme="dark"
     >
-      <div class="row">
-        <div id="left-element" class="col-4">
+      <div class="row justify-content-between">
+        <div id="left-element" class="col-4 d-none d-md-block">
           <div class="row mt-3">
             <div class="col-2 d-none d-lg-block">
               <img
@@ -536,10 +536,10 @@
               />
             </div>
             <div class="col-4 mt-3 ms-3">
-              <h3 id="title">Song title</h3>
-              <p id="artist">Artist</p>
+              <h3 id="player-title">Song title</h3>
+              <p id="player-artist">Artist</p>
             </div>
-            <div class="col">
+            <div class="col-2">
               <p class="fs-3 fw-lighter player-extra-icons" id="heart">
                 &#9825;
               </p>
@@ -742,7 +742,7 @@
               </button>
             </div>
             <div class="col-1 mx-1">
-              <button id="volume-button">
+              <button class="d-none d-lg-block" id="volume-button">
                 <svg
                   class="player-extra-icons"
                   width="20"
@@ -764,8 +764,6 @@
               </button>
             </div>
             <div class="col d-none d-lg-block" id="volume-range-div">
-              <input type="range" id="volume-range" />
-            <div class="col" id="volume-range-div">
               <input
                 type="range"
                 id="volume-range"

@@ -1,4 +1,4 @@
-let isPlaying = false
+let playing = false
 
 const QueenUrl =
   "https://striveschool-api.herokuapp.com/api/deezer/search?q=queen"
@@ -43,7 +43,8 @@ const populateLibrary = function (elements) {
     const newCol = document.createElement("div")
     newCol.classList.add("card", "card-libreria")
     newCol.innerHTML = `
-                                                           <div class="row no-gutters">
+                      <a href="./album-page.html?id=${elements.data[i].album.id}" class="text-decoration-none">
+                      <div class="row no-gutters">
                         <div class="col-3">
                           <img
                             src="${elements.data[i].album.cover_small}"
@@ -54,10 +55,13 @@ const populateLibrary = function (elements) {
                         <div class="col-9 p-0">
                           <div class="card-body p-0 flex-row">
                             <p class="card-title cir-bold text-white">${elements.data[i].album.title}</p>
+                            <!--<a href="./artist-page.html?id=${elements.data[i].artist.id}" class="text-decoration-none">-->
                             <p class="card-text cir-light text-white">${elements.data[i].artist.name}</p>
+                           <!-- </a> -->
                           </div>
                         </div>
                       </div>
+                      </a>
       `
 
     libraryDeck.appendChild(newCol)
@@ -74,8 +78,12 @@ const populateTracks = function (elements, i) {
     newCol.innerHTML = `
       <div id="song-button${i}" class="track-num d-flex mb-3">${i + 1}</div>
             <div class="song">
-              <h3 class="song-title fs-5 mb-0">${tracks.title}</h3>
-              <p>${tracks.artist.name}</p>
+              <h3 id="pause-button${i}" class="song-title fs-5 mb-0">${
+      tracks.title
+    }</h3>
+              <a href="./artist-page.html?id=${
+                elements.artist.id
+              }" class="text-decoration-none"><p>${tracks.artist.name}</p> </a>
             </div>
             <div class="song-length"><span></span>${Math.floor(
               tracks.duration / 60
@@ -87,15 +95,14 @@ const populateTracks = function (elements, i) {
     // Play/pause canzone
     const song = new Audio(tracks.preview)
     let songBtn = document.getElementById(`song-button${i}`)
+    let pauseBtn = document.getElementById(`pause-button${i}`)
     songBtn.addEventListener("click", function () {
       console.log(`L'url della traccia da riprodurre è ${tracks.preview}`)
-      const song = new Audio(tracks.preview)
-      song.getAttribute("controls")
-      if (song.playing) {
-        song.pause()
-      } else {
-        song.play()
-      }
+      song.play()
+    })
+    pauseBtn.addEventListener("click", function () {
+      console.log(`L'url della traccia da riprodurre è ${tracks.preview}`)
+      song.pause()
     })
 
     // Sincronizza immagine dell'album nel player

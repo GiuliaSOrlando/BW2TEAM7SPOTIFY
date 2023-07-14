@@ -30,6 +30,12 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
     />
     <link rel="stylesheet" href="artist/artist.css" />
+    <style>
+      .artist-carousel-img {
+        width: 500px;
+        height: 500px;
+      }
+    </style>
     <!-- <style>
       body {
         background-color: #000000;
@@ -396,9 +402,29 @@
             <div class="artist-heading-wrapper" id="heading-wrapper">
               <div class="scritte-immagini">
                 <div class="album-title">
-                  <p>artista verificato</p>
-                  <h1>Artista</h1>
-                  <p>1000 ascoltatori mensili</p>
+                  <p>
+                    <svg
+                      version="1.0"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="17.000000pt"
+                      height="20.000000pt"
+                      viewBox="0 0 153.000000 156.000000"
+                      preserveAspectRatio="xMidYMid meet"
+                    >
+                      <g
+                        transform="translate(0.000000,156.000000) scale(0.100000,-0.100000)"
+                        fill="#548fed"
+                        stroke="none"
+                      >
+                        <path
+                          d="M704 1478 c-16 -11 -60 -52 -99 -89 l-70 -68 -127 -3 c-173 -4 -172 -3 -176 -175 l-4 -127 -84 -89 c-123 -131 -123 -145 0 -274 l84 -89 4 -127 c4 -172 3 -171 175 -175 l127 -4 89 -84 c131 -123 145 -123 274 0 l89 84 127 4 c172 4 171 3 175 175 l4 127 84 89 c123 129 123 143 0 274 l-84 89 -4 127 c-4 172 -3 171 -176 175 l-127 3 -55 53 c-143 136 -168 148 -226 104z m384 -466 c33 -42 20 -59 -218 -297 l-230 -230 -110 110 c-116 116 -127 138 -90 175 34 34 64 25 135 -42 l66 -62 182 181 c100 99 189 183 197 186 21 7 53 -2 68 -21z"
+                        />
+                      </g>
+                    </svg>
+                    Artista verificato
+                  </p>
+                  <h1 id="header-artist-name">Artista</h1>
+                  <p id="nb-fan"></p>
                 </div>
               </div>
             </div>
@@ -421,221 +447,198 @@
                   <i class="fas fa-ellipsis-h"></i>
                 </button>
               </div>
-              <div id="tracks-container">
-                <div class="track">
-                  <div class="track-img">
-                    <img
-                      src="https://i.pinimg.com/236x/a1/ca/de/a1cade6cd6c09804d486c3614672c507--linkin-park-albums-linkin-park-album-cover.jpg"
-                      alt=""
-                    />
-                  </div>
-                  <div class="song">
-                    <h3 class="song-title">Song Title</h3>
-                    <p>authors</p>
-                  </div>
-                  <div class="views d-flex align-items-center">23456</div>
-                  <div class="song-length"><span></span>2:06 <span></span></div>
-                </div>
-
-                <div class="track">
-                  <div class="track-img">
-                    <img
-                      src="https://i.pinimg.com/236x/a1/ca/de/a1cade6cd6c09804d486c3614672c507--linkin-park-albums-linkin-park-album-cover.jpg"
-                      alt=""
-                    />
-                  </div>
-                  <div class="song">
-                    <h3 class="song-title">Song Title</h3>
-                    <p>authors</p>
-                  </div>
-                  <div class="views d-flex align-items-center">23456</div>
-                  <div class="song-length"><span></span>2:06 <span></span></div>
-                </div>
-
-                <div class="track">
-                  <div class="track-img">
-                    <img
-                      src="https://i.pinimg.com/236x/a1/ca/de/a1cade6cd6c09804d486c3614672c507--linkin-park-albums-linkin-park-album-cover.jpg"
-                      alt=""
-                    />
-                  </div>
-                  <div class="song">
-                    <h3 class="song-title">Song Title</h3>
-                    <p>authors</p>
-                  </div>
-                  <div class="views d-flex align-items-center">23456</div>
-                  <div class="song-length"><span></span>2:06 <span></span></div>
-                </div>
-
-                <div class="track">
-                  <div class="track-img">
-                    <img
-                      src="https://i.pinimg.com/236x/a1/ca/de/a1cade6cd6c09804d486c3614672c507--linkin-park-albums-linkin-park-album-cover.jpg"
-                      alt=""
-                    />
-                  </div>
-                  <div class="song">
-                    <h3 class="song-title">Song Title</h3>
-                    <p>authors</p>
-                  </div>
-                  <div class="views d-flex align-items-center">23456</div>
-                  <div class="song-length"><span></span>2:06 <span></span></div>
-                </div>
-
-                <div class="track">
-                  <div class="track-img">
-                    <img
-                      src="https://i.pinimg.com/236x/a1/ca/de/a1cade6cd6c09804d486c3614672c507--linkin-park-albums-linkin-park-album-cover.jpg"
-                      alt=""
-                    />
-                  </div>
-                  <div class="song">
-                    <h3 class="song-title">Song Title</h3>
-                    <p>authors</p>
-                  </div>
-                  <div class="views d-flex align-items-center">23456</div>
-                  <div class="song-length"><span></span>2:06 <span></span></div>
-                </div>
-
-                <div class="track">
-                  <div class="track-img">
-                    <img
-                      src="https://i.pinimg.com/236x/a1/ca/de/a1cade6cd6c09804d486c3614672c507--linkin-park-albums-linkin-park-album-cover.jpg"
-                      alt=""
-                    />
-                  </div>
-                  <div class="song">
-                    <h3 class="song-title">Song Title</h3>
-                    <p>authors</p>
-                  </div>
-                  <div class="views d-flex align-items-center">23456</div>
-                  <div class="song-length"><span></span>2:06 <span></span></div>
-                </div>
-
-                <div class="track">
-                  <div class="track-img">
-                    <img
-                      src="https://i.pinimg.com/236x/a1/ca/de/a1cade6cd6c09804d486c3614672c507--linkin-park-albums-linkin-park-album-cover.jpg"
-                      alt=""
-                    />
-                  </div>
-                  <div class="song">
-                    <h3 class="song-title">Song Title</h3>
-                    <p>authors</p>
-                  </div>
-                  <div class="views d-flex align-items-center">23456</div>
-                  <div class="song-length"><span></span>2:06 <span></span></div>
-                </div>
-
-                <div class="track">
-                  <div class="track-img">
-                    <img
-                      src="https://i.pinimg.com/236x/a1/ca/de/a1cade6cd6c09804d486c3614672c507--linkin-park-albums-linkin-park-album-cover.jpg"
-                      alt=""
-                    />
-                  </div>
-                  <div class="song">
-                    <h3 class="song-title">Song Title</h3>
-                    <p>authors</p>
-                  </div>
-                  <div class="views d-flex align-items-center">23456</div>
-                  <div class="song-length"><span></span>2:06 <span></span></div>
-                </div>
-
-                <div class="track">
-                  <div class="track-img">
-                    <img
-                      src="https://i.pinimg.com/236x/a1/ca/de/a1cade6cd6c09804d486c3614672c507--linkin-park-albums-linkin-park-album-cover.jpg"
-                      alt=""
-                    />
-                  </div>
-                  <div class="song">
-                    <h3 class="song-title">Song Title</h3>
-                    <p>authors</p>
-                  </div>
-                  <div class="views d-flex align-items-center">23456</div>
-                  <div class="song-length"><span></span>2:06 <span></span></div>
-                </div>
-
-                <div class="track">
-                  <div class="track-img">
-                    <img
-                      src="https://i.pinimg.com/236x/a1/ca/de/a1cade6cd6c09804d486c3614672c507--linkin-park-albums-linkin-park-album-cover.jpg"
-                      alt=""
-                    />
-                  </div>
-                  <div class="song">
-                    <h3 class="song-title">Song Title</h3>
-                    <p>authors</p>
-                  </div>
-                  <div class="views d-flex align-items-center">23456</div>
-                  <div class="song-length"><span></span>2:06 <span></span></div>
-                </div>
-
-                <div class="track">
-                  <div class="track-img">
-                    <img
-                      src="https://i.pinimg.com/236x/a1/ca/de/a1cade6cd6c09804d486c3614672c507--linkin-park-albums-linkin-park-album-cover.jpg"
-                      alt=""
-                    />
-                  </div>
-                  <div class="song">
-                    <h3 class="song-title">Song Title</h3>
-                    <p>authors</p>
-                  </div>
-                  <div class="views d-flex align-items-center">23456</div>
-                  <div class="song-length"><span></span>2:06 <span></span></div>
-                </div>
-
-                <div class="track">
-                  <div class="track-img">
-                    <img
-                      src="https://i.pinimg.com/236x/a1/ca/de/a1cade6cd6c09804d486c3614672c507--linkin-park-albums-linkin-park-album-cover.jpg"
-                      alt=""
-                    />
-                  </div>
-                  <div class="song">
-                    <h3 class="song-title">Song Title</h3>
-                    <p>authors</p>
-                  </div>
-                  <div class="views d-flex align-items-center">23456</div>
-                  <div class="song-length"><span></span>2:06 <span></span></div>
-                </div>
-
-                <div class="track">
-                  <div class="track-img">
-                    <img
-                      src="https://i.pinimg.com/236x/a1/ca/de/a1cade6cd6c09804d486c3614672c507--linkin-park-albums-linkin-park-album-cover.jpg"
-                      alt=""
-                    />
-                  </div>
-                  <div class="song">
-                    <h3 class="song-title">Song Title</h3>
-                    <p>authors</p>
-                  </div>
-                  <div class="views d-flex align-items-center">23456</div>
-                  <div class="song-length"><span></span>2:06 <span></span></div>
-                </div>
-
-                <div class="track">
-                  <div class="track-img">
-                    <img
-                      src="https://i.pinimg.com/236x/a1/ca/de/a1cade6cd6c09804d486c3614672c507--linkin-park-albums-linkin-park-album-cover.jpg"
-                      alt=""
-                    />
-                  </div>
-                  <div class="song">
-                    <h3 class="song-title">Song Title</h3>
-                    <p>authors</p>
-                  </div>
-                  <div class="views d-flex align-items-center">23456</div>
-                  <div class="song-length"><span></span>2:06 <span></span></div>
-                </div>
-              </div>
+              <div id="tracks-container"></div>
             </div>
             <div id="Sezione 1">
-              <h3>Album</h3>
-              <div id="album-row" class="row container-card"></div>
+              <h3>Ricerche correlate</h3>
+              <div id="related-search-row" class="row container-card"></div>
+            </div>
+            <div id="artist-info">
+              <h2>Informazioni</h2>
+              <div
+                class="container d-flex justify-content-center bg-black opacity-75 py-5"
+              >
+                <div class="row">
+                  <div class="col-12">
+                    <button
+                      id="artist-info-card"
+                      type="button"
+                      data-bs-toggle="modal"
+                      data-bs-target="#staticBackdrop"
+                    >
+                      <div class="card text-bg-dark">
+                        <img
+                          id="artist-info-modal-img"
+                          src="/assets/imgs/main/image-6.jpg"
+                          class="card-img"
+                          alt="..."
+                        />
+                        <div
+                          class="card-img-overlay d-flex flex-column justify-content-end"
+                        >
+                          <h5
+                            id="modal-nb-fan"
+                            class="card-title text-white fw-bold text-start"
+                          ></h5>
+                          <p
+                            class="card-text text-white text-truncate text-start"
+                          >
+                            This is a wider card with supporting text below as a
+                            natural lead-in to additional content. This content
+                            is a little bit longer. This is a wider card with
+                            supporting text below as a natural lead-in to
+                            additional content. This content is a little bit
+                            longer. This is a wider card with supporting text
+                            below as a natural lead-in to additional content.
+                            This content is a little bit longer. This is a wider
+                            card with supporting text below as a natural lead-in
+                            to additional content. This content is a little bit
+                            longer.
+                          </p>
+                        </div>
+                      </div>
+                    </button>
+                    <div
+                      class="modal fade"
+                      id="staticBackdrop"
+                      data-bs-backdrop="static"
+                      data-bs-keyboard="false"
+                      tabindex="-1"
+                      aria-labelledby="staticBackdropLabel"
+                      aria-hidden="true"
+                    >
+                      <div
+                        class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg"
+                        data-bs-theme="dark"
+                      >
+                        <div class="modal-content bg-black">
+                          <div class="modal-body text-white-50">
+                            <button
+                              type="button"
+                              class="btn-close"
+                              data-bs-dismiss="modal"
+                              aria-label="Close"
+                            ></button>
+                            <div id="carouselExample" class="carousel slide">
+                              <div class="carousel-inner">
+                                <div class="carousel-item active text-center">
+                                  <img
+                                    id="modal-carousel-img1"
+                                    src="/assets/imgs/main/image-6.jpg"
+                                    class="card-img artist-carousel-img center"
+                                    alt="..."
+                                  />
+                                </div>
+                                <div class="carousel-item text-center">
+                                  <img
+                                    id="modal-carousel-img2"
+                                    src="/assets/imgs/main/image-7.jpg"
+                                    class="card-img artist-carousel-img"
+                                    alt="..."
+                                  />
+                                </div>
+                                <div class="carousel-item text-center">
+                                  <img
+                                    id="modal-carousel-img3"
+                                    src="/assets/imgs/main/image-8.jpg"
+                                    class="card-img artist-carousel-img"
+                                    alt="..."
+                                  />
+                                </div>
+                              </div>
+                              <button
+                                class="carousel-control-prev carousel-control-next bg-body-secondary bg-opacity-75 rounded-circle top-50 ms-4"
+                                type="button"
+                                data-bs-target="#carouselExample"
+                                data-bs-slide="prev"
+                                style="height: 40px; width: 40px"
+                              >
+                                <span
+                                  class="carousel-control-prev-icon"
+                                  aria-hidden="true"
+                                ></span>
+                                <span class="visually-hidden">Previous</span>
+                              </button>
+                              <button
+                                class="carousel-control-next bg-body-secondary bg-opacity-75 rounded-circle top-50 me-4"
+                                type="button"
+                                data-bs-target="#carouselExample"
+                                data-bs-slide="next"
+                                style="height: 40px; width: 40px"
+                              >
+                                <span
+                                  class="carousel-control-next-icon"
+                                  aria-hidden="true"
+                                ></span>
+                                <span class="visually-hidden">Next</span>
+                              </button>
+                            </div>
+                            <div class="row">
+                              <div class="col-4">
+                                <div class="row">
+                                  <div class="col-1">
+                                    <p
+                                      id="inside-modal-nb-fan"
+                                      class="pt-5 fw-bolder text-white fs-2"
+                                    ></p>
+                                  </div>
+                                  <div class="col-1">
+                                    <p
+                                      class="mt-5 pt-5 fw-normal text-white fs-5"
+                                    >
+                                      followers
+                                    </p>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-8">
+                                <p class="pt-5">
+                                  Lorem ipsum dolor sit amet consectetur
+                                  adipisicing elit. Quo a ipsa earum commodi
+                                  quis iste molestiae hic id tempore in?
+                                  Perferendis maxime iusto accusamus sequi nobis
+                                  pariatur voluptatibus officia expedita. Lorem
+                                  ipsum dolor sit amet consectetur adipisicing
+                                  elit. Vel esse sapiente tempora deserunt!
+                                  Placeat quisquam repudiandae sunt nihil ut qui
+                                  et, eaque fuga aut aliquam facilis excepturi
+                                  nemo, animi eum. Lorem ipsum dolor sit, amet
+                                  consectetur adipisicing elit. Saepe nostrum
+                                  provident recusandae quaerat, officiis
+                                  sapiente explicabo illo, labore, magni
+                                  veritatis quam repudiandae. Dicta vero ut
+                                  laboriosam nihil non recusandae modi. Lorem
+                                  ipsum, dolor sit amet consectetur adipisicing
+                                  elit. Impedit exercitationem dicta nisi,
+                                  ducimus delectus assumenda doloribus.
+                                  Distinctio ratione unde enim repudiandae
+                                  delectus vel exercitationem est laudantium
+                                  beatae, quae facere perferendis? Lorem ipsum
+                                  dolor sit amet, consectetur adipisicing elit.
+                                  Vel consequuntur voluptatibus dolores dolorum.
+                                  Ex voluptas, labore accusamus, fugiat numquam
+                                  quam dolore eos tempore atque, asperiores vel
+                                  modi ipsam repellat similique? Lorem ipsum
+                                  dolor sit, amet consectetur adipisicing elit.
+                                  Rem asperiores eius numquam ducimus, eaque
+                                  illum doloremque similique corporis eligendi
+                                  autem exercitationem cumque soluta inventore
+                                  temporibus eveniet vel qui beatae eos. Lorem,
+                                  ipsum dolor sit amet consectetur adipisicing
+                                  elit. Fugit ad quisquam veritatis quas dolorem
+                                  voluptas nihil reprehenderit, eius asperiores
+                                  laboriosam in voluptates similique vero
+                                  aliquid cumque harum ipsa ratione dignissimos.
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </section>
         </div>

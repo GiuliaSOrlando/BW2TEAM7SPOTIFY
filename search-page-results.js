@@ -129,7 +129,6 @@ searchForm.addEventListener("submit", function (e) {
   const searchUrl = `https://striveschool-api.herokuapp.com/api/deezer/search?q=${queryValue}`
   console.log(searchUrl)
   getData(searchUrl, populateAlbums1)
-
 })
 
 getData(rockUrl, populateLibrary)

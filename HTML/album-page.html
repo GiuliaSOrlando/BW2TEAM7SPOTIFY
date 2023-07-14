@@ -69,7 +69,7 @@
   <body>
     <div class="margin-div">
       <div class="home-container">
-        <div class="home-aside">
+        <div class="d-none d-md-block home-aside">
           <!-- ASIDE: Home/Search -->
           <div class="container bg-black">
             <!-- <div class="sidebar-brand">
@@ -105,14 +105,14 @@
                               >
                                 <path
                                   d="M1083 2639 c-249 -135 -486 -277 -646 -385 l-153 -104 -15 -290 c-20
--401 -2 -1135 29 -1166 17 -17 131 -24 382 -24 463 0 428 -33 436 413 l7 341
-137 -7 c176 -10 162 19 182 -379 10 -190 23 -350 30 -356 25 -26 765 -13 792
-14 29 29 51 1142 26 1340 -17 139 -248 306 -804 583 -243 121 -221 120 -403
-20z m372 -110 c342 -185 705 -411 727 -454 24 -43 16 -1284 -8 -1308 -17 -16
--609 -18 -626 -2 -9 9 -21 170 -28 358 -14 409 -6 397 -251 397 -236 0 -236 1
--252 -417 -7 -183 -14 -335 -15 -338 -1 -3 -141 -5 -312 -5 l-310 0 0 676 0
-676 355 208 c511 298 513 300 533 300 10 0 95 -41 187 -91z m-1120 -1374 c-4
--135 -6 -24 -6 245 0 270 2 380 6 245 3 -135 3 -355 0 -490z"
+            -401 -2 -1135 29 -1166 17 -17 131 -24 382 -24 463 0 428 -33 436 413 l7 341
+            137 -7 c176 -10 162 19 182 -379 10 -190 23 -350 30 -356 25 -26 765 -13 792
+            14 29 29 51 1142 26 1340 -17 139 -248 306 -804 583 -243 121 -221 120 -403
+            20z m372 -110 c342 -185 705 -411 727 -454 24 -43 16 -1284 -8 -1308 -17 -16
+            -609 -18 -626 -2 -9 9 -21 170 -28 358 -14 409 -6 397 -251 397 -236 0 -236 1
+            -252 -417 -7 -183 -14 -335 -15 -338 -1 -3 -141 -5 -312 -5 l-310 0 0 676 0
+            676 355 208 c511 298 513 300 533 300 10 0 95 -41 187 -91z m-1120 -1374 c-4
+            -135 -6 -24 -6 245 0 270 2 380 6 245 3 -135 3 -355 0 -490z"
                                 />
                               </g>
                             </svg>
@@ -122,37 +122,37 @@
                         <br />
                         <li class="nav-item active">
                           <a
-                            href="./search-page.html"
-                            class="text-decoration-none text-white fs-5 a"
+                          href="/HTML/search-page.html"
+                          class="text-decoration-none text-white fs-5 a"
+                        >
+                          <svg
+                            version="1.0"
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="25.000000pt"
+                            height="35.000000pt"
+                            viewBox="0 0 114.000000 135.000000"
+                            preserveAspectRatio="xMidYMid meet"
                           >
-                            <svg
-                              version="1.0"
-                              xmlns="http://www.w3.org/2000/svg"
-                              width="25.000000pt"
-                              height="35.000000pt"
-                              viewBox="0 0 114.000000 135.000000"
-                              preserveAspectRatio="xMidYMid meet"
+                            <metadata>
+                              Created by potrace 1.10, written by Peter
+                              Selinger 2001-2011
+                            </metadata>
+                            <g
+                              transform="translate(0.000000,135.000000) scale(0.050000,-0.050000)"
+                              fill="#ffffff"
+                              stroke="none"
                             >
-                              <metadata>
-                                Created by potrace 1.10, written by Peter
-                                Selinger 2001-2011
-                              </metadata>
-                              <g
-                                transform="translate(0.000000,135.000000) scale(0.050000,-0.050000)"
-                                fill="#ffffff"
-                                stroke="none"
-                              >
-                                <path
-                                  d="M827 2299 c-512 -101 -811 -696 -589 -1170 210 -451 818 -629 1225
+                              <path
+                                d="M827 2299 c-512 -101 -811 -696 -589 -1170 210 -451 818 -629 1225
 -359 l79 52 194 -188 c233 -225 262 -243 321 -202 59 42 40 73 -191 315 -104
 108 -185 202 -182 210 3 7 35 72 71 143 316 631 -231 1337 -928 1199z m317
 -181 c509 -105 699 -735 333 -1101 -264 -264 -716 -252 -967 27 -425 473 6
 1204 634 1074z"
-                                />
-                              </g>
-                            </svg>
-                            Cerca
-                          </a>
+                              />
+                            </g>
+                          </svg>
+                          Cerca
+                        </a>
                         </li>
                         <br />
                       </ul>
@@ -282,7 +282,7 @@
             id="album-section"
             style="height: 100%; padding-bottom: 120px"
           >
-            <nav id="navbar" class="navbar bg-transparent navbar-expand p-0">
+            <nav class="navbar navbar-expand">
               <div class="container-fluid">
                 <div
                   class="collapse navbar-collapse"
@@ -291,7 +291,7 @@
                   <ul
                     class="navbar-nav me-auto mb-2 mb-lg-0 w-100 justify-content-between"
                   >
-                    <div id="buttons-container" class="d-flex">
+                    <div class="d-flex">
                       <li class="nav-item">
                         <a
                           onclick="history.back()"
@@ -311,28 +311,11 @@
                           ></i
                         ></a>
                       </li>
-                      <div id="reproduce" class="d-none">
-                        <button id="play-button-nav">
-                          <i class="fas fa-play"></i></button
-                        ><span id="testo-canzone-nav">Canzone</span>
-                      </div>
-                      <!-- <form class="d-flex" role="search">
-                  <div class="d-flex align-items-center">
-                    <i
-                      class="bi bi-search text-white fs-6 mx-2 position-absolute"
-                    ></i>
-                    <input
-                      class="border-0 rounded-5 pe-5 fs-6 text-white"
-                      type="search"
-                      placeholder="Cosa vuoi ascoltare?"
-                      aria-label="Search"
-                      autofocus
-                    />
-                  </div>
-                </form> -->
                     </div>
                     <div class="d-flex align-items-center">
-                      <ul class="d-flex navbar-nav align-items-center">
+                      <ul
+                        class="d-flex navbar-nav align-items-center d-none d-lg-flex"
+                      >
                         <li class="nav-item">
                           <a
                             class="nav-link text-black rounded-5 bg-white py-1 fw-bold me-2 px-3 ulhov"
@@ -365,7 +348,7 @@
                             data-bs-toggle="tooltip"
                             data-bs-title="user"
                             data-bs-placement="bottom"
-                            data-bs-custom-class="custom-tooltip"
+                            data-bs-custom-class="custom-tooltip d-none d-lg-block"
                           ></i>
                         </a>
                         <ul class="dropdown-menu drop">
@@ -399,7 +382,7 @@
               </div>
             </nav>
             <div class="album-heading-wrapper">
-              <div class="scritte-immagini">
+              <div class="scritte-immagini d-block d-lg-flex">
                 <div id="album-img" class="album-img">
                   <img
                     src="https://images.genius.com/026447f265b15f5807c4ef22fac092f3.1000x1000x1.jpg"
@@ -438,31 +421,24 @@
       </div>
     </div>
     <div
-      id="player"
-      class="container-fluid bg-black text-white"
-      data-bs-theme="dark"
+    id="player"
+    class="container-fluid bg-black text-white"
+    data-bs-theme="dark"
     >
-      <div class="row">
-        <div id="left-element" class="col-4">
-          <div class="row mt-3">
-            <div class="col-2">
-              <img
-                src="/assets/imgs/main/image-1.jpg"
-                alt=""
-                id="album-cover"
-              />
-            </div>
-            <div class="col-4 mt-3 ms-3">
-              <a href="#" class="text-decoration-none"
-                ><h3 id="player-title-link">Song title</h3></a
-              >
-              <a
-                href="#"
-                id="player-artist-link"
-                class="text-decoration-none text-white"
-                ><p id="player-artist">Artist</p></a
-              >
-            </div>
+    <div class="row ms-1 ms-md-0 justify-content-sm-center justify-content-lg-between" >
+      <div id="left-element" class="col-4 d-none d-lg-block">
+        <div class="row mt-3">
+          <div class="col-2">
+            <img
+            src="/assets/imgs/main/image-1.jpg"
+            alt=""
+            id="album-cover"
+            />
+          </div>
+          <div class="col-4 mt-3 ms-3">
+            <h3 id="player-title-link">Song title</h3>
+            <p id="player-artist-link">Artist</p>
+          </div>
             <div class="col">
               <p class="fs-3 fw-lighter player-extra-icons" id="heart">
                 &#9825;
@@ -473,11 +449,11 @@
         <div class="col-4 text-center mt-4">
           <div class="row flex-column">
             <div class="col">
-              <div class="row justify-content-center">
+              <div class="row justify-content-center justify-content-sm-start justify-content-md-center">
                 <div class="col-1 mt-2 mx-1">
                   <button id="shuffle-button">
                     <svg
-                      class="controller-icon"
+                    class="controller-icon"
                       width="19"
                       height="20"
                       viewBox="0 0 59 50"
@@ -500,7 +476,7 @@
                 <div class="col-1 mt-2 mx-1">
                   <button>
                     <svg
-                      class="controller-icon"
+                    class="controller-icon"
                       width="19"
                       height="20"
                       viewBox="0 0 49 50"
@@ -509,7 +485,7 @@
                     >
                       <g id="Previous">
                         <path
-                          id="Previous_2"
+                        id="Previous_2"
                           fill-rule="evenodd"
                           clip-rule="evenodd"
                           d="M11.145 28.8432L11.145 47.4046C11.145 48.3233 10.4307 49.0697 9.44864 49.0697L2.48474 49.0697C1.59193 49.0697 0.877685 48.3233 0.877685 47.4046L0.877689 2.59642C0.877689 1.67772 1.59194 0.932261 2.48474 0.932261L9.44864 0.932262C10.4307 0.932262 11.145 1.67772 11.145 2.59642L11.145 21.1579L45.0717 1.56168C45.8752 1.10009 46.8573 1.1001 47.6608 1.56168C48.4643 2.02326 49 2.87585 49 3.79901C49 13.5199 49 36.4811 49 46.2029C49 47.1251 48.4643 47.9778 47.6608 48.4393C46.8573 48.9009 45.8752 48.901 45.0717 48.4403L11.145 28.8432Z"
@@ -522,7 +498,7 @@
                 <div class="col-2 mx-1">
                   <button>
                     <svg
-                      id="play-button"
+                    id="play-button"
                       xmlns="http://www.w3.org/2000/svg"
                       width="48"
                       height="48"
@@ -544,7 +520,7 @@
                 <div class="col-1 mt-2 mx-1">
                   <button>
                     <svg
-                      class="controller-icon"
+                    class="controller-icon"
                       width="19"
                       height="20"
                       viewBox="0 0 49 50"
@@ -589,20 +565,16 @@
               </div>
             </div>
             <div class="col">
-              <input
-                type="range"
-                id="song-range"
-                class="styled-slider slider-progress"
-              />
+              <input type="range" id="song-range"  class="styled-slider slider-progress" />
             </div>
           </div>
         </div>
-        <div id="right-element" class="col-4">
-          <div class="row float-end mt-5">
+        <div id="right-element" class="col-4 ">
+          <div class="row float-end mt-5 d-none d-md-flex">
             <div class="col-1 mx-1">
               <button id="about-button">
                 <svg
-                  class="player-extra-icons"
+                class="player-extra-icons"
                   width="20"
                   height="20"
                   viewBox="0 0 58 55"
@@ -688,15 +660,224 @@
               </button>
             </div>
             <div class="col" id="volume-range-div">
-              <input
-                type="range"
-                id="volume-range"
-                class="styled-slider slider-progress"
-              />
+              <input type="range" id="volume-range" class="styled-slider slider-progress" />
             </div>
           </div>
         </div>
       </div>
+
+      <!-- offcanvas nav -->
+      <nav class="navbar bg-black fixed-bottom d-md-none p-0 border border-bottom-0 border-start-0 border-end-0" id="offacnvas-library">
+        <div class="container-fluid d-block" style="height: 44px !important;">
+
+          <a class="navbar-brand" href="#">   <a
+            href="/index.html"
+            class="text-decoration-none text-white text-start fs-5 a mx-5"
+
+          >
+            <svg
+              version="1.0"
+              xmlns="http://www.w3.org/2000/svg"
+              width="25.000000pt"
+              height="35.000000pt"
+              viewBox="0 0 134.000000 146.000000"
+              preserveAspectRatio="xMidYMid meet"
+            >
+              <metadata>
+                Created by potrace 1.10, written by Peter
+                Selinger 2001-2011
+              </metadata>
+              <g
+                transform="translate(0.000000,146.000000) scale(0.050000,-0.050000)"
+                fill="#ffffff"
+                stroke="none"
+              >
+                <path
+                  d="M1083 2639 c-249 -135 -486 -277 -646 -385 l-153 -104 -15 -290 c-20
+-401 -2 -1135 29 -1166 17 -17 131 -24 382 -24 463 0 428 -33 436 413 l7 341
+137 -7 c176 -10 162 19 182 -379 10 -190 23 -350 30 -356 25 -26 765 -13 792
+14 29 29 51 1142 26 1340 -17 139 -248 306 -804 583 -243 121 -221 120 -403
+20z m372 -110 c342 -185 705 -411 727 -454 24 -43 16 -1284 -8 -1308 -17 -16
+-609 -18 -626 -2 -9 9 -21 170 -28 358 -14 409 -6 397 -251 397 -236 0 -236 1
+-252 -417 -7 -183 -14 -335 -15 -338 -1 -3 -141 -5 -312 -5 l-310 0 0 676 0
+676 355 208 c511 298 513 300 533 300 10 0 95 -41 187 -91z m-1120 -1374 c-4
+-135 -6 -24 -6 245 0 270 2 380 6 245 3 -135 3 -355 0 -490z"
+                />
+              </g>
+            </svg>
+
+            </a
+          ></a>
+          <a class="navbar-brand" href="#">    <a
+            href="/HTML/search-page.html"
+            class="text-decoration-none text-white fs-5 a ms-5"
+          >
+            <svg
+              version="1.0"
+              xmlns="http://www.w3.org/2000/svg"
+              width="25.000000pt"
+              height="35.000000pt"
+              viewBox="0 0 114.000000 135.000000"
+              preserveAspectRatio="xMidYMid meet"
+            >
+              <g
+                transform="translate(0.000000,135.000000) scale(0.100000,-0.100000)"
+                fill="#ffffff"
+                stroke="none"
+              >
+                <path
+                  d="M481 1188 c-130 -20 -267 -122 -329 -247 -30 -60 -32 -71 -32 -171 0
+-103 2 -110 35 -177 44 -88 121 -163 212 -206 55 -25 83 -32 154 -35 93 -5
+148 8 243 55 l48 25 37 -34 c20 -18 68 -64 107 -101 75 -72 95 -79 121 -41 13
+20 8 28 -90 135 l-104 113 38 80 c38 77 39 83 39 185 0 96 -3 112 -29 166 -82
+173 -272 279 -450 253z m203 -127 c82 -40 150 -114 171 -184 24 -81 20 -183
+-10 -244 -29 -58 -102 -130 -166 -165 -37 -20 -58 -23 -139 -23 -83 1 -102 4
+-145 27 -54 28 -132 104 -161 159 -15 27 -19 56 -19 139 0 117 8 140 73 212
+107 119 256 148 396 79z"
+                />
+                <path
+                  d="M429 952 c-184 -118 -106 -395 112 -395 67 0 127 30 173 86 29 37 31
+43 31 127 0 83 -2 90 -31 126 -42 53 -96 78 -174 82 -58 3 -70 0 -111 -26z"
+                />
+              </g>
+            </svg>
+
+            
+          </a>
+          </a>
+
+          <button class="navbar-toggler mx-5" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon "></span>
+          </button>
+          <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Libreria</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+              <div class="container libreria rounded h-100">
+                <div class="row">
+                  <div class="col">
+                    <nav
+                      class="navbar navbar-expand justify-content-between align-items-center pb-0"
+                    >
+                      <div
+                        class="d-flex justify-content-start align-items-center"
+                      >
+                        <a
+                          class="navbar-link text-decoration-none a"
+                          href="#"
+                          data-bs-toggle="tooltip"
+                          data-bs-title="Comprimi la tua libreria"
+                          data-bs-placement="top"
+                          data-bs-custom-class="custom-tooltip"
+                        >
+                          <svg
+                            version="1.0"
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="23.000000pt"
+                            height="20.000000pt"
+                            viewBox="0 0 227.000000 224.000000"
+                            preserveAspectRatio="xMidYMid meet"
+                          >
+                            <g
+                              transform="translate(0.000000,224.000000) scale(0.100000,-0.100000)"
+                              fill="#ffff"
+                              stroke="none"
+                            >
+                              <path
+                                d="M333 2100 c-12 -5 -30 -21 -40 -37 -17 -26 -18 -72 -16 -873 l3 -845
+          25 -22 c33 -29 84 -30 117 -3 l26 20 7 703 c4 387 4 773 0 857 -7 151 -8 155
+          -35 182 -29 29 -49 33 -87 18z"
+                              />
+                              <path
+                                d="M856 2080 l-36 -32 0 -667 c0 -366 3 -751 7 -855 6 -171 8 -190 27
+          -207 24 -23 83 -25 111 -3 31 23 34 101 34 955 l1 786 -23 21 c-13 12 -37 24
+          -54 28 -25 5 -37 0 -67 -26z"
+                              />
+                              <path
+                                d="M1401 2084 l-31 -26 0 -849 0 -850 22 -29 22 -30 316 0 317 0 21 23
+          22 23 0 702 0 701 -42 29 c-135 92 -571 332 -604 332 -7 0 -26 -12 -43 -26z"
+                              />
+                            </g>
+                          </svg>
+  
+                          La tua libreria</a
+                        >
+                      </div>
+                      <div class="">
+                        <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                            <a
+                              class="nav-link i"
+                              href="#"
+                              data-bs-toggle="tooltip"
+                              data-bs-title="Crea una playlist o una cartella"
+                              data-bs-placement="top"
+                              data-bs-custom-class="custom-tooltip"
+                            >
+                              <i class="fas fa-plus"></i>
+                            </a>
+                </li>
+                <li class="nav-item">
+                            <a
+                              class="nav-link i"
+                              href="#"
+                              data-bs-toggle="tooltip"
+                              data-bs-title="Allarga la tua libreria"
+                              data-bs-placement="top"
+                              data-bs-custom-class="custom-tooltip"
+                            >
+                              <i class="fas fa-arrow-right"></i>
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li>
+                      <hr class="dropdown-divider">
+                    </li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                  </ul>
+                </li>
+              </ul>
+                      </div>
+                    </nav>
+                  </div>
+                </div>
+                <div class="row mt-3">
+                  <div class="col text-start">
+                    <button
+                      id="album-btn2"
+                      class="btn btn-libreria text-white rounded-pill me-1 fw-medium"
+                    >
+                      Album
+                    </button>
+                    <button
+                      id="artist-btn2"
+                      class="btn btn-libreria text-white rounded-pill fw-medium"
+                    >
+                      Artisti
+                    </button>
+                  </div>
+                </div>
+                <div class="row mt-3">
+                  <div class="col aside-height">
+                    <div
+                      id="library-deck"
+                      class="card-deck"
+                      style="
+                        overflow-y: scroll;
+                        max-height: 580px;
+                        overflow-x: hidden;
+                      "
+                    ></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
     </div>
 
     <script
@@ -704,58 +885,58 @@
       integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
       crossorigin="anonymous"
     ></script>
-    <script src="Elementi singoli/player/player.js"></script>
+    <script src="/Elementi singoli/"></script>
     <!-- <script src="avrg_color.js"></script> n-->
     <script>
       //toast script
       document
         .querySelectorAll('[data-bs-toggle="tooltip"]')
         .forEach((tooltip) => {
-          new bootstrap.Tooltip(tooltip)
-        })
+          new bootstrap.Tooltip(tooltip);
+        });
       // let avgColor = start()
 
-      let albumSection = document.getElementById("album-section")
+      let albumSection = document.getElementById("album-section");
 
       albumSection.addEventListener("scroll", function () {
-        let y = albumSection.scrollTop
-        let tracksHeader = document.querySelector(".tracks-header")
-        console.log(y)
-        let nav = document.getElementById("navbar")
-        let navButtonsContainer = document.getElementById("buttons-container")
-        let playButtonNav = document.getElementById("reproduce")
+        let y = albumSection.scrollTop;
+        let tracksHeader = document.querySelector(".tracks-header");
+        console.log(y);
+        let nav = document.getElementById("navbar");
+        let navButtonsContainer = document.getElementById("buttons-container");
+        let playButtonNav = document.getElementById("reproduce");
         if (y > 25) {
-          nav.classList.remove("bg-transparent")
+          nav.classList.remove("bg-transparent");
           if (y > 264) {
-            playButtonNav.classList.remove("d-none")
+            playButtonNav.classList.remove("d-none");
             playButtonNav.classList.add(
               "d-flex",
               "justify-content-center",
               "align-items-center"
-            )
+            );
           } else {
-            playButtonNav.classList.add("d-none")
+            playButtonNav.classList.add("d-none");
           }
           if (y > 368) {
-            tracksHeader.style.backgroundColor = "#272727;"
-            tracksHeader.style.margin = "none"
+            tracksHeader.style.backgroundColor = "#272727;";
+            tracksHeader.style.margin = "none";
           }
         } else {
-          nav.classList.add("bg-transparent")
+          nav.classList.add("bg-transparent");
         }
-      })
-      let tracks = document.querySelectorAll(".track")
+      });
+      let tracks = document.querySelectorAll(".track");
       tracks.forEach((track) => {
-        let trackNum = track.querySelector(".track-num")
-        let songNum = trackNum.innerText
+        let trackNum = track.querySelector(".track-num");
+        let songNum = trackNum.innerText;
         track.addEventListener("mouseover", () => {
-          trackNum.innerHTML = `<i class="fas fa-play"></i>`
-        })
+          trackNum.innerHTML = `<i class="fas fa-play"></i>`;
+        });
         track.addEventListener("mouseout", () => {
-          let trackNum = track.querySelector(".track-num")
-          trackNum.innerHTML = `${songNum}`
-        })
-      })
+          let trackNum = track.querySelector(".track-num");
+          trackNum.innerHTML = `${songNum}`;
+        });
+      });
     </script>
     <script src="/JS/album-page.js"></script>
   </body>

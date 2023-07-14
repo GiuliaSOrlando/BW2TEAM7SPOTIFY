@@ -31,7 +31,7 @@
   <body>
     <div class="margin-div">
       <div class="home-container">
-        <div class="d-none d-lg-block home-aside">
+        <div class="d-none d-md-block home-aside">
           <!-- ASIDE: Home/Search -->
           <div class="container bg-black">
             <!-- <div class="sidebar-brand">
@@ -525,8 +525,8 @@
       class="container-fluid bg-black text-white"
       data-bs-theme="dark"
     >
-      <div class="row justify-content-between">
-        <div id="left-element" class="col-4 d-none d-md-block">
+    <div class="row ms-1 ms-md-0 justify-content-sm-center justify-content-lg-between" >
+      <div id="left-element" class="col-4 d-none d-md-block">
           <div class="row mt-3">
             <div class="col-2 d-none d-lg-block">
               <img
@@ -549,7 +549,7 @@
         <div class="col-4 text-center mt-4">
           <div class="row flex-column">
             <div class="col">
-              <div class="row justify-content-center">
+              <div class="row justify-content-end justify-content-sm-start justify-content-md-center">
                 <div class="col-1 mt-2 mx-1">
                   <button id="shuffle-button">
                     <svg
@@ -673,8 +673,8 @@
             </div>
           </div>
         </div>
-        <div id="right-element" class="col-4">
-          <div class="row float-end mt-5">
+        <div id="right-element " class="col-4">
+          <div class="row float-end mt-5 d-none d-md-flex">
             <div class="col-1 mx-1">
               <button id="about-button">
                 <svg
@@ -773,6 +773,211 @@
           </div>
         </div>
       </div>
+      <nav class="navbar bg-black fixed-bottom d-md-none p-0 border border-bottom-0 border-start-0 border-end-0" id="offacnvas-library">
+        <div class="container-fluid" style="height: 50px !important;">
+
+          <a class="navbar-brand" href="#">   <a
+            href="/index.html"
+            class="text-decoration-none text-white text-start fs-5 a"
+
+          >
+          <svg
+          version="1.0"
+          xmlns="http://www.w3.org/2000/svg"
+          width="39pt"
+          height="45pt"
+          viewBox="0 0 282.000000 282.000000"
+          preserveAspectRatio="xMidYMid meet"
+        >
+          <g
+            transform="translate(25.000000,282.000000) scale(0.100000,-0.100000)"
+            fill="#ffff"
+            stroke="none"
+          >
+            <path
+              d="M1412 2056 c-17 -7 -37 -17 -44 -24 -7 -7 -20 -12 -29 -12 -10 0 -19
+-4 -21 -8 -3 -9 -11 -13 -105 -62 -26 -14 -50 -28 -53 -32 -3 -4 -17 -12 -30
+-18 -14 -5 -38 -19 -55 -30 -16 -11 -39 -24 -50 -30 -42 -23 -67 -38 -78 -49
+-6 -6 -19 -11 -29 -11 -17 0 -18 -24 -18 -455 l0 -455 198 0 198 0 13 133 c7
+72 16 159 20 192 l6 60 125 0 125 0 7 -60 c3 -33 12 -120 19 -192 l13 -133
+196 0 197 0 7 258 c3 141 11 313 17 382 6 69 9 151 7 184 -3 55 -5 60 -35 76
+-18 9 -47 28 -65 42 -18 13 -40 28 -48 31 -8 4 -28 16 -45 27 -16 11 -39 24
+-50 30 -11 6 -33 19 -50 30 -16 11 -34 22 -40 24 -5 2 -17 7 -25 10 -8 3 -28
+15 -45 26 -16 11 -37 22 -45 25 -8 3 -28 13 -43 21 -16 7 -37 14 -47 14 -10 0
+-22 5 -25 10 -8 12 -30 11 -73 -4z"
+            />
+          </g>
+        </svg>
+
+            </a
+          ></a>
+          <a class="navbar-brand" href="#">    <a
+            href="/HTML/search-page.html"
+            class="text-decoration-none text-white fs-5 a"
+          >
+          <svg
+          version="1.0"
+          xmlns="http://www.w3.org/2000/svg"
+          width="25.000000pt"
+          height="35.000000pt"
+          viewBox="0 0 114.000000 135.000000"
+          preserveAspectRatio="xMidYMid meet"
+        >
+          <metadata>
+            Created by potrace 1.10, written by Peter
+            Selinger 2001-2011
+          </metadata>
+          <g
+            transform="translate(0.000000,135.000000) scale(0.050000,-0.050000)"
+            fill="#ffffff"
+            stroke="none"
+          >
+            <path
+              d="M827 2299 c-512 -101 -811 -696 -589 -1170 210 -451 818 -629 1225
+-359 l79 52 194 -188 c233 -225 262 -243 321 -202 59 42 40 73 -191 315 -104
+108 -185 202 -182 210 3 7 35 72 71 143 316 631 -231 1337 -928 1199z m317
+-181 c509 -105 699 -735 333 -1101 -264 -264 -716 -252 -967 27 -425 473 6
+1204 634 1074z"
+            />
+          </g>
+        </svg>
+
+            
+          </a>
+          </a>
+
+          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Libreria</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+              <div class="container libreria rounded h-100">
+                <div class="row">
+                  <div class="col">
+                    <nav
+                      class="navbar navbar-expand justify-content-between align-items-center pb-0"
+                    >
+                      <div
+                        class="d-flex justify-content-start align-items-center"
+                      >
+                        <a
+                          class="navbar-link text-decoration-none a"
+                          href="#"
+                          data-bs-toggle="tooltip"
+                          data-bs-title="Comprimi la tua libreria"
+                          data-bs-placement="top"
+                          data-bs-custom-class="custom-tooltip"
+                        >
+                          <svg
+                            version="1.0"
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="23.000000pt"
+                            height="20.000000pt"
+                            viewBox="0 0 227.000000 224.000000"
+                            preserveAspectRatio="xMidYMid meet"
+                          >
+                            <g
+                              transform="translate(0.000000,224.000000) scale(0.100000,-0.100000)"
+                              fill="#ffff"
+                              stroke="none"
+                            >
+                              <path
+                                d="M333 2100 c-12 -5 -30 -21 -40 -37 -17 -26 -18 -72 -16 -873 l3 -845
+          25 -22 c33 -29 84 -30 117 -3 l26 20 7 703 c4 387 4 773 0 857 -7 151 -8 155
+          -35 182 -29 29 -49 33 -87 18z"
+                              />
+                              <path
+                                d="M856 2080 l-36 -32 0 -667 c0 -366 3 -751 7 -855 6 -171 8 -190 27
+          -207 24 -23 83 -25 111 -3 31 23 34 101 34 955 l1 786 -23 21 c-13 12 -37 24
+          -54 28 -25 5 -37 0 -67 -26z"
+                              />
+                              <path
+                                d="M1401 2084 l-31 -26 0 -849 0 -850 22 -29 22 -30 316 0 317 0 21 23
+          22 23 0 702 0 701 -42 29 c-135 92 -571 332 -604 332 -7 0 -26 -12 -43 -26z"
+                              />
+                            </g>
+                          </svg>
+  
+                          La tua libreria</a
+                        >
+                      </div>
+                      <div class="">
+                        <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                            <a
+                              class="nav-link i"
+                              href="#"
+                              data-bs-toggle="tooltip"
+                              data-bs-title="Crea una playlist o una cartella"
+                              data-bs-placement="top"
+                              data-bs-custom-class="custom-tooltip"
+                            >
+                              <i class="fas fa-plus"></i>
+                            </a>
+                </li>
+                <li class="nav-item">
+                            <a
+                              class="nav-link i"
+                              href="#"
+                              data-bs-toggle="tooltip"
+                              data-bs-title="Allarga la tua libreria"
+                              data-bs-placement="top"
+                              data-bs-custom-class="custom-tooltip"
+                            >
+                              <i class="fas fa-arrow-right"></i>
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li>
+                      <hr class="dropdown-divider">
+                    </li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                  </ul>
+                </li>
+              </ul>
+                      </div>
+                    </nav>
+                  </div>
+                </div>
+                <div class="row mt-3">
+                  <div class="col text-start">
+                    <button
+                      id="album-btn2"
+                      class="btn btn-libreria text-white rounded-pill me-1 fw-medium"
+                    >
+                      Album
+                    </button>
+                    <button
+                      id="artist-btn2"
+                      class="btn btn-libreria text-white rounded-pill fw-medium"
+                    >
+                      Artisti
+                    </button>
+                  </div>
+                </div>
+                <div class="row mt-3">
+                  <div class="col aside-height">
+                    <div
+                      id="library-deck"
+                      class="card-deck"
+                      style="
+                        overflow-y: scroll;
+                        max-height: 580px;
+                        overflow-x: hidden;
+                      "
+                    ></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
     </div>
 
     <script

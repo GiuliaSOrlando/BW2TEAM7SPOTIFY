@@ -1,7 +1,7 @@
 // crea un canvas con l'immagine e ne ritorno il context 2d
 const draw = function (img) {
-  let canvas = document.createElement('canvas')
-  let c = canvas.getContext('2d')
+  let canvas = document.createElement("canvas")
+  let c = canvas.getContext("2d")
   c.width = canvas.width = img.clientWidth
   c.height = canvas.height = img.clientHeight
   c.clearRect(0, 0, c.width, c.height)
@@ -45,7 +45,7 @@ const findMostRecurrentColor = function (colorMap) {
 // converte un valore in rgb a un valore esadecimale
 const rgbToHex = function (r, g, b) {
   if (r > 255 || g > 255 || b > 255) {
-    throw 'Invalid color component'
+    throw "Invalid color component"
   } else {
     return ((r << 16) | (g << 8) | b).toString(16)
   }
@@ -53,7 +53,7 @@ const rgbToHex = function (r, g, b) {
 
 // inserisce degli '0' se necessario davanti al colore in esadecimale per renderlo di 6 caratteri
 const pad = function (hex) {
-  return ('000000' + hex).slice(-6)
+  return ("000000" + hex).slice(-6)
 }
 
 // const generateImage = function () {
@@ -77,8 +77,7 @@ const pad = function (hex) {
 
 const start = function () {
   // prendo il riferimento all'immagine del dom
-  let imgReference = document.querySelector('#album-img img')
-  
+  let imgReference = document.querySelector("#album-img img")
 
   // creo il context 2d dell'immagine selezionata
   let context = draw(imgReference)
@@ -93,7 +92,9 @@ const start = function () {
   let mostRecurrentHex = pad(mostRecurrent)
 
   // console.log del risultato
-  console.log(mostRecurrentHex)
+  let headingGradient = document.getElementById("gradient-container")
+  headingGradient.style.background = `linear-gradient(180deg, #${mostRecurrentHex}, black)`
+  console.log("lello", mostRecurrentHex)
 }
 
 // generateImage()

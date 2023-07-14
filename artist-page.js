@@ -145,4 +145,12 @@ getData(dynamicUrl, function (elements) {
   artistModalImage.setAttribute("src", `${elements.picture_xl}`)
   let modalNumFan = document.getElementById("modal-nb-fan")
   modalNumFan.innerHTML = `${elements.nb_fan} ascoltatori mensili`
+  let firstModalCslImage = document.getElementById("modal-carousel-img1")
+  let secondModalCslImage = document.getElementById("modal-carousel-img2")
+  let thirdModalCslImage = document.getElementById("modal-carousel-img3")
+  firstModalCslImage.setAttribute("src", `${elements.picture_xl}`)
+  secondModalCslImage.setAttribute("src", `${elements.picture_xl}`)
+  thirdModalCslImage.setAttribute("src", `${elements.picture_xl}`)
+  let insideModalNumFan = document.getElementById("inside-modal-nb-fan")
+  insideModalNumFan.innerHTML = `${elements.nb_fan}`
 })

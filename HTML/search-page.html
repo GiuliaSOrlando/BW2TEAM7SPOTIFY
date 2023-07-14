@@ -19,14 +19,15 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="/assets/CSS/index.css" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
     />
     <style></style>
-    <link rel="stylesheet" href="./Elementi singoli/nav/css/nav.css" />
-    <link rel="stylesheet" href="./Elementi singoli/player/player.css" />
+    <link rel="stylesheet" href="/Elementi singoli/nav/css/nav.css" />
+    <link rel="stylesheet" href="/Elementi singoli/player/player.css" />
+    <link rel="stylesheet" href="/assets/CSS/search-page.css" />
   </head>
   <body>
     <div class="margin-div">
@@ -45,7 +46,7 @@
                       <ul class="navbar-nav">
                         <li class="nav-item active">
                           <a
-                            href="index.html"
+                            href="/index.html"
                             class="text-decoration-none text-white text-start fs-5 a"
                           >
                             <svg
@@ -78,13 +79,14 @@
                                 />
                               </g>
                             </svg>
+
                             Home</a
                           >
                         </li>
                         <br />
                         <li class="nav-item active">
                           <a
-                            href="search-page.html"
+                            href="/HTML/search-page.html"
                             class="text-decoration-none text-white fs-5 a"
                           >
                             <svg
@@ -95,24 +97,28 @@
                               viewBox="0 0 114.000000 135.000000"
                               preserveAspectRatio="xMidYMid meet"
                             >
-                              <metadata>
-                                Created by potrace 1.10, written by Peter
-                                Selinger 2001-2011
-                              </metadata>
                               <g
-                                transform="translate(0.000000,135.000000) scale(0.050000,-0.050000)"
+                                transform="translate(0.000000,135.000000) scale(0.100000,-0.100000)"
                                 fill="#ffffff"
                                 stroke="none"
                               >
                                 <path
-                                  d="M827 2299 c-512 -101 -811 -696 -589 -1170 210 -451 818 -629 1225
--359 l79 52 194 -188 c233 -225 262 -243 321 -202 59 42 40 73 -191 315 -104
-108 -185 202 -182 210 3 7 35 72 71 143 316 631 -231 1337 -928 1199z m317
--181 c509 -105 699 -735 333 -1101 -264 -264 -716 -252 -967 27 -425 473 6
-1204 634 1074z"
+                                  d="M481 1188 c-130 -20 -267 -122 -329 -247 -30 -60 -32 -71 -32 -171 0
+-103 2 -110 35 -177 44 -88 121 -163 212 -206 55 -25 83 -32 154 -35 93 -5
+148 8 243 55 l48 25 37 -34 c20 -18 68 -64 107 -101 75 -72 95 -79 121 -41 13
+20 8 28 -90 135 l-104 113 38 80 c38 77 39 83 39 185 0 96 -3 112 -29 166 -82
+173 -272 279 -450 253z m203 -127 c82 -40 150 -114 171 -184 24 -81 20 -183
+-10 -244 -29 -58 -102 -130 -166 -165 -37 -20 -58 -23 -139 -23 -83 1 -102 4
+-145 27 -54 28 -132 104 -161 159 -15 27 -19 56 -19 139 0 117 8 140 73 212
+107 119 256 148 396 79z"
+                                />
+                                <path
+                                  d="M429 952 c-184 -118 -106 -395 112 -395 67 0 127 30 173 86 29 37 31
+43 31 127 0 83 -2 90 -31 126 -42 53 -96 78 -174 82 -58 3 -70 0 -111 -26z"
                                 />
                               </g>
                             </svg>
+
                             Cerca
                           </a>
                         </li>
@@ -221,7 +227,7 @@
                 </div>
               </div>
               <div class="row mt-3">
-                <div class="col">
+                <div class="col aside-height">
                   <div
                     id="library-deck"
                     class="card-deck"
@@ -238,7 +244,7 @@
         </div>
 
         <!-- MAIN CONTENT  -->
-        <div class="main-content" style="margin-bottom: 140px">
+        <div class="main-content" style="margin-bottom: 112px">
           <!-- NAVBAR -->
           <nav class="navbar navbar-expand">
             <div class="container-fluid">
@@ -253,18 +259,18 @@
                         class="nav-link active text-white"
                         aria-current="page"
                         ><i
-                          class="bi bi-chevron-left bg-black opacity-50 rounded-circle fs-5 p-1 px-2"
+                          class="bi bi-chevron-left bg-black opacity-50 rounded-circle fs-5 p-2 px-2"
                         ></i
                       ></a>
                     </li>
                     <li class="nav-item">
                       <a onclick="history.forward()" class="nav-link text-white"
                         ><i
-                          class="bi bi-chevron-right bg-black rounded-circle fs-5 p-1 px-2"
+                          class="bi bi-chevron-right bg-black rounded-circle fs-5 p-2 px-2"
                         ></i
                       ></a>
                     </li>
-                    <form id="search-bar" class="d-flex" role="search">
+                    <form id="search-bar" class="d-flex d-none" role="search">
                       <div class="d-flex align-items-center">
                         <i
                           class="bi bi-search text-white fs-6 mx-2 position-absolute"
@@ -272,7 +278,6 @@
                         <input
                           class="border-0 rounded-5 pe-5 fs-6 text-white"
                           type="search"
-                          id="search-bar-input-field"
                           placeholder="Cosa vuoi ascoltare?"
                           aria-label="Search"
                           autofocus
@@ -350,94 +355,626 @@
 
           <!-- CONTENUTI HOME -->
           <div class="main-content-body">
-            <!--HERO SECTION-->
-            <div class="container">
-              <div class="row he">
-                <div class="col col-md-2 bg-success bg-lin position-relative">
-                  <div class="d-flex flex-column">
-                    <h2 class="fs-4 text-white">Presentato da</h2>
-                    <p class="text-white">lorem</p>
-                  </div>
-                  <img
-                    src="../assets/imgs/main/image-10.jpg"
-                    alt=""
-                    class="position-absolute abs w-100"
-                  />
-                </div>
-                <div class="col bg-img p-0">
-                  <div class="bg-lin h-100">
-                    <div
-                      class="col d-flex justify-content-end h-100 flex-column align-items-start tw ms-5"
-                    >
-                      <p class="text-white fs-4">PLAYLIST</p>
-                      <h1 class="text-white">Hit Italiane</h1>
-                      <p class="text-white">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Consequuntur nulla debitis
-                      </p>
-                      <div class="d-flex justify-content-between w-100 mb-3">
-                        <button
-                          class="btn btn-success rounded-5 text-black fw-bold px-4"
-                        >
-                          Play
-                        </button>
-                        <button
-                          class="btn bg-black bg-opacity-25 rounded-5 text-white fw-bold px-4"
-                        >
-                          Segui
-                        </button>
-                        <button class="btn bg-transparent text-white fw-bold">
-                          . . .
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+            <!--CARDS RISULTATI RICERCA-->
+            <div
+              class="container rounded rounded-top-0 rounded-bottom-0 container-album text-white"
+            >
+              <div id="Sezione 1">
+                <h3>Album</h3>
+                <div id="album-row" class="row container-card p-0 py-5"></div>
               </div>
             </div>
-            <!--CARDS SECTION-->
-            <div class="container p-0">
-              <div class="container rounded container-album text-white">
-                <div id="Sezione 1">
-                  <h3>Album</h3>
-                  <div id="album-row1" class="row container-card"></div>
+            <!--CARDS STATICHE SEARCH-->
+            <h3 class="fs-4 text-white back-search p-5 mb-0 ps-3">
+              Sfoglia tutto
+            </h3>
+            <div class="container">
+              <div
+                class="row row-cols-2 row-cols-sm-3 row-cols-md-4 row-cols-lg-5 back-search pt-3"
+              >
+                <div class="col mb-5 search-card">
+                  <a href="#" class="text-decoration-none">
+                    <div class="div-cont rounded-3 color1">
+                      <h3 class="fs-4">Podcast</h3>
+                      <img
+                        src="/assets/imgs/search/image-2.jpg"
+                        class="position-absolute w-50 bottom-0 ro"
+                        alt="copertina card"
+                      />
+                    </div>
+                  </a>
+                </div>
+                <div class="col mb-5 search-card">
+                  <a href="#" class="text-decoration-none">
+                    <div class="div-cont rounded-3 color2">
+                      <h3 class="fs-4">Eventi dal vivo</h3>
+                      <img
+                        src="/assets/imgs/search/image-38.jpg"
+                        class="position-absolute w-50 bottom-0 ro"
+                        alt="copertina card"
+                      />
+                    </div>
+                  </a>
+                </div>
+                <div class="col mb-5 search-card">
+                  <a href="#" class="text-decoration-none">
+                    <div class="div-cont rounded-3 color3">
+                      <h3 class="fs-4">Create per te</h3>
+                      <img
+                        src="/assets/imgs/search/image-42.png"
+                        class="position-absolute w-50 bottom-0 ro color2"
+                        alt="copertina card"
+                      /></div
+                  ></a>
+                </div>
+                <div class="col mb-5 search-card">
+                  <a href="#" class="text-decoration-none">
+                    <div class="div-cont rounded-3 color4">
+                      <h3 class="fs-4">Nuove uscite</h3>
+                      <img
+                        src="/assets/imgs/search/image-26.jpg"
+                        class="position-absolute w-50 bottom-0 ro"
+                        alt="copertina card"
+                      /></div
+                  ></a>
+                </div>
+                <div class="col mb-5 search-card">
+                  <a href="#" class="text-decoration-none">
+                    <div class="div-cont rounded-3 color5">
+                      <h3 class="fs-4">Estate</h3>
+                      <img
+                        src="/assets/imgs/search/image-13.jpeg"
+                        class="position-absolute w-50 bottom-0 ro"
+                        alt="copertina card"
+                      /></div
+                  ></a>
+                </div>
+                <div class="col mb-5 search-card">
+                  <a href="#" class="text-decoration-none">
+                    <div class="div-cont rounded-3 color6">
+                      <h3 class="fs-4">Pop</h3>
+                      <img
+                        src="/assets/imgs/search/image-47.jpg"
+                        class="position-absolute w-50 bottom-0 ro"
+                        alt="copertina card"
+                      /></div
+                  ></a>
+                </div>
+                <div class="col mb-5 search-card">
+                  <a href="#" class="text-decoration-none">
+                    <div class="div-cont rounded-3 color7">
+                      <h3 class="fs-4">Hip Hop</h3>
+                      <img
+                        src="/assets/imgs/search/image-49.jpg"
+                        class="position-absolute w-50 bottom-0 ro"
+                        alt="copertina card"
+                      /></div
+                  ></a>
+                </div>
+                <div class="col mb-5 search-card">
+                  <a href="#" class="text-decoration-none">
+                    <div class="div-cont rounded-3 color1">
+                      <h3 class="fs-4 text-break">Dance/Elettronica</h3>
+                      <img
+                        src="/assets/imgs/search/image-4.jpg"
+                        class="position-absolute w-50 bottom-0 ro"
+                        alt="copertina card"
+                      /></div
+                  ></a>
+                </div>
+                <div class="col mb-5 search-card">
+                  <a href="#" class="text-decoration-none">
+                    <div class="div-cont rounded-3 color2">
+                      <h3 class="fs-4">Classifiche</h3>
+                      <img
+                        src="/assets/imgs/search/image-14.jpg"
+                        class="position-absolute w-50 bottom-0 ro"
+                        alt="copertina card"
+                      /></div
+                  ></a>
+                </div>
+                <div class="col mb-5 search-card">
+                  <a href="#" class="text-decoration-none">
+                    <div class="div-cont rounded-3 color8">
+                      <h3 class="fs-4">Latina</h3>
+                      <img
+                        src="/assets/imgs/search/image-5.jpg"
+                        class="position-absolute w-50 bottom-0 ro"
+                        alt="copertina card"
+                      /></div
+                  ></a>
+                </div>
+                <div class="col mb-5 search-card">
+                  <a href="#" class="text-decoration-none">
+                    <div class="div-cont rounded-3 color12">
+                      <h3 class="fs-4">Rock</h3>
+                      <img
+                        src="/assets/imgs/search/image-7.jpg"
+                        class="position-absolute w-50 bottom-0 ro"
+                        alt="copertina card"
+                      /></div
+                  ></a>
+                </div>
+                <div class="col mb-5 search-card">
+                  <a href="#" class="text-decoration-none">
+                    <div class="div-cont rounded-3 color12">
+                      <h3 class="fs-4">Indie</h3>
+                      <img
+                        src="/assets/imgs/search/image-22.jpg"
+                        class="position-absolute w-50 bottom-0 ro"
+                        alt="copertina card"
+                      /></div
+                  ></a>
+                </div>
+                <div class="col mb-5 search-card">
+                  <a href="#" class="text-decoration-none">
+                    <div class="div-cont rounded-3 color9">
+                      <h3 class="fs-4">In auto</h3>
+                      <img
+                        src="/assets/imgs/search/image-45.png"
+                        class="position-absolute w-50 bottom-0 ro"
+                        alt="copertina card"
+                      /></div
+                  ></a>
+                </div>
+                <div class="col mb-5 search-card">
+                  <a href="#" class="text-decoration-none">
+                    <div class="div-cont rounded-3 color2">
+                      <h3 class="fs-4">Scopri</h3>
+                      <img
+                        src="/assets/imgs/search/image-1.jpeg"
+                        class="position-absolute w-50 bottom-0 ro"
+                        alt="copertina card"
+                      /></div
+                  ></a>
+                </div>
+                <div class="col mb-5 search-card">
+                  <a href="#" class="text-decoration-none">
+                    <div class="div-cont rounded-3 color8">
+                      <h3 class="fs-4">Mood</h3>
+                      <img
+                        src="/assets/imgs/search/image-51.jpg"
+                        class="position-absolute w-50 bottom-0 ro"
+                        alt="copertina card"
+                      /></div
+                  ></a>
+                </div>
+                <div class="col mb-5 search-card">
+                  <a href="#" class="text-decoration-none">
+                    <div class="div-cont rounded-3 color8">
+                      <h3 class="fs-4">Di tendenza</h3>
+                      <img
+                        src="/assets/imgs/search/image-37.jpeg"
+                        class="position-absolute w-50 bottom-0 ro"
+                        alt="copertina card"
+                      /></div
+                  ></a>
+                </div>
+                <div class="col mb-5 search-card">
+                  <a href="#" class="text-decoration-none">
+                    <div class="div-cont rounded-3 bg-secondary">
+                      <h3 class="fs-4">Radar</h3>
+                      <img
+                        src="/assets/imgs/search/image-43.png"
+                        class="position-absolute w-50 bottom-0 ro"
+                        alt="copertina card"
+                      /></div
+                  ></a>
+                </div>
+                <div class="col mb-5 search-card">
+                  <a href="#" class="text-decoration-none">
+                    <div class="div-cont rounded-3 bg-secondary">
+                      <h3 class="fs-4">Allenamento</h3>
+                      <img
+                        src="/assets/imgs/search/image-8.jpg"
+                        class="position-absolute w-50 bottom-0 ro"
+                        alt="copertina card"
+                      /></div
+                  ></a>
+                </div>
+                <div class="col mb-5 search-card">
+                  <a href="#" class="text-decoration-none">
+                    <div class="div-cont rounded-3 color2">
+                      <h3 class="fs-4">Party</h3>
+                      <img
+                        src="/assets/imgs/search/image-27.jpg"
+                        class="position-absolute w-50 bottom-0 ro"
+                        alt="copertina card"
+                      /></div
+                  ></a>
+                </div>
+                <div class="col mb-5 search-card">
+                  <a href="#" class="text-decoration-none">
+                    <div class="div-cont rounded-3 color2">
+                      <h3 class="fs-4">Gaming</h3>
+                      <img
+                        src="/assets/imgs/search/image-52.jpg"
+                        class="position-absolute w-50 bottom-0 ro"
+                        alt="copertina card"
+                      /></div
+                  ></a>
+                </div>
+                <div class="col mb-5 search-card">
+                  <a href="#" class="text-decoration-none">
+                    <div class="div-cont rounded-3 color8">
+                      <h3 class="fs-4">R&B</h3>
+                      <img
+                        src="/assets/imgs/search/image-6.jpg"
+                        class="position-absolute w-50 bottom-0 ro"
+                        alt="copertina card"
+                      /></div
+                  ></a>
+                </div>
+                <div class="col mb-5 search-card">
+                  <a href="#" class="text-decoration-none">
+                    <div class="div-cont rounded-3 color7">
+                      <h3 class="fs-4">Anni</h3>
+                      <img
+                        src="/assets/imgs/search/image-12.jpg"
+                        class="position-absolute w-50 bottom-0 ro"
+                        alt="copertina card"
+                      /></div
+                  ></a>
+                </div>
+                <div class="col mb-5 search-card">
+                  <a href="#" class="text-decoration-none">
+                    <div class="div-cont rounded-3 color1">
+                      <h3 class="fs-4">Relax</h3>
+                      <img
+                        src="/assets/imgs/search/image-17.jpg"
+                        class="position-absolute w-50 bottom-0 ro"
+                        alt="copertina card"
+                      /></div
+                  ></a>
+                </div>
+                <div class="col mb-5 search-card">
+                  <a href="#" class="text-decoration-none">
+                    <div class="div-cont rounded-3 color4">
+                      <h3 class="fs-4">Autori</h3>
+                      <img
+                        src="/assets/imgs/search/image-3.jpg"
+                        class="position-absolute w-50 bottom-0 ro"
+                        alt="copertina card"
+                      /></div
+                  ></a>
+                </div>
+                <div class="col mb-5 search-card">
+                  <a href="#" class="text-decoration-none">
+                    <div class="div-cont rounded-3 color6">
+                      <h3 class="fs-4">K-pop</h3>
+                      <img
+                        src="/assets/imgs/search/image-35.jpg"
+                        class="position-absolute w-50 bottom-0 ro"
+                        alt="copertina card"
+                      /></div
+                  ></a>
+                </div>
+                <div class="col mb-5 search-card">
+                  <a href="#" class="text-decoration-none">
+                    <div class="div-cont rounded-3 bg-secondary">
+                      <h3 class="fs-4">Jazz</h3>
+                      <img
+                        src="/assets/imgs/search/image-20.jpg"
+                        class="position-absolute w-50 bottom-0 ro"
+                        alt="copertina card"
+                      /></div
+                  ></a>
+                </div>
+                <div class="col mb-5 search-card">
+                  <a href="#" class="text-decoration-none">
+                    <div class="div-cont rounded-3 color10">
+                      <h3 class="fs-4 text-break">Concentrazione</h3>
+                      <img
+                        src="/assets/imgs/search/image-23.jpg"
+                        class="position-absolute w-50 bottom-0 ro"
+                        alt="copertina card"
+                      /></div
+                  ></a>
+                </div>
+                <div class="col mb-5 search-card">
+                  <a href="#" class="text-decoration-none">
+                    <div class="div-cont rounded-3 color3">
+                      <h3 class="fs-4">Dormire</h3>
+                      <img
+                        src="/assets/imgs/search/image-18.jpg"
+                        class="position-absolute w-50 bottom-0 ro"
+                        alt="copertina card"
+                      /></div
+                  ></a>
+                </div>
+                <div class="col mb-5 search-card">
+                  <a href="#" class="text-decoration-none">
+                    <div class="div-cont rounded-3 color11">
+                      <h3 class="fs-4">Classica</h3>
+                      <img
+                        src="/assets/imgs/search/image-29.jpg"
+                        class="position-absolute w-50 bottom-0 ro"
+                        alt="copertina card"
+                      /></div
+                  ></a>
+                </div>
+                <div class="col mb-5 search-card">
+                  <a href="#" class="text-decoration-none">
+                    <div class="div-cont rounded-3 color8">
+                      <h3 class="fs-4">Soul</h3>
+                      <img
+                        src="/assets/imgs/search/image-16.jpg"
+                        class="position-absolute w-50 bottom-0 ro"
+                        alt="copertina card"
+                      /></div
+                  ></a>
+                </div>
+                <div class="col mb-5 search-card">
+                  <a href="#" class="text-decoration-none">
+                    <div class="div-cont rounded-3 color1">
+                      <h3 class="fs-4">Country</h3>
+                      <img
+                        src="/assets/imgs/search/image-39.jpg"
+                        class="position-absolute w-50 bottom-0 ro"
+                        alt="copertina card"
+                      /></div
+                  ></a>
+                </div>
+                <div class="col mb-5 search-card">
+                  <a href="#" class="text-decoration-none">
+                    <div class="div-cont rounded-3 color6">
+                      <h3 class="fs-4">League of Legend</h3>
+                      <img
+                        src="/assets/imgs/search/image-30.jpg"
+                        class="position-absolute w-50 bottom-0 ro"
+                        alt="copertina card"
+                      /></div
+                  ></a>
+                </div>
+                <div class="col mb-5 search-card">
+                  <a href="#" class="text-decoration-none">
+                    <div class="div-cont rounded-3 color9">
+                      <h3 class="fs-4">Viaggi</h3>
+                      <img
+                        src="/assets/imgs/search/image-11.jpg"
+                        class="position-absolute w-50 bottom-0 ro"
+                        alt="copertina card"
+                      /></div
+                  ></a>
+                </div>
+                <div class="col mb-5 search-card">
+                  <a href="#" class="text-decoration-none">
+                    <div class="div-cont rounded-3 color3">
+                      <h3 class="fs-4">Punk</h3>
+                      <img
+                        src="/assets/imgs/search/image-33.jpg"
+                        class="position-absolute w-50 bottom-0 ro"
+                        alt="copertina card"
+                      /></div
+                  ></a>
+                </div>
+                <div class="col mb-5 search-card">
+                  <a href="#" class="text-decoration-none">
+                    <div class="div-cont rounded-3 color12">
+                      <h3 class="fs-4">Metal</h3>
+                      <img
+                        src="/assets/imgs/search/image-31.jpg"
+                        class="position-absolute w-50 bottom-0 ro"
+                        alt="copertina card"
+                      /></div
+                  ></a>
+                </div>
+                <div class="col mb-5 search-card">
+                  <a href="#" class="text-decoration-none">
+                    <div class="div-cont rounded-3 color2">
+                      <h3 class="fs-4">Strumentale</h3>
+                      <img
+                        src="/assets/imgs/search/image-24.jpg"
+                        class="position-absolute w-50 bottom-0 ro"
+                        alt="copertina card"
+                      /></div
+                  ></a>
+                </div>
+                <div class="col mb-5 search-card">
+                  <a href="#" class="text-decoration-none">
+                    <div class="div-cont rounded-3 color9">
+                      <h3 class="fs-4">Suoni e Natura</h3>
+                      <img
+                        src="/assets/imgs/search/image-40.jpg"
+                        class="position-absolute w-50 bottom-0 ro"
+                        alt="copertina card"
+                      /></div
+                  ></a>
+                </div>
+                <div class="col mb-5 search-card">
+                  <a href="#" class="text-decoration-none">
+                    <div class="div-cont rounded-3 color2">
+                      <h3 class="fs-4">Ambient</h3>
+                      <img
+                        src="/assets/imgs/search/image-34.jpg"
+                        class="position-absolute w-50 bottom-0 ro"
+                        alt="copertina card"
+                      /></div
+                  ></a>
+                </div>
+                <div class="col mb-5 search-card">
+                  <a href="#" class="text-decoration-none">
+                    <div class="div-cont rounded-3 color11">
+                      <h3 class="fs-4">Blues</h3>
+                      <img
+                        src="/assets/imgs/search/image-36.jpg"
+                        class="position-absolute w-50 bottom-0 ro"
+                        alt="copertina card"
+                      /></div
+                  ></a>
+                </div>
+                <div class="col mb-5 search-card">
+                  <a href="#" class="text-decoration-none">
+                    <div class="div-cont rounded-3 color1">
+                      <h3 class="fs-4">Afro</h3>
+                      <img
+                        src="/assets/imgs/search/image-28.jpg"
+                        class="position-absolute w-50 bottom-0 ro"
+                        alt="copertina card"
+                      /></div
+                  ></a>
+                </div>
+                <div class="col mb-5 search-card">
+                  <a href="#" class="text-decoration-none">
+                    <div class="div-cont rounded-3 color12">
+                      <h3 class="fs-4">Funk</h3>
+                      <img
+                        src="/assets/imgs/search/image-32.jpg"
+                        class="position-absolute w-50 bottom-0 ro"
+                        alt="copertina card"
+                      /></div
+                  ></a>
+                </div>
+                <div class="col mb-5 search-card">
+                  <a href="#" class="text-decoration-none">
+                    <div class="div-cont rounded-3 bg-secondary">
+                      <h3 class="fs-4">Spotify Singles</h3>
+                      <img
+                        src="/assets/imgs/search/image-25.jpeg"
+                        class="position-absolute w-50 bottom-0 ro"
+                        alt="copertina card"
+                      /></div
+                  ></a>
+                </div>
+                <div class="col mb-5 search-card">
+                  <a href="#" class="text-decoration-none">
+                    <div class="div-cont rounded-3 color11">
+                      <h3 class="fs-4">Podcast</h3>
+                      <img
+                        src="/assets/imgs/search/image-15.jpg"
+                        class="position-absolute w-50 bottom-0 ro"
+                        alt="copertina card"
+                      /></div
+                  ></a>
+                </div>
+                <div class="col mb-5 search-card">
+                  <a href="#" class="text-decoration-none">
+                    <div class="div-cont rounded-3 color6">
+                      <h3 class="fs-4">Island Pop</h3>
+                      <img
+                        src="/assets/imgs/search/image-19.jpg"
+                        class="position-absolute w-50 bottom-0 ro"
+                        alt="copertina card"
+                      /></div
+                  ></a>
+                </div>
+                <div class="col mb-5 search-card">
+                  <a href="#" class="text-decoration-none">
+                    <div class="div-cont rounded-3 bg-secondary">
+                      <h3 class="fs-4">Written by Nija</h3>
+                      <img
+                        src="/assets/imgs/search/image-9.jpg"
+                        class="position-absolute w-50 bottom-0 ro"
+                        alt="copertina card"
+                      /></div
+                  ></a>
+                </div>
+                <div class="col mb-5 search-card">
+                  <a href="#" class="text-decoration-none">
+                    <div class="div-cont rounded-3 color6">
+                      <h3 class="fs-4">Rockeras</h3>
+                      <img
+                        src="/assets/imgs/search/image-50.jpg"
+                        class="position-absolute w-50 bottom-0 ro"
+                        alt="copertina card"
+                      /></div
+                  ></a>
+                </div>
+                <div class="col mb-5 search-card">
+                  <a href="#" class="text-decoration-none">
+                    <div class="div-cont rounded-3 color2">
+                      <h3 class="fs-4">Christian</h3>
+                      <img
+                        src="/assets/imgs/search/image-48.jpeg"
+                        class="position-absolute w-50 bottom-0 ro"
+                        alt="copertina card"
+                      /></div
+                  ></a>
+                </div>
+                <div class="col mb-5 search-card">
+                  <a href="#" class="text-decoration-none">
+                    <div class="div-cont rounded-3 color8">
+                      <h3 class="fs-4">Bambini</h3>
+                      <img
+                        src="/assets/imgs/search/image-44.png"
+                        class="position-absolute w-50 bottom-0 ro"
+                        alt="copertina card"
+                      /></div
+                  ></a>
+                </div>
+                <div class="col mb-5 search-card">
+                  <a href="#" class="text-decoration-none">
+                    <div class="div-cont rounded-3 color9">
+                      <h3 class="fs-4">Arab</h3>
+                      <img
+                        src="/assets/imgs/search/image-41.jpg"
+                        class="position-absolute w-50 bottom-0 ro"
+                        alt="copertina card"
+                      /></div
+                  ></a>
+                </div>
+                <div class="col mb-5 search-card">
+                  <a href="#" class="text-decoration-none">
+                    <div class="div-cont rounded-3 color10">
+                      <h3 class="fs-4">Lo-fi</h3>
+                      <img
+                        src="/assets/imgs/search/image-10.jpg"
+                        class="position-absolute w-50 bottom-0 ro"
+                        alt="copertina card"
+                      /></div
+                  ></a>
+                </div>
+                <div class="col mb-5 search-card">
+                  <a href="#" class="text-decoration-none">
+                    <div class="div-cont rounded-3 color8">
+                      <h3 class="fs-4">Tastemaker</h3>
+                      <img
+                        src="/assets/imgs/search/image-46.jpeg"
+                        class="position-absolute w-50 bottom-0 ro"
+                        alt="copertina card"
+                      /></div
+                  ></a>
                 </div>
               </div>
             </div>
             <!--FOOTER-->
-            <footer class="container mt-2 rounded">
+            <footer class="container py-5 rounded rounded-top-0">
               <div class="row">
                 <div class="col m-3">
                   <div class="row d-flex justify-content-between">
                     <div class="col">
                       <div class="section">
                         <h5>Azienda</h5>
-                        <div class="m-3"><a href="#">Chi siamo</a></div>
-                        <div class="m-3">
+                        <div class="m-3 ms-0">
+                          <a href="about-us.html">Chi siamo</a>
+                        </div>
+                        <div class="m-3 ms-0">
                           <a href="#">Opportunità di Lavoro</a>
                         </div>
-                        <div class="m-3"><a href="#">For the Record</a></div>
+                        <div class="m-3 ms-0">
+                          <a href="#">For the Record</a>
+                        </div>
                       </div>
                     </div>
                     <div class="col">
                       <div class="section">
                         <h5>Community</h5>
-                        <div class="m-3">
+                        <div class="m-3 ms-0">
                           <a href="#"> Per artisti </a>
                         </div>
-                        <div class="m-3">
+                        <div class="m-3 ms-0">
                           <a href="#"> Sviluppatori </a>
                         </div>
-                        <div class="m-3">
+                        <div class="m-3 ms-0">
                           <a href="#"> Pubblicità </a>
                         </div>
-                        <div class="m-3">
+                        <div class="m-3 ms-0">
                           <a href="#"> Investitori </a>
                         </div>
-                        <div class="m-3">
+                        <div class="m-3 ms-0">
                           <a href="#"> Venditori </a>
                         </div>
-                        <div class="m-3">
+                        <div class="m-3 ms-0">
                           <a href="#"> Spotify for Work </a>
                         </div>
                       </div>
@@ -445,24 +982,19 @@
                     <div class="col">
                       <div class="section">
                         <h5>Link utili</h5>
-                        <div class="m-3">
+                        <div class="m-3 ms-0">
                           <a href="#"> Assistenza </a>
                         </div>
-                        <div class="m-3">
+                        <div class="m-3 ms-0">
                           <a href="#"> App per cellulare gratuita </a>
                         </div>
-                        <div class="m-3">
+                        <div class="m-3 ms-0">
                           <a href="#"> Diritti del consumatore </a>
                         </div>
                       </div>
                     </div>
                     <div class="col">
-                      <div class="section d-flex">
-                        <div
-                          class="i-footer d-flex justify-content-center align-items-center rounded-circle"
-                        >
-                          <i class="fa-brands fa-facebook"></i>
-                        </div>
+                      <div class="section d-flex justify-content-end">
                         <div
                           class="i-footer d-flex justify-content-center align-items-center rounded-circle"
                         >
@@ -472,6 +1004,11 @@
                           class="i-footer d-flex justify-content-center align-items-center rounded-circle"
                         >
                           <i class="fa-brands fa-twitter"></i>
+                        </div>
+                        <div
+                          class="i-footer d-flex justify-content-center align-items-center rounded-circle"
+                        >
+                          <i class="fa-brands fa-facebook"></i>
                         </div>
                       </div>
                     </div>
@@ -485,7 +1022,9 @@
               </div>
               <div class="row">
                 <div class="col">
-                  <div class="section d-flex justify-content-between">
+                  <div
+                    class="section d-flex justify-content-between align-items-center my-5"
+                  >
                     <!-- Contenuto della sezione inferiore -->
                     <a href="#"> Informazioni legali </a>
                     <a href="#"> Centro sulla privacy </a>
@@ -493,7 +1032,7 @@
                     <a href="#"> Impostazioni Cookie</a>
                     <a href="#"> Info annunci </a>
                     <a href="#"> Accessibilità </a>
-                    <p>2023 Spotify AB</p>
+                    <p class="mb-0">&copy;<span id="year"></span> Spotify AB</p>
                   </div>
                 </div>
               </div>
@@ -755,6 +1294,6 @@
       crossorigin="anonymous"
     ></script>
     <script src="Elementi singoli/player/player.js"></script>
-    <script src="search-page-results.js"></script>
+    <script src="/JS/search-page.js"></script>
   </body>
 </html>

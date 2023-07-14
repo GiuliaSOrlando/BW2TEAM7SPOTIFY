@@ -5,10 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Spotify - Web Player: Music for everyone</title>
     <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"
-    />
-    <link
       rel="icon"
       type="image/x-icon"
       href="assets/svg-spotify/Spotify_icon.png"
@@ -23,54 +19,14 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="index.css" />
-    <link rel="stylesheet" href="./Elementi singoli/nav/css/nav.css" />
+    <link rel="stylesheet" href="/assets/CSS/index.css" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
     />
-    <link rel="stylesheet" href="artist/artist.css" />
-    <style>
-      .artist-carousel-img {
-        width: 500px;
-        height: 500px;
-      }
-    </style>
-    <!-- <style>
-      body {
-        background-color: #000000;
-      }
-      .libreria,
-      .card-libreria {
-        background-color: #121212;
-      }
-      .card-libreria:hover {
-        cursor: pointer;
-        background-color: #181818;
-      }
-      a i {
-        color: white;
-      }
-      .img-libreria {
-        height: 50px;
-        width: 50px;
-      }
-
-      .btn-libreria {
-        background-color: white;
-      }
-      .btn-libreria:hover {
-        background-color: white;
-      }
-      .bg-aside {
-        background-color: #121212;
-      }
-      .navbar {
-        background-color: #121212;
-      }
-    </style> -->
-    <!-- <link rel="stylesheet" href="./nav/css/nav.css" /> -->
-    <link rel="stylesheet" href="./Elementi singoli/player/player.css" />
+    <style></style>
+    <link rel="stylesheet" href="/Elementi singoli/nav/css/nav.css" />
+    <link rel="stylesheet" href="/Elementi singoli/player/player.css" />
   </head>
   <body>
     <div class="margin-div">
@@ -89,7 +45,7 @@
                       <ul class="navbar-nav">
                         <li class="nav-item active">
                           <a
-                            href="index.html"
+                            href="/index.html"
                             class="text-decoration-none text-white text-start fs-5 a"
                           >
                             <svg
@@ -97,7 +53,7 @@
                               xmlns="http://www.w3.org/2000/svg"
                               width="25.000000pt"
                               height="35.000000pt"
-                              viewBox="0 0 140.000000 146.000000"
+                              viewBox="0 0 134.000000 146.000000"
                               preserveAspectRatio="xMidYMid meet"
                             >
                               <metadata>
@@ -128,7 +84,7 @@
                         <br />
                         <li class="nav-item active">
                           <a
-                            href="#"
+                            href="/HTML/search-page.html"
                             class="text-decoration-none text-white fs-5 a"
                           >
                             <svg
@@ -160,7 +116,6 @@
                             Cerca
                           </a>
                         </li>
-                        <br />
                       </ul>
                     </div>
                   </div>
@@ -283,364 +238,267 @@
         </div>
 
         <!-- MAIN CONTENT  -->
-        <div id="section-hidden">
-          <section id="album-section">
-            <nav id="navbar" class="navbar bg-transparent navbar-expand">
-              <div class="container-fluid">
-                <div
-                  class="collapse navbar-collapse"
-                  id="navbarSupportedContent"
+        <div class="main-content" style="margin-bottom: 140px">
+          <!-- NAVBAR -->
+          <nav class="navbar navbar-expand">
+            <div class="container-fluid">
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul
+                  class="navbar-nav me-auto mb-2 mb-lg-0 w-100 justify-content-between"
                 >
-                  <ul
-                    class="navbar-nav me-auto mb-2 mb-lg-0 w-100 justify-content-between"
-                  >
-                    <div id="buttons-container" class="d-flex">
+                  <div class="d-flex">
+                    <li class="nav-item">
+                      <a
+                        onclick="history.back()"
+                        class="nav-link active text-white"
+                        aria-current="page"
+                        ><i
+                          class="bi bi-chevron-left bg-black opacity-50 rounded-circle fs-5 p-1 px-2"
+                        ></i
+                      ></a>
+                    </li>
+                    <li class="nav-item">
+                      <a onclick="history.forward()" class="nav-link text-white"
+                        ><i
+                          class="bi bi-chevron-right bg-black rounded-circle fs-5 p-1 px-2"
+                        ></i
+                      ></a>
+                    </li>
+                    <form id="search-bar" class="d-flex" role="search">
+                      <div class="d-flex align-items-center">
+                        <i
+                          class="bi bi-search text-white fs-6 mx-2 position-absolute"
+                        ></i>
+                        <input
+                          class="border-0 rounded-5 pe-5 fs-6 text-white"
+                          type="search"
+                          id="search-bar-input-field"
+                          placeholder="Cosa vuoi ascoltare?"
+                          aria-label="Search"
+                          autofocus
+                        />
+                      </div>
+                    </form>
+                  </div>
+                  <div class="d-flex align-items-center">
+                    <ul class="d-flex navbar-nav align-items-center">
                       <li class="nav-item">
                         <a
-                          class="nav-link active text-white"
-                          aria-current="page"
+                          class="nav-link text-black rounded-5 bg-white py-1 fw-bold me-2 px-3 ulhov"
                           href="#"
-                          ><i
-                            class="bi bi-chevron-left p-2 px-2 bg-black opacity-50 rounded-circle fs-5 p-1 px-2"
-                          ></i
-                        ></a>
+                        >
+                          Esplora Premium</a
+                        >
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link text-white" href="#"
-                          ><i
-                            class="bi bi-chevron-right p-2 px-2 bg-black rounded-circle fs-5 p-1 px-2"
-                          ></i
-                        ></a>
+                        <a
+                          class="nav-link text-white rounded-5 bg-black bg-opacity-25 py-1 fw-bold px-3 d-flex align-items-center ulhov"
+                          href="#"
+                        >
+                          <i class="bi bi-arrow-down-circle fs-6 me-1"></i
+                          >Installa app</a
+                        >
                       </li>
-                      <div id="reproduce" class="d-none">
-                        <button id="play-button-nav">
-                          <i class="fas fa-play"></i></button
-                        ><span id="testo-canzone-nav">Artista</span>
-                      </div>
-                      <!-- <form class="d-flex" role="search">
-                        <div class="d-flex align-items-center">
-                          <i
-                            class="bi bi-search text-white fs-6 mx-2 position-absolute"
-                          ></i>
-                          <input
-                            class="border-0 rounded-5 pe-5 fs-6 text-white"
-                            type="search"
-                            placeholder="Cosa vuoi ascoltare?"
-                            aria-label="Search"
-                            autofocus
-                          />
-                        </div>
-                      </form> -->
-                    </div>
-                    <div class="d-flex align-items-center">
-                      <ul class="d-flex navbar-nav align-items-center">
-                        <li class="nav-item">
+                    </ul>
+
+                    <li class="nav-item dropdown">
+                      <a
+                        class="nav-link dropdown-toggle ulhov"
+                        href="#"
+                        role="button"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                      >
+                        <i
+                          class="bi bi-person rounded-circle fs-5 p-1 px-2 bg-black bg-opacity-25 text-white ahover"
+                          data-bs-toggle="tooltip"
+                          data-bs-title="user"
+                          data-bs-placement="bottom"
+                          data-bs-custom-class="custom-tooltip"
+                        ></i>
+                      </a>
+                      <ul class="dropdown-menu drop">
+                        <li>
                           <a
-                            class="nav-link text-black rounded-5 bg-white py-1 fw-bold me-2 px-3 ulhov"
+                            class="dropdown-item d-flex justify-content-between"
                             href="#"
-                          >
-                            Esplora Premium</a
-                          >
+                            >Account
+                            <i class="bi bi-box-arrow-up-right ms-1"></i
+                          ></a>
                         </li>
-                        <li class="nav-item">
+                        <li><a class="dropdown-item" href="#">Profilo</a></li>
+                        <li>
                           <a
-                            class="nav-link text-white rounded-5 bg-black bg-opacity-25 py-1 fw-bold px-3 d-flex align-items-center ulhov"
+                            class="dropdown-item d-flex justify-content-between fs-6"
                             href="#"
-                          >
-                            <i class="bi bi-arrow-down-circle fs-6 me-1"></i
-                            >Installa app</a
-                          >
+                            >Effettua l' upgrade a Premium
+                            <i class="bi bi-box-arrow-up-right ms-1"></i
+                          ></a>
                         </li>
+                        <li>
+                          <a class="dropdown-item" href="#">Impostazioni</a>
+                        </li>
+                        <li><hr class="dropdown-divider bg-secondary" /></li>
+                        <li><a class="dropdown-item" href="#">Esci</a></li>
                       </ul>
+                    </li>
+                  </div>
+                </ul>
+              </div>
+            </div>
+          </nav>
 
-                      <li class="nav-item dropdown">
-                        <a
-                          class="nav-link dropdown-toggle ulhov"
-                          href="#"
-                          role="button"
-                          data-bs-toggle="dropdown"
-                          aria-expanded="false"
-                        >
-                          <i
-                            class="bi bi-person rounded-circle fs-5 p-1 px-2 bg-black bg-opacity-25 text-white ahover"
-                            data-bs-toggle="tooltip"
-                            data-bs-title="user"
-                            data-bs-placement="bottom"
-                            data-bs-custom-class="custom-tooltip"
-                          ></i>
-                        </a>
-                        <ul class="dropdown-menu drop">
-                          <li>
-                            <a
-                              class="dropdown-item d-flex justify-content-between"
-                              href="#"
-                              >Account
-                              <i class="bi bi-box-arrow-up-right ms-1"></i
-                            ></a>
-                          </li>
-                          <li><a class="dropdown-item" href="#">Profilo</a></li>
-                          <li>
-                            <a
-                              class="dropdown-item d-flex justify-content-between fs-6"
-                              href="#"
-                              >Effettua l' upgrade a Premium
-                              <i class="bi bi-box-arrow-up-right ms-1"></i
-                            ></a>
-                          </li>
-                          <li>
-                            <a class="dropdown-item" href="#">Impostazioni</a>
-                          </li>
-                          <li><hr class="dropdown-divider bg-secondary" /></li>
-                          <li><a class="dropdown-item" href="#">Esci</a></li>
-                        </ul>
-                      </li>
-                    </div>
-                  </ul>
+          <!-- CONTENUTI HOME -->
+          <div class="main-content-body">
+            <!--HERO SECTION-->
+            <div class="container">
+              <div class="row he">
+                <div class="col col-md-2 bg-success bg-lin position-relative">
+                  <div class="d-flex flex-column">
+                    <h2 class="fs-4 text-white">Presentato da</h2>
+                    <p class="text-white">lorem</p>
+                  </div>
+                  <img
+                    src="../assets/imgs/main/image-10.jpg"
+                    alt=""
+                    class="position-absolute abs w-100"
+                  />
                 </div>
-              </div>
-            </nav>
-            <div class="artist-heading-wrapper" id="heading-wrapper">
-              <div class="scritte-immagini">
-                <div class="album-title">
-                  <p>
-                    <svg
-                      version="1.0"
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="17.000000pt"
-                      height="20.000000pt"
-                      viewBox="0 0 153.000000 156.000000"
-                      preserveAspectRatio="xMidYMid meet"
-                    >
-                      <g
-                        transform="translate(0.000000,156.000000) scale(0.100000,-0.100000)"
-                        fill="#548fed"
-                        stroke="none"
-                      >
-                        <path
-                          d="M704 1478 c-16 -11 -60 -52 -99 -89 l-70 -68 -127 -3 c-173 -4 -172 -3 -176 -175 l-4 -127 -84 -89 c-123 -131 -123 -145 0 -274 l84 -89 4 -127 c4 -172 3 -171 175 -175 l127 -4 89 -84 c131 -123 145 -123 274 0 l89 84 127 4 c172 4 171 3 175 175 l4 127 84 89 c123 129 123 143 0 274 l-84 89 -4 127 c-4 172 -3 171 -176 175 l-127 3 -55 53 c-143 136 -168 148 -226 104z m384 -466 c33 -42 20 -59 -218 -297 l-230 -230 -110 110 c-116 116 -127 138 -90 175 34 34 64 25 135 -42 l66 -62 182 181 c100 99 189 183 197 186 21 7 53 -2 68 -21z"
-                        />
-                      </g>
-                    </svg>
-                    Artista verificato
-                  </p>
-                  <h1 id="header-artist-name">Artista</h1>
-                  <p id="nb-fan"></p>
-                </div>
-              </div>
-            </div>
-
-            <div id="buttons-and-tracks-container">
-              <div class="bottoni">
-                <button id="play-button-album">
-                  <i class="fas fa-play"></i>
-                </button>
-
-                <button
-                  id="follow-button"
-                  type="button"
-                  class="btn btn-outline-light"
-                >
-                  SEGUI
-                </button>
-
-                <button id="ellipsis-button">
-                  <i class="fas fa-ellipsis-h"></i>
-                </button>
-              </div>
-              <div id="tracks-container"></div>
-            </div>
-            <div id="Sezione 1">
-              <h3>Ricerche correlate</h3>
-              <div id="related-search-row" class="row container-card"></div>
-            </div>
-            <div id="artist-info">
-              <h2>Informazioni</h2>
-              <div
-                class="container d-flex justify-content-center bg-black opacity-75 py-5"
-              >
-                <div class="row">
-                  <div class="col-12">
-                    <button
-                      id="artist-info-card"
-                      type="button"
-                      data-bs-toggle="modal"
-                      data-bs-target="#staticBackdrop"
-                    >
-                      <div class="card text-bg-dark">
-                        <img
-                          id="artist-info-modal-img"
-                          src="/assets/imgs/main/image-6.jpg"
-                          class="card-img"
-                          alt="..."
-                        />
-                        <div
-                          class="card-img-overlay d-flex flex-column justify-content-end"
-                        >
-                          <h5
-                            id="modal-nb-fan"
-                            class="card-title text-white fw-bold text-start"
-                          ></h5>
-                          <p
-                            class="card-text text-white text-truncate text-start"
-                          >
-                            This is a wider card with supporting text below as a
-                            natural lead-in to additional content. This content
-                            is a little bit longer. This is a wider card with
-                            supporting text below as a natural lead-in to
-                            additional content. This content is a little bit
-                            longer. This is a wider card with supporting text
-                            below as a natural lead-in to additional content.
-                            This content is a little bit longer. This is a wider
-                            card with supporting text below as a natural lead-in
-                            to additional content. This content is a little bit
-                            longer.
-                          </p>
-                        </div>
-                      </div>
-                    </button>
+                <div class="col bg-img p-0">
+                  <div class="bg-lin h-100">
                     <div
-                      class="modal fade"
-                      id="staticBackdrop"
-                      data-bs-backdrop="static"
-                      data-bs-keyboard="false"
-                      tabindex="-1"
-                      aria-labelledby="staticBackdropLabel"
-                      aria-hidden="true"
+                      class="col d-flex justify-content-end h-100 flex-column align-items-start tw ms-5"
                     >
-                      <div
-                        class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg"
-                        data-bs-theme="dark"
-                      >
-                        <div class="modal-content bg-black">
-                          <div class="modal-body text-white-50">
-                            <button
-                              type="button"
-                              class="btn-close"
-                              data-bs-dismiss="modal"
-                              aria-label="Close"
-                            ></button>
-                            <div id="carouselExample" class="carousel slide">
-                              <div class="carousel-inner">
-                                <div class="carousel-item active text-center">
-                                  <img
-                                    id="modal-carousel-img1"
-                                    src="/assets/imgs/main/image-6.jpg"
-                                    class="card-img artist-carousel-img center"
-                                    alt="..."
-                                  />
-                                </div>
-                                <div class="carousel-item text-center">
-                                  <img
-                                    id="modal-carousel-img2"
-                                    src="/assets/imgs/main/image-7.jpg"
-                                    class="card-img artist-carousel-img"
-                                    alt="..."
-                                  />
-                                </div>
-                                <div class="carousel-item text-center">
-                                  <img
-                                    id="modal-carousel-img3"
-                                    src="/assets/imgs/main/image-8.jpg"
-                                    class="card-img artist-carousel-img"
-                                    alt="..."
-                                  />
-                                </div>
-                              </div>
-                              <button
-                                class="carousel-control-prev carousel-control-next bg-body-secondary bg-opacity-75 rounded-circle top-50 ms-4"
-                                type="button"
-                                data-bs-target="#carouselExample"
-                                data-bs-slide="prev"
-                                style="height: 40px; width: 40px"
-                              >
-                                <span
-                                  class="carousel-control-prev-icon"
-                                  aria-hidden="true"
-                                ></span>
-                                <span class="visually-hidden">Previous</span>
-                              </button>
-                              <button
-                                class="carousel-control-next bg-body-secondary bg-opacity-75 rounded-circle top-50 me-4"
-                                type="button"
-                                data-bs-target="#carouselExample"
-                                data-bs-slide="next"
-                                style="height: 40px; width: 40px"
-                              >
-                                <span
-                                  class="carousel-control-next-icon"
-                                  aria-hidden="true"
-                                ></span>
-                                <span class="visually-hidden">Next</span>
-                              </button>
-                            </div>
-                            <div class="row">
-                              <div class="col-4">
-                                <div class="row">
-                                  <div class="col-1">
-                                    <p
-                                      id="inside-modal-nb-fan"
-                                      class="pt-5 fw-bolder text-white fs-2"
-                                    ></p>
-                                  </div>
-                                  <div class="col-1">
-                                    <p
-                                      class="mt-5 pt-5 fw-normal text-white fs-5"
-                                    >
-                                      followers
-                                    </p>
-                                  </div>
-                                </div>
-                              </div>
-                              <div class="col-8">
-                                <p class="pt-5">
-                                  Lorem ipsum dolor sit amet consectetur
-                                  adipisicing elit. Quo a ipsa earum commodi
-                                  quis iste molestiae hic id tempore in?
-                                  Perferendis maxime iusto accusamus sequi nobis
-                                  pariatur voluptatibus officia expedita. Lorem
-                                  ipsum dolor sit amet consectetur adipisicing
-                                  elit. Vel esse sapiente tempora deserunt!
-                                  Placeat quisquam repudiandae sunt nihil ut qui
-                                  et, eaque fuga aut aliquam facilis excepturi
-                                  nemo, animi eum. Lorem ipsum dolor sit, amet
-                                  consectetur adipisicing elit. Saepe nostrum
-                                  provident recusandae quaerat, officiis
-                                  sapiente explicabo illo, labore, magni
-                                  veritatis quam repudiandae. Dicta vero ut
-                                  laboriosam nihil non recusandae modi. Lorem
-                                  ipsum, dolor sit amet consectetur adipisicing
-                                  elit. Impedit exercitationem dicta nisi,
-                                  ducimus delectus assumenda doloribus.
-                                  Distinctio ratione unde enim repudiandae
-                                  delectus vel exercitationem est laudantium
-                                  beatae, quae facere perferendis? Lorem ipsum
-                                  dolor sit amet, consectetur adipisicing elit.
-                                  Vel consequuntur voluptatibus dolores dolorum.
-                                  Ex voluptas, labore accusamus, fugiat numquam
-                                  quam dolore eos tempore atque, asperiores vel
-                                  modi ipsam repellat similique? Lorem ipsum
-                                  dolor sit, amet consectetur adipisicing elit.
-                                  Rem asperiores eius numquam ducimus, eaque
-                                  illum doloremque similique corporis eligendi
-                                  autem exercitationem cumque soluta inventore
-                                  temporibus eveniet vel qui beatae eos. Lorem,
-                                  ipsum dolor sit amet consectetur adipisicing
-                                  elit. Fugit ad quisquam veritatis quas dolorem
-                                  voluptas nihil reprehenderit, eius asperiores
-                                  laboriosam in voluptates similique vero
-                                  aliquid cumque harum ipsa ratione dignissimos.
-                                </p>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
+                      <p class="text-white fs-4">PLAYLIST</p>
+                      <h1 class="text-white">Hit Italiane</h1>
+                      <p class="text-white">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Consequuntur nulla debitis
+                      </p>
+                      <div class="d-flex justify-content-between w-100 mb-3">
+                        <button
+                          class="btn btn-success rounded-5 text-black fw-bold px-4"
+                        >
+                          Play
+                        </button>
+                        <button
+                          class="btn bg-black bg-opacity-25 rounded-5 text-white fw-bold px-4"
+                        >
+                          Segui
+                        </button>
+                        <button class="btn bg-transparent text-white fw-bold">
+                          . . .
+                        </button>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-          </section>
+            <!--CARDS SECTION-->
+            <div class="container p-0">
+              <div class="container rounded container-album text-white">
+                <div id="Sezione 1">
+                  <h3>Album</h3>
+                  <div id="album-row1" class="row container-card"></div>
+                </div>
+              </div>
+            </div>
+            <!--FOOTER-->
+            <footer class="container mt-2 rounded">
+              <div class="row">
+                <div class="col m-3">
+                  <div class="row d-flex justify-content-between">
+                    <div class="col">
+                      <div class="section">
+                        <h5>Azienda</h5>
+                        <div class="m-3"><a href="#">Chi siamo</a></div>
+                        <div class="m-3">
+                          <a href="#">Opportunità di Lavoro</a>
+                        </div>
+                        <div class="m-3"><a href="#">For the Record</a></div>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="section">
+                        <h5>Community</h5>
+                        <div class="m-3">
+                          <a href="#"> Per artisti </a>
+                        </div>
+                        <div class="m-3">
+                          <a href="#"> Sviluppatori </a>
+                        </div>
+                        <div class="m-3">
+                          <a href="#"> Pubblicità </a>
+                        </div>
+                        <div class="m-3">
+                          <a href="#"> Investitori </a>
+                        </div>
+                        <div class="m-3">
+                          <a href="#"> Venditori </a>
+                        </div>
+                        <div class="m-3">
+                          <a href="#"> Spotify for Work </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="section">
+                        <h5>Link utili</h5>
+                        <div class="m-3">
+                          <a href="#"> Assistenza </a>
+                        </div>
+                        <div class="m-3">
+                          <a href="#"> App per cellulare gratuita </a>
+                        </div>
+                        <div class="m-3">
+                          <a href="#"> Diritti del consumatore </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="section d-flex">
+                        <div
+                          class="i-footer d-flex justify-content-center align-items-center rounded-circle"
+                        >
+                          <i class="fa-brands fa-facebook"></i>
+                        </div>
+                        <div
+                          class="i-footer d-flex justify-content-center align-items-center rounded-circle"
+                        >
+                          <i class="fa-brands fa-instagram"></i>
+                        </div>
+                        <div
+                          class="i-footer d-flex justify-content-center align-items-center rounded-circle"
+                        >
+                          <i class="fa-brands fa-twitter"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col">
+                  <div class="divider"></div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col">
+                  <div class="section d-flex justify-content-between">
+                    <!-- Contenuto della sezione inferiore -->
+                    <a href="#"> Informazioni legali </a>
+                    <a href="#"> Centro sulla privacy </a>
+                    <a href="#"> Informativa sulla privacy </a>
+                    <a href="#"> Impostazioni Cookie</a>
+                    <a href="#"> Info annunci </a>
+                    <a href="#"> Accessibilità </a>
+                    <p>2023 Spotify AB</p>
+                  </div>
+                </div>
+              </div>
+            </footer>
+          </div>
         </div>
       </div>
     </div>
@@ -897,58 +755,6 @@
       crossorigin="anonymous"
     ></script>
     <script src="Elementi singoli/player/player.js"></script>
-    <!-- <script src="avrg_color.js"></script> n-->
-    <script>
-      //toast script
-      document
-        .querySelectorAll('[data-bs-toggle="tooltip"]')
-        .forEach((tooltip) => {
-          new bootstrap.Tooltip(tooltip)
-        })
-      // let avgColor = start()
-
-      let albumSection = document.getElementById("album-section")
-
-      albumSection.addEventListener("scroll", function () {
-        let y = albumSection.scrollTop
-        let tracksHeader = document.querySelector(".tracks-header")
-        console.log(y)
-        let nav = document.getElementById("navbar")
-        let navButtonsContainer = document.getElementById("buttons-container")
-        let playButtonNav = document.getElementById("reproduce")
-        if (y > 25) {
-          nav.classList.remove("bg-transparent")
-          if (y > 264) {
-            playButtonNav.classList.remove("d-none")
-            playButtonNav.classList.add(
-              "d-flex",
-              "justify-content-center",
-              "align-items-center"
-            )
-          } else {
-            playButtonNav.classList.add("d-none")
-          }
-          if (y > 368) {
-            tracksHeader.style.backgroundColor = "#272727;"
-            tracksHeader.style.margin = "none"
-          }
-        } else {
-          nav.classList.add("bg-transparent")
-        }
-      })
-      let tracks = document.querySelectorAll(".track")
-      tracks.forEach((track) => {
-        let trackImg = track.querySelector(".track-img")
-        let songImg = trackImg.innerHTML
-        track.addEventListener("mouseover", () => {
-          trackImg.innerHTML = `<i class="fas fa-play"></i>`
-        })
-        track.addEventListener("mouseout", () => {
-          let trackImg = track.querySelector(".track-img")
-          trackImg.innerHTML = songImg
-        })
-      })
-    </script>
-    <script src="artist-page.js"></script>
+    <script src="/JS/search-page-results.js"></script>
   </body>
 </html>

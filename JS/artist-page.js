@@ -156,3 +156,78 @@ getData(dynamicUrl, function (elements) {
   let insideModalNumFan = document.getElementById("inside-modal-nb-fan")
   insideModalNumFan.innerHTML = `${elements.nb_fan}`
 })
+
+//aggiungo funzione populateLibrary
+// Creo la lista nella libreria
+const populateLibrary = function (elements) {
+  for (let i = 0; i < 15; i++) {
+    const libraryDeck = document.getElementById("library-deck")
+    const newCol = document.createElement("div")
+    newCol.classList.add("card", "card-libreria")
+    newCol.innerHTML = `
+                      <a href="/HTML/album-page.html?id=${elements.data[i].album.id}" class="text-decoration-none">
+                      <div class="row no-gutters">
+                        <div class="col-3">
+                          <img
+                            src="${elements.data[i].album.cover_small}"
+                            class="card-img-top img-libreria flex-column"
+                            alt="Album 1"
+                          />
+                        </div>
+                        <div class="col-9 p-0">
+                          <div class="card-body p-0 flex-row">
+                          <p class="card-title cir-bold text-white"> <a href="/HTML/album-page.html?id=${elements.data[i].album.id}">${elements.data[i].album.title}</a></p>
+                          <p class="card-text cir-light text-white"> <a href="/HTML/artist-page.html?id=${elements.data[i].artist.id}"> ${elements.data[i].artist.name} </a></p>
+                          </div>
+                        </div>
+                      </div>
+                      </a>
+      `
+
+    libraryDeck.appendChild(newCol)
+  }
+}
+
+
+//aggiungo eventlistener ai bottoni libreria
+
+const LoveUrl =
+  "https://striveschool-api.herokuapp.com/api/deezer/search?q=Love"
+
+const MetalUrl =
+  "https://striveschool-api.herokuapp.com/api/deezer/search?q=ironmaiden"
+
+const MerolaUrl =
+  "https://striveschool-api.herokuapp.com/api/deezer/search?q=mariomerola"
+
+const LigabueUrl =
+  "https://striveschool-api.herokuapp.com/api/deezer/search?q=Ligabue"
+
+const rockUrl =
+  "https://striveschool-api.herokuapp.com/api/deezer/search?q=rock"
+  getData(rockUrl, function(elements){
+    
+    populateLibrary(elements)
+  })
+  
+
+const albumBtn = document.getElementById("album-btn")
+const artistBtn = document.getElementById("artist-btn")
+
+albumBtn.addEventListener("click", () => {
+  console.log(rockUrl)
+  let libraryDeck = document.getElementById("library-deck")
+  libraryDeck.innerHTML=""
+  getData(rockUrl, function(elements){
+    
+    populateLibrary(elements)
+  })
+})
+
+artistBtn.addEventListener("click", () => {
+  let libraryDeck = document.getElementById("library-deck")
+  libraryDeck.innerHTML=""
+  getData(LoveUrl, function(elements){
+    populateLibrary(elements)
+  })
+})

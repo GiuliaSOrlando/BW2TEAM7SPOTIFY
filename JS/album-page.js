@@ -54,10 +54,8 @@ const populateLibrary = function (elements) {
                         </div>
                         <div class="col-9 p-0">
                           <div class="card-body p-0 flex-row">
-                            <p class="card-title cir-bold text-white">${elements.data[i].album.title}</p>
-                            <!--<a href="./artist-page.html?id=${elements.data[i].artist.id}" class="text-decoration-none">-->
-                            <p class="card-text cir-light text-white">${elements.data[i].artist.name}</p>
-                           <!-- </a> -->
+                          <p class="card-title cir-bold text-white"> <a href="/HTML/album-page.html?id=${elements.data[i].album.id}">${elements.data[i].album.title}</a></p>
+                          <p class="card-text cir-light text-white"> <a href="/HTML/artist-page.html?id=${elements.data[i].artist.id}"> ${elements.data[i].artist.name} </a></p>
                           </div>
                         </div>
                       </div>
@@ -147,3 +145,40 @@ const getDataNew = function (url, foo) {
 getDataNew(dynamicUrl, albumInfo)
 getDataNew(dynamicUrl, populateTracks)
 getDataNew(rockUrl, populateLibrary)
+
+//aggiungo eventlistener ai bottoni libreria
+
+const LoveUrl =
+  "https://striveschool-api.herokuapp.com/api/deezer/search?q=Love"
+
+const MetalUrl =
+  "https://striveschool-api.herokuapp.com/api/deezer/search?q=ironmaiden"
+
+const MerolaUrl =
+  "https://striveschool-api.herokuapp.com/api/deezer/search?q=mariomerola"
+
+const LigabueUrl =
+  "https://striveschool-api.herokuapp.com/api/deezer/search?q=Ligabue"
+
+// const rockUrl =
+//   "https://striveschool-api.herokuapp.com/api/deezer/search?q=rock"
+
+const albumBtn = document.getElementById("album-btn")
+const artistBtn = document.getElementById("artist-btn")
+
+albumBtn.addEventListener("click", () => {
+  let libraryDeck = document.getElementById("library-deck")
+  libraryDeck.innerHTML=""
+  getDataNew(rockUrl, function(elements){
+    console.log("papopepo", elements)
+    populateLibrary(elements)
+  })
+})
+
+artistBtn.addEventListener("click", () => {
+  let libraryDeck = document.getElementById("library-deck")
+  libraryDeck.innerHTML=""
+  getDataNew(LoveUrl, function(elements){
+    populateLibrary(elements)
+  })
+})

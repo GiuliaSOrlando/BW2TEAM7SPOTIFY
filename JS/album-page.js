@@ -1,3 +1,17 @@
+//codice non legato API
+for (let e of document.querySelectorAll(
+  'input[type="range"].slider-progress'
+)) {
+  e.style.setProperty("--value", e.value)
+  e.style.setProperty("--min", e.min == "" ? "0" : e.min)
+  e.style.setProperty("--max", e.max == "" ? "100" : e.max)
+  e.addEventListener("input", () => e.style.setProperty("--value", e.value))
+}
+
+document.querySelectorAll('[data-bs-toggle="tooltip"]').forEach((tooltip) => {
+  new bootstrap.Tooltip(tooltip)
+})
+
 let playing = false
 
 const QueenUrl =
@@ -108,7 +122,7 @@ const populateTracks = function (elements, i) {
     songBtn.addEventListener("click", function () {
       let playerAlbumImg = document.getElementById("album-cover")
       playerAlbumImg.setAttribute("src", elements.cover)
-      let playerTitle = document.getElementById("player-title")
+      let playerTitle = document.getElementById("player-title-link")
       playerTitle.innerText = tracks.title_short
       let playerArtist = document.getElementById("player-artist")
       playerArtist.innerText = elements.artist.name
@@ -118,7 +132,7 @@ const populateTracks = function (elements, i) {
     console.log(elements)
     playerArtistLink.setAttribute(
       "href",
-      `./artist-page.html?id=${elements.artist.id}`
+      `/HTML/artist-page.html?id=${elements.artist.id}`
     )
   })
 }

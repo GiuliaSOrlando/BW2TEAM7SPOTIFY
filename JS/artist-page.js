@@ -1,3 +1,17 @@
+//codice non legato API
+for (let e of document.querySelectorAll(
+  'input[type="range"].slider-progress'
+)) {
+  e.style.setProperty("--value", e.value)
+  e.style.setProperty("--min", e.min == "" ? "0" : e.min)
+  e.style.setProperty("--max", e.max == "" ? "100" : e.max)
+  e.addEventListener("input", () => e.style.setProperty("--value", e.value))
+}
+
+document.querySelectorAll('[data-bs-toggle="tooltip"]').forEach((tooltip) => {
+  new bootstrap.Tooltip(tooltip)
+})
+
 const originatingUrl =
   "https://striveschool-api.herokuapp.com/api/deezer/artist/"
 let addressBarContent = new URLSearchParams(location.search)
@@ -33,16 +47,8 @@ const populateTracks = function (elements) {
     `
     tracksContainer.appendChild(track)
     console.log(elements.data[i].title)
-    localStorage.setItem("artistName", `${elements.data[0].artist.name}`)
   }
 }
-
-const searchQuery =
-  "https://striveschool-api.herokuapp.com/api/deezer/search?q="
-
-let artistName = localStorage.getItem("artistName").split(" ").join("")
-let searchUrl = searchQuery + artistName
-console.log(searchUrl)
 
 // Popolo gli album
 const populateAlbums = function (elements) {
@@ -118,6 +124,14 @@ getData(dynamicUrl, function (el) {
   getData(el.tracklist, function (el) {
     populateTracks(el)
   })
+  console.log(el)
+  let artistName = el.name
+  const searchQuery =
+    "https://striveschool-api.herokuapp.com/api/deezer/search?q="
+  let searchUrl = searchQuery + artistName
+  console.log(searchUrl)
+
+  getData(searchUrl, populateAlbums)
 })
 
 //Numero di fan
@@ -127,8 +141,6 @@ getData(dynamicUrl, function (elements) {
   let headerArtistName = document.getElementById("header-artist-name")
   headerArtistName.innerHTML = elements.name
 })
-
-getData(searchUrl, populateAlbums)
 
 // Aggiungo dinamicamente l'immagine header
 

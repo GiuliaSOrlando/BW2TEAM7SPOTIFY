@@ -660,8 +660,15 @@
               />
             </div>
             <div class="col-4 mt-3 ms-3">
-              <h3 id="player-title">Song title</h3>
-              <p id="player-artist">Artist</p>
+              <a href="#" class="text-decoration-none"
+                ><h3 id="player-title-link">Song title</h3></a
+              >
+              <a
+                href="#"
+                id="player-artist-link"
+                class="text-decoration-none text-white"
+                ><p id="player-artist">Artist</p></a
+              >
             </div>
             <div class="col">
               <p class="fs-3 fw-lighter player-extra-icons" id="heart">
@@ -789,7 +796,11 @@
               </div>
             </div>
             <div class="col">
-              <input type="range" id="song-range" />
+              <input
+                type="range"
+                id="song-range"
+                class="styled-slider slider-progress"
+              />
             </div>
           </div>
         </div>
@@ -884,7 +895,11 @@
               </button>
             </div>
             <div class="col" id="volume-range-div">
-              <input type="range" id="volume-range" />
+              <input
+                type="range"
+                id="volume-range"
+                class="styled-slider slider-progress"
+              />
             </div>
           </div>
         </div>
@@ -896,7 +911,7 @@
       integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
       crossorigin="anonymous"
     ></script>
-    <script src="Elementi singoli/player/player.js"></script>
+    <script src="/Elementi singoli/player/player.js"></script>
     <!-- <script src="avrg_color.js"></script> n-->
     <script>
       //toast script

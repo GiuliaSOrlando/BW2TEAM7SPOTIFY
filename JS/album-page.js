@@ -163,7 +163,7 @@ const populateTracks = function (elements, i) {
       playerAlbumImg.setAttribute("src", elements.cover)
       let playerTitle = document.getElementById("player-title-link")
       playerTitle.innerText = tracks.title_short
-      let playerArtist = document.getElementById("player-artist")
+      let playerArtist = document.getElementById("player-artist-link")
       playerArtist.innerText = elements.artist.name
     })
 

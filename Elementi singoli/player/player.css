@@ -70,9 +70,12 @@ button {
   #repeat,
   #about,
   #queue,
-  #connect,
-  #volume {
+  #connect {
     fill: #1db954;
+  }
+
+  #volume {
+    fill: white;
   }
 
   #about,

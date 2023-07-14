@@ -145,6 +145,16 @@ const populateTracks = function (elements, i) {
       console.log(`L'url della traccia da riprodurre è ${tracks.preview}`)
       song.pause()
     })
+
+    let volumeBtn = document.getElementById("volume-button")
+    volumeBtn.addEventListener("click", function () {
+      if (song.muted === false) {
+        song.muted = true
+      } else {
+        song.muted = false
+      }
+    })
+
     // Sincronizza immagine dell'album nel player
 
     songBtn.addEventListener("click", function () {

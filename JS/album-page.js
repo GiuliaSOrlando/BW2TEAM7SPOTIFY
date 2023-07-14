@@ -35,7 +35,8 @@ const albumInfo = function (elements) {
                      <img
                     src="${elements.cover_xl}"
                     alt=""
-
+                    onload="start()"
+                    crossorigin="Anonymous"
                   />
       `
   const albumTextualInfo = document.getElementById("album-info-section")

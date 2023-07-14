@@ -83,7 +83,7 @@
   margin-top: -3.4rem;
   display: flex;
   flex-direction: column;
-  background: linear-gradient(180deg, #ab9595, #584d4d);
+  /* background: linear-gradient(180deg, #ab9595, #584d4d); */
 }
 nav {
   position: sticky !important;
@@ -211,4 +211,5 @@ nav {
 #testo-canzone-nav {
   font-size: 1.5rem;
   margin-left: 0.5rem;
+  
 }

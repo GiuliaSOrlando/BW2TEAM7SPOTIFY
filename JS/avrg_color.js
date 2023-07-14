@@ -93,7 +93,9 @@ const start = function () {
   let mostRecurrentHex = pad(mostRecurrent)
 
   // console.log del risultato
-  console.log(mostRecurrentHex)
+  let headingGradient = document.getElementById("gradient-container")
+  headingGradient.style.backgroundColor = `#${mostRecurrentHex};`
+  console.log("lello", mostRecurrentHex)
 }
 
 // generateImage()

@@ -61,7 +61,7 @@ const populateLibrary = function (elements) {
     const newCol = document.createElement("div")
     newCol.classList.add("card", "card-libreria")
     newCol.innerHTML = `
-                      <a href="./album-page.html?id=${elements.data[i].album.id}" class="text-decoration-none">
+                      <a href="/HTML/album-page.html?id=${elements.data[i].album.id}" class="text-decoration-none">
                       <div class="row no-gutters">
                         <div class="col-3">
                           <img
@@ -99,7 +99,7 @@ const populateTracks = function (elements, i) {
               <h3 id="pause-button${i}" class="song-title fs-5 mb-0">${
       tracks.title
     }</h3>
-              <a href="./artist-page.html?id=${
+              <a href="/HTML/artist-page.html?id=${
                 elements.artist.id
               }" class="text-decoration-none"><p>${tracks.artist.name}</p> </a>
             </div>

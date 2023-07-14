@@ -23,19 +23,13 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="index.css" />
-    <link rel="stylesheet" href="./Elementi singoli/nav/css/nav.css" />
+    <link rel="stylesheet" href="/assets/CSS/index.css" />
+    <link rel="stylesheet" href="/Elementi singoli/nav/css/nav.css" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
     />
-    <link rel="stylesheet" href="artist/artist.css" />
-    <style>
-      .artist-carousel-img {
-        width: 500px;
-        height: 500px;
-      }
-    </style>
+    <link rel="stylesheet" href="/Elementi singoli/album/album.css" />
     <!-- <style>
       body {
         background-color: #000000;
@@ -70,7 +64,7 @@
       }
     </style> -->
     <!-- <link rel="stylesheet" href="./nav/css/nav.css" /> -->
-    <link rel="stylesheet" href="./Elementi singoli/player/player.css" />
+    <link rel="stylesheet" href="/Elementi singoli/player/player.css" />
   </head>
   <body>
     <div class="margin-div">
@@ -89,7 +83,7 @@
                       <ul class="navbar-nav">
                         <li class="nav-item active">
                           <a
-                            href="index.html"
+                            href="/index.html"
                             class="text-decoration-none text-white text-start fs-5 a"
                           >
                             <svg
@@ -284,8 +278,11 @@
 
         <!-- MAIN CONTENT  -->
         <div id="section-hidden">
-          <section id="album-section">
-            <nav id="navbar" class="navbar bg-transparent navbar-expand">
+          <section
+            id="album-section"
+            style="height: 100%; padding-bottom: 120px"
+          >
+            <nav id="navbar" class="navbar bg-transparent navbar-expand p-0">
               <div class="container-fluid">
                 <div
                   class="collapse navbar-collapse"
@@ -297,40 +294,42 @@
                     <div id="buttons-container" class="d-flex">
                       <li class="nav-item">
                         <a
+                          onclick="history.back()"
                           class="nav-link active text-white"
                           aria-current="page"
-                          href="#"
                           ><i
-                            class="bi bi-chevron-left p-2 px-2 bg-black opacity-50 rounded-circle fs-5 p-1 px-2"
+                            class="bi bi-chevron-left bg-black opacity-50 rounded-circle fs-5 p-2 px-2"
                           ></i
                         ></a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link text-white" href="#"
+                        <a
+                          onclick="history.forward()"
+                          class="nav-link text-white"
                           ><i
-                            class="bi bi-chevron-right p-2 px-2 bg-black rounded-circle fs-5 p-1 px-2"
+                            class="bi bi-chevron-right bg-black rounded-circle fs-5 p-2 px-2"
                           ></i
                         ></a>
                       </li>
                       <div id="reproduce" class="d-none">
                         <button id="play-button-nav">
                           <i class="fas fa-play"></i></button
-                        ><span id="testo-canzone-nav">Artista</span>
+                        ><span id="testo-canzone-nav">Canzone</span>
                       </div>
                       <!-- <form class="d-flex" role="search">
-                        <div class="d-flex align-items-center">
-                          <i
-                            class="bi bi-search text-white fs-6 mx-2 position-absolute"
-                          ></i>
-                          <input
-                            class="border-0 rounded-5 pe-5 fs-6 text-white"
-                            type="search"
-                            placeholder="Cosa vuoi ascoltare?"
-                            aria-label="Search"
-                            autofocus
-                          />
-                        </div>
-                      </form> -->
+                  <div class="d-flex align-items-center">
+                    <i
+                      class="bi bi-search text-white fs-6 mx-2 position-absolute"
+                    ></i>
+                    <input
+                      class="border-0 rounded-5 pe-5 fs-6 text-white"
+                      type="search"
+                      placeholder="Cosa vuoi ascoltare?"
+                      aria-label="Search"
+                      autofocus
+                    />
+                  </div>
+                </form> -->
                     </div>
                     <div class="d-flex align-items-center">
                       <ul class="d-flex navbar-nav align-items-center">
@@ -399,244 +398,38 @@
                 </div>
               </div>
             </nav>
-            <div class="artist-heading-wrapper" id="heading-wrapper">
+            <div class="album-heading-wrapper">
               <div class="scritte-immagini">
-                <div class="album-title">
-                  <p>
-                    <svg
-                      version="1.0"
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="17.000000pt"
-                      height="20.000000pt"
-                      viewBox="0 0 153.000000 156.000000"
-                      preserveAspectRatio="xMidYMid meet"
-                    >
-                      <g
-                        transform="translate(0.000000,156.000000) scale(0.100000,-0.100000)"
-                        fill="#548fed"
-                        stroke="none"
-                      >
-                        <path
-                          d="M704 1478 c-16 -11 -60 -52 -99 -89 l-70 -68 -127 -3 c-173 -4 -172 -3 -176 -175 l-4 -127 -84 -89 c-123 -131 -123 -145 0 -274 l84 -89 4 -127 c4 -172 3 -171 175 -175 l127 -4 89 -84 c131 -123 145 -123 274 0 l89 84 127 4 c172 4 171 3 175 175 l4 127 84 89 c123 129 123 143 0 274 l-84 89 -4 127 c-4 172 -3 171 -176 175 l-127 3 -55 53 c-143 136 -168 148 -226 104z m384 -466 c33 -42 20 -59 -218 -297 l-230 -230 -110 110 c-116 116 -127 138 -90 175 34 34 64 25 135 -42 l66 -62 182 181 c100 99 189 183 197 186 21 7 53 -2 68 -21z"
-                        />
-                      </g>
-                    </svg>
-                    Artista verificato
-                  </p>
-                  <h1 id="header-artist-name">Artista</h1>
-                  <p id="nb-fan"></p>
+                <div id="album-img" class="album-img">
+                  <img
+                    src="https://images.genius.com/026447f265b15f5807c4ef22fac092f3.1000x1000x1.jpg"
+                    alt=""
+                  />
+                </div>
+                <div id="album-info-section" class="album-title">
+                  <p>Album</p>
+                  <h1>Infernum</h1>
+                  <p>Claver Gold Murubutu 2020 14 brani, 46 min 31sec.</p>
                 </div>
               </div>
-            </div>
-
-            <div id="buttons-and-tracks-container">
               <div class="bottoni">
                 <button id="play-button-album">
                   <i class="fas fa-play"></i>
                 </button>
-
-                <button
-                  id="follow-button"
-                  type="button"
-                  class="btn btn-outline-light"
-                >
-                  SEGUI
-                </button>
-
+                <button id="fav-button"><i class="fas fa-heart"></i></button>
                 <button id="ellipsis-button">
                   <i class="fas fa-ellipsis-h"></i>
                 </button>
               </div>
-              <div id="tracks-container"></div>
             </div>
-            <div id="Sezione 1">
-              <h3>Ricerche correlate</h3>
-              <div id="related-search-row" class="row container-card"></div>
-            </div>
-            <div id="artist-info">
-              <h2>Informazioni</h2>
-              <div
-                class="container d-flex justify-content-center bg-black opacity-75 py-5"
-              >
-                <div class="row">
-                  <div class="col-12">
-                    <button
-                      id="artist-info-card"
-                      type="button"
-                      data-bs-toggle="modal"
-                      data-bs-target="#staticBackdrop"
-                    >
-                      <div class="card text-bg-dark">
-                        <img
-                          id="artist-info-modal-img"
-                          src="/assets/imgs/main/image-6.jpg"
-                          class="card-img"
-                          alt="..."
-                        />
-                        <div
-                          class="card-img-overlay d-flex flex-column justify-content-end"
-                        >
-                          <h5
-                            id="modal-nb-fan"
-                            class="card-title text-white fw-bold text-start"
-                          ></h5>
-                          <p
-                            class="card-text text-white text-truncate text-start"
-                          >
-                            This is a wider card with supporting text below as a
-                            natural lead-in to additional content. This content
-                            is a little bit longer. This is a wider card with
-                            supporting text below as a natural lead-in to
-                            additional content. This content is a little bit
-                            longer. This is a wider card with supporting text
-                            below as a natural lead-in to additional content.
-                            This content is a little bit longer. This is a wider
-                            card with supporting text below as a natural lead-in
-                            to additional content. This content is a little bit
-                            longer.
-                          </p>
-                        </div>
-                      </div>
-                    </button>
-                    <div
-                      class="modal fade"
-                      id="staticBackdrop"
-                      data-bs-backdrop="static"
-                      data-bs-keyboard="false"
-                      tabindex="-1"
-                      aria-labelledby="staticBackdropLabel"
-                      aria-hidden="true"
-                    >
-                      <div
-                        class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg"
-                        data-bs-theme="dark"
-                      >
-                        <div class="modal-content bg-black">
-                          <div class="modal-body text-white-50">
-                            <button
-                              type="button"
-                              class="btn-close"
-                              data-bs-dismiss="modal"
-                              aria-label="Close"
-                            ></button>
-                            <div id="carouselExample" class="carousel slide">
-                              <div class="carousel-inner">
-                                <div class="carousel-item active text-center">
-                                  <img
-                                    id="modal-carousel-img1"
-                                    src="/assets/imgs/main/image-6.jpg"
-                                    class="card-img artist-carousel-img center"
-                                    alt="..."
-                                  />
-                                </div>
-                                <div class="carousel-item text-center">
-                                  <img
-                                    id="modal-carousel-img2"
-                                    src="/assets/imgs/main/image-7.jpg"
-                                    class="card-img artist-carousel-img"
-                                    alt="..."
-                                  />
-                                </div>
-                                <div class="carousel-item text-center">
-                                  <img
-                                    id="modal-carousel-img3"
-                                    src="/assets/imgs/main/image-8.jpg"
-                                    class="card-img artist-carousel-img"
-                                    alt="..."
-                                  />
-                                </div>
-                              </div>
-                              <button
-                                class="carousel-control-prev carousel-control-next bg-body-secondary bg-opacity-75 rounded-circle top-50 ms-4"
-                                type="button"
-                                data-bs-target="#carouselExample"
-                                data-bs-slide="prev"
-                                style="height: 40px; width: 40px"
-                              >
-                                <span
-                                  class="carousel-control-prev-icon"
-                                  aria-hidden="true"
-                                ></span>
-                                <span class="visually-hidden">Previous</span>
-                              </button>
-                              <button
-                                class="carousel-control-next bg-body-secondary bg-opacity-75 rounded-circle top-50 me-4"
-                                type="button"
-                                data-bs-target="#carouselExample"
-                                data-bs-slide="next"
-                                style="height: 40px; width: 40px"
-                              >
-                                <span
-                                  class="carousel-control-next-icon"
-                                  aria-hidden="true"
-                                ></span>
-                                <span class="visually-hidden">Next</span>
-                              </button>
-                            </div>
-                            <div class="row">
-                              <div class="col-4">
-                                <div class="row">
-                                  <div class="col-1">
-                                    <p
-                                      id="inside-modal-nb-fan"
-                                      class="pt-5 fw-bolder text-white fs-2"
-                                    ></p>
-                                  </div>
-                                  <div class="col-1">
-                                    <p
-                                      class="mt-5 pt-5 fw-normal text-white fs-5"
-                                    >
-                                      followers
-                                    </p>
-                                  </div>
-                                </div>
-                              </div>
-                              <div class="col-8">
-                                <p class="pt-5">
-                                  Lorem ipsum dolor sit amet consectetur
-                                  adipisicing elit. Quo a ipsa earum commodi
-                                  quis iste molestiae hic id tempore in?
-                                  Perferendis maxime iusto accusamus sequi nobis
-                                  pariatur voluptatibus officia expedita. Lorem
-                                  ipsum dolor sit amet consectetur adipisicing
-                                  elit. Vel esse sapiente tempora deserunt!
-                                  Placeat quisquam repudiandae sunt nihil ut qui
-                                  et, eaque fuga aut aliquam facilis excepturi
-                                  nemo, animi eum. Lorem ipsum dolor sit, amet
-                                  consectetur adipisicing elit. Saepe nostrum
-                                  provident recusandae quaerat, officiis
-                                  sapiente explicabo illo, labore, magni
-                                  veritatis quam repudiandae. Dicta vero ut
-                                  laboriosam nihil non recusandae modi. Lorem
-                                  ipsum, dolor sit amet consectetur adipisicing
-                                  elit. Impedit exercitationem dicta nisi,
-                                  ducimus delectus assumenda doloribus.
-                                  Distinctio ratione unde enim repudiandae
-                                  delectus vel exercitationem est laudantium
-                                  beatae, quae facere perferendis? Lorem ipsum
-                                  dolor sit amet, consectetur adipisicing elit.
-                                  Vel consequuntur voluptatibus dolores dolorum.
-                                  Ex voluptas, labore accusamus, fugiat numquam
-                                  quam dolore eos tempore atque, asperiores vel
-                                  modi ipsam repellat similique? Lorem ipsum
-                                  dolor sit, amet consectetur adipisicing elit.
-                                  Rem asperiores eius numquam ducimus, eaque
-                                  illum doloremque similique corporis eligendi
-                                  autem exercitationem cumque soluta inventore
-                                  temporibus eveniet vel qui beatae eos. Lorem,
-                                  ipsum dolor sit amet consectetur adipisicing
-                                  elit. Fugit ad quisquam veritatis quas dolorem
-                                  voluptas nihil reprehenderit, eius asperiores
-                                  laboriosam in voluptates similique vero
-                                  aliquid cumque harum ipsa ratione dignissimos.
-                                </p>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+            <div id="tracks-container">
+              <div class="track tracks-header">
+                <div class="track-num">#</div>
+                <div class="song">
+                  <h3 class="song-title">title</h3>
+                </div>
+                <div class="song-length">
+                  <i class="far fa-clock"></i>
                 </div>
               </div>
             </div>
@@ -660,8 +453,8 @@
               />
             </div>
             <div class="col-4 mt-3 ms-3">
-              <h3 id="player-title">Song title</h3>
-              <p id="player-artist">Artist</p>
+              <h3 id="title">Song title</h3>
+              <p id="artist">Artist</p>
             </div>
             <div class="col">
               <p class="fs-3 fw-lighter player-extra-icons" id="heart">
@@ -789,10 +582,8 @@
               </div>
             </div>
             <div class="col">
-              <input
-                type="range"
-                id="song-range"
-                class="styled-slider slider-progress"
+              <input type="range" id="song-range"
+              class="styled-slider slider-progress"
               />
             </div>
           </div>
@@ -888,11 +679,8 @@
               </button>
             </div>
             <div class="col" id="volume-range-div">
-              <input
-                type="range"
-                id="volume-range"
-                class="styled-slider slider-progress"
-              />
+              <input type="range" id="volume-range"               class="styled-slider slider-progress"
+ />
             </div>
           </div>
         </div>
@@ -911,52 +699,52 @@
       document
         .querySelectorAll('[data-bs-toggle="tooltip"]')
         .forEach((tooltip) => {
-          new bootstrap.Tooltip(tooltip);
-        });
+          new bootstrap.Tooltip(tooltip)
+        })
       // let avgColor = start()
 
-      let albumSection = document.getElementById("album-section");
+      let albumSection = document.getElementById("album-section")
 
       albumSection.addEventListener("scroll", function () {
-        let y = albumSection.scrollTop;
-        let tracksHeader = document.querySelector(".tracks-header");
-        console.log(y);
-        let nav = document.getElementById("navbar");
-        let navButtonsContainer = document.getElementById("buttons-container");
-        let playButtonNav = document.getElementById("reproduce");
+        let y = albumSection.scrollTop
+        let tracksHeader = document.querySelector(".tracks-header")
+        console.log(y)
+        let nav = document.getElementById("navbar")
+        let navButtonsContainer = document.getElementById("buttons-container")
+        let playButtonNav = document.getElementById("reproduce")
         if (y > 25) {
-          nav.classList.remove("bg-transparent");
+          nav.classList.remove("bg-transparent")
           if (y > 264) {
-            playButtonNav.classList.remove("d-none");
+            playButtonNav.classList.remove("d-none")
             playButtonNav.classList.add(
               "d-flex",
               "justify-content-center",
               "align-items-center"
-            );
+            )
           } else {
-            playButtonNav.classList.add("d-none");
+            playButtonNav.classList.add("d-none")
           }
           if (y > 368) {
-            tracksHeader.style.backgroundColor = "#272727;";
-            tracksHeader.style.margin = "none";
+            tracksHeader.style.backgroundColor = "#272727;"
+            tracksHeader.style.margin = "none"
           }
         } else {
-          nav.classList.add("bg-transparent");
+          nav.classList.add("bg-transparent")
         }
-      });
-      let tracks = document.querySelectorAll(".track");
+      })
+      let tracks = document.querySelectorAll(".track")
       tracks.forEach((track) => {
-        let trackImg = track.querySelector(".track-img");
-        let songImg = trackImg.innerHTML;
+        let trackNum = track.querySelector(".track-num")
+        let songNum = trackNum.innerText
         track.addEventListener("mouseover", () => {
-          trackImg.innerHTML = `<i class="fas fa-play"></i>`;
-        });
+          trackNum.innerHTML = `<i class="fas fa-play"></i>`
+        })
         track.addEventListener("mouseout", () => {
-          let trackImg = track.querySelector(".track-img");
-          trackImg.innerHTML = songImg;
-        });
-      });
+          let trackNum = track.querySelector(".track-num")
+          trackNum.innerHTML = `${songNum}`
+        })
+      })
     </script>
-    <script src="artist-page.js"></script>
+    <script src="/JS/album-page.js"></script>
   </body>
 </html>

@@ -1,15 +1,15 @@
 @font-face {
   font-family: circular;
-  src: url(assets/fonts/CircularStd-Book.otf);
+  src: url(/assets/fonts/CircularStd-Book.otf);
 }
 @font-face {
   font-family: circular-bold;
-  src: url(assets/fonts/CircularStd-Bold.otf);
+  src: url(/assets/fonts/CircularStd-Bold.otf);
 }
 
 @font-face {
   font-family: circular-light;
-  src: url(assets/fonts/CircularStd-Light.otf);
+  src: url(/assets/fonts/CircularStd-Light.otf);
 }
 .card-text {
   font-size: medium;
@@ -158,7 +158,7 @@ body {
 }
 
 .bg-img {
-  background-image: url("../assets/imgs/digital-painting-mountain-with-colorful-tree-foreground.jpg");
+  background-image: url("/assets/imgs/digital-painting-mountain-with-colorful-tree-foreground.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }

@@ -128,7 +128,7 @@
                         <br />
                         <li class="nav-item active">
                           <a
-                            href="#"
+                            href="./search-page.html"
                             class="text-decoration-none text-white fs-5 a"
                           >
                             <svg
@@ -266,7 +266,7 @@
                 </div>
               </div>
               <div class="row mt-3">
-                <div class="col">
+                <div class="col aside-height">
                   <div
                     id="library-deck"
                     class="card-deck"
@@ -789,7 +789,11 @@
               </div>
             </div>
             <div class="col">
-              <input type="range" id="song-range" />
+              <input
+                type="range"
+                id="song-range"
+                class="styled-slider slider-progress"
+              />
             </div>
           </div>
         </div>
@@ -884,7 +888,11 @@
               </button>
             </div>
             <div class="col" id="volume-range-div">
-              <input type="range" id="volume-range" />
+              <input
+                type="range"
+                id="volume-range"
+                class="styled-slider slider-progress"
+              />
             </div>
           </div>
         </div>
@@ -903,51 +911,51 @@
       document
         .querySelectorAll('[data-bs-toggle="tooltip"]')
         .forEach((tooltip) => {
-          new bootstrap.Tooltip(tooltip)
-        })
+          new bootstrap.Tooltip(tooltip);
+        });
       // let avgColor = start()
 
-      let albumSection = document.getElementById("album-section")
+      let albumSection = document.getElementById("album-section");
 
       albumSection.addEventListener("scroll", function () {
-        let y = albumSection.scrollTop
-        let tracksHeader = document.querySelector(".tracks-header")
-        console.log(y)
-        let nav = document.getElementById("navbar")
-        let navButtonsContainer = document.getElementById("buttons-container")
-        let playButtonNav = document.getElementById("reproduce")
+        let y = albumSection.scrollTop;
+        let tracksHeader = document.querySelector(".tracks-header");
+        console.log(y);
+        let nav = document.getElementById("navbar");
+        let navButtonsContainer = document.getElementById("buttons-container");
+        let playButtonNav = document.getElementById("reproduce");
         if (y > 25) {
-          nav.classList.remove("bg-transparent")
+          nav.classList.remove("bg-transparent");
           if (y > 264) {
-            playButtonNav.classList.remove("d-none")
+            playButtonNav.classList.remove("d-none");
             playButtonNav.classList.add(
               "d-flex",
               "justify-content-center",
               "align-items-center"
-            )
+            );
           } else {
-            playButtonNav.classList.add("d-none")
+            playButtonNav.classList.add("d-none");
           }
           if (y > 368) {
-            tracksHeader.style.backgroundColor = "#272727;"
-            tracksHeader.style.margin = "none"
+            tracksHeader.style.backgroundColor = "#272727;";
+            tracksHeader.style.margin = "none";
           }
         } else {
-          nav.classList.add("bg-transparent")
+          nav.classList.add("bg-transparent");
         }
-      })
-      let tracks = document.querySelectorAll(".track")
+      });
+      let tracks = document.querySelectorAll(".track");
       tracks.forEach((track) => {
-        let trackImg = track.querySelector(".track-img")
-        let songImg = trackImg.innerHTML
+        let trackImg = track.querySelector(".track-img");
+        let songImg = trackImg.innerHTML;
         track.addEventListener("mouseover", () => {
-          trackImg.innerHTML = `<i class="fas fa-play"></i>`
-        })
+          trackImg.innerHTML = `<i class="fas fa-play"></i>`;
+        });
         track.addEventListener("mouseout", () => {
-          let trackImg = track.querySelector(".track-img")
-          trackImg.innerHTML = songImg
-        })
-      })
+          let trackImg = track.querySelector(".track-img");
+          trackImg.innerHTML = songImg;
+        });
+      });
     </script>
     <script src="artist-page.js"></script>
   </body>

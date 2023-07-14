@@ -33,8 +33,9 @@ const albumInfo = function (elements) {
   const albumDiv = document.getElementById("album-img")
   albumDiv.innerHTML = `
                      <img
-                    src="${elements.cover}"
+                    src="${elements.cover_xl}"
                     alt=""
+
                   />
       `
   const albumTextualInfo = document.getElementById("album-info-section")

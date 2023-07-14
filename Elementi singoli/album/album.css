@@ -16,12 +16,12 @@
 @font-face {
   font-family: "Circular";
   font-weight: 100;
-  src: url(../assets/fonts/CircularStd-Light.otf);
+  src: url(/assets/fonts/CircularStd-Light.otf);
 }
 @font-face {
   font-family: "Circular";
   font-weight: 500;
-  src: url(../assets/fonts/CircularStd-Medium.otf);
+  src: url(/assets/fonts/CircularStd-Medium.otf);
 }
 /* Firefox */
 #section-hidden {

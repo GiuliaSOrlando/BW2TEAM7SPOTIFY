@@ -43,7 +43,8 @@ const populateLibrary = function (elements) {
     const newCol = document.createElement("div")
     newCol.classList.add("card", "card-libreria")
     newCol.innerHTML = `
-                                                           <div class="row no-gutters">
+                      <a href="./album-page.html?id=${elements.data[i].album.id}" class="text-decoration-none">
+                      <div class="row no-gutters">
                         <div class="col-3">
                           <img
                             src="${elements.data[i].album.cover_small}"
@@ -54,10 +55,13 @@ const populateLibrary = function (elements) {
                         <div class="col-9 p-0">
                           <div class="card-body p-0 flex-row">
                             <p class="card-title cir-bold text-white">${elements.data[i].album.title}</p>
+                            <!--<a href="./artist-page.html?id=${elements.data[i].artist.id}" class="text-decoration-none">-->
                             <p class="card-text cir-light text-white">${elements.data[i].artist.name}</p>
+                           <!-- </a> -->
                           </div>
                         </div>
                       </div>
+                      </a>
       `
 
     libraryDeck.appendChild(newCol)

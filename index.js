@@ -279,5 +279,5 @@ albumBtn.addEventListener("click", () => {
 artistBtn.addEventListener("click", () => {
   const libraryDeck = document.getElementById("library-deck")
   libraryDeck.innerHTML = ""
-  getData(QueenUrl, populateLibrary)
+  getData(LoveUrl, populateLibrary)
 })

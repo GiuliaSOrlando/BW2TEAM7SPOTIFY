@@ -124,7 +124,7 @@ const populateTracks = function (elements, i) {
     songBtn.addEventListener("click", function () {
       let playerAlbumImg = document.getElementById("album-cover")
       playerAlbumImg.setAttribute("src", elements.cover)
-      let playerTitle = document.getElementById("player-title")
+      let playerTitle = document.getElementById("player-title-link")
       playerTitle.innerText = tracks.title_short
       let playerArtist = document.getElementById("player-artist")
       playerArtist.innerText = elements.artist.name
